@@ -40,15 +40,15 @@ namespace AutoTestTool
                         ProcTestData.WriteLastUserName(ProcTestData.lastLoginUserFile, ProcTestData.PresentAccount);
 
                         this.Hide();
-                        if ((radioButton1.Checked == true) && (radioButton2.Checked == false))
+                  //      if ((radioButton1.Checked == true) && (radioButton2.Checked == false))
                         {
                             MainForm fm = new MainForm();
                             fm.Show();
                         }
-                        else {
-                            U8_SubForms fm = new U8_SubForms();
-                            fm.Show();
-                        }
+                //        else {
+                //            U8_SubForms fm = new U8_SubForms();
+                 //           fm.Show();
+                  //      }
                         return;
                     }
                 }
@@ -63,7 +63,7 @@ namespace AutoTestTool
         {
             try
             {
-                radioButton1.Checked = true;
+            //    radioButton1.Checked = true;
                 ProcTestData.Account = ProcTestData.GetMysqlUserInfo("user");
                 ProcTestData.Password = ProcTestData.GetMysqlUserInfo("password");
 
@@ -94,12 +94,12 @@ namespace AutoTestTool
 
         private void radioButton1_Click(object sender, EventArgs e)
         {
-            radioButton2.Checked = false;
+        //    radioButton2.Checked = false;
         }
 
         private void radioButton2_Click(object sender, EventArgs e)
         {
-            radioButton1.Checked = false;
+        //    radioButton1.Checked = false;
         }
 
         private void radioButton2_CheckedChanged(object sender, EventArgs e)
@@ -118,6 +118,31 @@ namespace AutoTestTool
         }
 
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox_UserName_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox_LoginCode_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void skinLabel2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void skinLabel1_Click(object sender, EventArgs e)
         {
 
         }

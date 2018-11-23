@@ -151,6 +151,12 @@ namespace AutoTestTool
             {"WiFiPassWd","Chargerlink-608"},
         };
 
+        Dictionary<string, object> UartSettingInfo = new Dictionary<string, object>
+        {
+            {"PortNumber","COM3"},
+            {"BaudRate","19200"},
+        };
+
         public static List<byte> arraybuffer = new List<byte> { };
 
         GetResult GetResultObj = new GetResult
@@ -595,6 +601,7 @@ namespace AutoTestTool
                                             break;
                                         case (byte)Command.CMD_GET_SMOKE_SENSOR433:
                                             int GetSmokeSensor = validFrame[17];
+                                            UInt32 SmokeSensorAddr = 0;
 
                                             if (0 == GetSmokeSensor)   //设置返回
                                             {
@@ -602,12 +609,12 @@ namespace AutoTestTool
                                                 {
                                                     //设置成功     
                                                     TextBoxLog("设置433地址成功");
-                                                    TextBoxLog("433地址"+ validFrame[19] + validFrame[20] + validFrame[21]);
+                                                //    TextBoxLog("433地址"+ validFrame[19] + validFrame[20] + validFrame[21]);
                                                 }
                                                 else
                                                 {
                                                     TextBoxLog("设置433地址失败");
-                                                    TextBoxLog("433地址" + validFrame[19] + validFrame[20] + validFrame[21]);
+                                                //    TextBoxLog("433地址" + validFrame[19] + validFrame[20] + validFrame[21]);
                                                 }
                                             }
                                             else if (1 == GetSmokeSensor)
@@ -618,7 +625,9 @@ namespace AutoTestTool
                                                     {
                                                         if (0 == validFrame[18])
                                                         {
-                                                            LOG("433地址" + validFrame[19] + validFrame[20] + validFrame[21]);
+                                                            SmokeSensorAddr = (UInt32)((validFrame[19] << 16) | (validFrame[20] << 8) | validFrame[21]);
+                                                            LOG("433地址  " + SmokeSensorAddr.ToString("X2"));
+                                                            
                                                             MBTestResultDir["烟感"] = "通过";
                                                             updateControlText(skinLabel_MB_433_RESULT, "测试通过", Color.Green);
                                                         //    if (6 <= (GetCurrentTimeStamp() - cardNumTimeTicks))
@@ -629,7 +638,9 @@ namespace AutoTestTool
                                                         }
                                                         else
                                                         {
-                                                            LOG("433地址" + validFrame[19] + validFrame[20] + validFrame[21]);
+                                                             LOG("433地址 " + validFrame[19].ToString("X2") + validFrame[20].ToString("X2") + validFrame[21].ToString("X2"));
+                                                         //   SmokeSensorAddr = (UInt32)((validFrame[19] << 16) | (validFrame[20] << 8) | validFrame[21]);
+                                                            //  LOG("433地址  " + SmokeSensorAddr.ToString("X2"));
                                                             LOG("烟感地址不对!");
                                                             updateControlText(skinLabel_MB_433_RESULT, "测试不通过", Color.Red);
                                                             MBTestResultDir["烟感"] = "不通过";
@@ -1662,7 +1673,8 @@ namespace AutoTestTool
                             updateControlText(skinLabel_MB_433_RESULT, "");
                             LOG("请按报警烟感按钮报警进行烟感测试.");
                             //发送433测试指令
-                          //  SendSmokeSensor433TestReq();
+                            SendSetSmokeSensor433();
+                            //  SendSmokeSensor433TestReq();
                         }
                         if ((GetCurrentTimeStamp() - ItemTestTime) >= 30)//超时
                         {
@@ -2304,26 +2316,30 @@ namespace AutoTestTool
         {
             byte[] data = { mode };
             int wait = 0, n = 0;
+            int WaitTimes = 2;
 
             GetResultObj.testMode = -1;
             GetResultObj.testModeAllow = -1;
            
             SendSerialData(MakeSendArray((byte)Command.TestMode, data));
             
-            while (GetResultObj.testMode == -1) {
-                Thread.Sleep(1000);
-                if (wait++ > 10) {
+            while (GetResultObj.testMode == -1)
+            {
+                Thread.Sleep(300);
+                if (wait++ > WaitTimes)
+                {
                     wait = 0;
                     n++;
                     SendSerialData(MakeSendArray((byte)Command.TestMode, data));
                 }
 
-                if (n > 3) {
+                if (n > WaitTimes)
+                {
                     break;
                 }
             }
 
-            if (n > 10)
+            if (n > WaitTimes)
             {
                 if (MessageBox.Show((mode == 0) ? "请求开始失败！\r\n是否重试" : "请求结束失败！\r\n是否重试", "提示",
                     MessageBoxButtons.RetryCancel, MessageBoxIcon.Warning) == DialogResult.Retry)
@@ -2437,9 +2453,9 @@ namespace AutoTestTool
             string Addr433 = textBoxSmokeSensor433.Text.Trim();
             //byte[] SmokeSensorData = System.Text.Encoding.Default.GetBytes(Addr433);
 
-            if (6 < Addr433.Length)
+            if ((6 < Addr433.Length) || (0 >= Addr433.Length))
             {
-                TextBoxLog("地址超出3个字节,请重新输入");
+                TextBoxLog("地址超出3个字节或输入433模块地址有误,请重新输入");
                 return;
             }
             //  TextBoxLog("SmokeSensorData长度  \n" + SmokeSensorData.Length);
@@ -3427,6 +3443,12 @@ namespace AutoTestTool
         {
             try
             {
+                UartSettingInfo["PortNumber"] = skinComboBox_SerialPortSelect.SelectedItem;
+                UartSettingInfo["BaudRate"] = skinComboBox_SerialBuateSelect.SelectedItem;
+                ProcTestData.WriteConfig(ProcTestData.UartConfigFile, UartSettingInfo);
+                //   TextBoxLog("保存成功");
+                //    MessageBox.Show("保存成功", "温馨提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
+               
                 if (!serialPort1.IsOpen)
                 {
                     serialPort1.BaudRate = int.Parse(skinComboBox_SerialBuateSelect.SelectedItem.ToString());
@@ -4272,7 +4294,7 @@ namespace AutoTestTool
                 textBoxWiFiName.Text = Test433SettingInfo["WiFiName"].ToString();
                 textBoxWiFiPassWd.Text = Test433SettingInfo["WiFiPassWd"].ToString();
             }
-           
+
             timer1.Enabled = true;
             timer1.Start();
 
@@ -4292,6 +4314,11 @@ namespace AutoTestTool
                 {
                     skinComboBox_SerialPortSelect.SelectedIndex = 0;
                     skinComboBox_SerialBuateSelect.SelectedIndex = 0;
+                }
+                {   //串口端口号和波特率栏增加记忆功能
+                    UartSettingInfo = ProcTestData.UartReadConfig(ProcTestData.UartConfigFile, UartSettingInfo);
+                    skinComboBox_SerialPortSelect.SelectedItem = UartSettingInfo["PortNumber"].ToString();
+                    skinComboBox_SerialBuateSelect.SelectedItem = UartSettingInfo["BaudRate"].ToString();
                 }
             }
             catch (Exception ex)
@@ -5797,6 +5824,16 @@ namespace AutoTestTool
         private void textBoxWiFiPassWd_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void skinButton_MB_433_RTEST_Click(object sender, EventArgs e)
+        {
+            ItemTestTime = GetCurrentTimeStamp();
+            countDownTime_MB.SmokeSensor433 = countdownTime;
+            MBTestResultDir["烟感"] = "";
+            updateControlText(skinLabel_MB_433_RESULT, "");
+            LOG("主板烟感重新测试.");
+            SendSetSmokeSensor433();
         }
     }
 }

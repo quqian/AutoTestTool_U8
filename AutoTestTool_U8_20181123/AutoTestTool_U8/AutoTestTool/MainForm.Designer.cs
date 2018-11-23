@@ -304,6 +304,116 @@
             this.skinButton_WholeChg_ReportDir = new CCWin.SkinControl.SkinButton();
             this.textBoxDebugInfo = new System.Windows.Forms.TextBox();
             this.skinButton_WholeChg_ClearLog = new CCWin.SkinControl.SkinButton();
+            this.skinTabControl_WholeChg = new CCWin.SkinControl.SkinTabControl();
+            this.skinTabPage_WholeChg_SN = new CCWin.SkinControl.SkinTabPage();
+            this.skinSplitContainer10 = new CCWin.SkinControl.SkinSplitContainer();
+            this.skinLabel24 = new CCWin.SkinControl.SkinLabel();
+            this.skinButton_WholeChg_SN_Confirm = new CCWin.SkinControl.SkinButton();
+            this.skinLabel31 = new CCWin.SkinControl.SkinLabel();
+            this.textBox_WholeChg_SN_QR = new System.Windows.Forms.TextBox();
+            this.skinTabPage_WholeChg_Led = new CCWin.SkinControl.SkinTabPage();
+            this.skinSplitContainer11 = new CCWin.SkinControl.SkinSplitContainer();
+            this.skinLabel_WholeChg_Led_Time = new CCWin.SkinControl.SkinLabel();
+            this.skinLabel33 = new CCWin.SkinControl.SkinLabel();
+            this.skinLabel34 = new CCWin.SkinControl.SkinLabel();
+            this.skinLabel35 = new CCWin.SkinControl.SkinLabel();
+            this.skinLabel_CHG_LED_RESULT = new CCWin.SkinControl.SkinLabel();
+            this.skinButton_WholeChg_Led_RTest = new CCWin.SkinControl.SkinButton();
+            this.skinButton_WholeChg_Led_Over = new CCWin.SkinControl.SkinButton();
+            this.skinButton_WholeChg_Led_Fail = new CCWin.SkinControl.SkinButton();
+            this.skinButton_WholeChg_Led_Success = new CCWin.SkinControl.SkinButton();
+            this.skinLabel36 = new CCWin.SkinControl.SkinLabel();
+            this.skinTabPage_WholeChg_Bt = new CCWin.SkinControl.SkinTabPage();
+            this.skinSplitContainer12 = new CCWin.SkinControl.SkinSplitContainer();
+            this.label6 = new System.Windows.Forms.Label();
+            this.skinLabel_WholeChg_BT_Time = new CCWin.SkinControl.SkinLabel();
+            this.skinLabel39 = new CCWin.SkinControl.SkinLabel();
+            this.skinLabel40 = new CCWin.SkinControl.SkinLabel();
+            this.skinLabel_CHG_BT_RESULT = new CCWin.SkinControl.SkinLabel();
+            this.skinButton_WholeChg_BT_RTest = new CCWin.SkinControl.SkinButton();
+            this.skinButton_WholeChg_BT_Over = new CCWin.SkinControl.SkinButton();
+            this.skinLabel41 = new CCWin.SkinControl.SkinLabel();
+            this.skinTabPage_WholeChg_2POINT4 = new CCWin.SkinControl.SkinTabPage();
+            this.skinSplitContainer13 = new CCWin.SkinControl.SkinSplitContainer();
+            this.skinLabel_WholeChg_2POINT4_Time = new CCWin.SkinControl.SkinLabel();
+            this.skinLabel44 = new CCWin.SkinControl.SkinLabel();
+            this.skinLabel45 = new CCWin.SkinControl.SkinLabel();
+            this.skinLabel_CHG_24G_RESULT = new CCWin.SkinControl.SkinLabel();
+            this.skinButton_WholeChg_2POINT4_RTest = new CCWin.SkinControl.SkinButton();
+            this.skinButton_WholeChg_2POINT4_Over = new CCWin.SkinControl.SkinButton();
+            this.skinLabel46 = new CCWin.SkinControl.SkinLabel();
+            this.skinTabPage_CHG_2G = new CCWin.SkinControl.SkinTabPage();
+            this.skinSplitContainer7 = new CCWin.SkinControl.SkinSplitContainer();
+            this.skinLabel47 = new CCWin.SkinControl.SkinLabel();
+            this.skinLabel_CHG_2G_TIME = new CCWin.SkinControl.SkinLabel();
+            this.skinLabel51 = new CCWin.SkinControl.SkinLabel();
+            this.skinLabel58 = new CCWin.SkinControl.SkinLabel();
+            this.skinButton_CHG_2G_RTEST = new CCWin.SkinControl.SkinButton();
+            this.skinButton_CHG_2G_SKIP = new CCWin.SkinControl.SkinButton();
+            this.skinLabel_CHG_2G_RESULT = new CCWin.SkinControl.SkinLabel();
+            this.skinLabel67 = new CCWin.SkinControl.SkinLabel();
+            this.R6skinTabPage_Whole_FLASH = new CCWin.SkinControl.SkinTabPage();
+            this.splitContainer6 = new System.Windows.Forms.SplitContainer();
+            this.R6skinLabel_Whole_FLASH_TIME = new CCWin.SkinControl.SkinLabel();
+            this.skinLabel12 = new CCWin.SkinControl.SkinLabel();
+            this.skinLabel17 = new CCWin.SkinControl.SkinLabel();
+            this.R6skinButton_Whole_FLASH_RTEST = new CCWin.SkinControl.SkinButton();
+            this.R6skinButton_Whole_FLASH_SKIP = new CCWin.SkinControl.SkinButton();
+            this.R6skinLabel_Whole_FLASH_RESULT = new CCWin.SkinControl.SkinLabel();
+            this.skinLabel22 = new CCWin.SkinControl.SkinLabel();
+            this.R6skinTabPage_Whole_SET_RTC = new CCWin.SkinControl.SkinTabPage();
+            this.splitContainer5 = new System.Windows.Forms.SplitContainer();
+            this.R6skinLabel_Whole_SETRTC_TIME = new CCWin.SkinControl.SkinLabel();
+            this.skinLabel87 = new CCWin.SkinControl.SkinLabel();
+            this.skinLabel94 = new CCWin.SkinControl.SkinLabel();
+            this.R6skinButton_Whole_SETRTC_RTEST = new CCWin.SkinControl.SkinButton();
+            this.R6skinButton_Whole_SETRTC_SKIP = new CCWin.SkinControl.SkinButton();
+            this.R6skinLabel_Whole_SETRTC_RESULT = new CCWin.SkinControl.SkinLabel();
+            this.skinLabel95 = new CCWin.SkinControl.SkinLabel();
+            this.R6skinTabPage_Whole_GET_RTC = new CCWin.SkinControl.SkinTabPage();
+            this.splitContainer4 = new System.Windows.Forms.SplitContainer();
+            this.R6skinLabel_Whole_GETRTC_TIME = new CCWin.SkinControl.SkinLabel();
+            this.skinLabel38 = new CCWin.SkinControl.SkinLabel();
+            this.skinLabel42 = new CCWin.SkinControl.SkinLabel();
+            this.R6skinButton_Whole_GETRTC_RTEST = new CCWin.SkinControl.SkinButton();
+            this.R6skinButton_Whole_GETRTC_SKIP = new CCWin.SkinControl.SkinButton();
+            this.R6skinLabel_Whole_GETRTC_RESULT = new CCWin.SkinControl.SkinLabel();
+            this.skinLabel93 = new CCWin.SkinControl.SkinLabel();
+            this.skinTabPage_CHG_STOP_TEST = new CCWin.SkinControl.SkinTabPage();
+            this.skinSplitContainer23 = new CCWin.SkinControl.SkinSplitContainer();
+            this.skinLabel81 = new CCWin.SkinControl.SkinLabel();
+            this.R6_WHOLE_SET_RTC_RESULT_VAL = new CCWin.SkinControl.SkinLabel();
+            this.R6_WHOLE_GET_RTC_RESULT_VAL = new CCWin.SkinControl.SkinLabel();
+            this.skinLabel104 = new CCWin.SkinControl.SkinLabel();
+            this.skinLabel105 = new CCWin.SkinControl.SkinLabel();
+            this.R6_WHOLE_FLASH_RESULT_VAL = new CCWin.SkinControl.SkinLabel();
+            this.skinLabel107 = new CCWin.SkinControl.SkinLabel();
+            this.skinLabel_CHG_TEST_TIME_RES_VAL = new CCWin.SkinControl.SkinLabel();
+            this.skinLabel92 = new CCWin.SkinControl.SkinLabel();
+            this.skinLabel_CHG_2G_ICCID_RES_VAL = new CCWin.SkinControl.SkinLabel();
+            this.skinLabel65 = new CCWin.SkinControl.SkinLabel();
+            this.skinLabel_CHG_TEST_USEDTIME_RES_VAL = new CCWin.SkinControl.SkinLabel();
+            this.skinLabel_CHG_2G_CSQ_RES_VAL = new CCWin.SkinControl.SkinLabel();
+            this.skinLabel_CHG_MB_QR_RES_VAL = new CCWin.SkinControl.SkinLabel();
+            this.skinLabel63 = new CCWin.SkinControl.SkinLabel();
+            this.skinLabel_CHG_2G_RES_VAL = new CCWin.SkinControl.SkinLabel();
+            this.skinLabel_CHG_24G_RES_VAL = new CCWin.SkinControl.SkinLabel();
+            this.skinLabel_CHG_BT_RES_VAL = new CCWin.SkinControl.SkinLabel();
+            this.skinLabel_CHG_LED_RES_VAL = new CCWin.SkinControl.SkinLabel();
+            this.skinLabeL_CHG_TEST_RES_VAL = new CCWin.SkinControl.SkinLabel();
+            this.skinLabel_CHG_FW_RES_VAL = new CCWin.SkinControl.SkinLabel();
+            this.skinLabel_CHG_TESTOR_RES_VAL = new CCWin.SkinControl.SkinLabel();
+            this.skinLabel_CHG_STATION_ID_RESLUT_VAL = new CCWin.SkinControl.SkinLabel();
+            this.skinLabel113 = new CCWin.SkinControl.SkinLabel();
+            this.skinLabel115 = new CCWin.SkinControl.SkinLabel();
+            this.skinLabel116 = new CCWin.SkinControl.SkinLabel();
+            this.skinLabel117 = new CCWin.SkinControl.SkinLabel();
+            this.skinLabel118 = new CCWin.SkinControl.SkinLabel();
+            this.skinLabel121 = new CCWin.SkinControl.SkinLabel();
+            this.skinLabel122 = new CCWin.SkinControl.SkinLabel();
+            this.skinLabel123 = new CCWin.SkinControl.SkinLabel();
+            this.skinLabel124 = new CCWin.SkinControl.SkinLabel();
+            this.skinLabel125 = new CCWin.SkinControl.SkinLabel();
             this.skinTabPage_OnlineTest = new CCWin.SkinControl.SkinTabPage();
             this.splitContainer13 = new System.Windows.Forms.SplitContainer();
             this.label8 = new System.Windows.Forms.Label();
@@ -365,116 +475,7 @@
             this.skinButtonDevReboot = new System.Windows.Forms.Button();
             this.textBoxChargerID = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.skinTabPage_CHG_STOP_TEST = new CCWin.SkinControl.SkinTabPage();
-            this.skinSplitContainer23 = new CCWin.SkinControl.SkinSplitContainer();
-            this.skinLabel125 = new CCWin.SkinControl.SkinLabel();
-            this.skinLabel124 = new CCWin.SkinControl.SkinLabel();
-            this.skinLabel123 = new CCWin.SkinControl.SkinLabel();
-            this.skinLabel122 = new CCWin.SkinControl.SkinLabel();
-            this.skinLabel121 = new CCWin.SkinControl.SkinLabel();
-            this.skinLabel118 = new CCWin.SkinControl.SkinLabel();
-            this.skinLabel117 = new CCWin.SkinControl.SkinLabel();
-            this.skinLabel116 = new CCWin.SkinControl.SkinLabel();
-            this.skinLabel115 = new CCWin.SkinControl.SkinLabel();
-            this.skinLabel113 = new CCWin.SkinControl.SkinLabel();
-            this.skinLabel_CHG_STATION_ID_RESLUT_VAL = new CCWin.SkinControl.SkinLabel();
-            this.skinLabel_CHG_TESTOR_RES_VAL = new CCWin.SkinControl.SkinLabel();
-            this.skinLabel_CHG_FW_RES_VAL = new CCWin.SkinControl.SkinLabel();
-            this.skinLabeL_CHG_TEST_RES_VAL = new CCWin.SkinControl.SkinLabel();
-            this.skinLabel_CHG_LED_RES_VAL = new CCWin.SkinControl.SkinLabel();
-            this.skinLabel_CHG_BT_RES_VAL = new CCWin.SkinControl.SkinLabel();
-            this.skinLabel_CHG_24G_RES_VAL = new CCWin.SkinControl.SkinLabel();
-            this.skinLabel_CHG_2G_RES_VAL = new CCWin.SkinControl.SkinLabel();
-            this.skinLabel63 = new CCWin.SkinControl.SkinLabel();
-            this.skinLabel_CHG_MB_QR_RES_VAL = new CCWin.SkinControl.SkinLabel();
-            this.skinLabel_CHG_2G_CSQ_RES_VAL = new CCWin.SkinControl.SkinLabel();
-            this.skinLabel_CHG_TEST_USEDTIME_RES_VAL = new CCWin.SkinControl.SkinLabel();
-            this.skinLabel65 = new CCWin.SkinControl.SkinLabel();
-            this.skinLabel_CHG_2G_ICCID_RES_VAL = new CCWin.SkinControl.SkinLabel();
-            this.skinLabel92 = new CCWin.SkinControl.SkinLabel();
-            this.skinLabel_CHG_TEST_TIME_RES_VAL = new CCWin.SkinControl.SkinLabel();
-            this.skinLabel107 = new CCWin.SkinControl.SkinLabel();
-            this.R6_WHOLE_FLASH_RESULT_VAL = new CCWin.SkinControl.SkinLabel();
-            this.skinLabel105 = new CCWin.SkinControl.SkinLabel();
-            this.skinLabel104 = new CCWin.SkinControl.SkinLabel();
-            this.R6_WHOLE_GET_RTC_RESULT_VAL = new CCWin.SkinControl.SkinLabel();
-            this.R6_WHOLE_SET_RTC_RESULT_VAL = new CCWin.SkinControl.SkinLabel();
-            this.skinLabel81 = new CCWin.SkinControl.SkinLabel();
-            this.R6skinTabPage_Whole_GET_RTC = new CCWin.SkinControl.SkinTabPage();
-            this.splitContainer4 = new System.Windows.Forms.SplitContainer();
-            this.skinLabel93 = new CCWin.SkinControl.SkinLabel();
-            this.R6skinLabel_Whole_GETRTC_RESULT = new CCWin.SkinControl.SkinLabel();
-            this.R6skinButton_Whole_GETRTC_SKIP = new CCWin.SkinControl.SkinButton();
-            this.R6skinButton_Whole_GETRTC_RTEST = new CCWin.SkinControl.SkinButton();
-            this.skinLabel42 = new CCWin.SkinControl.SkinLabel();
-            this.skinLabel38 = new CCWin.SkinControl.SkinLabel();
-            this.R6skinLabel_Whole_GETRTC_TIME = new CCWin.SkinControl.SkinLabel();
-            this.R6skinTabPage_Whole_SET_RTC = new CCWin.SkinControl.SkinTabPage();
-            this.splitContainer5 = new System.Windows.Forms.SplitContainer();
-            this.skinLabel95 = new CCWin.SkinControl.SkinLabel();
-            this.R6skinLabel_Whole_SETRTC_RESULT = new CCWin.SkinControl.SkinLabel();
-            this.R6skinButton_Whole_SETRTC_SKIP = new CCWin.SkinControl.SkinButton();
-            this.R6skinButton_Whole_SETRTC_RTEST = new CCWin.SkinControl.SkinButton();
-            this.skinLabel94 = new CCWin.SkinControl.SkinLabel();
-            this.skinLabel87 = new CCWin.SkinControl.SkinLabel();
-            this.R6skinLabel_Whole_SETRTC_TIME = new CCWin.SkinControl.SkinLabel();
-            this.R6skinTabPage_Whole_FLASH = new CCWin.SkinControl.SkinTabPage();
-            this.splitContainer6 = new System.Windows.Forms.SplitContainer();
-            this.skinLabel22 = new CCWin.SkinControl.SkinLabel();
-            this.R6skinLabel_Whole_FLASH_RESULT = new CCWin.SkinControl.SkinLabel();
-            this.R6skinButton_Whole_FLASH_SKIP = new CCWin.SkinControl.SkinButton();
-            this.R6skinButton_Whole_FLASH_RTEST = new CCWin.SkinControl.SkinButton();
-            this.skinLabel17 = new CCWin.SkinControl.SkinLabel();
-            this.skinLabel12 = new CCWin.SkinControl.SkinLabel();
-            this.R6skinLabel_Whole_FLASH_TIME = new CCWin.SkinControl.SkinLabel();
-            this.skinTabPage_CHG_2G = new CCWin.SkinControl.SkinTabPage();
-            this.skinSplitContainer7 = new CCWin.SkinControl.SkinSplitContainer();
-            this.skinLabel67 = new CCWin.SkinControl.SkinLabel();
-            this.skinLabel_CHG_2G_RESULT = new CCWin.SkinControl.SkinLabel();
-            this.skinButton_CHG_2G_SKIP = new CCWin.SkinControl.SkinButton();
-            this.skinButton_CHG_2G_RTEST = new CCWin.SkinControl.SkinButton();
-            this.skinLabel58 = new CCWin.SkinControl.SkinLabel();
-            this.skinLabel51 = new CCWin.SkinControl.SkinLabel();
-            this.skinLabel_CHG_2G_TIME = new CCWin.SkinControl.SkinLabel();
-            this.skinLabel47 = new CCWin.SkinControl.SkinLabel();
-            this.skinTabPage_WholeChg_2POINT4 = new CCWin.SkinControl.SkinTabPage();
-            this.skinSplitContainer13 = new CCWin.SkinControl.SkinSplitContainer();
-            this.skinLabel46 = new CCWin.SkinControl.SkinLabel();
-            this.skinButton_WholeChg_2POINT4_Over = new CCWin.SkinControl.SkinButton();
-            this.skinButton_WholeChg_2POINT4_RTest = new CCWin.SkinControl.SkinButton();
-            this.skinLabel_CHG_24G_RESULT = new CCWin.SkinControl.SkinLabel();
-            this.skinLabel45 = new CCWin.SkinControl.SkinLabel();
-            this.skinLabel44 = new CCWin.SkinControl.SkinLabel();
-            this.skinLabel_WholeChg_2POINT4_Time = new CCWin.SkinControl.SkinLabel();
-            this.skinTabPage_WholeChg_Bt = new CCWin.SkinControl.SkinTabPage();
-            this.skinSplitContainer12 = new CCWin.SkinControl.SkinSplitContainer();
-            this.skinLabel41 = new CCWin.SkinControl.SkinLabel();
-            this.skinButton_WholeChg_BT_Over = new CCWin.SkinControl.SkinButton();
-            this.skinButton_WholeChg_BT_RTest = new CCWin.SkinControl.SkinButton();
-            this.skinLabel_CHG_BT_RESULT = new CCWin.SkinControl.SkinLabel();
-            this.skinLabel40 = new CCWin.SkinControl.SkinLabel();
-            this.skinLabel39 = new CCWin.SkinControl.SkinLabel();
-            this.skinLabel_WholeChg_BT_Time = new CCWin.SkinControl.SkinLabel();
-            this.label6 = new System.Windows.Forms.Label();
-            this.skinTabPage_WholeChg_Led = new CCWin.SkinControl.SkinTabPage();
-            this.skinSplitContainer11 = new CCWin.SkinControl.SkinSplitContainer();
-            this.skinLabel36 = new CCWin.SkinControl.SkinLabel();
-            this.skinButton_WholeChg_Led_Success = new CCWin.SkinControl.SkinButton();
-            this.skinButton_WholeChg_Led_Fail = new CCWin.SkinControl.SkinButton();
-            this.skinButton_WholeChg_Led_Over = new CCWin.SkinControl.SkinButton();
-            this.skinButton_WholeChg_Led_RTest = new CCWin.SkinControl.SkinButton();
-            this.skinLabel_CHG_LED_RESULT = new CCWin.SkinControl.SkinLabel();
-            this.skinLabel35 = new CCWin.SkinControl.SkinLabel();
-            this.skinLabel34 = new CCWin.SkinControl.SkinLabel();
-            this.skinLabel33 = new CCWin.SkinControl.SkinLabel();
-            this.skinLabel_WholeChg_Led_Time = new CCWin.SkinControl.SkinLabel();
-            this.skinTabPage_WholeChg_SN = new CCWin.SkinControl.SkinTabPage();
-            this.skinSplitContainer10 = new CCWin.SkinControl.SkinSplitContainer();
-            this.textBox_WholeChg_SN_QR = new System.Windows.Forms.TextBox();
-            this.skinLabel31 = new CCWin.SkinControl.SkinLabel();
-            this.skinButton_WholeChg_SN_Confirm = new CCWin.SkinControl.SkinButton();
-            this.skinLabel24 = new CCWin.SkinControl.SkinLabel();
-            this.skinTabControl_WholeChg = new CCWin.SkinControl.SkinTabControl();
+            this.skinButton_MB_433_RTEST = new CCWin.SkinControl.SkinButton();
             this.tableLayoutPanel8.SuspendLayout();
             this.skinTabControl_TestMenu.SuspendLayout();
             this.skinTabPage_CurrentUser.SuspendLayout();
@@ -586,6 +587,52 @@
             this.tableLayoutPanel1.SuspendLayout();
             this.skinTabPage_WholeChgTest.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
+            this.skinTabControl_WholeChg.SuspendLayout();
+            this.skinTabPage_WholeChg_SN.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.skinSplitContainer10)).BeginInit();
+            this.skinSplitContainer10.Panel1.SuspendLayout();
+            this.skinSplitContainer10.Panel2.SuspendLayout();
+            this.skinSplitContainer10.SuspendLayout();
+            this.skinTabPage_WholeChg_Led.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.skinSplitContainer11)).BeginInit();
+            this.skinSplitContainer11.Panel1.SuspendLayout();
+            this.skinSplitContainer11.Panel2.SuspendLayout();
+            this.skinSplitContainer11.SuspendLayout();
+            this.skinTabPage_WholeChg_Bt.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.skinSplitContainer12)).BeginInit();
+            this.skinSplitContainer12.Panel1.SuspendLayout();
+            this.skinSplitContainer12.Panel2.SuspendLayout();
+            this.skinSplitContainer12.SuspendLayout();
+            this.skinTabPage_WholeChg_2POINT4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.skinSplitContainer13)).BeginInit();
+            this.skinSplitContainer13.Panel1.SuspendLayout();
+            this.skinSplitContainer13.Panel2.SuspendLayout();
+            this.skinSplitContainer13.SuspendLayout();
+            this.skinTabPage_CHG_2G.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.skinSplitContainer7)).BeginInit();
+            this.skinSplitContainer7.Panel1.SuspendLayout();
+            this.skinSplitContainer7.Panel2.SuspendLayout();
+            this.skinSplitContainer7.SuspendLayout();
+            this.R6skinTabPage_Whole_FLASH.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer6)).BeginInit();
+            this.splitContainer6.Panel1.SuspendLayout();
+            this.splitContainer6.Panel2.SuspendLayout();
+            this.splitContainer6.SuspendLayout();
+            this.R6skinTabPage_Whole_SET_RTC.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer5)).BeginInit();
+            this.splitContainer5.Panel1.SuspendLayout();
+            this.splitContainer5.Panel2.SuspendLayout();
+            this.splitContainer5.SuspendLayout();
+            this.R6skinTabPage_Whole_GET_RTC.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer4)).BeginInit();
+            this.splitContainer4.Panel1.SuspendLayout();
+            this.splitContainer4.Panel2.SuspendLayout();
+            this.splitContainer4.SuspendLayout();
+            this.skinTabPage_CHG_STOP_TEST.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.skinSplitContainer23)).BeginInit();
+            this.skinSplitContainer23.Panel1.SuspendLayout();
+            this.skinSplitContainer23.Panel2.SuspendLayout();
+            this.skinSplitContainer23.SuspendLayout();
             this.skinTabPage_OnlineTest.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer13)).BeginInit();
             this.splitContainer13.Panel1.SuspendLayout();
@@ -609,52 +656,6 @@
             this.groupBox7.SuspendLayout();
             this.groupBox6.SuspendLayout();
             this.groupBox5.SuspendLayout();
-            this.skinTabPage_CHG_STOP_TEST.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.skinSplitContainer23)).BeginInit();
-            this.skinSplitContainer23.Panel1.SuspendLayout();
-            this.skinSplitContainer23.Panel2.SuspendLayout();
-            this.skinSplitContainer23.SuspendLayout();
-            this.R6skinTabPage_Whole_GET_RTC.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer4)).BeginInit();
-            this.splitContainer4.Panel1.SuspendLayout();
-            this.splitContainer4.Panel2.SuspendLayout();
-            this.splitContainer4.SuspendLayout();
-            this.R6skinTabPage_Whole_SET_RTC.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer5)).BeginInit();
-            this.splitContainer5.Panel1.SuspendLayout();
-            this.splitContainer5.Panel2.SuspendLayout();
-            this.splitContainer5.SuspendLayout();
-            this.R6skinTabPage_Whole_FLASH.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer6)).BeginInit();
-            this.splitContainer6.Panel1.SuspendLayout();
-            this.splitContainer6.Panel2.SuspendLayout();
-            this.splitContainer6.SuspendLayout();
-            this.skinTabPage_CHG_2G.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.skinSplitContainer7)).BeginInit();
-            this.skinSplitContainer7.Panel1.SuspendLayout();
-            this.skinSplitContainer7.Panel2.SuspendLayout();
-            this.skinSplitContainer7.SuspendLayout();
-            this.skinTabPage_WholeChg_2POINT4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.skinSplitContainer13)).BeginInit();
-            this.skinSplitContainer13.Panel1.SuspendLayout();
-            this.skinSplitContainer13.Panel2.SuspendLayout();
-            this.skinSplitContainer13.SuspendLayout();
-            this.skinTabPage_WholeChg_Bt.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.skinSplitContainer12)).BeginInit();
-            this.skinSplitContainer12.Panel1.SuspendLayout();
-            this.skinSplitContainer12.Panel2.SuspendLayout();
-            this.skinSplitContainer12.SuspendLayout();
-            this.skinTabPage_WholeChg_Led.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.skinSplitContainer11)).BeginInit();
-            this.skinSplitContainer11.Panel1.SuspendLayout();
-            this.skinSplitContainer11.Panel2.SuspendLayout();
-            this.skinSplitContainer11.SuspendLayout();
-            this.skinTabPage_WholeChg_SN.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.skinSplitContainer10)).BeginInit();
-            this.skinSplitContainer10.Panel1.SuspendLayout();
-            this.skinSplitContainer10.Panel2.SuspendLayout();
-            this.skinSplitContainer10.SuspendLayout();
-            this.skinTabControl_WholeChg.SuspendLayout();
             this.SuspendLayout();
             // 
             // serialPort1
@@ -705,7 +706,7 @@
             this.skinTabControl_TestMenu.PageHover = ((System.Drawing.Image)(resources.GetObject("skinTabControl_TestMenu.PageHover")));
             this.skinTabControl_TestMenu.PageImagePosition = CCWin.SkinControl.SkinTabControl.ePageImagePosition.Left;
             this.skinTabControl_TestMenu.PageNorml = null;
-            this.skinTabControl_TestMenu.SelectedIndex = 5;
+            this.skinTabControl_TestMenu.SelectedIndex = 1;
             this.skinTabControl_TestMenu.Size = new System.Drawing.Size(1322, 813);
             this.skinTabControl_TestMenu.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.skinTabControl_TestMenu.TabIndex = 0;
@@ -1808,6 +1809,7 @@
             // splitContainer3.Panel2
             // 
             this.splitContainer3.Panel2.BackColor = System.Drawing.Color.MintCream;
+            this.splitContainer3.Panel2.Controls.Add(this.skinButton_MB_433_RTEST);
             this.splitContainer3.Panel2.Controls.Add(this.skinButton_MB_433_SUCCESS);
             this.splitContainer3.Panel2.Controls.Add(this.skinButton_MB_433_FALI);
             this.splitContainer3.Panel2.Controls.Add(this.skinButton_MB_433_SKIP);
@@ -1892,7 +1894,7 @@
             this.skinButton_MB_433_FALI.BorderColor = System.Drawing.Color.DarkGray;
             this.skinButton_MB_433_FALI.ControlState = CCWin.SkinClass.ControlState.Normal;
             this.skinButton_MB_433_FALI.DownBack = null;
-            this.skinButton_MB_433_FALI.Location = new System.Drawing.Point(146, 177);
+            this.skinButton_MB_433_FALI.Location = new System.Drawing.Point(296, 108);
             this.skinButton_MB_433_FALI.MouseBack = null;
             this.skinButton_MB_433_FALI.Name = "skinButton_MB_433_FALI";
             this.skinButton_MB_433_FALI.NormlBack = null;
@@ -1911,7 +1913,7 @@
             this.skinButton_MB_433_SKIP.BorderColor = System.Drawing.Color.DarkGray;
             this.skinButton_MB_433_SKIP.ControlState = CCWin.SkinClass.ControlState.Normal;
             this.skinButton_MB_433_SKIP.DownBack = null;
-            this.skinButton_MB_433_SKIP.Location = new System.Drawing.Point(146, 247);
+            this.skinButton_MB_433_SKIP.Location = new System.Drawing.Point(146, 174);
             this.skinButton_MB_433_SKIP.MouseBack = null;
             this.skinButton_MB_433_SKIP.Name = "skinButton_MB_433_SKIP";
             this.skinButton_MB_433_SKIP.NormlBack = null;
@@ -5265,6 +5267,1849 @@
             this.skinButton_WholeChg_ClearLog.UseVisualStyleBackColor = false;
             this.skinButton_WholeChg_ClearLog.Click += new System.EventHandler(this.skinButton_WholeChg_ClearLog_Click);
             // 
+            // skinTabControl_WholeChg
+            // 
+            this.skinTabControl_WholeChg.Alignment = System.Windows.Forms.TabAlignment.Left;
+            this.skinTabControl_WholeChg.AnimationStart = true;
+            this.skinTabControl_WholeChg.AnimatorType = CCWin.SkinControl.AnimationType.VertSlide;
+            this.skinTabControl_WholeChg.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.skinTabControl_WholeChg.CloseRect = new System.Drawing.Rectangle(2, 2, 12, 12);
+            this.skinTabControl_WholeChg.Controls.Add(this.skinTabPage_WholeChg_SN);
+            this.skinTabControl_WholeChg.Controls.Add(this.skinTabPage_WholeChg_Led);
+            this.skinTabControl_WholeChg.Controls.Add(this.skinTabPage_WholeChg_Bt);
+            this.skinTabControl_WholeChg.Controls.Add(this.skinTabPage_WholeChg_2POINT4);
+            this.skinTabControl_WholeChg.Controls.Add(this.skinTabPage_CHG_2G);
+            this.skinTabControl_WholeChg.Controls.Add(this.R6skinTabPage_Whole_FLASH);
+            this.skinTabControl_WholeChg.Controls.Add(this.R6skinTabPage_Whole_SET_RTC);
+            this.skinTabControl_WholeChg.Controls.Add(this.R6skinTabPage_Whole_GET_RTC);
+            this.skinTabControl_WholeChg.Controls.Add(this.skinTabPage_CHG_STOP_TEST);
+            this.skinTabControl_WholeChg.HeadBack = null;
+            this.skinTabControl_WholeChg.ImgTxtOffset = new System.Drawing.Point(0, 0);
+            this.skinTabControl_WholeChg.ItemSize = new System.Drawing.Size(50, 100);
+            this.skinTabControl_WholeChg.Location = new System.Drawing.Point(0, 0);
+            this.skinTabControl_WholeChg.Multiline = true;
+            this.skinTabControl_WholeChg.Name = "skinTabControl_WholeChg";
+            this.skinTabControl_WholeChg.PageArrowDown = ((System.Drawing.Image)(resources.GetObject("skinTabControl_WholeChg.PageArrowDown")));
+            this.skinTabControl_WholeChg.PageArrowHover = ((System.Drawing.Image)(resources.GetObject("skinTabControl_WholeChg.PageArrowHover")));
+            this.skinTabControl_WholeChg.PageCloseHover = ((System.Drawing.Image)(resources.GetObject("skinTabControl_WholeChg.PageCloseHover")));
+            this.skinTabControl_WholeChg.PageCloseNormal = ((System.Drawing.Image)(resources.GetObject("skinTabControl_WholeChg.PageCloseNormal")));
+            this.skinTabControl_WholeChg.PageDown = ((System.Drawing.Image)(resources.GetObject("skinTabControl_WholeChg.PageDown")));
+            this.skinTabControl_WholeChg.PageHover = ((System.Drawing.Image)(resources.GetObject("skinTabControl_WholeChg.PageHover")));
+            this.skinTabControl_WholeChg.PageImagePosition = CCWin.SkinControl.SkinTabControl.ePageImagePosition.Left;
+            this.skinTabControl_WholeChg.PageNorml = null;
+            this.skinTabControl_WholeChg.SelectedIndex = 8;
+            this.skinTabControl_WholeChg.Size = new System.Drawing.Size(879, 683);
+            this.skinTabControl_WholeChg.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
+            this.skinTabControl_WholeChg.TabIndex = 2;
+            this.skinTabControl_WholeChg.SelectedIndexChanged += new System.EventHandler(this.skinTabControl_WholeChg_SelectedIndexChanged);
+            // 
+            // skinTabPage_WholeChg_SN
+            // 
+            this.skinTabPage_WholeChg_SN.BackColor = System.Drawing.Color.White;
+            this.skinTabPage_WholeChg_SN.Controls.Add(this.skinSplitContainer10);
+            this.skinTabPage_WholeChg_SN.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.skinTabPage_WholeChg_SN.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.skinTabPage_WholeChg_SN.Location = new System.Drawing.Point(100, 0);
+            this.skinTabPage_WholeChg_SN.Name = "skinTabPage_WholeChg_SN";
+            this.skinTabPage_WholeChg_SN.Size = new System.Drawing.Size(779, 683);
+            this.skinTabPage_WholeChg_SN.TabIndex = 0;
+            this.skinTabPage_WholeChg_SN.TabItemImage = null;
+            this.skinTabPage_WholeChg_SN.Text = "桩号";
+            // 
+            // skinSplitContainer10
+            // 
+            this.skinSplitContainer10.Cursor = System.Windows.Forms.Cursors.Default;
+            this.skinSplitContainer10.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.skinSplitContainer10.LineBack = System.Drawing.Color.Gray;
+            this.skinSplitContainer10.LineBack2 = System.Drawing.Color.Gray;
+            this.skinSplitContainer10.Location = new System.Drawing.Point(0, 0);
+            this.skinSplitContainer10.Name = "skinSplitContainer10";
+            this.skinSplitContainer10.Orientation = System.Windows.Forms.Orientation.Horizontal;
+            // 
+            // skinSplitContainer10.Panel1
+            // 
+            this.skinSplitContainer10.Panel1.Controls.Add(this.skinLabel24);
+            // 
+            // skinSplitContainer10.Panel2
+            // 
+            this.skinSplitContainer10.Panel2.Controls.Add(this.skinButton_WholeChg_SN_Confirm);
+            this.skinSplitContainer10.Panel2.Controls.Add(this.skinLabel31);
+            this.skinSplitContainer10.Panel2.Controls.Add(this.textBox_WholeChg_SN_QR);
+            this.skinSplitContainer10.Size = new System.Drawing.Size(779, 683);
+            this.skinSplitContainer10.SplitterDistance = 101;
+            this.skinSplitContainer10.TabIndex = 0;
+            // 
+            // skinLabel24
+            // 
+            this.skinLabel24.AutoSize = true;
+            this.skinLabel24.BackColor = System.Drawing.Color.Transparent;
+            this.skinLabel24.BorderColor = System.Drawing.Color.White;
+            this.skinLabel24.Font = new System.Drawing.Font("微软雅黑", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.skinLabel24.Location = new System.Drawing.Point(30, 21);
+            this.skinLabel24.Name = "skinLabel24";
+            this.skinLabel24.Size = new System.Drawing.Size(315, 33);
+            this.skinLabel24.TabIndex = 0;
+            this.skinLabel24.Text = "请用扫码枪扫描电桩二维码";
+            // 
+            // skinButton_WholeChg_SN_Confirm
+            // 
+            this.skinButton_WholeChg_SN_Confirm.BackColor = System.Drawing.Color.Transparent;
+            this.skinButton_WholeChg_SN_Confirm.BaseColor = System.Drawing.Color.DarkGray;
+            this.skinButton_WholeChg_SN_Confirm.BorderColor = System.Drawing.Color.DarkGray;
+            this.skinButton_WholeChg_SN_Confirm.ControlState = CCWin.SkinClass.ControlState.Normal;
+            this.skinButton_WholeChg_SN_Confirm.DownBack = null;
+            this.skinButton_WholeChg_SN_Confirm.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.skinButton_WholeChg_SN_Confirm.ForeColorSuit = true;
+            this.skinButton_WholeChg_SN_Confirm.Location = new System.Drawing.Point(35, 146);
+            this.skinButton_WholeChg_SN_Confirm.MouseBack = null;
+            this.skinButton_WholeChg_SN_Confirm.Name = "skinButton_WholeChg_SN_Confirm";
+            this.skinButton_WholeChg_SN_Confirm.NormlBack = null;
+            this.skinButton_WholeChg_SN_Confirm.Radius = 15;
+            this.skinButton_WholeChg_SN_Confirm.RoundStyle = CCWin.SkinClass.RoundStyle.All;
+            this.skinButton_WholeChg_SN_Confirm.Size = new System.Drawing.Size(157, 45);
+            this.skinButton_WholeChg_SN_Confirm.TabIndex = 2;
+            this.skinButton_WholeChg_SN_Confirm.Text = "确认";
+            this.skinButton_WholeChg_SN_Confirm.UseVisualStyleBackColor = false;
+            this.skinButton_WholeChg_SN_Confirm.Click += new System.EventHandler(this.skinButton_WholeChg_SN_Confirm_Click);
+            // 
+            // skinLabel31
+            // 
+            this.skinLabel31.AutoSize = true;
+            this.skinLabel31.BackColor = System.Drawing.Color.Transparent;
+            this.skinLabel31.BorderColor = System.Drawing.Color.White;
+            this.skinLabel31.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.skinLabel31.Location = new System.Drawing.Point(38, 70);
+            this.skinLabel31.Name = "skinLabel31";
+            this.skinLabel31.Size = new System.Drawing.Size(402, 24);
+            this.skinLabel31.TabIndex = 1;
+            this.skinLabel31.Text = "输入完成按键盘\"回车键\"或以下\"确认键\"开始测试";
+            // 
+            // textBox_WholeChg_SN_QR
+            // 
+            this.textBox_WholeChg_SN_QR.Location = new System.Drawing.Point(35, 17);
+            this.textBox_WholeChg_SN_QR.MaxLength = 100;
+            this.textBox_WholeChg_SN_QR.Name = "textBox_WholeChg_SN_QR";
+            this.textBox_WholeChg_SN_QR.Size = new System.Drawing.Size(397, 30);
+            this.textBox_WholeChg_SN_QR.TabIndex = 0;
+            this.textBox_WholeChg_SN_QR.TextChanged += new System.EventHandler(this.textBox_WholeChg_SN_QR_TextChanged);
+            this.textBox_WholeChg_SN_QR.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_WholeChg_SN_QR_KeyPress);
+            // 
+            // skinTabPage_WholeChg_Led
+            // 
+            this.skinTabPage_WholeChg_Led.BackColor = System.Drawing.Color.White;
+            this.skinTabPage_WholeChg_Led.Controls.Add(this.skinSplitContainer11);
+            this.skinTabPage_WholeChg_Led.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.skinTabPage_WholeChg_Led.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.skinTabPage_WholeChg_Led.Location = new System.Drawing.Point(100, 0);
+            this.skinTabPage_WholeChg_Led.Name = "skinTabPage_WholeChg_Led";
+            this.skinTabPage_WholeChg_Led.Size = new System.Drawing.Size(779, 683);
+            this.skinTabPage_WholeChg_Led.TabIndex = 1;
+            this.skinTabPage_WholeChg_Led.TabItemImage = null;
+            this.skinTabPage_WholeChg_Led.Text = "指示灯";
+            // 
+            // skinSplitContainer11
+            // 
+            this.skinSplitContainer11.Cursor = System.Windows.Forms.Cursors.Default;
+            this.skinSplitContainer11.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.skinSplitContainer11.LineBack = System.Drawing.Color.Gray;
+            this.skinSplitContainer11.LineBack2 = System.Drawing.Color.Gray;
+            this.skinSplitContainer11.Location = new System.Drawing.Point(0, 0);
+            this.skinSplitContainer11.Name = "skinSplitContainer11";
+            this.skinSplitContainer11.Orientation = System.Windows.Forms.Orientation.Horizontal;
+            // 
+            // skinSplitContainer11.Panel1
+            // 
+            this.skinSplitContainer11.Panel1.Controls.Add(this.skinLabel_WholeChg_Led_Time);
+            this.skinSplitContainer11.Panel1.Controls.Add(this.skinLabel33);
+            this.skinSplitContainer11.Panel1.Controls.Add(this.skinLabel34);
+            this.skinSplitContainer11.Panel1.Controls.Add(this.skinLabel35);
+            // 
+            // skinSplitContainer11.Panel2
+            // 
+            this.skinSplitContainer11.Panel2.Controls.Add(this.skinLabel_CHG_LED_RESULT);
+            this.skinSplitContainer11.Panel2.Controls.Add(this.skinButton_WholeChg_Led_RTest);
+            this.skinSplitContainer11.Panel2.Controls.Add(this.skinButton_WholeChg_Led_Over);
+            this.skinSplitContainer11.Panel2.Controls.Add(this.skinButton_WholeChg_Led_Fail);
+            this.skinSplitContainer11.Panel2.Controls.Add(this.skinButton_WholeChg_Led_Success);
+            this.skinSplitContainer11.Panel2.Controls.Add(this.skinLabel36);
+            this.skinSplitContainer11.Size = new System.Drawing.Size(779, 683);
+            this.skinSplitContainer11.SplitterDistance = 142;
+            this.skinSplitContainer11.TabIndex = 0;
+            // 
+            // skinLabel_WholeChg_Led_Time
+            // 
+            this.skinLabel_WholeChg_Led_Time.AutoSize = true;
+            this.skinLabel_WholeChg_Led_Time.BackColor = System.Drawing.Color.Transparent;
+            this.skinLabel_WholeChg_Led_Time.BorderColor = System.Drawing.Color.White;
+            this.skinLabel_WholeChg_Led_Time.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.skinLabel_WholeChg_Led_Time.Location = new System.Drawing.Point(512, 15);
+            this.skinLabel_WholeChg_Led_Time.Name = "skinLabel_WholeChg_Led_Time";
+            this.skinLabel_WholeChg_Led_Time.Size = new System.Drawing.Size(0, 31);
+            this.skinLabel_WholeChg_Led_Time.TabIndex = 3;
+            // 
+            // skinLabel33
+            // 
+            this.skinLabel33.AutoSize = true;
+            this.skinLabel33.BackColor = System.Drawing.Color.Transparent;
+            this.skinLabel33.BorderColor = System.Drawing.Color.White;
+            this.skinLabel33.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.skinLabel33.Location = new System.Drawing.Point(19, 54);
+            this.skinLabel33.Name = "skinLabel33";
+            this.skinLabel33.Size = new System.Drawing.Size(302, 31);
+            this.skinLabel33.TabIndex = 2;
+            this.skinLabel33.Text = "请肉眼观察指示灯是否亮起";
+            // 
+            // skinLabel34
+            // 
+            this.skinLabel34.AutoSize = true;
+            this.skinLabel34.BackColor = System.Drawing.Color.Transparent;
+            this.skinLabel34.BorderColor = System.Drawing.Color.White;
+            this.skinLabel34.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.skinLabel34.Location = new System.Drawing.Point(422, 15);
+            this.skinLabel34.Name = "skinLabel34";
+            this.skinLabel34.Size = new System.Drawing.Size(92, 31);
+            this.skinLabel34.TabIndex = 1;
+            this.skinLabel34.Text = "倒计时:";
+            // 
+            // skinLabel35
+            // 
+            this.skinLabel35.AutoSize = true;
+            this.skinLabel35.BackColor = System.Drawing.Color.Transparent;
+            this.skinLabel35.BorderColor = System.Drawing.Color.White;
+            this.skinLabel35.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.skinLabel35.Location = new System.Drawing.Point(19, 15);
+            this.skinLabel35.Name = "skinLabel35";
+            this.skinLabel35.Size = new System.Drawing.Size(236, 31);
+            this.skinLabel35.TabIndex = 0;
+            this.skinLabel35.Text = "当前项目:指示灯测试";
+            // 
+            // skinLabel_CHG_LED_RESULT
+            // 
+            this.skinLabel_CHG_LED_RESULT.AutoSize = true;
+            this.skinLabel_CHG_LED_RESULT.BackColor = System.Drawing.Color.Transparent;
+            this.skinLabel_CHG_LED_RESULT.BorderColor = System.Drawing.Color.White;
+            this.skinLabel_CHG_LED_RESULT.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.skinLabel_CHG_LED_RESULT.Location = new System.Drawing.Point(144, 21);
+            this.skinLabel_CHG_LED_RESULT.Name = "skinLabel_CHG_LED_RESULT";
+            this.skinLabel_CHG_LED_RESULT.Size = new System.Drawing.Size(0, 31);
+            this.skinLabel_CHG_LED_RESULT.TabIndex = 5;
+            // 
+            // skinButton_WholeChg_Led_RTest
+            // 
+            this.skinButton_WholeChg_Led_RTest.BackColor = System.Drawing.Color.Transparent;
+            this.skinButton_WholeChg_Led_RTest.BaseColor = System.Drawing.Color.Silver;
+            this.skinButton_WholeChg_Led_RTest.BorderColor = System.Drawing.Color.Silver;
+            this.skinButton_WholeChg_Led_RTest.ControlState = CCWin.SkinClass.ControlState.Normal;
+            this.skinButton_WholeChg_Led_RTest.DownBack = null;
+            this.skinButton_WholeChg_Led_RTest.Location = new System.Drawing.Point(295, 143);
+            this.skinButton_WholeChg_Led_RTest.MouseBack = null;
+            this.skinButton_WholeChg_Led_RTest.Name = "skinButton_WholeChg_Led_RTest";
+            this.skinButton_WholeChg_Led_RTest.NormlBack = null;
+            this.skinButton_WholeChg_Led_RTest.Radius = 15;
+            this.skinButton_WholeChg_Led_RTest.RoundStyle = CCWin.SkinClass.RoundStyle.All;
+            this.skinButton_WholeChg_Led_RTest.Size = new System.Drawing.Size(110, 40);
+            this.skinButton_WholeChg_Led_RTest.TabIndex = 4;
+            this.skinButton_WholeChg_Led_RTest.Text = "重新测试";
+            this.skinButton_WholeChg_Led_RTest.UseVisualStyleBackColor = false;
+            this.skinButton_WholeChg_Led_RTest.Click += new System.EventHandler(this.skinButton_WholeChg_Led_RTest_Click);
+            // 
+            // skinButton_WholeChg_Led_Over
+            // 
+            this.skinButton_WholeChg_Led_Over.BackColor = System.Drawing.Color.Transparent;
+            this.skinButton_WholeChg_Led_Over.BaseColor = System.Drawing.Color.Silver;
+            this.skinButton_WholeChg_Led_Over.BorderColor = System.Drawing.Color.Silver;
+            this.skinButton_WholeChg_Led_Over.ControlState = CCWin.SkinClass.ControlState.Normal;
+            this.skinButton_WholeChg_Led_Over.DownBack = null;
+            this.skinButton_WholeChg_Led_Over.Location = new System.Drawing.Point(132, 143);
+            this.skinButton_WholeChg_Led_Over.MouseBack = null;
+            this.skinButton_WholeChg_Led_Over.Name = "skinButton_WholeChg_Led_Over";
+            this.skinButton_WholeChg_Led_Over.NormlBack = null;
+            this.skinButton_WholeChg_Led_Over.Radius = 15;
+            this.skinButton_WholeChg_Led_Over.RoundStyle = CCWin.SkinClass.RoundStyle.All;
+            this.skinButton_WholeChg_Led_Over.Size = new System.Drawing.Size(110, 40);
+            this.skinButton_WholeChg_Led_Over.TabIndex = 3;
+            this.skinButton_WholeChg_Led_Over.Text = "跳过";
+            this.skinButton_WholeChg_Led_Over.UseVisualStyleBackColor = false;
+            this.skinButton_WholeChg_Led_Over.Click += new System.EventHandler(this.skinButton_WholeChg_Led_Over_Click);
+            // 
+            // skinButton_WholeChg_Led_Fail
+            // 
+            this.skinButton_WholeChg_Led_Fail.BackColor = System.Drawing.Color.Transparent;
+            this.skinButton_WholeChg_Led_Fail.BaseColor = System.Drawing.Color.Silver;
+            this.skinButton_WholeChg_Led_Fail.BorderColor = System.Drawing.Color.Silver;
+            this.skinButton_WholeChg_Led_Fail.ControlState = CCWin.SkinClass.ControlState.Normal;
+            this.skinButton_WholeChg_Led_Fail.DownBack = null;
+            this.skinButton_WholeChg_Led_Fail.Location = new System.Drawing.Point(295, 75);
+            this.skinButton_WholeChg_Led_Fail.MouseBack = null;
+            this.skinButton_WholeChg_Led_Fail.Name = "skinButton_WholeChg_Led_Fail";
+            this.skinButton_WholeChg_Led_Fail.NormlBack = null;
+            this.skinButton_WholeChg_Led_Fail.Radius = 15;
+            this.skinButton_WholeChg_Led_Fail.RoundStyle = CCWin.SkinClass.RoundStyle.All;
+            this.skinButton_WholeChg_Led_Fail.Size = new System.Drawing.Size(110, 40);
+            this.skinButton_WholeChg_Led_Fail.TabIndex = 2;
+            this.skinButton_WholeChg_Led_Fail.Text = "失败";
+            this.skinButton_WholeChg_Led_Fail.UseVisualStyleBackColor = false;
+            this.skinButton_WholeChg_Led_Fail.Click += new System.EventHandler(this.skinButton_WholeChg_Led_Fail_Click);
+            // 
+            // skinButton_WholeChg_Led_Success
+            // 
+            this.skinButton_WholeChg_Led_Success.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.skinButton_WholeChg_Led_Success.BackColor = System.Drawing.Color.Transparent;
+            this.skinButton_WholeChg_Led_Success.BaseColor = System.Drawing.Color.Silver;
+            this.skinButton_WholeChg_Led_Success.BorderColor = System.Drawing.Color.Silver;
+            this.skinButton_WholeChg_Led_Success.ControlState = CCWin.SkinClass.ControlState.Normal;
+            this.skinButton_WholeChg_Led_Success.DownBack = null;
+            this.skinButton_WholeChg_Led_Success.Location = new System.Drawing.Point(132, 75);
+            this.skinButton_WholeChg_Led_Success.MouseBack = null;
+            this.skinButton_WholeChg_Led_Success.Name = "skinButton_WholeChg_Led_Success";
+            this.skinButton_WholeChg_Led_Success.NormlBack = null;
+            this.skinButton_WholeChg_Led_Success.Radius = 15;
+            this.skinButton_WholeChg_Led_Success.RoundStyle = CCWin.SkinClass.RoundStyle.All;
+            this.skinButton_WholeChg_Led_Success.Size = new System.Drawing.Size(110, 40);
+            this.skinButton_WholeChg_Led_Success.TabIndex = 1;
+            this.skinButton_WholeChg_Led_Success.Text = "成功";
+            this.skinButton_WholeChg_Led_Success.UseVisualStyleBackColor = false;
+            this.skinButton_WholeChg_Led_Success.Click += new System.EventHandler(this.skinButton_WholeChg_Led_Success_Click);
+            // 
+            // skinLabel36
+            // 
+            this.skinLabel36.AutoSize = true;
+            this.skinLabel36.BackColor = System.Drawing.Color.Transparent;
+            this.skinLabel36.BorderColor = System.Drawing.Color.White;
+            this.skinLabel36.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.skinLabel36.Location = new System.Drawing.Point(21, 21);
+            this.skinLabel36.Name = "skinLabel36";
+            this.skinLabel36.Size = new System.Drawing.Size(116, 31);
+            this.skinLabel36.TabIndex = 0;
+            this.skinLabel36.Text = "测试结果:";
+            // 
+            // skinTabPage_WholeChg_Bt
+            // 
+            this.skinTabPage_WholeChg_Bt.BackColor = System.Drawing.Color.White;
+            this.skinTabPage_WholeChg_Bt.Controls.Add(this.skinSplitContainer12);
+            this.skinTabPage_WholeChg_Bt.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.skinTabPage_WholeChg_Bt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.skinTabPage_WholeChg_Bt.Location = new System.Drawing.Point(100, 0);
+            this.skinTabPage_WholeChg_Bt.Name = "skinTabPage_WholeChg_Bt";
+            this.skinTabPage_WholeChg_Bt.Size = new System.Drawing.Size(779, 683);
+            this.skinTabPage_WholeChg_Bt.TabIndex = 2;
+            this.skinTabPage_WholeChg_Bt.TabItemImage = null;
+            this.skinTabPage_WholeChg_Bt.Text = "蓝牙通信";
+            // 
+            // skinSplitContainer12
+            // 
+            this.skinSplitContainer12.Cursor = System.Windows.Forms.Cursors.Default;
+            this.skinSplitContainer12.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.skinSplitContainer12.LineBack = System.Drawing.Color.Silver;
+            this.skinSplitContainer12.LineBack2 = System.Drawing.Color.Silver;
+            this.skinSplitContainer12.Location = new System.Drawing.Point(0, 0);
+            this.skinSplitContainer12.Name = "skinSplitContainer12";
+            this.skinSplitContainer12.Orientation = System.Windows.Forms.Orientation.Horizontal;
+            // 
+            // skinSplitContainer12.Panel1
+            // 
+            this.skinSplitContainer12.Panel1.Controls.Add(this.label6);
+            this.skinSplitContainer12.Panel1.Controls.Add(this.skinLabel_WholeChg_BT_Time);
+            this.skinSplitContainer12.Panel1.Controls.Add(this.skinLabel39);
+            this.skinSplitContainer12.Panel1.Controls.Add(this.skinLabel40);
+            // 
+            // skinSplitContainer12.Panel2
+            // 
+            this.skinSplitContainer12.Panel2.Controls.Add(this.skinLabel_CHG_BT_RESULT);
+            this.skinSplitContainer12.Panel2.Controls.Add(this.skinButton_WholeChg_BT_RTest);
+            this.skinSplitContainer12.Panel2.Controls.Add(this.skinButton_WholeChg_BT_Over);
+            this.skinSplitContainer12.Panel2.Controls.Add(this.skinLabel41);
+            this.skinSplitContainer12.Size = new System.Drawing.Size(779, 683);
+            this.skinSplitContainer12.SplitterDistance = 109;
+            this.skinSplitContainer12.TabIndex = 0;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label6.Location = new System.Drawing.Point(28, 53);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(653, 31);
+            this.label6.TabIndex = 4;
+            this.label6.Text = "蓝牙模块正在初始化...,测试时需要等待20s左右点击重新测试";
+            this.label6.Click += new System.EventHandler(this.label6_Click);
+            // 
+            // skinLabel_WholeChg_BT_Time
+            // 
+            this.skinLabel_WholeChg_BT_Time.AutoSize = true;
+            this.skinLabel_WholeChg_BT_Time.BackColor = System.Drawing.Color.Transparent;
+            this.skinLabel_WholeChg_BT_Time.BorderColor = System.Drawing.Color.White;
+            this.skinLabel_WholeChg_BT_Time.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.skinLabel_WholeChg_BT_Time.Location = new System.Drawing.Point(518, 14);
+            this.skinLabel_WholeChg_BT_Time.Name = "skinLabel_WholeChg_BT_Time";
+            this.skinLabel_WholeChg_BT_Time.Size = new System.Drawing.Size(0, 31);
+            this.skinLabel_WholeChg_BT_Time.TabIndex = 3;
+            // 
+            // skinLabel39
+            // 
+            this.skinLabel39.AutoSize = true;
+            this.skinLabel39.BackColor = System.Drawing.Color.Transparent;
+            this.skinLabel39.BorderColor = System.Drawing.Color.White;
+            this.skinLabel39.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.skinLabel39.Location = new System.Drawing.Point(438, 14);
+            this.skinLabel39.Name = "skinLabel39";
+            this.skinLabel39.Size = new System.Drawing.Size(92, 31);
+            this.skinLabel39.TabIndex = 1;
+            this.skinLabel39.Text = "倒计时:";
+            // 
+            // skinLabel40
+            // 
+            this.skinLabel40.AutoSize = true;
+            this.skinLabel40.BackColor = System.Drawing.Color.Transparent;
+            this.skinLabel40.BorderColor = System.Drawing.Color.White;
+            this.skinLabel40.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.skinLabel40.Location = new System.Drawing.Point(28, 14);
+            this.skinLabel40.Name = "skinLabel40";
+            this.skinLabel40.Size = new System.Drawing.Size(260, 31);
+            this.skinLabel40.TabIndex = 0;
+            this.skinLabel40.Text = "当前项目:蓝牙通信测试";
+            // 
+            // skinLabel_CHG_BT_RESULT
+            // 
+            this.skinLabel_CHG_BT_RESULT.AutoSize = true;
+            this.skinLabel_CHG_BT_RESULT.BackColor = System.Drawing.Color.Transparent;
+            this.skinLabel_CHG_BT_RESULT.BorderColor = System.Drawing.Color.White;
+            this.skinLabel_CHG_BT_RESULT.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.skinLabel_CHG_BT_RESULT.Location = new System.Drawing.Point(158, 23);
+            this.skinLabel_CHG_BT_RESULT.Name = "skinLabel_CHG_BT_RESULT";
+            this.skinLabel_CHG_BT_RESULT.Size = new System.Drawing.Size(0, 31);
+            this.skinLabel_CHG_BT_RESULT.TabIndex = 13;
+            // 
+            // skinButton_WholeChg_BT_RTest
+            // 
+            this.skinButton_WholeChg_BT_RTest.BackColor = System.Drawing.Color.Transparent;
+            this.skinButton_WholeChg_BT_RTest.BaseColor = System.Drawing.Color.DarkGray;
+            this.skinButton_WholeChg_BT_RTest.BorderColor = System.Drawing.Color.DarkGray;
+            this.skinButton_WholeChg_BT_RTest.ControlState = CCWin.SkinClass.ControlState.Normal;
+            this.skinButton_WholeChg_BT_RTest.DownBack = null;
+            this.skinButton_WholeChg_BT_RTest.Location = new System.Drawing.Point(322, 112);
+            this.skinButton_WholeChg_BT_RTest.MouseBack = null;
+            this.skinButton_WholeChg_BT_RTest.Name = "skinButton_WholeChg_BT_RTest";
+            this.skinButton_WholeChg_BT_RTest.NormlBack = null;
+            this.skinButton_WholeChg_BT_RTest.Radius = 15;
+            this.skinButton_WholeChg_BT_RTest.RoundStyle = CCWin.SkinClass.RoundStyle.All;
+            this.skinButton_WholeChg_BT_RTest.Size = new System.Drawing.Size(110, 40);
+            this.skinButton_WholeChg_BT_RTest.TabIndex = 12;
+            this.skinButton_WholeChg_BT_RTest.Text = "重新测试";
+            this.skinButton_WholeChg_BT_RTest.UseVisualStyleBackColor = false;
+            this.skinButton_WholeChg_BT_RTest.Click += new System.EventHandler(this.skinButton_WholeChg_BT_RTest_Click);
+            // 
+            // skinButton_WholeChg_BT_Over
+            // 
+            this.skinButton_WholeChg_BT_Over.BackColor = System.Drawing.Color.Transparent;
+            this.skinButton_WholeChg_BT_Over.BaseColor = System.Drawing.Color.DarkGray;
+            this.skinButton_WholeChg_BT_Over.BorderColor = System.Drawing.Color.DarkGray;
+            this.skinButton_WholeChg_BT_Over.ControlState = CCWin.SkinClass.ControlState.Normal;
+            this.skinButton_WholeChg_BT_Over.DownBack = null;
+            this.skinButton_WholeChg_BT_Over.Location = new System.Drawing.Point(143, 112);
+            this.skinButton_WholeChg_BT_Over.MouseBack = null;
+            this.skinButton_WholeChg_BT_Over.Name = "skinButton_WholeChg_BT_Over";
+            this.skinButton_WholeChg_BT_Over.NormlBack = null;
+            this.skinButton_WholeChg_BT_Over.Radius = 15;
+            this.skinButton_WholeChg_BT_Over.RoundStyle = CCWin.SkinClass.RoundStyle.All;
+            this.skinButton_WholeChg_BT_Over.Size = new System.Drawing.Size(110, 40);
+            this.skinButton_WholeChg_BT_Over.TabIndex = 11;
+            this.skinButton_WholeChg_BT_Over.Text = "跳过";
+            this.skinButton_WholeChg_BT_Over.UseVisualStyleBackColor = false;
+            this.skinButton_WholeChg_BT_Over.Click += new System.EventHandler(this.skinButton_WholeChg_BT_Over_Click);
+            // 
+            // skinLabel41
+            // 
+            this.skinLabel41.AutoSize = true;
+            this.skinLabel41.BackColor = System.Drawing.Color.Transparent;
+            this.skinLabel41.BorderColor = System.Drawing.Color.White;
+            this.skinLabel41.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.skinLabel41.Location = new System.Drawing.Point(28, 23);
+            this.skinLabel41.Name = "skinLabel41";
+            this.skinLabel41.Size = new System.Drawing.Size(116, 31);
+            this.skinLabel41.TabIndex = 8;
+            this.skinLabel41.Text = "测试结果:";
+            // 
+            // skinTabPage_WholeChg_2POINT4
+            // 
+            this.skinTabPage_WholeChg_2POINT4.BackColor = System.Drawing.Color.White;
+            this.skinTabPage_WholeChg_2POINT4.Controls.Add(this.skinSplitContainer13);
+            this.skinTabPage_WholeChg_2POINT4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.skinTabPage_WholeChg_2POINT4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.skinTabPage_WholeChg_2POINT4.Location = new System.Drawing.Point(100, 0);
+            this.skinTabPage_WholeChg_2POINT4.Name = "skinTabPage_WholeChg_2POINT4";
+            this.skinTabPage_WholeChg_2POINT4.Size = new System.Drawing.Size(779, 683);
+            this.skinTabPage_WholeChg_2POINT4.TabIndex = 3;
+            this.skinTabPage_WholeChg_2POINT4.TabItemImage = null;
+            this.skinTabPage_WholeChg_2POINT4.Text = "2.4G通信";
+            // 
+            // skinSplitContainer13
+            // 
+            this.skinSplitContainer13.Cursor = System.Windows.Forms.Cursors.Default;
+            this.skinSplitContainer13.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.skinSplitContainer13.LineBack = System.Drawing.Color.Gray;
+            this.skinSplitContainer13.LineBack2 = System.Drawing.Color.Gray;
+            this.skinSplitContainer13.Location = new System.Drawing.Point(0, 0);
+            this.skinSplitContainer13.Name = "skinSplitContainer13";
+            this.skinSplitContainer13.Orientation = System.Windows.Forms.Orientation.Horizontal;
+            // 
+            // skinSplitContainer13.Panel1
+            // 
+            this.skinSplitContainer13.Panel1.Controls.Add(this.skinLabel_WholeChg_2POINT4_Time);
+            this.skinSplitContainer13.Panel1.Controls.Add(this.skinLabel44);
+            this.skinSplitContainer13.Panel1.Controls.Add(this.skinLabel45);
+            // 
+            // skinSplitContainer13.Panel2
+            // 
+            this.skinSplitContainer13.Panel2.Controls.Add(this.skinLabel_CHG_24G_RESULT);
+            this.skinSplitContainer13.Panel2.Controls.Add(this.skinButton_WholeChg_2POINT4_RTest);
+            this.skinSplitContainer13.Panel2.Controls.Add(this.skinButton_WholeChg_2POINT4_Over);
+            this.skinSplitContainer13.Panel2.Controls.Add(this.skinLabel46);
+            this.skinSplitContainer13.Size = new System.Drawing.Size(779, 683);
+            this.skinSplitContainer13.SplitterDistance = 83;
+            this.skinSplitContainer13.TabIndex = 0;
+            // 
+            // skinLabel_WholeChg_2POINT4_Time
+            // 
+            this.skinLabel_WholeChg_2POINT4_Time.AutoSize = true;
+            this.skinLabel_WholeChg_2POINT4_Time.BackColor = System.Drawing.Color.Transparent;
+            this.skinLabel_WholeChg_2POINT4_Time.BorderColor = System.Drawing.Color.White;
+            this.skinLabel_WholeChg_2POINT4_Time.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.skinLabel_WholeChg_2POINT4_Time.Location = new System.Drawing.Point(491, 23);
+            this.skinLabel_WholeChg_2POINT4_Time.Name = "skinLabel_WholeChg_2POINT4_Time";
+            this.skinLabel_WholeChg_2POINT4_Time.Size = new System.Drawing.Size(0, 31);
+            this.skinLabel_WholeChg_2POINT4_Time.TabIndex = 2;
+            // 
+            // skinLabel44
+            // 
+            this.skinLabel44.AutoSize = true;
+            this.skinLabel44.BackColor = System.Drawing.Color.Transparent;
+            this.skinLabel44.BorderColor = System.Drawing.Color.White;
+            this.skinLabel44.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.skinLabel44.Location = new System.Drawing.Point(399, 23);
+            this.skinLabel44.Name = "skinLabel44";
+            this.skinLabel44.Size = new System.Drawing.Size(92, 31);
+            this.skinLabel44.TabIndex = 1;
+            this.skinLabel44.Text = "倒计时:";
+            // 
+            // skinLabel45
+            // 
+            this.skinLabel45.AutoSize = true;
+            this.skinLabel45.BackColor = System.Drawing.Color.Transparent;
+            this.skinLabel45.BorderColor = System.Drawing.Color.White;
+            this.skinLabel45.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.skinLabel45.Location = new System.Drawing.Point(45, 23);
+            this.skinLabel45.Name = "skinLabel45";
+            this.skinLabel45.Size = new System.Drawing.Size(264, 31);
+            this.skinLabel45.TabIndex = 0;
+            this.skinLabel45.Text = "当前项目:2.4G通信测试";
+            // 
+            // skinLabel_CHG_24G_RESULT
+            // 
+            this.skinLabel_CHG_24G_RESULT.AutoSize = true;
+            this.skinLabel_CHG_24G_RESULT.BackColor = System.Drawing.Color.Transparent;
+            this.skinLabel_CHG_24G_RESULT.BorderColor = System.Drawing.Color.White;
+            this.skinLabel_CHG_24G_RESULT.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.skinLabel_CHG_24G_RESULT.Location = new System.Drawing.Point(168, 22);
+            this.skinLabel_CHG_24G_RESULT.Name = "skinLabel_CHG_24G_RESULT";
+            this.skinLabel_CHG_24G_RESULT.Size = new System.Drawing.Size(0, 31);
+            this.skinLabel_CHG_24G_RESULT.TabIndex = 17;
+            // 
+            // skinButton_WholeChg_2POINT4_RTest
+            // 
+            this.skinButton_WholeChg_2POINT4_RTest.BackColor = System.Drawing.Color.Transparent;
+            this.skinButton_WholeChg_2POINT4_RTest.BaseColor = System.Drawing.Color.DarkGray;
+            this.skinButton_WholeChg_2POINT4_RTest.BorderColor = System.Drawing.Color.DarkGray;
+            this.skinButton_WholeChg_2POINT4_RTest.ControlState = CCWin.SkinClass.ControlState.Normal;
+            this.skinButton_WholeChg_2POINT4_RTest.DownBack = null;
+            this.skinButton_WholeChg_2POINT4_RTest.Location = new System.Drawing.Point(324, 93);
+            this.skinButton_WholeChg_2POINT4_RTest.MouseBack = null;
+            this.skinButton_WholeChg_2POINT4_RTest.Name = "skinButton_WholeChg_2POINT4_RTest";
+            this.skinButton_WholeChg_2POINT4_RTest.NormlBack = null;
+            this.skinButton_WholeChg_2POINT4_RTest.Radius = 15;
+            this.skinButton_WholeChg_2POINT4_RTest.RoundStyle = CCWin.SkinClass.RoundStyle.All;
+            this.skinButton_WholeChg_2POINT4_RTest.Size = new System.Drawing.Size(110, 40);
+            this.skinButton_WholeChg_2POINT4_RTest.TabIndex = 16;
+            this.skinButton_WholeChg_2POINT4_RTest.Text = "重新测试";
+            this.skinButton_WholeChg_2POINT4_RTest.UseVisualStyleBackColor = false;
+            this.skinButton_WholeChg_2POINT4_RTest.Click += new System.EventHandler(this.skinButton_WholeChg_2POINT4_RTest_Click);
+            // 
+            // skinButton_WholeChg_2POINT4_Over
+            // 
+            this.skinButton_WholeChg_2POINT4_Over.BackColor = System.Drawing.Color.Transparent;
+            this.skinButton_WholeChg_2POINT4_Over.BaseColor = System.Drawing.Color.DarkGray;
+            this.skinButton_WholeChg_2POINT4_Over.BorderColor = System.Drawing.Color.DarkGray;
+            this.skinButton_WholeChg_2POINT4_Over.ControlState = CCWin.SkinClass.ControlState.Normal;
+            this.skinButton_WholeChg_2POINT4_Over.DownBack = null;
+            this.skinButton_WholeChg_2POINT4_Over.Location = new System.Drawing.Point(140, 93);
+            this.skinButton_WholeChg_2POINT4_Over.MouseBack = null;
+            this.skinButton_WholeChg_2POINT4_Over.Name = "skinButton_WholeChg_2POINT4_Over";
+            this.skinButton_WholeChg_2POINT4_Over.NormlBack = null;
+            this.skinButton_WholeChg_2POINT4_Over.Radius = 15;
+            this.skinButton_WholeChg_2POINT4_Over.RoundStyle = CCWin.SkinClass.RoundStyle.All;
+            this.skinButton_WholeChg_2POINT4_Over.Size = new System.Drawing.Size(110, 40);
+            this.skinButton_WholeChg_2POINT4_Over.TabIndex = 15;
+            this.skinButton_WholeChg_2POINT4_Over.Text = "跳过";
+            this.skinButton_WholeChg_2POINT4_Over.UseVisualStyleBackColor = false;
+            this.skinButton_WholeChg_2POINT4_Over.Click += new System.EventHandler(this.skinButton_WholeChg_2POINT4_Over_Click);
+            // 
+            // skinLabel46
+            // 
+            this.skinLabel46.AutoSize = true;
+            this.skinLabel46.BackColor = System.Drawing.Color.Transparent;
+            this.skinLabel46.BorderColor = System.Drawing.Color.White;
+            this.skinLabel46.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.skinLabel46.Location = new System.Drawing.Point(45, 22);
+            this.skinLabel46.Name = "skinLabel46";
+            this.skinLabel46.Size = new System.Drawing.Size(116, 31);
+            this.skinLabel46.TabIndex = 3;
+            this.skinLabel46.Text = "测试结果:";
+            // 
+            // skinTabPage_CHG_2G
+            // 
+            this.skinTabPage_CHG_2G.BackColor = System.Drawing.Color.White;
+            this.skinTabPage_CHG_2G.Controls.Add(this.skinSplitContainer7);
+            this.skinTabPage_CHG_2G.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.skinTabPage_CHG_2G.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.skinTabPage_CHG_2G.Location = new System.Drawing.Point(100, 0);
+            this.skinTabPage_CHG_2G.Name = "skinTabPage_CHG_2G";
+            this.skinTabPage_CHG_2G.Size = new System.Drawing.Size(779, 683);
+            this.skinTabPage_CHG_2G.TabIndex = 10;
+            this.skinTabPage_CHG_2G.TabItemImage = null;
+            this.skinTabPage_CHG_2G.Text = "2G/4G通信";
+            // 
+            // skinSplitContainer7
+            // 
+            this.skinSplitContainer7.Cursor = System.Windows.Forms.Cursors.Default;
+            this.skinSplitContainer7.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.skinSplitContainer7.LineBack = System.Drawing.Color.Gray;
+            this.skinSplitContainer7.LineBack2 = System.Drawing.Color.Gray;
+            this.skinSplitContainer7.Location = new System.Drawing.Point(0, 0);
+            this.skinSplitContainer7.Name = "skinSplitContainer7";
+            this.skinSplitContainer7.Orientation = System.Windows.Forms.Orientation.Horizontal;
+            // 
+            // skinSplitContainer7.Panel1
+            // 
+            this.skinSplitContainer7.Panel1.Controls.Add(this.skinLabel47);
+            this.skinSplitContainer7.Panel1.Controls.Add(this.skinLabel_CHG_2G_TIME);
+            this.skinSplitContainer7.Panel1.Controls.Add(this.skinLabel51);
+            this.skinSplitContainer7.Panel1.Controls.Add(this.skinLabel58);
+            // 
+            // skinSplitContainer7.Panel2
+            // 
+            this.skinSplitContainer7.Panel2.Controls.Add(this.skinButton_CHG_2G_RTEST);
+            this.skinSplitContainer7.Panel2.Controls.Add(this.skinButton_CHG_2G_SKIP);
+            this.skinSplitContainer7.Panel2.Controls.Add(this.skinLabel_CHG_2G_RESULT);
+            this.skinSplitContainer7.Panel2.Controls.Add(this.skinLabel67);
+            this.skinSplitContainer7.Panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.skinSplitContainer7_Panel2_Paint);
+            this.skinSplitContainer7.Size = new System.Drawing.Size(779, 683);
+            this.skinSplitContainer7.SplitterDistance = 124;
+            this.skinSplitContainer7.TabIndex = 3;
+            // 
+            // skinLabel47
+            // 
+            this.skinLabel47.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.skinLabel47.AutoEllipsis = true;
+            this.skinLabel47.AutoSize = true;
+            this.skinLabel47.BackColor = System.Drawing.Color.Transparent;
+            this.skinLabel47.BorderColor = System.Drawing.Color.White;
+            this.skinLabel47.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.skinLabel47.Location = new System.Drawing.Point(37, 53);
+            this.skinLabel47.Name = "skinLabel47";
+            this.skinLabel47.Size = new System.Drawing.Size(364, 31);
+            this.skinLabel47.TabIndex = 14;
+            this.skinLabel47.Text = "请注意确认网络信号值是否达标  ";
+            // 
+            // skinLabel_CHG_2G_TIME
+            // 
+            this.skinLabel_CHG_2G_TIME.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.skinLabel_CHG_2G_TIME.AutoEllipsis = true;
+            this.skinLabel_CHG_2G_TIME.AutoSize = true;
+            this.skinLabel_CHG_2G_TIME.BackColor = System.Drawing.Color.Transparent;
+            this.skinLabel_CHG_2G_TIME.BorderColor = System.Drawing.Color.White;
+            this.skinLabel_CHG_2G_TIME.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.skinLabel_CHG_2G_TIME.Location = new System.Drawing.Point(516, 13);
+            this.skinLabel_CHG_2G_TIME.Name = "skinLabel_CHG_2G_TIME";
+            this.skinLabel_CHG_2G_TIME.Size = new System.Drawing.Size(21, 31);
+            this.skinLabel_CHG_2G_TIME.TabIndex = 13;
+            this.skinLabel_CHG_2G_TIME.Text = " ";
+            // 
+            // skinLabel51
+            // 
+            this.skinLabel51.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.skinLabel51.AutoEllipsis = true;
+            this.skinLabel51.AutoSize = true;
+            this.skinLabel51.BackColor = System.Drawing.Color.Transparent;
+            this.skinLabel51.BorderColor = System.Drawing.Color.White;
+            this.skinLabel51.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.skinLabel51.Location = new System.Drawing.Point(406, 13);
+            this.skinLabel51.Name = "skinLabel51";
+            this.skinLabel51.Size = new System.Drawing.Size(92, 31);
+            this.skinLabel51.TabIndex = 12;
+            this.skinLabel51.Text = "倒计时:";
+            // 
+            // skinLabel58
+            // 
+            this.skinLabel58.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.skinLabel58.AutoEllipsis = true;
+            this.skinLabel58.AutoSize = true;
+            this.skinLabel58.BackColor = System.Drawing.Color.Transparent;
+            this.skinLabel58.BorderColor = System.Drawing.Color.White;
+            this.skinLabel58.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.skinLabel58.Location = new System.Drawing.Point(37, 13);
+            this.skinLabel58.Name = "skinLabel58";
+            this.skinLabel58.Size = new System.Drawing.Size(286, 31);
+            this.skinLabel58.TabIndex = 9;
+            this.skinLabel58.Text = "当前项目:2G/4G模块测试";
+            // 
+            // skinButton_CHG_2G_RTEST
+            // 
+            this.skinButton_CHG_2G_RTEST.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.skinButton_CHG_2G_RTEST.BackColor = System.Drawing.Color.Transparent;
+            this.skinButton_CHG_2G_RTEST.BaseColor = System.Drawing.Color.Silver;
+            this.skinButton_CHG_2G_RTEST.BorderColor = System.Drawing.Color.Silver;
+            this.skinButton_CHG_2G_RTEST.ControlState = CCWin.SkinClass.ControlState.Normal;
+            this.skinButton_CHG_2G_RTEST.DownBack = null;
+            this.skinButton_CHG_2G_RTEST.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.skinButton_CHG_2G_RTEST.Location = new System.Drawing.Point(354, 272);
+            this.skinButton_CHG_2G_RTEST.MouseBack = null;
+            this.skinButton_CHG_2G_RTEST.Name = "skinButton_CHG_2G_RTEST";
+            this.skinButton_CHG_2G_RTEST.NormlBack = null;
+            this.skinButton_CHG_2G_RTEST.Radius = 15;
+            this.skinButton_CHG_2G_RTEST.RoundStyle = CCWin.SkinClass.RoundStyle.All;
+            this.skinButton_CHG_2G_RTEST.Size = new System.Drawing.Size(137, 41);
+            this.skinButton_CHG_2G_RTEST.TabIndex = 19;
+            this.skinButton_CHG_2G_RTEST.Text = "重新测试";
+            this.skinButton_CHG_2G_RTEST.UseVisualStyleBackColor = false;
+            this.skinButton_CHG_2G_RTEST.Click += new System.EventHandler(this.skinButton_CHG_2G_RTEST_Click);
+            // 
+            // skinButton_CHG_2G_SKIP
+            // 
+            this.skinButton_CHG_2G_SKIP.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.skinButton_CHG_2G_SKIP.BackColor = System.Drawing.Color.Transparent;
+            this.skinButton_CHG_2G_SKIP.BaseColor = System.Drawing.Color.Silver;
+            this.skinButton_CHG_2G_SKIP.BorderColor = System.Drawing.Color.Silver;
+            this.skinButton_CHG_2G_SKIP.ControlState = CCWin.SkinClass.ControlState.Normal;
+            this.skinButton_CHG_2G_SKIP.DownBack = null;
+            this.skinButton_CHG_2G_SKIP.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.skinButton_CHG_2G_SKIP.Location = new System.Drawing.Point(168, 272);
+            this.skinButton_CHG_2G_SKIP.MouseBack = null;
+            this.skinButton_CHG_2G_SKIP.Name = "skinButton_CHG_2G_SKIP";
+            this.skinButton_CHG_2G_SKIP.NormlBack = null;
+            this.skinButton_CHG_2G_SKIP.Radius = 15;
+            this.skinButton_CHG_2G_SKIP.RoundStyle = CCWin.SkinClass.RoundStyle.All;
+            this.skinButton_CHG_2G_SKIP.Size = new System.Drawing.Size(137, 41);
+            this.skinButton_CHG_2G_SKIP.TabIndex = 18;
+            this.skinButton_CHG_2G_SKIP.Text = "跳过";
+            this.skinButton_CHG_2G_SKIP.UseVisualStyleBackColor = false;
+            this.skinButton_CHG_2G_SKIP.Click += new System.EventHandler(this.skinButton_CHG_2G_SKIP_Click);
+            // 
+            // skinLabel_CHG_2G_RESULT
+            // 
+            this.skinLabel_CHG_2G_RESULT.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.skinLabel_CHG_2G_RESULT.AutoEllipsis = true;
+            this.skinLabel_CHG_2G_RESULT.AutoSize = true;
+            this.skinLabel_CHG_2G_RESULT.BackColor = System.Drawing.Color.Transparent;
+            this.skinLabel_CHG_2G_RESULT.BorderColor = System.Drawing.Color.White;
+            this.skinLabel_CHG_2G_RESULT.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.skinLabel_CHG_2G_RESULT.Location = new System.Drawing.Point(164, 31);
+            this.skinLabel_CHG_2G_RESULT.Name = "skinLabel_CHG_2G_RESULT";
+            this.skinLabel_CHG_2G_RESULT.Size = new System.Drawing.Size(21, 31);
+            this.skinLabel_CHG_2G_RESULT.TabIndex = 14;
+            this.skinLabel_CHG_2G_RESULT.Text = " ";
+            // 
+            // skinLabel67
+            // 
+            this.skinLabel67.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.skinLabel67.AutoEllipsis = true;
+            this.skinLabel67.AutoSize = true;
+            this.skinLabel67.BackColor = System.Drawing.Color.Transparent;
+            this.skinLabel67.BorderColor = System.Drawing.Color.White;
+            this.skinLabel67.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.skinLabel67.Location = new System.Drawing.Point(37, 31);
+            this.skinLabel67.Name = "skinLabel67";
+            this.skinLabel67.Size = new System.Drawing.Size(116, 31);
+            this.skinLabel67.TabIndex = 13;
+            this.skinLabel67.Text = "测试结果:";
+            // 
+            // R6skinTabPage_Whole_FLASH
+            // 
+            this.R6skinTabPage_Whole_FLASH.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.R6skinTabPage_Whole_FLASH.Controls.Add(this.splitContainer6);
+            this.R6skinTabPage_Whole_FLASH.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.R6skinTabPage_Whole_FLASH.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.R6skinTabPage_Whole_FLASH.Location = new System.Drawing.Point(100, 0);
+            this.R6skinTabPage_Whole_FLASH.Name = "R6skinTabPage_Whole_FLASH";
+            this.R6skinTabPage_Whole_FLASH.Size = new System.Drawing.Size(779, 683);
+            this.R6skinTabPage_Whole_FLASH.TabIndex = 11;
+            this.R6skinTabPage_Whole_FLASH.TabItemImage = null;
+            this.R6skinTabPage_Whole_FLASH.Text = "FLASH";
+            // 
+            // splitContainer6
+            // 
+            this.splitContainer6.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer6.Location = new System.Drawing.Point(0, 0);
+            this.splitContainer6.Name = "splitContainer6";
+            this.splitContainer6.Orientation = System.Windows.Forms.Orientation.Horizontal;
+            // 
+            // splitContainer6.Panel1
+            // 
+            this.splitContainer6.Panel1.BackColor = System.Drawing.Color.White;
+            this.splitContainer6.Panel1.Controls.Add(this.R6skinLabel_Whole_FLASH_TIME);
+            this.splitContainer6.Panel1.Controls.Add(this.skinLabel12);
+            this.splitContainer6.Panel1.Controls.Add(this.skinLabel17);
+            // 
+            // splitContainer6.Panel2
+            // 
+            this.splitContainer6.Panel2.BackColor = System.Drawing.Color.White;
+            this.splitContainer6.Panel2.Controls.Add(this.R6skinButton_Whole_FLASH_RTEST);
+            this.splitContainer6.Panel2.Controls.Add(this.R6skinButton_Whole_FLASH_SKIP);
+            this.splitContainer6.Panel2.Controls.Add(this.R6skinLabel_Whole_FLASH_RESULT);
+            this.splitContainer6.Panel2.Controls.Add(this.skinLabel22);
+            this.splitContainer6.Size = new System.Drawing.Size(779, 683);
+            this.splitContainer6.SplitterDistance = 79;
+            this.splitContainer6.TabIndex = 0;
+            // 
+            // R6skinLabel_Whole_FLASH_TIME
+            // 
+            this.R6skinLabel_Whole_FLASH_TIME.AutoSize = true;
+            this.R6skinLabel_Whole_FLASH_TIME.BackColor = System.Drawing.Color.Transparent;
+            this.R6skinLabel_Whole_FLASH_TIME.BorderColor = System.Drawing.Color.White;
+            this.R6skinLabel_Whole_FLASH_TIME.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.R6skinLabel_Whole_FLASH_TIME.Location = new System.Drawing.Point(477, 27);
+            this.R6skinLabel_Whole_FLASH_TIME.Name = "R6skinLabel_Whole_FLASH_TIME";
+            this.R6skinLabel_Whole_FLASH_TIME.Size = new System.Drawing.Size(0, 31);
+            this.R6skinLabel_Whole_FLASH_TIME.TabIndex = 5;
+            // 
+            // skinLabel12
+            // 
+            this.skinLabel12.AutoSize = true;
+            this.skinLabel12.BackColor = System.Drawing.Color.Transparent;
+            this.skinLabel12.BorderColor = System.Drawing.Color.White;
+            this.skinLabel12.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.skinLabel12.Location = new System.Drawing.Point(385, 27);
+            this.skinLabel12.Name = "skinLabel12";
+            this.skinLabel12.Size = new System.Drawing.Size(92, 31);
+            this.skinLabel12.TabIndex = 4;
+            this.skinLabel12.Text = "倒计时:";
+            // 
+            // skinLabel17
+            // 
+            this.skinLabel17.AutoSize = true;
+            this.skinLabel17.BackColor = System.Drawing.Color.Transparent;
+            this.skinLabel17.BorderColor = System.Drawing.Color.White;
+            this.skinLabel17.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.skinLabel17.Location = new System.Drawing.Point(31, 27);
+            this.skinLabel17.Name = "skinLabel17";
+            this.skinLabel17.Size = new System.Drawing.Size(239, 31);
+            this.skinLabel17.TabIndex = 3;
+            this.skinLabel17.Text = "当前项目:FLASH测试";
+            // 
+            // R6skinButton_Whole_FLASH_RTEST
+            // 
+            this.R6skinButton_Whole_FLASH_RTEST.BackColor = System.Drawing.Color.Transparent;
+            this.R6skinButton_Whole_FLASH_RTEST.BaseColor = System.Drawing.Color.DarkGray;
+            this.R6skinButton_Whole_FLASH_RTEST.BorderColor = System.Drawing.Color.DarkGray;
+            this.R6skinButton_Whole_FLASH_RTEST.ControlState = CCWin.SkinClass.ControlState.Normal;
+            this.R6skinButton_Whole_FLASH_RTEST.DownBack = null;
+            this.R6skinButton_Whole_FLASH_RTEST.Location = new System.Drawing.Point(325, 130);
+            this.R6skinButton_Whole_FLASH_RTEST.MouseBack = null;
+            this.R6skinButton_Whole_FLASH_RTEST.Name = "R6skinButton_Whole_FLASH_RTEST";
+            this.R6skinButton_Whole_FLASH_RTEST.NormlBack = null;
+            this.R6skinButton_Whole_FLASH_RTEST.Radius = 15;
+            this.R6skinButton_Whole_FLASH_RTEST.RoundStyle = CCWin.SkinClass.RoundStyle.All;
+            this.R6skinButton_Whole_FLASH_RTEST.Size = new System.Drawing.Size(134, 40);
+            this.R6skinButton_Whole_FLASH_RTEST.TabIndex = 15;
+            this.R6skinButton_Whole_FLASH_RTEST.Text = "重新测试";
+            this.R6skinButton_Whole_FLASH_RTEST.UseVisualStyleBackColor = false;
+            this.R6skinButton_Whole_FLASH_RTEST.Click += new System.EventHandler(this.R6skinButton_Whole_FLASH_RTEST_Click);
+            // 
+            // R6skinButton_Whole_FLASH_SKIP
+            // 
+            this.R6skinButton_Whole_FLASH_SKIP.BackColor = System.Drawing.Color.Transparent;
+            this.R6skinButton_Whole_FLASH_SKIP.BaseColor = System.Drawing.Color.DarkGray;
+            this.R6skinButton_Whole_FLASH_SKIP.BorderColor = System.Drawing.Color.DarkGray;
+            this.R6skinButton_Whole_FLASH_SKIP.ControlState = CCWin.SkinClass.ControlState.Normal;
+            this.R6skinButton_Whole_FLASH_SKIP.DownBack = null;
+            this.R6skinButton_Whole_FLASH_SKIP.Location = new System.Drawing.Point(125, 130);
+            this.R6skinButton_Whole_FLASH_SKIP.MouseBack = null;
+            this.R6skinButton_Whole_FLASH_SKIP.Name = "R6skinButton_Whole_FLASH_SKIP";
+            this.R6skinButton_Whole_FLASH_SKIP.NormlBack = null;
+            this.R6skinButton_Whole_FLASH_SKIP.Radius = 15;
+            this.R6skinButton_Whole_FLASH_SKIP.RoundStyle = CCWin.SkinClass.RoundStyle.All;
+            this.R6skinButton_Whole_FLASH_SKIP.Size = new System.Drawing.Size(134, 40);
+            this.R6skinButton_Whole_FLASH_SKIP.TabIndex = 14;
+            this.R6skinButton_Whole_FLASH_SKIP.Text = "跳过";
+            this.R6skinButton_Whole_FLASH_SKIP.UseVisualStyleBackColor = false;
+            this.R6skinButton_Whole_FLASH_SKIP.Click += new System.EventHandler(this.R6skinButton_Whole_FLASH_SKIP_Click);
+            // 
+            // R6skinLabel_Whole_FLASH_RESULT
+            // 
+            this.R6skinLabel_Whole_FLASH_RESULT.AutoSize = true;
+            this.R6skinLabel_Whole_FLASH_RESULT.BackColor = System.Drawing.Color.Transparent;
+            this.R6skinLabel_Whole_FLASH_RESULT.BorderColor = System.Drawing.Color.White;
+            this.R6skinLabel_Whole_FLASH_RESULT.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.R6skinLabel_Whole_FLASH_RESULT.Location = new System.Drawing.Point(144, 46);
+            this.R6skinLabel_Whole_FLASH_RESULT.Name = "R6skinLabel_Whole_FLASH_RESULT";
+            this.R6skinLabel_Whole_FLASH_RESULT.Size = new System.Drawing.Size(0, 31);
+            this.R6skinLabel_Whole_FLASH_RESULT.TabIndex = 13;
+            // 
+            // skinLabel22
+            // 
+            this.skinLabel22.AutoSize = true;
+            this.skinLabel22.BackColor = System.Drawing.Color.Transparent;
+            this.skinLabel22.BorderColor = System.Drawing.Color.White;
+            this.skinLabel22.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.skinLabel22.Location = new System.Drawing.Point(31, 44);
+            this.skinLabel22.Name = "skinLabel22";
+            this.skinLabel22.Size = new System.Drawing.Size(116, 31);
+            this.skinLabel22.TabIndex = 12;
+            this.skinLabel22.Text = "测试结果:";
+            // 
+            // R6skinTabPage_Whole_SET_RTC
+            // 
+            this.R6skinTabPage_Whole_SET_RTC.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.R6skinTabPage_Whole_SET_RTC.Controls.Add(this.splitContainer5);
+            this.R6skinTabPage_Whole_SET_RTC.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.R6skinTabPage_Whole_SET_RTC.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.R6skinTabPage_Whole_SET_RTC.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.R6skinTabPage_Whole_SET_RTC.Location = new System.Drawing.Point(100, 0);
+            this.R6skinTabPage_Whole_SET_RTC.Name = "R6skinTabPage_Whole_SET_RTC";
+            this.R6skinTabPage_Whole_SET_RTC.Size = new System.Drawing.Size(779, 683);
+            this.R6skinTabPage_Whole_SET_RTC.TabIndex = 12;
+            this.R6skinTabPage_Whole_SET_RTC.TabItemImage = null;
+            this.R6skinTabPage_Whole_SET_RTC.Text = "更新RTC";
+            this.R6skinTabPage_Whole_SET_RTC.Click += new System.EventHandler(this.R6skinTabPage_Whole_SET_RTC_Click);
+            // 
+            // splitContainer5
+            // 
+            this.splitContainer5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer5.Location = new System.Drawing.Point(0, 0);
+            this.splitContainer5.Name = "splitContainer5";
+            this.splitContainer5.Orientation = System.Windows.Forms.Orientation.Horizontal;
+            // 
+            // splitContainer5.Panel1
+            // 
+            this.splitContainer5.Panel1.BackColor = System.Drawing.Color.White;
+            this.splitContainer5.Panel1.Controls.Add(this.R6skinLabel_Whole_SETRTC_TIME);
+            this.splitContainer5.Panel1.Controls.Add(this.skinLabel87);
+            this.splitContainer5.Panel1.Controls.Add(this.skinLabel94);
+            this.splitContainer5.Panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.splitContainer5_Panel1_Paint);
+            // 
+            // splitContainer5.Panel2
+            // 
+            this.splitContainer5.Panel2.BackColor = System.Drawing.Color.White;
+            this.splitContainer5.Panel2.Controls.Add(this.R6skinButton_Whole_SETRTC_RTEST);
+            this.splitContainer5.Panel2.Controls.Add(this.R6skinButton_Whole_SETRTC_SKIP);
+            this.splitContainer5.Panel2.Controls.Add(this.R6skinLabel_Whole_SETRTC_RESULT);
+            this.splitContainer5.Panel2.Controls.Add(this.skinLabel95);
+            this.splitContainer5.Size = new System.Drawing.Size(779, 683);
+            this.splitContainer5.SplitterDistance = 99;
+            this.splitContainer5.TabIndex = 0;
+            // 
+            // R6skinLabel_Whole_SETRTC_TIME
+            // 
+            this.R6skinLabel_Whole_SETRTC_TIME.AutoSize = true;
+            this.R6skinLabel_Whole_SETRTC_TIME.BackColor = System.Drawing.Color.Transparent;
+            this.R6skinLabel_Whole_SETRTC_TIME.BorderColor = System.Drawing.Color.White;
+            this.R6skinLabel_Whole_SETRTC_TIME.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.R6skinLabel_Whole_SETRTC_TIME.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.R6skinLabel_Whole_SETRTC_TIME.Location = new System.Drawing.Point(477, 24);
+            this.R6skinLabel_Whole_SETRTC_TIME.Name = "R6skinLabel_Whole_SETRTC_TIME";
+            this.R6skinLabel_Whole_SETRTC_TIME.Size = new System.Drawing.Size(0, 31);
+            this.R6skinLabel_Whole_SETRTC_TIME.TabIndex = 5;
+            // 
+            // skinLabel87
+            // 
+            this.skinLabel87.AutoSize = true;
+            this.skinLabel87.BackColor = System.Drawing.Color.Transparent;
+            this.skinLabel87.BorderColor = System.Drawing.Color.White;
+            this.skinLabel87.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.skinLabel87.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.skinLabel87.Location = new System.Drawing.Point(385, 24);
+            this.skinLabel87.Name = "skinLabel87";
+            this.skinLabel87.Size = new System.Drawing.Size(92, 31);
+            this.skinLabel87.TabIndex = 4;
+            this.skinLabel87.Text = "倒计时:";
+            // 
+            // skinLabel94
+            // 
+            this.skinLabel94.AutoSize = true;
+            this.skinLabel94.BackColor = System.Drawing.Color.Transparent;
+            this.skinLabel94.BorderColor = System.Drawing.Color.White;
+            this.skinLabel94.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.skinLabel94.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.skinLabel94.Location = new System.Drawing.Point(31, 24);
+            this.skinLabel94.Name = "skinLabel94";
+            this.skinLabel94.Size = new System.Drawing.Size(258, 31);
+            this.skinLabel94.TabIndex = 3;
+            this.skinLabel94.Text = "当前项目:更新RTC时间";
+            // 
+            // R6skinButton_Whole_SETRTC_RTEST
+            // 
+            this.R6skinButton_Whole_SETRTC_RTEST.BackColor = System.Drawing.Color.Transparent;
+            this.R6skinButton_Whole_SETRTC_RTEST.BaseColor = System.Drawing.Color.DarkGray;
+            this.R6skinButton_Whole_SETRTC_RTEST.BorderColor = System.Drawing.Color.DarkGray;
+            this.R6skinButton_Whole_SETRTC_RTEST.ControlState = CCWin.SkinClass.ControlState.Normal;
+            this.R6skinButton_Whole_SETRTC_RTEST.DownBack = null;
+            this.R6skinButton_Whole_SETRTC_RTEST.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.R6skinButton_Whole_SETRTC_RTEST.Location = new System.Drawing.Point(325, 155);
+            this.R6skinButton_Whole_SETRTC_RTEST.MouseBack = null;
+            this.R6skinButton_Whole_SETRTC_RTEST.Name = "R6skinButton_Whole_SETRTC_RTEST";
+            this.R6skinButton_Whole_SETRTC_RTEST.NormlBack = null;
+            this.R6skinButton_Whole_SETRTC_RTEST.Radius = 15;
+            this.R6skinButton_Whole_SETRTC_RTEST.RoundStyle = CCWin.SkinClass.RoundStyle.All;
+            this.R6skinButton_Whole_SETRTC_RTEST.Size = new System.Drawing.Size(134, 40);
+            this.R6skinButton_Whole_SETRTC_RTEST.TabIndex = 15;
+            this.R6skinButton_Whole_SETRTC_RTEST.Text = "重新测试";
+            this.R6skinButton_Whole_SETRTC_RTEST.UseVisualStyleBackColor = false;
+            this.R6skinButton_Whole_SETRTC_RTEST.Click += new System.EventHandler(this.R6skinButton_Whole_SETRTC_RTEST_Click);
+            // 
+            // R6skinButton_Whole_SETRTC_SKIP
+            // 
+            this.R6skinButton_Whole_SETRTC_SKIP.BackColor = System.Drawing.Color.Transparent;
+            this.R6skinButton_Whole_SETRTC_SKIP.BaseColor = System.Drawing.Color.DarkGray;
+            this.R6skinButton_Whole_SETRTC_SKIP.BorderColor = System.Drawing.Color.DarkGray;
+            this.R6skinButton_Whole_SETRTC_SKIP.ControlState = CCWin.SkinClass.ControlState.Normal;
+            this.R6skinButton_Whole_SETRTC_SKIP.DownBack = null;
+            this.R6skinButton_Whole_SETRTC_SKIP.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.R6skinButton_Whole_SETRTC_SKIP.Location = new System.Drawing.Point(125, 155);
+            this.R6skinButton_Whole_SETRTC_SKIP.MouseBack = null;
+            this.R6skinButton_Whole_SETRTC_SKIP.Name = "R6skinButton_Whole_SETRTC_SKIP";
+            this.R6skinButton_Whole_SETRTC_SKIP.NormlBack = null;
+            this.R6skinButton_Whole_SETRTC_SKIP.Radius = 15;
+            this.R6skinButton_Whole_SETRTC_SKIP.RoundStyle = CCWin.SkinClass.RoundStyle.All;
+            this.R6skinButton_Whole_SETRTC_SKIP.Size = new System.Drawing.Size(134, 40);
+            this.R6skinButton_Whole_SETRTC_SKIP.TabIndex = 14;
+            this.R6skinButton_Whole_SETRTC_SKIP.Text = "跳过";
+            this.R6skinButton_Whole_SETRTC_SKIP.UseVisualStyleBackColor = false;
+            this.R6skinButton_Whole_SETRTC_SKIP.Click += new System.EventHandler(this.R6skinButton_Whole_SETRTC_SKIP_Click);
+            // 
+            // R6skinLabel_Whole_SETRTC_RESULT
+            // 
+            this.R6skinLabel_Whole_SETRTC_RESULT.AutoSize = true;
+            this.R6skinLabel_Whole_SETRTC_RESULT.BackColor = System.Drawing.Color.Transparent;
+            this.R6skinLabel_Whole_SETRTC_RESULT.BorderColor = System.Drawing.Color.White;
+            this.R6skinLabel_Whole_SETRTC_RESULT.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.R6skinLabel_Whole_SETRTC_RESULT.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.R6skinLabel_Whole_SETRTC_RESULT.Location = new System.Drawing.Point(144, 30);
+            this.R6skinLabel_Whole_SETRTC_RESULT.Name = "R6skinLabel_Whole_SETRTC_RESULT";
+            this.R6skinLabel_Whole_SETRTC_RESULT.Size = new System.Drawing.Size(0, 31);
+            this.R6skinLabel_Whole_SETRTC_RESULT.TabIndex = 13;
+            // 
+            // skinLabel95
+            // 
+            this.skinLabel95.AutoSize = true;
+            this.skinLabel95.BackColor = System.Drawing.Color.Transparent;
+            this.skinLabel95.BorderColor = System.Drawing.Color.White;
+            this.skinLabel95.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.skinLabel95.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.skinLabel95.Location = new System.Drawing.Point(31, 28);
+            this.skinLabel95.Name = "skinLabel95";
+            this.skinLabel95.Size = new System.Drawing.Size(116, 31);
+            this.skinLabel95.TabIndex = 12;
+            this.skinLabel95.Text = "测试结果:";
+            // 
+            // R6skinTabPage_Whole_GET_RTC
+            // 
+            this.R6skinTabPage_Whole_GET_RTC.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.R6skinTabPage_Whole_GET_RTC.Controls.Add(this.splitContainer4);
+            this.R6skinTabPage_Whole_GET_RTC.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.R6skinTabPage_Whole_GET_RTC.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.R6skinTabPage_Whole_GET_RTC.Location = new System.Drawing.Point(100, 0);
+            this.R6skinTabPage_Whole_GET_RTC.Name = "R6skinTabPage_Whole_GET_RTC";
+            this.R6skinTabPage_Whole_GET_RTC.Size = new System.Drawing.Size(779, 683);
+            this.R6skinTabPage_Whole_GET_RTC.TabIndex = 13;
+            this.R6skinTabPage_Whole_GET_RTC.TabItemImage = null;
+            this.R6skinTabPage_Whole_GET_RTC.Text = "读取RTC";
+            // 
+            // splitContainer4
+            // 
+            this.splitContainer4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer4.Location = new System.Drawing.Point(0, 0);
+            this.splitContainer4.Name = "splitContainer4";
+            this.splitContainer4.Orientation = System.Windows.Forms.Orientation.Horizontal;
+            // 
+            // splitContainer4.Panel1
+            // 
+            this.splitContainer4.Panel1.BackColor = System.Drawing.Color.White;
+            this.splitContainer4.Panel1.Controls.Add(this.R6skinLabel_Whole_GETRTC_TIME);
+            this.splitContainer4.Panel1.Controls.Add(this.skinLabel38);
+            this.splitContainer4.Panel1.Controls.Add(this.skinLabel42);
+            this.splitContainer4.Panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.splitContainer4_Panel1_Paint);
+            // 
+            // splitContainer4.Panel2
+            // 
+            this.splitContainer4.Panel2.BackColor = System.Drawing.Color.White;
+            this.splitContainer4.Panel2.Controls.Add(this.R6skinButton_Whole_GETRTC_RTEST);
+            this.splitContainer4.Panel2.Controls.Add(this.R6skinButton_Whole_GETRTC_SKIP);
+            this.splitContainer4.Panel2.Controls.Add(this.R6skinLabel_Whole_GETRTC_RESULT);
+            this.splitContainer4.Panel2.Controls.Add(this.skinLabel93);
+            this.splitContainer4.Panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.splitContainer4_Panel2_Paint);
+            this.splitContainer4.Size = new System.Drawing.Size(779, 683);
+            this.splitContainer4.SplitterDistance = 79;
+            this.splitContainer4.TabIndex = 0;
+            // 
+            // R6skinLabel_Whole_GETRTC_TIME
+            // 
+            this.R6skinLabel_Whole_GETRTC_TIME.AutoSize = true;
+            this.R6skinLabel_Whole_GETRTC_TIME.BackColor = System.Drawing.Color.Transparent;
+            this.R6skinLabel_Whole_GETRTC_TIME.BorderColor = System.Drawing.Color.White;
+            this.R6skinLabel_Whole_GETRTC_TIME.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.R6skinLabel_Whole_GETRTC_TIME.Location = new System.Drawing.Point(484, 23);
+            this.R6skinLabel_Whole_GETRTC_TIME.Name = "R6skinLabel_Whole_GETRTC_TIME";
+            this.R6skinLabel_Whole_GETRTC_TIME.Size = new System.Drawing.Size(0, 31);
+            this.R6skinLabel_Whole_GETRTC_TIME.TabIndex = 5;
+            // 
+            // skinLabel38
+            // 
+            this.skinLabel38.AutoSize = true;
+            this.skinLabel38.BackColor = System.Drawing.Color.Transparent;
+            this.skinLabel38.BorderColor = System.Drawing.Color.White;
+            this.skinLabel38.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.skinLabel38.Location = new System.Drawing.Point(392, 23);
+            this.skinLabel38.Name = "skinLabel38";
+            this.skinLabel38.Size = new System.Drawing.Size(92, 31);
+            this.skinLabel38.TabIndex = 4;
+            this.skinLabel38.Text = "倒计时:";
+            // 
+            // skinLabel42
+            // 
+            this.skinLabel42.AutoSize = true;
+            this.skinLabel42.BackColor = System.Drawing.Color.Transparent;
+            this.skinLabel42.BorderColor = System.Drawing.Color.White;
+            this.skinLabel42.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.skinLabel42.Location = new System.Drawing.Point(38, 23);
+            this.skinLabel42.Name = "skinLabel42";
+            this.skinLabel42.Size = new System.Drawing.Size(258, 31);
+            this.skinLabel42.TabIndex = 3;
+            this.skinLabel42.Text = "当前项目:读取RTC时间";
+            // 
+            // R6skinButton_Whole_GETRTC_RTEST
+            // 
+            this.R6skinButton_Whole_GETRTC_RTEST.BackColor = System.Drawing.Color.Transparent;
+            this.R6skinButton_Whole_GETRTC_RTEST.BaseColor = System.Drawing.Color.DarkGray;
+            this.R6skinButton_Whole_GETRTC_RTEST.BorderColor = System.Drawing.Color.DarkGray;
+            this.R6skinButton_Whole_GETRTC_RTEST.ControlState = CCWin.SkinClass.ControlState.Normal;
+            this.R6skinButton_Whole_GETRTC_RTEST.DownBack = null;
+            this.R6skinButton_Whole_GETRTC_RTEST.Location = new System.Drawing.Point(332, 153);
+            this.R6skinButton_Whole_GETRTC_RTEST.MouseBack = null;
+            this.R6skinButton_Whole_GETRTC_RTEST.Name = "R6skinButton_Whole_GETRTC_RTEST";
+            this.R6skinButton_Whole_GETRTC_RTEST.NormlBack = null;
+            this.R6skinButton_Whole_GETRTC_RTEST.Radius = 15;
+            this.R6skinButton_Whole_GETRTC_RTEST.RoundStyle = CCWin.SkinClass.RoundStyle.All;
+            this.R6skinButton_Whole_GETRTC_RTEST.Size = new System.Drawing.Size(134, 40);
+            this.R6skinButton_Whole_GETRTC_RTEST.TabIndex = 15;
+            this.R6skinButton_Whole_GETRTC_RTEST.Text = "重新测试";
+            this.R6skinButton_Whole_GETRTC_RTEST.UseVisualStyleBackColor = false;
+            this.R6skinButton_Whole_GETRTC_RTEST.Click += new System.EventHandler(this.R6skinButton_Whole_GETRTC_RTEST_Click);
+            // 
+            // R6skinButton_Whole_GETRTC_SKIP
+            // 
+            this.R6skinButton_Whole_GETRTC_SKIP.BackColor = System.Drawing.Color.Transparent;
+            this.R6skinButton_Whole_GETRTC_SKIP.BaseColor = System.Drawing.Color.DarkGray;
+            this.R6skinButton_Whole_GETRTC_SKIP.BorderColor = System.Drawing.Color.DarkGray;
+            this.R6skinButton_Whole_GETRTC_SKIP.ControlState = CCWin.SkinClass.ControlState.Normal;
+            this.R6skinButton_Whole_GETRTC_SKIP.DownBack = null;
+            this.R6skinButton_Whole_GETRTC_SKIP.Location = new System.Drawing.Point(132, 153);
+            this.R6skinButton_Whole_GETRTC_SKIP.MouseBack = null;
+            this.R6skinButton_Whole_GETRTC_SKIP.Name = "R6skinButton_Whole_GETRTC_SKIP";
+            this.R6skinButton_Whole_GETRTC_SKIP.NormlBack = null;
+            this.R6skinButton_Whole_GETRTC_SKIP.Radius = 15;
+            this.R6skinButton_Whole_GETRTC_SKIP.RoundStyle = CCWin.SkinClass.RoundStyle.All;
+            this.R6skinButton_Whole_GETRTC_SKIP.Size = new System.Drawing.Size(134, 40);
+            this.R6skinButton_Whole_GETRTC_SKIP.TabIndex = 14;
+            this.R6skinButton_Whole_GETRTC_SKIP.Text = "跳过";
+            this.R6skinButton_Whole_GETRTC_SKIP.UseVisualStyleBackColor = false;
+            this.R6skinButton_Whole_GETRTC_SKIP.Click += new System.EventHandler(this.R6skinButton_Whole_GETRTC_SKIP_Click);
+            // 
+            // R6skinLabel_Whole_GETRTC_RESULT
+            // 
+            this.R6skinLabel_Whole_GETRTC_RESULT.AutoSize = true;
+            this.R6skinLabel_Whole_GETRTC_RESULT.BackColor = System.Drawing.Color.Transparent;
+            this.R6skinLabel_Whole_GETRTC_RESULT.BorderColor = System.Drawing.Color.White;
+            this.R6skinLabel_Whole_GETRTC_RESULT.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.R6skinLabel_Whole_GETRTC_RESULT.Location = new System.Drawing.Point(151, 28);
+            this.R6skinLabel_Whole_GETRTC_RESULT.Name = "R6skinLabel_Whole_GETRTC_RESULT";
+            this.R6skinLabel_Whole_GETRTC_RESULT.Size = new System.Drawing.Size(0, 31);
+            this.R6skinLabel_Whole_GETRTC_RESULT.TabIndex = 13;
+            // 
+            // skinLabel93
+            // 
+            this.skinLabel93.AutoSize = true;
+            this.skinLabel93.BackColor = System.Drawing.Color.Transparent;
+            this.skinLabel93.BorderColor = System.Drawing.Color.White;
+            this.skinLabel93.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.skinLabel93.Location = new System.Drawing.Point(38, 26);
+            this.skinLabel93.Name = "skinLabel93";
+            this.skinLabel93.Size = new System.Drawing.Size(116, 31);
+            this.skinLabel93.TabIndex = 12;
+            this.skinLabel93.Text = "测试结果:";
+            // 
+            // skinTabPage_CHG_STOP_TEST
+            // 
+            this.skinTabPage_CHG_STOP_TEST.BackColor = System.Drawing.Color.White;
+            this.skinTabPage_CHG_STOP_TEST.Controls.Add(this.skinSplitContainer23);
+            this.skinTabPage_CHG_STOP_TEST.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.skinTabPage_CHG_STOP_TEST.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.skinTabPage_CHG_STOP_TEST.Location = new System.Drawing.Point(100, 0);
+            this.skinTabPage_CHG_STOP_TEST.Name = "skinTabPage_CHG_STOP_TEST";
+            this.skinTabPage_CHG_STOP_TEST.Size = new System.Drawing.Size(779, 683);
+            this.skinTabPage_CHG_STOP_TEST.TabIndex = 9;
+            this.skinTabPage_CHG_STOP_TEST.TabItemImage = null;
+            this.skinTabPage_CHG_STOP_TEST.Text = "结束测试";
+            // 
+            // skinSplitContainer23
+            // 
+            this.skinSplitContainer23.Cursor = System.Windows.Forms.Cursors.Default;
+            this.skinSplitContainer23.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.skinSplitContainer23.LineBack = System.Drawing.Color.Gray;
+            this.skinSplitContainer23.LineBack2 = System.Drawing.Color.Gray;
+            this.skinSplitContainer23.Location = new System.Drawing.Point(0, 0);
+            this.skinSplitContainer23.Name = "skinSplitContainer23";
+            this.skinSplitContainer23.Orientation = System.Windows.Forms.Orientation.Horizontal;
+            // 
+            // skinSplitContainer23.Panel1
+            // 
+            this.skinSplitContainer23.Panel1.Controls.Add(this.skinLabel81);
+            // 
+            // skinSplitContainer23.Panel2
+            // 
+            this.skinSplitContainer23.Panel2.Controls.Add(this.R6_WHOLE_SET_RTC_RESULT_VAL);
+            this.skinSplitContainer23.Panel2.Controls.Add(this.R6_WHOLE_GET_RTC_RESULT_VAL);
+            this.skinSplitContainer23.Panel2.Controls.Add(this.skinLabel104);
+            this.skinSplitContainer23.Panel2.Controls.Add(this.skinLabel105);
+            this.skinSplitContainer23.Panel2.Controls.Add(this.R6_WHOLE_FLASH_RESULT_VAL);
+            this.skinSplitContainer23.Panel2.Controls.Add(this.skinLabel107);
+            this.skinSplitContainer23.Panel2.Controls.Add(this.skinLabel_CHG_TEST_TIME_RES_VAL);
+            this.skinSplitContainer23.Panel2.Controls.Add(this.skinLabel92);
+            this.skinSplitContainer23.Panel2.Controls.Add(this.skinLabel_CHG_2G_ICCID_RES_VAL);
+            this.skinSplitContainer23.Panel2.Controls.Add(this.skinLabel65);
+            this.skinSplitContainer23.Panel2.Controls.Add(this.skinLabel_CHG_TEST_USEDTIME_RES_VAL);
+            this.skinSplitContainer23.Panel2.Controls.Add(this.skinLabel_CHG_2G_CSQ_RES_VAL);
+            this.skinSplitContainer23.Panel2.Controls.Add(this.skinLabel_CHG_MB_QR_RES_VAL);
+            this.skinSplitContainer23.Panel2.Controls.Add(this.skinLabel63);
+            this.skinSplitContainer23.Panel2.Controls.Add(this.skinLabel_CHG_2G_RES_VAL);
+            this.skinSplitContainer23.Panel2.Controls.Add(this.skinLabel_CHG_24G_RES_VAL);
+            this.skinSplitContainer23.Panel2.Controls.Add(this.skinLabel_CHG_BT_RES_VAL);
+            this.skinSplitContainer23.Panel2.Controls.Add(this.skinLabel_CHG_LED_RES_VAL);
+            this.skinSplitContainer23.Panel2.Controls.Add(this.skinLabeL_CHG_TEST_RES_VAL);
+            this.skinSplitContainer23.Panel2.Controls.Add(this.skinLabel_CHG_FW_RES_VAL);
+            this.skinSplitContainer23.Panel2.Controls.Add(this.skinLabel_CHG_TESTOR_RES_VAL);
+            this.skinSplitContainer23.Panel2.Controls.Add(this.skinLabel_CHG_STATION_ID_RESLUT_VAL);
+            this.skinSplitContainer23.Panel2.Controls.Add(this.skinLabel113);
+            this.skinSplitContainer23.Panel2.Controls.Add(this.skinLabel115);
+            this.skinSplitContainer23.Panel2.Controls.Add(this.skinLabel116);
+            this.skinSplitContainer23.Panel2.Controls.Add(this.skinLabel117);
+            this.skinSplitContainer23.Panel2.Controls.Add(this.skinLabel118);
+            this.skinSplitContainer23.Panel2.Controls.Add(this.skinLabel121);
+            this.skinSplitContainer23.Panel2.Controls.Add(this.skinLabel122);
+            this.skinSplitContainer23.Panel2.Controls.Add(this.skinLabel123);
+            this.skinSplitContainer23.Panel2.Controls.Add(this.skinLabel124);
+            this.skinSplitContainer23.Panel2.Controls.Add(this.skinLabel125);
+            this.skinSplitContainer23.Panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.skinSplitContainer23_Panel2_Paint);
+            this.skinSplitContainer23.Size = new System.Drawing.Size(779, 683);
+            this.skinSplitContainer23.SplitterDistance = 63;
+            this.skinSplitContainer23.TabIndex = 3;
+            // 
+            // skinLabel81
+            // 
+            this.skinLabel81.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.skinLabel81.AutoEllipsis = true;
+            this.skinLabel81.AutoSize = true;
+            this.skinLabel81.BackColor = System.Drawing.Color.Transparent;
+            this.skinLabel81.BorderColor = System.Drawing.Color.White;
+            this.skinLabel81.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.skinLabel81.Location = new System.Drawing.Point(287, 23);
+            this.skinLabel81.Name = "skinLabel81";
+            this.skinLabel81.Size = new System.Drawing.Size(122, 31);
+            this.skinLabel81.TabIndex = 15;
+            this.skinLabel81.Text = "测试结果";
+            // 
+            // R6_WHOLE_SET_RTC_RESULT_VAL
+            // 
+            this.R6_WHOLE_SET_RTC_RESULT_VAL.AllowDrop = true;
+            this.R6_WHOLE_SET_RTC_RESULT_VAL.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.R6_WHOLE_SET_RTC_RESULT_VAL.AutoEllipsis = true;
+            this.R6_WHOLE_SET_RTC_RESULT_VAL.AutoSize = true;
+            this.R6_WHOLE_SET_RTC_RESULT_VAL.BackColor = System.Drawing.Color.Transparent;
+            this.R6_WHOLE_SET_RTC_RESULT_VAL.BorderColor = System.Drawing.Color.White;
+            this.R6_WHOLE_SET_RTC_RESULT_VAL.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.R6_WHOLE_SET_RTC_RESULT_VAL.Location = new System.Drawing.Point(318, 345);
+            this.R6_WHOLE_SET_RTC_RESULT_VAL.Name = "R6_WHOLE_SET_RTC_RESULT_VAL";
+            this.R6_WHOLE_SET_RTC_RESULT_VAL.Size = new System.Drawing.Size(28, 31);
+            this.R6_WHOLE_SET_RTC_RESULT_VAL.TabIndex = 66;
+            this.R6_WHOLE_SET_RTC_RESULT_VAL.Text = "  ";
+            // 
+            // R6_WHOLE_GET_RTC_RESULT_VAL
+            // 
+            this.R6_WHOLE_GET_RTC_RESULT_VAL.AllowDrop = true;
+            this.R6_WHOLE_GET_RTC_RESULT_VAL.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.R6_WHOLE_GET_RTC_RESULT_VAL.AutoEllipsis = true;
+            this.R6_WHOLE_GET_RTC_RESULT_VAL.AutoSize = true;
+            this.R6_WHOLE_GET_RTC_RESULT_VAL.BackColor = System.Drawing.Color.Transparent;
+            this.R6_WHOLE_GET_RTC_RESULT_VAL.BorderColor = System.Drawing.Color.White;
+            this.R6_WHOLE_GET_RTC_RESULT_VAL.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.R6_WHOLE_GET_RTC_RESULT_VAL.Location = new System.Drawing.Point(318, 374);
+            this.R6_WHOLE_GET_RTC_RESULT_VAL.Name = "R6_WHOLE_GET_RTC_RESULT_VAL";
+            this.R6_WHOLE_GET_RTC_RESULT_VAL.Size = new System.Drawing.Size(28, 31);
+            this.R6_WHOLE_GET_RTC_RESULT_VAL.TabIndex = 65;
+            this.R6_WHOLE_GET_RTC_RESULT_VAL.Text = "  ";
+            // 
+            // skinLabel104
+            // 
+            this.skinLabel104.AllowDrop = true;
+            this.skinLabel104.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.skinLabel104.AutoEllipsis = true;
+            this.skinLabel104.AutoSize = true;
+            this.skinLabel104.BackColor = System.Drawing.Color.Transparent;
+            this.skinLabel104.BorderColor = System.Drawing.Color.White;
+            this.skinLabel104.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.skinLabel104.Location = new System.Drawing.Point(82, 374);
+            this.skinLabel104.Name = "skinLabel104";
+            this.skinLabel104.Size = new System.Drawing.Size(128, 31);
+            this.skinLabel104.TabIndex = 64;
+            this.skinLabel104.Text = "  读取RTC:";
+            // 
+            // skinLabel105
+            // 
+            this.skinLabel105.AllowDrop = true;
+            this.skinLabel105.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.skinLabel105.AutoEllipsis = true;
+            this.skinLabel105.AutoSize = true;
+            this.skinLabel105.BackColor = System.Drawing.Color.Transparent;
+            this.skinLabel105.BorderColor = System.Drawing.Color.White;
+            this.skinLabel105.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.skinLabel105.Location = new System.Drawing.Point(82, 345);
+            this.skinLabel105.Name = "skinLabel105";
+            this.skinLabel105.Size = new System.Drawing.Size(128, 31);
+            this.skinLabel105.TabIndex = 63;
+            this.skinLabel105.Text = "  更新RTC:";
+            // 
+            // R6_WHOLE_FLASH_RESULT_VAL
+            // 
+            this.R6_WHOLE_FLASH_RESULT_VAL.AllowDrop = true;
+            this.R6_WHOLE_FLASH_RESULT_VAL.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.R6_WHOLE_FLASH_RESULT_VAL.AutoEllipsis = true;
+            this.R6_WHOLE_FLASH_RESULT_VAL.AutoSize = true;
+            this.R6_WHOLE_FLASH_RESULT_VAL.BackColor = System.Drawing.Color.Transparent;
+            this.R6_WHOLE_FLASH_RESULT_VAL.BorderColor = System.Drawing.Color.White;
+            this.R6_WHOLE_FLASH_RESULT_VAL.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.R6_WHOLE_FLASH_RESULT_VAL.Location = new System.Drawing.Point(318, 320);
+            this.R6_WHOLE_FLASH_RESULT_VAL.Name = "R6_WHOLE_FLASH_RESULT_VAL";
+            this.R6_WHOLE_FLASH_RESULT_VAL.Size = new System.Drawing.Size(28, 31);
+            this.R6_WHOLE_FLASH_RESULT_VAL.TabIndex = 62;
+            this.R6_WHOLE_FLASH_RESULT_VAL.Text = "  ";
+            // 
+            // skinLabel107
+            // 
+            this.skinLabel107.AllowDrop = true;
+            this.skinLabel107.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.skinLabel107.AutoEllipsis = true;
+            this.skinLabel107.AutoSize = true;
+            this.skinLabel107.BackColor = System.Drawing.Color.Transparent;
+            this.skinLabel107.BorderColor = System.Drawing.Color.White;
+            this.skinLabel107.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.skinLabel107.Location = new System.Drawing.Point(82, 320);
+            this.skinLabel107.Name = "skinLabel107";
+            this.skinLabel107.Size = new System.Drawing.Size(109, 31);
+            this.skinLabel107.TabIndex = 61;
+            this.skinLabel107.Text = "  FLASH:";
+            // 
+            // skinLabel_CHG_TEST_TIME_RES_VAL
+            // 
+            this.skinLabel_CHG_TEST_TIME_RES_VAL.AllowDrop = true;
+            this.skinLabel_CHG_TEST_TIME_RES_VAL.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.skinLabel_CHG_TEST_TIME_RES_VAL.AutoEllipsis = true;
+            this.skinLabel_CHG_TEST_TIME_RES_VAL.AutoSize = true;
+            this.skinLabel_CHG_TEST_TIME_RES_VAL.BackColor = System.Drawing.Color.Transparent;
+            this.skinLabel_CHG_TEST_TIME_RES_VAL.BorderColor = System.Drawing.Color.White;
+            this.skinLabel_CHG_TEST_TIME_RES_VAL.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.skinLabel_CHG_TEST_TIME_RES_VAL.Location = new System.Drawing.Point(318, 426);
+            this.skinLabel_CHG_TEST_TIME_RES_VAL.Name = "skinLabel_CHG_TEST_TIME_RES_VAL";
+            this.skinLabel_CHG_TEST_TIME_RES_VAL.Size = new System.Drawing.Size(28, 31);
+            this.skinLabel_CHG_TEST_TIME_RES_VAL.TabIndex = 54;
+            this.skinLabel_CHG_TEST_TIME_RES_VAL.Text = "  ";
+            this.skinLabel_CHG_TEST_TIME_RES_VAL.Click += new System.EventHandler(this.skinLabel_CHG_TEST_TIME_RES_VAL_Click);
+            // 
+            // skinLabel92
+            // 
+            this.skinLabel92.AllowDrop = true;
+            this.skinLabel92.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.skinLabel92.AutoEllipsis = true;
+            this.skinLabel92.AutoSize = true;
+            this.skinLabel92.BackColor = System.Drawing.Color.Transparent;
+            this.skinLabel92.BorderColor = System.Drawing.Color.White;
+            this.skinLabel92.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.skinLabel92.Location = new System.Drawing.Point(84, 426);
+            this.skinLabel92.Name = "skinLabel92";
+            this.skinLabel92.Size = new System.Drawing.Size(130, 31);
+            this.skinLabel92.TabIndex = 53;
+            this.skinLabel92.Text = "  测试时间:";
+            this.skinLabel92.Click += new System.EventHandler(this.skinLabel92_Click);
+            // 
+            // skinLabel_CHG_2G_ICCID_RES_VAL
+            // 
+            this.skinLabel_CHG_2G_ICCID_RES_VAL.AllowDrop = true;
+            this.skinLabel_CHG_2G_ICCID_RES_VAL.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.skinLabel_CHG_2G_ICCID_RES_VAL.AutoEllipsis = true;
+            this.skinLabel_CHG_2G_ICCID_RES_VAL.AutoSize = true;
+            this.skinLabel_CHG_2G_ICCID_RES_VAL.BackColor = System.Drawing.Color.Transparent;
+            this.skinLabel_CHG_2G_ICCID_RES_VAL.BorderColor = System.Drawing.Color.White;
+            this.skinLabel_CHG_2G_ICCID_RES_VAL.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.skinLabel_CHG_2G_ICCID_RES_VAL.Location = new System.Drawing.Point(318, 295);
+            this.skinLabel_CHG_2G_ICCID_RES_VAL.Name = "skinLabel_CHG_2G_ICCID_RES_VAL";
+            this.skinLabel_CHG_2G_ICCID_RES_VAL.Size = new System.Drawing.Size(28, 31);
+            this.skinLabel_CHG_2G_ICCID_RES_VAL.TabIndex = 59;
+            this.skinLabel_CHG_2G_ICCID_RES_VAL.Text = "  ";
+            this.skinLabel_CHG_2G_ICCID_RES_VAL.Click += new System.EventHandler(this.skinLabel_CHG_2G_ICCID_RES_VAL_Click);
+            // 
+            // skinLabel65
+            // 
+            this.skinLabel65.AllowDrop = true;
+            this.skinLabel65.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.skinLabel65.AutoEllipsis = true;
+            this.skinLabel65.AutoSize = true;
+            this.skinLabel65.BackColor = System.Drawing.Color.Transparent;
+            this.skinLabel65.BorderColor = System.Drawing.Color.White;
+            this.skinLabel65.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.skinLabel65.Location = new System.Drawing.Point(84, 268);
+            this.skinLabel65.Name = "skinLabel65";
+            this.skinLabel65.Size = new System.Drawing.Size(106, 31);
+            this.skinLabel65.TabIndex = 55;
+            this.skinLabel65.Text = "  信号值:";
+            this.skinLabel65.Click += new System.EventHandler(this.skinLabel65_Click);
+            // 
+            // skinLabel_CHG_TEST_USEDTIME_RES_VAL
+            // 
+            this.skinLabel_CHG_TEST_USEDTIME_RES_VAL.AllowDrop = true;
+            this.skinLabel_CHG_TEST_USEDTIME_RES_VAL.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.skinLabel_CHG_TEST_USEDTIME_RES_VAL.AutoEllipsis = true;
+            this.skinLabel_CHG_TEST_USEDTIME_RES_VAL.AutoSize = true;
+            this.skinLabel_CHG_TEST_USEDTIME_RES_VAL.BackColor = System.Drawing.Color.Transparent;
+            this.skinLabel_CHG_TEST_USEDTIME_RES_VAL.BorderColor = System.Drawing.Color.White;
+            this.skinLabel_CHG_TEST_USEDTIME_RES_VAL.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.skinLabel_CHG_TEST_USEDTIME_RES_VAL.Location = new System.Drawing.Point(318, 399);
+            this.skinLabel_CHG_TEST_USEDTIME_RES_VAL.Name = "skinLabel_CHG_TEST_USEDTIME_RES_VAL";
+            this.skinLabel_CHG_TEST_USEDTIME_RES_VAL.Size = new System.Drawing.Size(28, 31);
+            this.skinLabel_CHG_TEST_USEDTIME_RES_VAL.TabIndex = 52;
+            this.skinLabel_CHG_TEST_USEDTIME_RES_VAL.Text = "  ";
+            this.skinLabel_CHG_TEST_USEDTIME_RES_VAL.Click += new System.EventHandler(this.skinLabel_CHG_TEST_USEDTIME_RES_VAL_Click);
+            // 
+            // skinLabel_CHG_2G_CSQ_RES_VAL
+            // 
+            this.skinLabel_CHG_2G_CSQ_RES_VAL.AllowDrop = true;
+            this.skinLabel_CHG_2G_CSQ_RES_VAL.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.skinLabel_CHG_2G_CSQ_RES_VAL.AutoEllipsis = true;
+            this.skinLabel_CHG_2G_CSQ_RES_VAL.AutoSize = true;
+            this.skinLabel_CHG_2G_CSQ_RES_VAL.BackColor = System.Drawing.Color.Transparent;
+            this.skinLabel_CHG_2G_CSQ_RES_VAL.BorderColor = System.Drawing.Color.White;
+            this.skinLabel_CHG_2G_CSQ_RES_VAL.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.skinLabel_CHG_2G_CSQ_RES_VAL.Location = new System.Drawing.Point(318, 268);
+            this.skinLabel_CHG_2G_CSQ_RES_VAL.Name = "skinLabel_CHG_2G_CSQ_RES_VAL";
+            this.skinLabel_CHG_2G_CSQ_RES_VAL.Size = new System.Drawing.Size(28, 31);
+            this.skinLabel_CHG_2G_CSQ_RES_VAL.TabIndex = 58;
+            this.skinLabel_CHG_2G_CSQ_RES_VAL.Text = "  ";
+            this.skinLabel_CHG_2G_CSQ_RES_VAL.Click += new System.EventHandler(this.skinLabel_CHG_2G_CSQ_RES_VAL_Click);
+            // 
+            // skinLabel_CHG_MB_QR_RES_VAL
+            // 
+            this.skinLabel_CHG_MB_QR_RES_VAL.AllowDrop = true;
+            this.skinLabel_CHG_MB_QR_RES_VAL.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.skinLabel_CHG_MB_QR_RES_VAL.AutoEllipsis = true;
+            this.skinLabel_CHG_MB_QR_RES_VAL.AutoSize = true;
+            this.skinLabel_CHG_MB_QR_RES_VAL.BackColor = System.Drawing.Color.Transparent;
+            this.skinLabel_CHG_MB_QR_RES_VAL.BorderColor = System.Drawing.Color.White;
+            this.skinLabel_CHG_MB_QR_RES_VAL.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.skinLabel_CHG_MB_QR_RES_VAL.Location = new System.Drawing.Point(318, 52);
+            this.skinLabel_CHG_MB_QR_RES_VAL.Name = "skinLabel_CHG_MB_QR_RES_VAL";
+            this.skinLabel_CHG_MB_QR_RES_VAL.Size = new System.Drawing.Size(28, 31);
+            this.skinLabel_CHG_MB_QR_RES_VAL.TabIndex = 51;
+            this.skinLabel_CHG_MB_QR_RES_VAL.Text = "  ";
+            this.skinLabel_CHG_MB_QR_RES_VAL.Click += new System.EventHandler(this.skinLabel_CHG_MB_QR_RES_VAL_Click);
+            // 
+            // skinLabel63
+            // 
+            this.skinLabel63.AllowDrop = true;
+            this.skinLabel63.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.skinLabel63.AutoEllipsis = true;
+            this.skinLabel63.AutoSize = true;
+            this.skinLabel63.BackColor = System.Drawing.Color.Transparent;
+            this.skinLabel63.BorderColor = System.Drawing.Color.White;
+            this.skinLabel63.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.skinLabel63.Location = new System.Drawing.Point(84, 295);
+            this.skinLabel63.Name = "skinLabel63";
+            this.skinLabel63.Size = new System.Drawing.Size(98, 31);
+            this.skinLabel63.TabIndex = 56;
+            this.skinLabel63.Text = "  ICCID:";
+            this.skinLabel63.Click += new System.EventHandler(this.skinLabel63_Click);
+            // 
+            // skinLabel_CHG_2G_RES_VAL
+            // 
+            this.skinLabel_CHG_2G_RES_VAL.AllowDrop = true;
+            this.skinLabel_CHG_2G_RES_VAL.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.skinLabel_CHG_2G_RES_VAL.AutoEllipsis = true;
+            this.skinLabel_CHG_2G_RES_VAL.AutoSize = true;
+            this.skinLabel_CHG_2G_RES_VAL.BackColor = System.Drawing.Color.Transparent;
+            this.skinLabel_CHG_2G_RES_VAL.BorderColor = System.Drawing.Color.White;
+            this.skinLabel_CHG_2G_RES_VAL.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.skinLabel_CHG_2G_RES_VAL.Location = new System.Drawing.Point(318, 241);
+            this.skinLabel_CHG_2G_RES_VAL.Name = "skinLabel_CHG_2G_RES_VAL";
+            this.skinLabel_CHG_2G_RES_VAL.Size = new System.Drawing.Size(28, 31);
+            this.skinLabel_CHG_2G_RES_VAL.TabIndex = 49;
+            this.skinLabel_CHG_2G_RES_VAL.Text = "  ";
+            this.skinLabel_CHG_2G_RES_VAL.Click += new System.EventHandler(this.skinLabel_CHG_2G_RES_VAL_Click);
+            // 
+            // skinLabel_CHG_24G_RES_VAL
+            // 
+            this.skinLabel_CHG_24G_RES_VAL.AllowDrop = true;
+            this.skinLabel_CHG_24G_RES_VAL.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.skinLabel_CHG_24G_RES_VAL.AutoEllipsis = true;
+            this.skinLabel_CHG_24G_RES_VAL.AutoSize = true;
+            this.skinLabel_CHG_24G_RES_VAL.BackColor = System.Drawing.Color.Transparent;
+            this.skinLabel_CHG_24G_RES_VAL.BorderColor = System.Drawing.Color.White;
+            this.skinLabel_CHG_24G_RES_VAL.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.skinLabel_CHG_24G_RES_VAL.Location = new System.Drawing.Point(318, 214);
+            this.skinLabel_CHG_24G_RES_VAL.Name = "skinLabel_CHG_24G_RES_VAL";
+            this.skinLabel_CHG_24G_RES_VAL.Size = new System.Drawing.Size(28, 31);
+            this.skinLabel_CHG_24G_RES_VAL.TabIndex = 48;
+            this.skinLabel_CHG_24G_RES_VAL.Text = "  ";
+            this.skinLabel_CHG_24G_RES_VAL.Click += new System.EventHandler(this.skinLabel_CHG_24G_RES_VAL_Click);
+            // 
+            // skinLabel_CHG_BT_RES_VAL
+            // 
+            this.skinLabel_CHG_BT_RES_VAL.AllowDrop = true;
+            this.skinLabel_CHG_BT_RES_VAL.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.skinLabel_CHG_BT_RES_VAL.AutoEllipsis = true;
+            this.skinLabel_CHG_BT_RES_VAL.AutoSize = true;
+            this.skinLabel_CHG_BT_RES_VAL.BackColor = System.Drawing.Color.Transparent;
+            this.skinLabel_CHG_BT_RES_VAL.BorderColor = System.Drawing.Color.White;
+            this.skinLabel_CHG_BT_RES_VAL.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.skinLabel_CHG_BT_RES_VAL.Location = new System.Drawing.Point(318, 187);
+            this.skinLabel_CHG_BT_RES_VAL.Name = "skinLabel_CHG_BT_RES_VAL";
+            this.skinLabel_CHG_BT_RES_VAL.Size = new System.Drawing.Size(28, 31);
+            this.skinLabel_CHG_BT_RES_VAL.TabIndex = 47;
+            this.skinLabel_CHG_BT_RES_VAL.Text = "  ";
+            this.skinLabel_CHG_BT_RES_VAL.Click += new System.EventHandler(this.skinLabel_CHG_BT_RES_VAL_Click);
+            // 
+            // skinLabel_CHG_LED_RES_VAL
+            // 
+            this.skinLabel_CHG_LED_RES_VAL.AllowDrop = true;
+            this.skinLabel_CHG_LED_RES_VAL.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.skinLabel_CHG_LED_RES_VAL.AutoEllipsis = true;
+            this.skinLabel_CHG_LED_RES_VAL.AutoSize = true;
+            this.skinLabel_CHG_LED_RES_VAL.BackColor = System.Drawing.Color.Transparent;
+            this.skinLabel_CHG_LED_RES_VAL.BorderColor = System.Drawing.Color.White;
+            this.skinLabel_CHG_LED_RES_VAL.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.skinLabel_CHG_LED_RES_VAL.Location = new System.Drawing.Point(318, 160);
+            this.skinLabel_CHG_LED_RES_VAL.Name = "skinLabel_CHG_LED_RES_VAL";
+            this.skinLabel_CHG_LED_RES_VAL.Size = new System.Drawing.Size(28, 31);
+            this.skinLabel_CHG_LED_RES_VAL.TabIndex = 44;
+            this.skinLabel_CHG_LED_RES_VAL.Text = "  ";
+            this.skinLabel_CHG_LED_RES_VAL.Click += new System.EventHandler(this.skinLabel_CHG_LED_RES_VAL_Click);
+            // 
+            // skinLabeL_CHG_TEST_RES_VAL
+            // 
+            this.skinLabeL_CHG_TEST_RES_VAL.AllowDrop = true;
+            this.skinLabeL_CHG_TEST_RES_VAL.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.skinLabeL_CHG_TEST_RES_VAL.AutoEllipsis = true;
+            this.skinLabeL_CHG_TEST_RES_VAL.AutoSize = true;
+            this.skinLabeL_CHG_TEST_RES_VAL.BackColor = System.Drawing.Color.Transparent;
+            this.skinLabeL_CHG_TEST_RES_VAL.BorderColor = System.Drawing.Color.White;
+            this.skinLabeL_CHG_TEST_RES_VAL.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.skinLabeL_CHG_TEST_RES_VAL.Location = new System.Drawing.Point(318, 133);
+            this.skinLabeL_CHG_TEST_RES_VAL.Name = "skinLabeL_CHG_TEST_RES_VAL";
+            this.skinLabeL_CHG_TEST_RES_VAL.Size = new System.Drawing.Size(28, 31);
+            this.skinLabeL_CHG_TEST_RES_VAL.TabIndex = 43;
+            this.skinLabeL_CHG_TEST_RES_VAL.Text = "  ";
+            this.skinLabeL_CHG_TEST_RES_VAL.Click += new System.EventHandler(this.skinLabeL_CHG_TEST_RES_VAL_Click);
+            // 
+            // skinLabel_CHG_FW_RES_VAL
+            // 
+            this.skinLabel_CHG_FW_RES_VAL.AllowDrop = true;
+            this.skinLabel_CHG_FW_RES_VAL.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.skinLabel_CHG_FW_RES_VAL.AutoEllipsis = true;
+            this.skinLabel_CHG_FW_RES_VAL.AutoSize = true;
+            this.skinLabel_CHG_FW_RES_VAL.BackColor = System.Drawing.Color.Transparent;
+            this.skinLabel_CHG_FW_RES_VAL.BorderColor = System.Drawing.Color.White;
+            this.skinLabel_CHG_FW_RES_VAL.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.skinLabel_CHG_FW_RES_VAL.Location = new System.Drawing.Point(318, 106);
+            this.skinLabel_CHG_FW_RES_VAL.Name = "skinLabel_CHG_FW_RES_VAL";
+            this.skinLabel_CHG_FW_RES_VAL.Size = new System.Drawing.Size(28, 31);
+            this.skinLabel_CHG_FW_RES_VAL.TabIndex = 42;
+            this.skinLabel_CHG_FW_RES_VAL.Text = "  ";
+            this.skinLabel_CHG_FW_RES_VAL.Click += new System.EventHandler(this.skinLabel_CHG_FW_RES_VAL_Click);
+            // 
+            // skinLabel_CHG_TESTOR_RES_VAL
+            // 
+            this.skinLabel_CHG_TESTOR_RES_VAL.AllowDrop = true;
+            this.skinLabel_CHG_TESTOR_RES_VAL.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.skinLabel_CHG_TESTOR_RES_VAL.AutoEllipsis = true;
+            this.skinLabel_CHG_TESTOR_RES_VAL.AutoSize = true;
+            this.skinLabel_CHG_TESTOR_RES_VAL.BackColor = System.Drawing.Color.Transparent;
+            this.skinLabel_CHG_TESTOR_RES_VAL.BorderColor = System.Drawing.Color.White;
+            this.skinLabel_CHG_TESTOR_RES_VAL.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.skinLabel_CHG_TESTOR_RES_VAL.Location = new System.Drawing.Point(318, 79);
+            this.skinLabel_CHG_TESTOR_RES_VAL.Name = "skinLabel_CHG_TESTOR_RES_VAL";
+            this.skinLabel_CHG_TESTOR_RES_VAL.Size = new System.Drawing.Size(28, 31);
+            this.skinLabel_CHG_TESTOR_RES_VAL.TabIndex = 41;
+            this.skinLabel_CHG_TESTOR_RES_VAL.Text = "  ";
+            this.skinLabel_CHG_TESTOR_RES_VAL.Click += new System.EventHandler(this.skinLabel_CHG_TESTOR_RES_VAL_Click);
+            // 
+            // skinLabel_CHG_STATION_ID_RESLUT_VAL
+            // 
+            this.skinLabel_CHG_STATION_ID_RESLUT_VAL.AllowDrop = true;
+            this.skinLabel_CHG_STATION_ID_RESLUT_VAL.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.skinLabel_CHG_STATION_ID_RESLUT_VAL.AutoEllipsis = true;
+            this.skinLabel_CHG_STATION_ID_RESLUT_VAL.AutoSize = true;
+            this.skinLabel_CHG_STATION_ID_RESLUT_VAL.BackColor = System.Drawing.Color.Transparent;
+            this.skinLabel_CHG_STATION_ID_RESLUT_VAL.BorderColor = System.Drawing.Color.White;
+            this.skinLabel_CHG_STATION_ID_RESLUT_VAL.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.skinLabel_CHG_STATION_ID_RESLUT_VAL.Location = new System.Drawing.Point(318, 25);
+            this.skinLabel_CHG_STATION_ID_RESLUT_VAL.Name = "skinLabel_CHG_STATION_ID_RESLUT_VAL";
+            this.skinLabel_CHG_STATION_ID_RESLUT_VAL.Size = new System.Drawing.Size(28, 31);
+            this.skinLabel_CHG_STATION_ID_RESLUT_VAL.TabIndex = 40;
+            this.skinLabel_CHG_STATION_ID_RESLUT_VAL.Text = "  ";
+            this.skinLabel_CHG_STATION_ID_RESLUT_VAL.Click += new System.EventHandler(this.skinLabel_CHG_STATION_ID_RESLUT_VAL_Click);
+            // 
+            // skinLabel113
+            // 
+            this.skinLabel113.AllowDrop = true;
+            this.skinLabel113.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.skinLabel113.AutoEllipsis = true;
+            this.skinLabel113.AutoSize = true;
+            this.skinLabel113.BackColor = System.Drawing.Color.Transparent;
+            this.skinLabel113.BorderColor = System.Drawing.Color.White;
+            this.skinLabel113.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.skinLabel113.Location = new System.Drawing.Point(84, 399);
+            this.skinLabel113.Name = "skinLabel113";
+            this.skinLabel113.Size = new System.Drawing.Size(130, 31);
+            this.skinLabel113.TabIndex = 39;
+            this.skinLabel113.Text = "  测试用时:";
+            this.skinLabel113.Click += new System.EventHandler(this.skinLabel113_Click);
+            // 
+            // skinLabel115
+            // 
+            this.skinLabel115.AllowDrop = true;
+            this.skinLabel115.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.skinLabel115.AutoEllipsis = true;
+            this.skinLabel115.AutoSize = true;
+            this.skinLabel115.BackColor = System.Drawing.Color.Transparent;
+            this.skinLabel115.BorderColor = System.Drawing.Color.White;
+            this.skinLabel115.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.skinLabel115.Location = new System.Drawing.Point(84, 52);
+            this.skinLabel115.Name = "skinLabel115";
+            this.skinLabel115.Size = new System.Drawing.Size(130, 31);
+            this.skinLabel115.TabIndex = 37;
+            this.skinLabel115.Text = "  主板编号:";
+            this.skinLabel115.Click += new System.EventHandler(this.skinLabel115_Click);
+            // 
+            // skinLabel116
+            // 
+            this.skinLabel116.AllowDrop = true;
+            this.skinLabel116.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.skinLabel116.AutoEllipsis = true;
+            this.skinLabel116.AutoSize = true;
+            this.skinLabel116.BackColor = System.Drawing.Color.Transparent;
+            this.skinLabel116.BorderColor = System.Drawing.Color.White;
+            this.skinLabel116.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.skinLabel116.Location = new System.Drawing.Point(84, 241);
+            this.skinLabel116.Name = "skinLabel116";
+            this.skinLabel116.Size = new System.Drawing.Size(114, 31);
+            this.skinLabel116.TabIndex = 36;
+            this.skinLabel116.Text = "  2G通信:";
+            this.skinLabel116.Click += new System.EventHandler(this.skinLabel116_Click);
+            // 
+            // skinLabel117
+            // 
+            this.skinLabel117.AllowDrop = true;
+            this.skinLabel117.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.skinLabel117.AutoEllipsis = true;
+            this.skinLabel117.AutoSize = true;
+            this.skinLabel117.BackColor = System.Drawing.Color.Transparent;
+            this.skinLabel117.BorderColor = System.Drawing.Color.White;
+            this.skinLabel117.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.skinLabel117.Location = new System.Drawing.Point(84, 214);
+            this.skinLabel117.Name = "skinLabel117";
+            this.skinLabel117.Size = new System.Drawing.Size(134, 31);
+            this.skinLabel117.TabIndex = 35;
+            this.skinLabel117.Text = "  2.4G通信:";
+            this.skinLabel117.Click += new System.EventHandler(this.skinLabel117_Click);
+            // 
+            // skinLabel118
+            // 
+            this.skinLabel118.AllowDrop = true;
+            this.skinLabel118.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.skinLabel118.AutoEllipsis = true;
+            this.skinLabel118.AutoSize = true;
+            this.skinLabel118.BackColor = System.Drawing.Color.Transparent;
+            this.skinLabel118.BorderColor = System.Drawing.Color.White;
+            this.skinLabel118.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.skinLabel118.Location = new System.Drawing.Point(84, 187);
+            this.skinLabel118.Name = "skinLabel118";
+            this.skinLabel118.Size = new System.Drawing.Size(130, 31);
+            this.skinLabel118.TabIndex = 34;
+            this.skinLabel118.Text = "  蓝牙通信:";
+            this.skinLabel118.Click += new System.EventHandler(this.skinLabel118_Click);
+            // 
+            // skinLabel121
+            // 
+            this.skinLabel121.AllowDrop = true;
+            this.skinLabel121.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.skinLabel121.AutoEllipsis = true;
+            this.skinLabel121.AutoSize = true;
+            this.skinLabel121.BackColor = System.Drawing.Color.Transparent;
+            this.skinLabel121.BorderColor = System.Drawing.Color.White;
+            this.skinLabel121.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.skinLabel121.Location = new System.Drawing.Point(84, 160);
+            this.skinLabel121.Name = "skinLabel121";
+            this.skinLabel121.Size = new System.Drawing.Size(106, 31);
+            this.skinLabel121.TabIndex = 31;
+            this.skinLabel121.Text = "  指示灯:";
+            this.skinLabel121.Click += new System.EventHandler(this.skinLabel121_Click);
+            // 
+            // skinLabel122
+            // 
+            this.skinLabel122.AllowDrop = true;
+            this.skinLabel122.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.skinLabel122.AutoEllipsis = true;
+            this.skinLabel122.AutoSize = true;
+            this.skinLabel122.BackColor = System.Drawing.Color.Transparent;
+            this.skinLabel122.BorderColor = System.Drawing.Color.White;
+            this.skinLabel122.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.skinLabel122.Location = new System.Drawing.Point(84, 133);
+            this.skinLabel122.Name = "skinLabel122";
+            this.skinLabel122.Size = new System.Drawing.Size(130, 31);
+            this.skinLabel122.TabIndex = 30;
+            this.skinLabel122.Text = "  测试结果:";
+            this.skinLabel122.Click += new System.EventHandler(this.skinLabel122_Click);
+            // 
+            // skinLabel123
+            // 
+            this.skinLabel123.AllowDrop = true;
+            this.skinLabel123.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.skinLabel123.AutoEllipsis = true;
+            this.skinLabel123.AutoSize = true;
+            this.skinLabel123.BackColor = System.Drawing.Color.Transparent;
+            this.skinLabel123.BorderColor = System.Drawing.Color.White;
+            this.skinLabel123.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.skinLabel123.Location = new System.Drawing.Point(84, 106);
+            this.skinLabel123.Name = "skinLabel123";
+            this.skinLabel123.Size = new System.Drawing.Size(130, 31);
+            this.skinLabel123.TabIndex = 29;
+            this.skinLabel123.Text = "  软件版本:";
+            this.skinLabel123.Click += new System.EventHandler(this.skinLabel123_Click);
+            // 
+            // skinLabel124
+            // 
+            this.skinLabel124.AllowDrop = true;
+            this.skinLabel124.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.skinLabel124.AutoEllipsis = true;
+            this.skinLabel124.AutoSize = true;
+            this.skinLabel124.BackColor = System.Drawing.Color.Transparent;
+            this.skinLabel124.BorderColor = System.Drawing.Color.White;
+            this.skinLabel124.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.skinLabel124.Location = new System.Drawing.Point(84, 79);
+            this.skinLabel124.Name = "skinLabel124";
+            this.skinLabel124.Size = new System.Drawing.Size(106, 31);
+            this.skinLabel124.TabIndex = 28;
+            this.skinLabel124.Text = "  测试员:";
+            this.skinLabel124.Click += new System.EventHandler(this.skinLabel124_Click);
+            // 
+            // skinLabel125
+            // 
+            this.skinLabel125.AllowDrop = true;
+            this.skinLabel125.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.skinLabel125.AutoEllipsis = true;
+            this.skinLabel125.AutoSize = true;
+            this.skinLabel125.BackColor = System.Drawing.Color.Transparent;
+            this.skinLabel125.BorderColor = System.Drawing.Color.White;
+            this.skinLabel125.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.skinLabel125.Location = new System.Drawing.Point(84, 25);
+            this.skinLabel125.Name = "skinLabel125";
+            this.skinLabel125.Size = new System.Drawing.Size(106, 31);
+            this.skinLabel125.TabIndex = 27;
+            this.skinLabel125.Text = "  电桩号:";
+            this.skinLabel125.Click += new System.EventHandler(this.skinLabel125_Click);
+            // 
             // skinTabPage_OnlineTest
             // 
             this.skinTabPage_OnlineTest.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
@@ -6090,1848 +7935,24 @@
             this.label3.TabIndex = 6;
             this.label3.Text = "识别码:";
             // 
-            // skinTabPage_CHG_STOP_TEST
-            // 
-            this.skinTabPage_CHG_STOP_TEST.BackColor = System.Drawing.Color.White;
-            this.skinTabPage_CHG_STOP_TEST.Controls.Add(this.skinSplitContainer23);
-            this.skinTabPage_CHG_STOP_TEST.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.skinTabPage_CHG_STOP_TEST.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.skinTabPage_CHG_STOP_TEST.Location = new System.Drawing.Point(100, 0);
-            this.skinTabPage_CHG_STOP_TEST.Name = "skinTabPage_CHG_STOP_TEST";
-            this.skinTabPage_CHG_STOP_TEST.Size = new System.Drawing.Size(779, 683);
-            this.skinTabPage_CHG_STOP_TEST.TabIndex = 9;
-            this.skinTabPage_CHG_STOP_TEST.TabItemImage = null;
-            this.skinTabPage_CHG_STOP_TEST.Text = "结束测试";
-            // 
-            // skinSplitContainer23
-            // 
-            this.skinSplitContainer23.Cursor = System.Windows.Forms.Cursors.Default;
-            this.skinSplitContainer23.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.skinSplitContainer23.LineBack = System.Drawing.Color.Gray;
-            this.skinSplitContainer23.LineBack2 = System.Drawing.Color.Gray;
-            this.skinSplitContainer23.Location = new System.Drawing.Point(0, 0);
-            this.skinSplitContainer23.Name = "skinSplitContainer23";
-            this.skinSplitContainer23.Orientation = System.Windows.Forms.Orientation.Horizontal;
-            // 
-            // skinSplitContainer23.Panel1
-            // 
-            this.skinSplitContainer23.Panel1.Controls.Add(this.skinLabel81);
-            // 
-            // skinSplitContainer23.Panel2
-            // 
-            this.skinSplitContainer23.Panel2.Controls.Add(this.R6_WHOLE_SET_RTC_RESULT_VAL);
-            this.skinSplitContainer23.Panel2.Controls.Add(this.R6_WHOLE_GET_RTC_RESULT_VAL);
-            this.skinSplitContainer23.Panel2.Controls.Add(this.skinLabel104);
-            this.skinSplitContainer23.Panel2.Controls.Add(this.skinLabel105);
-            this.skinSplitContainer23.Panel2.Controls.Add(this.R6_WHOLE_FLASH_RESULT_VAL);
-            this.skinSplitContainer23.Panel2.Controls.Add(this.skinLabel107);
-            this.skinSplitContainer23.Panel2.Controls.Add(this.skinLabel_CHG_TEST_TIME_RES_VAL);
-            this.skinSplitContainer23.Panel2.Controls.Add(this.skinLabel92);
-            this.skinSplitContainer23.Panel2.Controls.Add(this.skinLabel_CHG_2G_ICCID_RES_VAL);
-            this.skinSplitContainer23.Panel2.Controls.Add(this.skinLabel65);
-            this.skinSplitContainer23.Panel2.Controls.Add(this.skinLabel_CHG_TEST_USEDTIME_RES_VAL);
-            this.skinSplitContainer23.Panel2.Controls.Add(this.skinLabel_CHG_2G_CSQ_RES_VAL);
-            this.skinSplitContainer23.Panel2.Controls.Add(this.skinLabel_CHG_MB_QR_RES_VAL);
-            this.skinSplitContainer23.Panel2.Controls.Add(this.skinLabel63);
-            this.skinSplitContainer23.Panel2.Controls.Add(this.skinLabel_CHG_2G_RES_VAL);
-            this.skinSplitContainer23.Panel2.Controls.Add(this.skinLabel_CHG_24G_RES_VAL);
-            this.skinSplitContainer23.Panel2.Controls.Add(this.skinLabel_CHG_BT_RES_VAL);
-            this.skinSplitContainer23.Panel2.Controls.Add(this.skinLabel_CHG_LED_RES_VAL);
-            this.skinSplitContainer23.Panel2.Controls.Add(this.skinLabeL_CHG_TEST_RES_VAL);
-            this.skinSplitContainer23.Panel2.Controls.Add(this.skinLabel_CHG_FW_RES_VAL);
-            this.skinSplitContainer23.Panel2.Controls.Add(this.skinLabel_CHG_TESTOR_RES_VAL);
-            this.skinSplitContainer23.Panel2.Controls.Add(this.skinLabel_CHG_STATION_ID_RESLUT_VAL);
-            this.skinSplitContainer23.Panel2.Controls.Add(this.skinLabel113);
-            this.skinSplitContainer23.Panel2.Controls.Add(this.skinLabel115);
-            this.skinSplitContainer23.Panel2.Controls.Add(this.skinLabel116);
-            this.skinSplitContainer23.Panel2.Controls.Add(this.skinLabel117);
-            this.skinSplitContainer23.Panel2.Controls.Add(this.skinLabel118);
-            this.skinSplitContainer23.Panel2.Controls.Add(this.skinLabel121);
-            this.skinSplitContainer23.Panel2.Controls.Add(this.skinLabel122);
-            this.skinSplitContainer23.Panel2.Controls.Add(this.skinLabel123);
-            this.skinSplitContainer23.Panel2.Controls.Add(this.skinLabel124);
-            this.skinSplitContainer23.Panel2.Controls.Add(this.skinLabel125);
-            this.skinSplitContainer23.Panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.skinSplitContainer23_Panel2_Paint);
-            this.skinSplitContainer23.Size = new System.Drawing.Size(779, 683);
-            this.skinSplitContainer23.SplitterDistance = 63;
-            this.skinSplitContainer23.TabIndex = 3;
-            // 
-            // skinLabel125
-            // 
-            this.skinLabel125.AllowDrop = true;
-            this.skinLabel125.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.skinLabel125.AutoEllipsis = true;
-            this.skinLabel125.AutoSize = true;
-            this.skinLabel125.BackColor = System.Drawing.Color.Transparent;
-            this.skinLabel125.BorderColor = System.Drawing.Color.White;
-            this.skinLabel125.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.skinLabel125.Location = new System.Drawing.Point(84, 25);
-            this.skinLabel125.Name = "skinLabel125";
-            this.skinLabel125.Size = new System.Drawing.Size(106, 31);
-            this.skinLabel125.TabIndex = 27;
-            this.skinLabel125.Text = "  电桩号:";
-            this.skinLabel125.Click += new System.EventHandler(this.skinLabel125_Click);
-            // 
-            // skinLabel124
-            // 
-            this.skinLabel124.AllowDrop = true;
-            this.skinLabel124.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.skinLabel124.AutoEllipsis = true;
-            this.skinLabel124.AutoSize = true;
-            this.skinLabel124.BackColor = System.Drawing.Color.Transparent;
-            this.skinLabel124.BorderColor = System.Drawing.Color.White;
-            this.skinLabel124.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.skinLabel124.Location = new System.Drawing.Point(84, 79);
-            this.skinLabel124.Name = "skinLabel124";
-            this.skinLabel124.Size = new System.Drawing.Size(106, 31);
-            this.skinLabel124.TabIndex = 28;
-            this.skinLabel124.Text = "  测试员:";
-            this.skinLabel124.Click += new System.EventHandler(this.skinLabel124_Click);
-            // 
-            // skinLabel123
-            // 
-            this.skinLabel123.AllowDrop = true;
-            this.skinLabel123.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.skinLabel123.AutoEllipsis = true;
-            this.skinLabel123.AutoSize = true;
-            this.skinLabel123.BackColor = System.Drawing.Color.Transparent;
-            this.skinLabel123.BorderColor = System.Drawing.Color.White;
-            this.skinLabel123.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.skinLabel123.Location = new System.Drawing.Point(84, 106);
-            this.skinLabel123.Name = "skinLabel123";
-            this.skinLabel123.Size = new System.Drawing.Size(130, 31);
-            this.skinLabel123.TabIndex = 29;
-            this.skinLabel123.Text = "  软件版本:";
-            this.skinLabel123.Click += new System.EventHandler(this.skinLabel123_Click);
-            // 
-            // skinLabel122
-            // 
-            this.skinLabel122.AllowDrop = true;
-            this.skinLabel122.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.skinLabel122.AutoEllipsis = true;
-            this.skinLabel122.AutoSize = true;
-            this.skinLabel122.BackColor = System.Drawing.Color.Transparent;
-            this.skinLabel122.BorderColor = System.Drawing.Color.White;
-            this.skinLabel122.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.skinLabel122.Location = new System.Drawing.Point(84, 133);
-            this.skinLabel122.Name = "skinLabel122";
-            this.skinLabel122.Size = new System.Drawing.Size(130, 31);
-            this.skinLabel122.TabIndex = 30;
-            this.skinLabel122.Text = "  测试结果:";
-            this.skinLabel122.Click += new System.EventHandler(this.skinLabel122_Click);
-            // 
-            // skinLabel121
-            // 
-            this.skinLabel121.AllowDrop = true;
-            this.skinLabel121.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.skinLabel121.AutoEllipsis = true;
-            this.skinLabel121.AutoSize = true;
-            this.skinLabel121.BackColor = System.Drawing.Color.Transparent;
-            this.skinLabel121.BorderColor = System.Drawing.Color.White;
-            this.skinLabel121.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.skinLabel121.Location = new System.Drawing.Point(84, 160);
-            this.skinLabel121.Name = "skinLabel121";
-            this.skinLabel121.Size = new System.Drawing.Size(106, 31);
-            this.skinLabel121.TabIndex = 31;
-            this.skinLabel121.Text = "  指示灯:";
-            this.skinLabel121.Click += new System.EventHandler(this.skinLabel121_Click);
-            // 
-            // skinLabel118
-            // 
-            this.skinLabel118.AllowDrop = true;
-            this.skinLabel118.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.skinLabel118.AutoEllipsis = true;
-            this.skinLabel118.AutoSize = true;
-            this.skinLabel118.BackColor = System.Drawing.Color.Transparent;
-            this.skinLabel118.BorderColor = System.Drawing.Color.White;
-            this.skinLabel118.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.skinLabel118.Location = new System.Drawing.Point(84, 187);
-            this.skinLabel118.Name = "skinLabel118";
-            this.skinLabel118.Size = new System.Drawing.Size(130, 31);
-            this.skinLabel118.TabIndex = 34;
-            this.skinLabel118.Text = "  蓝牙通信:";
-            this.skinLabel118.Click += new System.EventHandler(this.skinLabel118_Click);
-            // 
-            // skinLabel117
-            // 
-            this.skinLabel117.AllowDrop = true;
-            this.skinLabel117.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.skinLabel117.AutoEllipsis = true;
-            this.skinLabel117.AutoSize = true;
-            this.skinLabel117.BackColor = System.Drawing.Color.Transparent;
-            this.skinLabel117.BorderColor = System.Drawing.Color.White;
-            this.skinLabel117.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.skinLabel117.Location = new System.Drawing.Point(84, 214);
-            this.skinLabel117.Name = "skinLabel117";
-            this.skinLabel117.Size = new System.Drawing.Size(134, 31);
-            this.skinLabel117.TabIndex = 35;
-            this.skinLabel117.Text = "  2.4G通信:";
-            this.skinLabel117.Click += new System.EventHandler(this.skinLabel117_Click);
-            // 
-            // skinLabel116
-            // 
-            this.skinLabel116.AllowDrop = true;
-            this.skinLabel116.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.skinLabel116.AutoEllipsis = true;
-            this.skinLabel116.AutoSize = true;
-            this.skinLabel116.BackColor = System.Drawing.Color.Transparent;
-            this.skinLabel116.BorderColor = System.Drawing.Color.White;
-            this.skinLabel116.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.skinLabel116.Location = new System.Drawing.Point(84, 241);
-            this.skinLabel116.Name = "skinLabel116";
-            this.skinLabel116.Size = new System.Drawing.Size(114, 31);
-            this.skinLabel116.TabIndex = 36;
-            this.skinLabel116.Text = "  2G通信:";
-            this.skinLabel116.Click += new System.EventHandler(this.skinLabel116_Click);
-            // 
-            // skinLabel115
-            // 
-            this.skinLabel115.AllowDrop = true;
-            this.skinLabel115.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.skinLabel115.AutoEllipsis = true;
-            this.skinLabel115.AutoSize = true;
-            this.skinLabel115.BackColor = System.Drawing.Color.Transparent;
-            this.skinLabel115.BorderColor = System.Drawing.Color.White;
-            this.skinLabel115.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.skinLabel115.Location = new System.Drawing.Point(84, 52);
-            this.skinLabel115.Name = "skinLabel115";
-            this.skinLabel115.Size = new System.Drawing.Size(130, 31);
-            this.skinLabel115.TabIndex = 37;
-            this.skinLabel115.Text = "  主板编号:";
-            this.skinLabel115.Click += new System.EventHandler(this.skinLabel115_Click);
-            // 
-            // skinLabel113
-            // 
-            this.skinLabel113.AllowDrop = true;
-            this.skinLabel113.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.skinLabel113.AutoEllipsis = true;
-            this.skinLabel113.AutoSize = true;
-            this.skinLabel113.BackColor = System.Drawing.Color.Transparent;
-            this.skinLabel113.BorderColor = System.Drawing.Color.White;
-            this.skinLabel113.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.skinLabel113.Location = new System.Drawing.Point(84, 399);
-            this.skinLabel113.Name = "skinLabel113";
-            this.skinLabel113.Size = new System.Drawing.Size(130, 31);
-            this.skinLabel113.TabIndex = 39;
-            this.skinLabel113.Text = "  测试用时:";
-            this.skinLabel113.Click += new System.EventHandler(this.skinLabel113_Click);
-            // 
-            // skinLabel_CHG_STATION_ID_RESLUT_VAL
-            // 
-            this.skinLabel_CHG_STATION_ID_RESLUT_VAL.AllowDrop = true;
-            this.skinLabel_CHG_STATION_ID_RESLUT_VAL.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.skinLabel_CHG_STATION_ID_RESLUT_VAL.AutoEllipsis = true;
-            this.skinLabel_CHG_STATION_ID_RESLUT_VAL.AutoSize = true;
-            this.skinLabel_CHG_STATION_ID_RESLUT_VAL.BackColor = System.Drawing.Color.Transparent;
-            this.skinLabel_CHG_STATION_ID_RESLUT_VAL.BorderColor = System.Drawing.Color.White;
-            this.skinLabel_CHG_STATION_ID_RESLUT_VAL.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.skinLabel_CHG_STATION_ID_RESLUT_VAL.Location = new System.Drawing.Point(318, 25);
-            this.skinLabel_CHG_STATION_ID_RESLUT_VAL.Name = "skinLabel_CHG_STATION_ID_RESLUT_VAL";
-            this.skinLabel_CHG_STATION_ID_RESLUT_VAL.Size = new System.Drawing.Size(28, 31);
-            this.skinLabel_CHG_STATION_ID_RESLUT_VAL.TabIndex = 40;
-            this.skinLabel_CHG_STATION_ID_RESLUT_VAL.Text = "  ";
-            this.skinLabel_CHG_STATION_ID_RESLUT_VAL.Click += new System.EventHandler(this.skinLabel_CHG_STATION_ID_RESLUT_VAL_Click);
-            // 
-            // skinLabel_CHG_TESTOR_RES_VAL
-            // 
-            this.skinLabel_CHG_TESTOR_RES_VAL.AllowDrop = true;
-            this.skinLabel_CHG_TESTOR_RES_VAL.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.skinLabel_CHG_TESTOR_RES_VAL.AutoEllipsis = true;
-            this.skinLabel_CHG_TESTOR_RES_VAL.AutoSize = true;
-            this.skinLabel_CHG_TESTOR_RES_VAL.BackColor = System.Drawing.Color.Transparent;
-            this.skinLabel_CHG_TESTOR_RES_VAL.BorderColor = System.Drawing.Color.White;
-            this.skinLabel_CHG_TESTOR_RES_VAL.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.skinLabel_CHG_TESTOR_RES_VAL.Location = new System.Drawing.Point(318, 79);
-            this.skinLabel_CHG_TESTOR_RES_VAL.Name = "skinLabel_CHG_TESTOR_RES_VAL";
-            this.skinLabel_CHG_TESTOR_RES_VAL.Size = new System.Drawing.Size(28, 31);
-            this.skinLabel_CHG_TESTOR_RES_VAL.TabIndex = 41;
-            this.skinLabel_CHG_TESTOR_RES_VAL.Text = "  ";
-            this.skinLabel_CHG_TESTOR_RES_VAL.Click += new System.EventHandler(this.skinLabel_CHG_TESTOR_RES_VAL_Click);
-            // 
-            // skinLabel_CHG_FW_RES_VAL
-            // 
-            this.skinLabel_CHG_FW_RES_VAL.AllowDrop = true;
-            this.skinLabel_CHG_FW_RES_VAL.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.skinLabel_CHG_FW_RES_VAL.AutoEllipsis = true;
-            this.skinLabel_CHG_FW_RES_VAL.AutoSize = true;
-            this.skinLabel_CHG_FW_RES_VAL.BackColor = System.Drawing.Color.Transparent;
-            this.skinLabel_CHG_FW_RES_VAL.BorderColor = System.Drawing.Color.White;
-            this.skinLabel_CHG_FW_RES_VAL.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.skinLabel_CHG_FW_RES_VAL.Location = new System.Drawing.Point(318, 106);
-            this.skinLabel_CHG_FW_RES_VAL.Name = "skinLabel_CHG_FW_RES_VAL";
-            this.skinLabel_CHG_FW_RES_VAL.Size = new System.Drawing.Size(28, 31);
-            this.skinLabel_CHG_FW_RES_VAL.TabIndex = 42;
-            this.skinLabel_CHG_FW_RES_VAL.Text = "  ";
-            this.skinLabel_CHG_FW_RES_VAL.Click += new System.EventHandler(this.skinLabel_CHG_FW_RES_VAL_Click);
-            // 
-            // skinLabeL_CHG_TEST_RES_VAL
-            // 
-            this.skinLabeL_CHG_TEST_RES_VAL.AllowDrop = true;
-            this.skinLabeL_CHG_TEST_RES_VAL.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.skinLabeL_CHG_TEST_RES_VAL.AutoEllipsis = true;
-            this.skinLabeL_CHG_TEST_RES_VAL.AutoSize = true;
-            this.skinLabeL_CHG_TEST_RES_VAL.BackColor = System.Drawing.Color.Transparent;
-            this.skinLabeL_CHG_TEST_RES_VAL.BorderColor = System.Drawing.Color.White;
-            this.skinLabeL_CHG_TEST_RES_VAL.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.skinLabeL_CHG_TEST_RES_VAL.Location = new System.Drawing.Point(318, 133);
-            this.skinLabeL_CHG_TEST_RES_VAL.Name = "skinLabeL_CHG_TEST_RES_VAL";
-            this.skinLabeL_CHG_TEST_RES_VAL.Size = new System.Drawing.Size(28, 31);
-            this.skinLabeL_CHG_TEST_RES_VAL.TabIndex = 43;
-            this.skinLabeL_CHG_TEST_RES_VAL.Text = "  ";
-            this.skinLabeL_CHG_TEST_RES_VAL.Click += new System.EventHandler(this.skinLabeL_CHG_TEST_RES_VAL_Click);
-            // 
-            // skinLabel_CHG_LED_RES_VAL
-            // 
-            this.skinLabel_CHG_LED_RES_VAL.AllowDrop = true;
-            this.skinLabel_CHG_LED_RES_VAL.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.skinLabel_CHG_LED_RES_VAL.AutoEllipsis = true;
-            this.skinLabel_CHG_LED_RES_VAL.AutoSize = true;
-            this.skinLabel_CHG_LED_RES_VAL.BackColor = System.Drawing.Color.Transparent;
-            this.skinLabel_CHG_LED_RES_VAL.BorderColor = System.Drawing.Color.White;
-            this.skinLabel_CHG_LED_RES_VAL.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.skinLabel_CHG_LED_RES_VAL.Location = new System.Drawing.Point(318, 160);
-            this.skinLabel_CHG_LED_RES_VAL.Name = "skinLabel_CHG_LED_RES_VAL";
-            this.skinLabel_CHG_LED_RES_VAL.Size = new System.Drawing.Size(28, 31);
-            this.skinLabel_CHG_LED_RES_VAL.TabIndex = 44;
-            this.skinLabel_CHG_LED_RES_VAL.Text = "  ";
-            this.skinLabel_CHG_LED_RES_VAL.Click += new System.EventHandler(this.skinLabel_CHG_LED_RES_VAL_Click);
-            // 
-            // skinLabel_CHG_BT_RES_VAL
-            // 
-            this.skinLabel_CHG_BT_RES_VAL.AllowDrop = true;
-            this.skinLabel_CHG_BT_RES_VAL.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.skinLabel_CHG_BT_RES_VAL.AutoEllipsis = true;
-            this.skinLabel_CHG_BT_RES_VAL.AutoSize = true;
-            this.skinLabel_CHG_BT_RES_VAL.BackColor = System.Drawing.Color.Transparent;
-            this.skinLabel_CHG_BT_RES_VAL.BorderColor = System.Drawing.Color.White;
-            this.skinLabel_CHG_BT_RES_VAL.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.skinLabel_CHG_BT_RES_VAL.Location = new System.Drawing.Point(318, 187);
-            this.skinLabel_CHG_BT_RES_VAL.Name = "skinLabel_CHG_BT_RES_VAL";
-            this.skinLabel_CHG_BT_RES_VAL.Size = new System.Drawing.Size(28, 31);
-            this.skinLabel_CHG_BT_RES_VAL.TabIndex = 47;
-            this.skinLabel_CHG_BT_RES_VAL.Text = "  ";
-            this.skinLabel_CHG_BT_RES_VAL.Click += new System.EventHandler(this.skinLabel_CHG_BT_RES_VAL_Click);
-            // 
-            // skinLabel_CHG_24G_RES_VAL
-            // 
-            this.skinLabel_CHG_24G_RES_VAL.AllowDrop = true;
-            this.skinLabel_CHG_24G_RES_VAL.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.skinLabel_CHG_24G_RES_VAL.AutoEllipsis = true;
-            this.skinLabel_CHG_24G_RES_VAL.AutoSize = true;
-            this.skinLabel_CHG_24G_RES_VAL.BackColor = System.Drawing.Color.Transparent;
-            this.skinLabel_CHG_24G_RES_VAL.BorderColor = System.Drawing.Color.White;
-            this.skinLabel_CHG_24G_RES_VAL.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.skinLabel_CHG_24G_RES_VAL.Location = new System.Drawing.Point(318, 214);
-            this.skinLabel_CHG_24G_RES_VAL.Name = "skinLabel_CHG_24G_RES_VAL";
-            this.skinLabel_CHG_24G_RES_VAL.Size = new System.Drawing.Size(28, 31);
-            this.skinLabel_CHG_24G_RES_VAL.TabIndex = 48;
-            this.skinLabel_CHG_24G_RES_VAL.Text = "  ";
-            this.skinLabel_CHG_24G_RES_VAL.Click += new System.EventHandler(this.skinLabel_CHG_24G_RES_VAL_Click);
-            // 
-            // skinLabel_CHG_2G_RES_VAL
-            // 
-            this.skinLabel_CHG_2G_RES_VAL.AllowDrop = true;
-            this.skinLabel_CHG_2G_RES_VAL.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.skinLabel_CHG_2G_RES_VAL.AutoEllipsis = true;
-            this.skinLabel_CHG_2G_RES_VAL.AutoSize = true;
-            this.skinLabel_CHG_2G_RES_VAL.BackColor = System.Drawing.Color.Transparent;
-            this.skinLabel_CHG_2G_RES_VAL.BorderColor = System.Drawing.Color.White;
-            this.skinLabel_CHG_2G_RES_VAL.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.skinLabel_CHG_2G_RES_VAL.Location = new System.Drawing.Point(318, 241);
-            this.skinLabel_CHG_2G_RES_VAL.Name = "skinLabel_CHG_2G_RES_VAL";
-            this.skinLabel_CHG_2G_RES_VAL.Size = new System.Drawing.Size(28, 31);
-            this.skinLabel_CHG_2G_RES_VAL.TabIndex = 49;
-            this.skinLabel_CHG_2G_RES_VAL.Text = "  ";
-            this.skinLabel_CHG_2G_RES_VAL.Click += new System.EventHandler(this.skinLabel_CHG_2G_RES_VAL_Click);
-            // 
-            // skinLabel63
-            // 
-            this.skinLabel63.AllowDrop = true;
-            this.skinLabel63.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.skinLabel63.AutoEllipsis = true;
-            this.skinLabel63.AutoSize = true;
-            this.skinLabel63.BackColor = System.Drawing.Color.Transparent;
-            this.skinLabel63.BorderColor = System.Drawing.Color.White;
-            this.skinLabel63.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.skinLabel63.Location = new System.Drawing.Point(84, 295);
-            this.skinLabel63.Name = "skinLabel63";
-            this.skinLabel63.Size = new System.Drawing.Size(98, 31);
-            this.skinLabel63.TabIndex = 56;
-            this.skinLabel63.Text = "  ICCID:";
-            this.skinLabel63.Click += new System.EventHandler(this.skinLabel63_Click);
-            // 
-            // skinLabel_CHG_MB_QR_RES_VAL
-            // 
-            this.skinLabel_CHG_MB_QR_RES_VAL.AllowDrop = true;
-            this.skinLabel_CHG_MB_QR_RES_VAL.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.skinLabel_CHG_MB_QR_RES_VAL.AutoEllipsis = true;
-            this.skinLabel_CHG_MB_QR_RES_VAL.AutoSize = true;
-            this.skinLabel_CHG_MB_QR_RES_VAL.BackColor = System.Drawing.Color.Transparent;
-            this.skinLabel_CHG_MB_QR_RES_VAL.BorderColor = System.Drawing.Color.White;
-            this.skinLabel_CHG_MB_QR_RES_VAL.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.skinLabel_CHG_MB_QR_RES_VAL.Location = new System.Drawing.Point(318, 52);
-            this.skinLabel_CHG_MB_QR_RES_VAL.Name = "skinLabel_CHG_MB_QR_RES_VAL";
-            this.skinLabel_CHG_MB_QR_RES_VAL.Size = new System.Drawing.Size(28, 31);
-            this.skinLabel_CHG_MB_QR_RES_VAL.TabIndex = 51;
-            this.skinLabel_CHG_MB_QR_RES_VAL.Text = "  ";
-            this.skinLabel_CHG_MB_QR_RES_VAL.Click += new System.EventHandler(this.skinLabel_CHG_MB_QR_RES_VAL_Click);
-            // 
-            // skinLabel_CHG_2G_CSQ_RES_VAL
-            // 
-            this.skinLabel_CHG_2G_CSQ_RES_VAL.AllowDrop = true;
-            this.skinLabel_CHG_2G_CSQ_RES_VAL.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.skinLabel_CHG_2G_CSQ_RES_VAL.AutoEllipsis = true;
-            this.skinLabel_CHG_2G_CSQ_RES_VAL.AutoSize = true;
-            this.skinLabel_CHG_2G_CSQ_RES_VAL.BackColor = System.Drawing.Color.Transparent;
-            this.skinLabel_CHG_2G_CSQ_RES_VAL.BorderColor = System.Drawing.Color.White;
-            this.skinLabel_CHG_2G_CSQ_RES_VAL.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.skinLabel_CHG_2G_CSQ_RES_VAL.Location = new System.Drawing.Point(318, 268);
-            this.skinLabel_CHG_2G_CSQ_RES_VAL.Name = "skinLabel_CHG_2G_CSQ_RES_VAL";
-            this.skinLabel_CHG_2G_CSQ_RES_VAL.Size = new System.Drawing.Size(28, 31);
-            this.skinLabel_CHG_2G_CSQ_RES_VAL.TabIndex = 58;
-            this.skinLabel_CHG_2G_CSQ_RES_VAL.Text = "  ";
-            this.skinLabel_CHG_2G_CSQ_RES_VAL.Click += new System.EventHandler(this.skinLabel_CHG_2G_CSQ_RES_VAL_Click);
-            // 
-            // skinLabel_CHG_TEST_USEDTIME_RES_VAL
-            // 
-            this.skinLabel_CHG_TEST_USEDTIME_RES_VAL.AllowDrop = true;
-            this.skinLabel_CHG_TEST_USEDTIME_RES_VAL.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.skinLabel_CHG_TEST_USEDTIME_RES_VAL.AutoEllipsis = true;
-            this.skinLabel_CHG_TEST_USEDTIME_RES_VAL.AutoSize = true;
-            this.skinLabel_CHG_TEST_USEDTIME_RES_VAL.BackColor = System.Drawing.Color.Transparent;
-            this.skinLabel_CHG_TEST_USEDTIME_RES_VAL.BorderColor = System.Drawing.Color.White;
-            this.skinLabel_CHG_TEST_USEDTIME_RES_VAL.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.skinLabel_CHG_TEST_USEDTIME_RES_VAL.Location = new System.Drawing.Point(318, 399);
-            this.skinLabel_CHG_TEST_USEDTIME_RES_VAL.Name = "skinLabel_CHG_TEST_USEDTIME_RES_VAL";
-            this.skinLabel_CHG_TEST_USEDTIME_RES_VAL.Size = new System.Drawing.Size(28, 31);
-            this.skinLabel_CHG_TEST_USEDTIME_RES_VAL.TabIndex = 52;
-            this.skinLabel_CHG_TEST_USEDTIME_RES_VAL.Text = "  ";
-            this.skinLabel_CHG_TEST_USEDTIME_RES_VAL.Click += new System.EventHandler(this.skinLabel_CHG_TEST_USEDTIME_RES_VAL_Click);
-            // 
-            // skinLabel65
-            // 
-            this.skinLabel65.AllowDrop = true;
-            this.skinLabel65.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.skinLabel65.AutoEllipsis = true;
-            this.skinLabel65.AutoSize = true;
-            this.skinLabel65.BackColor = System.Drawing.Color.Transparent;
-            this.skinLabel65.BorderColor = System.Drawing.Color.White;
-            this.skinLabel65.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.skinLabel65.Location = new System.Drawing.Point(84, 268);
-            this.skinLabel65.Name = "skinLabel65";
-            this.skinLabel65.Size = new System.Drawing.Size(106, 31);
-            this.skinLabel65.TabIndex = 55;
-            this.skinLabel65.Text = "  信号值:";
-            this.skinLabel65.Click += new System.EventHandler(this.skinLabel65_Click);
-            // 
-            // skinLabel_CHG_2G_ICCID_RES_VAL
-            // 
-            this.skinLabel_CHG_2G_ICCID_RES_VAL.AllowDrop = true;
-            this.skinLabel_CHG_2G_ICCID_RES_VAL.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.skinLabel_CHG_2G_ICCID_RES_VAL.AutoEllipsis = true;
-            this.skinLabel_CHG_2G_ICCID_RES_VAL.AutoSize = true;
-            this.skinLabel_CHG_2G_ICCID_RES_VAL.BackColor = System.Drawing.Color.Transparent;
-            this.skinLabel_CHG_2G_ICCID_RES_VAL.BorderColor = System.Drawing.Color.White;
-            this.skinLabel_CHG_2G_ICCID_RES_VAL.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.skinLabel_CHG_2G_ICCID_RES_VAL.Location = new System.Drawing.Point(318, 295);
-            this.skinLabel_CHG_2G_ICCID_RES_VAL.Name = "skinLabel_CHG_2G_ICCID_RES_VAL";
-            this.skinLabel_CHG_2G_ICCID_RES_VAL.Size = new System.Drawing.Size(28, 31);
-            this.skinLabel_CHG_2G_ICCID_RES_VAL.TabIndex = 59;
-            this.skinLabel_CHG_2G_ICCID_RES_VAL.Text = "  ";
-            this.skinLabel_CHG_2G_ICCID_RES_VAL.Click += new System.EventHandler(this.skinLabel_CHG_2G_ICCID_RES_VAL_Click);
-            // 
-            // skinLabel92
-            // 
-            this.skinLabel92.AllowDrop = true;
-            this.skinLabel92.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.skinLabel92.AutoEllipsis = true;
-            this.skinLabel92.AutoSize = true;
-            this.skinLabel92.BackColor = System.Drawing.Color.Transparent;
-            this.skinLabel92.BorderColor = System.Drawing.Color.White;
-            this.skinLabel92.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.skinLabel92.Location = new System.Drawing.Point(84, 426);
-            this.skinLabel92.Name = "skinLabel92";
-            this.skinLabel92.Size = new System.Drawing.Size(130, 31);
-            this.skinLabel92.TabIndex = 53;
-            this.skinLabel92.Text = "  测试时间:";
-            this.skinLabel92.Click += new System.EventHandler(this.skinLabel92_Click);
-            // 
-            // skinLabel_CHG_TEST_TIME_RES_VAL
-            // 
-            this.skinLabel_CHG_TEST_TIME_RES_VAL.AllowDrop = true;
-            this.skinLabel_CHG_TEST_TIME_RES_VAL.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.skinLabel_CHG_TEST_TIME_RES_VAL.AutoEllipsis = true;
-            this.skinLabel_CHG_TEST_TIME_RES_VAL.AutoSize = true;
-            this.skinLabel_CHG_TEST_TIME_RES_VAL.BackColor = System.Drawing.Color.Transparent;
-            this.skinLabel_CHG_TEST_TIME_RES_VAL.BorderColor = System.Drawing.Color.White;
-            this.skinLabel_CHG_TEST_TIME_RES_VAL.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.skinLabel_CHG_TEST_TIME_RES_VAL.Location = new System.Drawing.Point(318, 426);
-            this.skinLabel_CHG_TEST_TIME_RES_VAL.Name = "skinLabel_CHG_TEST_TIME_RES_VAL";
-            this.skinLabel_CHG_TEST_TIME_RES_VAL.Size = new System.Drawing.Size(28, 31);
-            this.skinLabel_CHG_TEST_TIME_RES_VAL.TabIndex = 54;
-            this.skinLabel_CHG_TEST_TIME_RES_VAL.Text = "  ";
-            this.skinLabel_CHG_TEST_TIME_RES_VAL.Click += new System.EventHandler(this.skinLabel_CHG_TEST_TIME_RES_VAL_Click);
-            // 
-            // skinLabel107
-            // 
-            this.skinLabel107.AllowDrop = true;
-            this.skinLabel107.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.skinLabel107.AutoEllipsis = true;
-            this.skinLabel107.AutoSize = true;
-            this.skinLabel107.BackColor = System.Drawing.Color.Transparent;
-            this.skinLabel107.BorderColor = System.Drawing.Color.White;
-            this.skinLabel107.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.skinLabel107.Location = new System.Drawing.Point(82, 320);
-            this.skinLabel107.Name = "skinLabel107";
-            this.skinLabel107.Size = new System.Drawing.Size(109, 31);
-            this.skinLabel107.TabIndex = 61;
-            this.skinLabel107.Text = "  FLASH:";
-            // 
-            // R6_WHOLE_FLASH_RESULT_VAL
-            // 
-            this.R6_WHOLE_FLASH_RESULT_VAL.AllowDrop = true;
-            this.R6_WHOLE_FLASH_RESULT_VAL.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.R6_WHOLE_FLASH_RESULT_VAL.AutoEllipsis = true;
-            this.R6_WHOLE_FLASH_RESULT_VAL.AutoSize = true;
-            this.R6_WHOLE_FLASH_RESULT_VAL.BackColor = System.Drawing.Color.Transparent;
-            this.R6_WHOLE_FLASH_RESULT_VAL.BorderColor = System.Drawing.Color.White;
-            this.R6_WHOLE_FLASH_RESULT_VAL.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.R6_WHOLE_FLASH_RESULT_VAL.Location = new System.Drawing.Point(318, 320);
-            this.R6_WHOLE_FLASH_RESULT_VAL.Name = "R6_WHOLE_FLASH_RESULT_VAL";
-            this.R6_WHOLE_FLASH_RESULT_VAL.Size = new System.Drawing.Size(28, 31);
-            this.R6_WHOLE_FLASH_RESULT_VAL.TabIndex = 62;
-            this.R6_WHOLE_FLASH_RESULT_VAL.Text = "  ";
-            // 
-            // skinLabel105
-            // 
-            this.skinLabel105.AllowDrop = true;
-            this.skinLabel105.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.skinLabel105.AutoEllipsis = true;
-            this.skinLabel105.AutoSize = true;
-            this.skinLabel105.BackColor = System.Drawing.Color.Transparent;
-            this.skinLabel105.BorderColor = System.Drawing.Color.White;
-            this.skinLabel105.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.skinLabel105.Location = new System.Drawing.Point(82, 345);
-            this.skinLabel105.Name = "skinLabel105";
-            this.skinLabel105.Size = new System.Drawing.Size(128, 31);
-            this.skinLabel105.TabIndex = 63;
-            this.skinLabel105.Text = "  更新RTC:";
-            // 
-            // skinLabel104
-            // 
-            this.skinLabel104.AllowDrop = true;
-            this.skinLabel104.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.skinLabel104.AutoEllipsis = true;
-            this.skinLabel104.AutoSize = true;
-            this.skinLabel104.BackColor = System.Drawing.Color.Transparent;
-            this.skinLabel104.BorderColor = System.Drawing.Color.White;
-            this.skinLabel104.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.skinLabel104.Location = new System.Drawing.Point(82, 374);
-            this.skinLabel104.Name = "skinLabel104";
-            this.skinLabel104.Size = new System.Drawing.Size(128, 31);
-            this.skinLabel104.TabIndex = 64;
-            this.skinLabel104.Text = "  读取RTC:";
-            // 
-            // R6_WHOLE_GET_RTC_RESULT_VAL
-            // 
-            this.R6_WHOLE_GET_RTC_RESULT_VAL.AllowDrop = true;
-            this.R6_WHOLE_GET_RTC_RESULT_VAL.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.R6_WHOLE_GET_RTC_RESULT_VAL.AutoEllipsis = true;
-            this.R6_WHOLE_GET_RTC_RESULT_VAL.AutoSize = true;
-            this.R6_WHOLE_GET_RTC_RESULT_VAL.BackColor = System.Drawing.Color.Transparent;
-            this.R6_WHOLE_GET_RTC_RESULT_VAL.BorderColor = System.Drawing.Color.White;
-            this.R6_WHOLE_GET_RTC_RESULT_VAL.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.R6_WHOLE_GET_RTC_RESULT_VAL.Location = new System.Drawing.Point(318, 374);
-            this.R6_WHOLE_GET_RTC_RESULT_VAL.Name = "R6_WHOLE_GET_RTC_RESULT_VAL";
-            this.R6_WHOLE_GET_RTC_RESULT_VAL.Size = new System.Drawing.Size(28, 31);
-            this.R6_WHOLE_GET_RTC_RESULT_VAL.TabIndex = 65;
-            this.R6_WHOLE_GET_RTC_RESULT_VAL.Text = "  ";
-            // 
-            // R6_WHOLE_SET_RTC_RESULT_VAL
-            // 
-            this.R6_WHOLE_SET_RTC_RESULT_VAL.AllowDrop = true;
-            this.R6_WHOLE_SET_RTC_RESULT_VAL.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.R6_WHOLE_SET_RTC_RESULT_VAL.AutoEllipsis = true;
-            this.R6_WHOLE_SET_RTC_RESULT_VAL.AutoSize = true;
-            this.R6_WHOLE_SET_RTC_RESULT_VAL.BackColor = System.Drawing.Color.Transparent;
-            this.R6_WHOLE_SET_RTC_RESULT_VAL.BorderColor = System.Drawing.Color.White;
-            this.R6_WHOLE_SET_RTC_RESULT_VAL.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.R6_WHOLE_SET_RTC_RESULT_VAL.Location = new System.Drawing.Point(318, 345);
-            this.R6_WHOLE_SET_RTC_RESULT_VAL.Name = "R6_WHOLE_SET_RTC_RESULT_VAL";
-            this.R6_WHOLE_SET_RTC_RESULT_VAL.Size = new System.Drawing.Size(28, 31);
-            this.R6_WHOLE_SET_RTC_RESULT_VAL.TabIndex = 66;
-            this.R6_WHOLE_SET_RTC_RESULT_VAL.Text = "  ";
-            // 
-            // skinLabel81
-            // 
-            this.skinLabel81.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.skinLabel81.AutoEllipsis = true;
-            this.skinLabel81.AutoSize = true;
-            this.skinLabel81.BackColor = System.Drawing.Color.Transparent;
-            this.skinLabel81.BorderColor = System.Drawing.Color.White;
-            this.skinLabel81.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.skinLabel81.Location = new System.Drawing.Point(287, 23);
-            this.skinLabel81.Name = "skinLabel81";
-            this.skinLabel81.Size = new System.Drawing.Size(122, 31);
-            this.skinLabel81.TabIndex = 15;
-            this.skinLabel81.Text = "测试结果";
-            // 
-            // R6skinTabPage_Whole_GET_RTC
-            // 
-            this.R6skinTabPage_Whole_GET_RTC.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.R6skinTabPage_Whole_GET_RTC.Controls.Add(this.splitContainer4);
-            this.R6skinTabPage_Whole_GET_RTC.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.R6skinTabPage_Whole_GET_RTC.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.R6skinTabPage_Whole_GET_RTC.Location = new System.Drawing.Point(100, 0);
-            this.R6skinTabPage_Whole_GET_RTC.Name = "R6skinTabPage_Whole_GET_RTC";
-            this.R6skinTabPage_Whole_GET_RTC.Size = new System.Drawing.Size(779, 683);
-            this.R6skinTabPage_Whole_GET_RTC.TabIndex = 13;
-            this.R6skinTabPage_Whole_GET_RTC.TabItemImage = null;
-            this.R6skinTabPage_Whole_GET_RTC.Text = "读取RTC";
-            // 
-            // splitContainer4
-            // 
-            this.splitContainer4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainer4.Location = new System.Drawing.Point(0, 0);
-            this.splitContainer4.Name = "splitContainer4";
-            this.splitContainer4.Orientation = System.Windows.Forms.Orientation.Horizontal;
-            // 
-            // splitContainer4.Panel1
-            // 
-            this.splitContainer4.Panel1.BackColor = System.Drawing.Color.White;
-            this.splitContainer4.Panel1.Controls.Add(this.R6skinLabel_Whole_GETRTC_TIME);
-            this.splitContainer4.Panel1.Controls.Add(this.skinLabel38);
-            this.splitContainer4.Panel1.Controls.Add(this.skinLabel42);
-            this.splitContainer4.Panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.splitContainer4_Panel1_Paint);
-            // 
-            // splitContainer4.Panel2
-            // 
-            this.splitContainer4.Panel2.BackColor = System.Drawing.Color.White;
-            this.splitContainer4.Panel2.Controls.Add(this.R6skinButton_Whole_GETRTC_RTEST);
-            this.splitContainer4.Panel2.Controls.Add(this.R6skinButton_Whole_GETRTC_SKIP);
-            this.splitContainer4.Panel2.Controls.Add(this.R6skinLabel_Whole_GETRTC_RESULT);
-            this.splitContainer4.Panel2.Controls.Add(this.skinLabel93);
-            this.splitContainer4.Panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.splitContainer4_Panel2_Paint);
-            this.splitContainer4.Size = new System.Drawing.Size(779, 683);
-            this.splitContainer4.SplitterDistance = 79;
-            this.splitContainer4.TabIndex = 0;
-            // 
-            // skinLabel93
-            // 
-            this.skinLabel93.AutoSize = true;
-            this.skinLabel93.BackColor = System.Drawing.Color.Transparent;
-            this.skinLabel93.BorderColor = System.Drawing.Color.White;
-            this.skinLabel93.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.skinLabel93.Location = new System.Drawing.Point(38, 26);
-            this.skinLabel93.Name = "skinLabel93";
-            this.skinLabel93.Size = new System.Drawing.Size(116, 31);
-            this.skinLabel93.TabIndex = 12;
-            this.skinLabel93.Text = "测试结果:";
-            // 
-            // R6skinLabel_Whole_GETRTC_RESULT
-            // 
-            this.R6skinLabel_Whole_GETRTC_RESULT.AutoSize = true;
-            this.R6skinLabel_Whole_GETRTC_RESULT.BackColor = System.Drawing.Color.Transparent;
-            this.R6skinLabel_Whole_GETRTC_RESULT.BorderColor = System.Drawing.Color.White;
-            this.R6skinLabel_Whole_GETRTC_RESULT.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.R6skinLabel_Whole_GETRTC_RESULT.Location = new System.Drawing.Point(151, 28);
-            this.R6skinLabel_Whole_GETRTC_RESULT.Name = "R6skinLabel_Whole_GETRTC_RESULT";
-            this.R6skinLabel_Whole_GETRTC_RESULT.Size = new System.Drawing.Size(0, 31);
-            this.R6skinLabel_Whole_GETRTC_RESULT.TabIndex = 13;
-            // 
-            // R6skinButton_Whole_GETRTC_SKIP
-            // 
-            this.R6skinButton_Whole_GETRTC_SKIP.BackColor = System.Drawing.Color.Transparent;
-            this.R6skinButton_Whole_GETRTC_SKIP.BaseColor = System.Drawing.Color.DarkGray;
-            this.R6skinButton_Whole_GETRTC_SKIP.BorderColor = System.Drawing.Color.DarkGray;
-            this.R6skinButton_Whole_GETRTC_SKIP.ControlState = CCWin.SkinClass.ControlState.Normal;
-            this.R6skinButton_Whole_GETRTC_SKIP.DownBack = null;
-            this.R6skinButton_Whole_GETRTC_SKIP.Location = new System.Drawing.Point(132, 153);
-            this.R6skinButton_Whole_GETRTC_SKIP.MouseBack = null;
-            this.R6skinButton_Whole_GETRTC_SKIP.Name = "R6skinButton_Whole_GETRTC_SKIP";
-            this.R6skinButton_Whole_GETRTC_SKIP.NormlBack = null;
-            this.R6skinButton_Whole_GETRTC_SKIP.Radius = 15;
-            this.R6skinButton_Whole_GETRTC_SKIP.RoundStyle = CCWin.SkinClass.RoundStyle.All;
-            this.R6skinButton_Whole_GETRTC_SKIP.Size = new System.Drawing.Size(134, 40);
-            this.R6skinButton_Whole_GETRTC_SKIP.TabIndex = 14;
-            this.R6skinButton_Whole_GETRTC_SKIP.Text = "跳过";
-            this.R6skinButton_Whole_GETRTC_SKIP.UseVisualStyleBackColor = false;
-            this.R6skinButton_Whole_GETRTC_SKIP.Click += new System.EventHandler(this.R6skinButton_Whole_GETRTC_SKIP_Click);
-            // 
-            // R6skinButton_Whole_GETRTC_RTEST
-            // 
-            this.R6skinButton_Whole_GETRTC_RTEST.BackColor = System.Drawing.Color.Transparent;
-            this.R6skinButton_Whole_GETRTC_RTEST.BaseColor = System.Drawing.Color.DarkGray;
-            this.R6skinButton_Whole_GETRTC_RTEST.BorderColor = System.Drawing.Color.DarkGray;
-            this.R6skinButton_Whole_GETRTC_RTEST.ControlState = CCWin.SkinClass.ControlState.Normal;
-            this.R6skinButton_Whole_GETRTC_RTEST.DownBack = null;
-            this.R6skinButton_Whole_GETRTC_RTEST.Location = new System.Drawing.Point(332, 153);
-            this.R6skinButton_Whole_GETRTC_RTEST.MouseBack = null;
-            this.R6skinButton_Whole_GETRTC_RTEST.Name = "R6skinButton_Whole_GETRTC_RTEST";
-            this.R6skinButton_Whole_GETRTC_RTEST.NormlBack = null;
-            this.R6skinButton_Whole_GETRTC_RTEST.Radius = 15;
-            this.R6skinButton_Whole_GETRTC_RTEST.RoundStyle = CCWin.SkinClass.RoundStyle.All;
-            this.R6skinButton_Whole_GETRTC_RTEST.Size = new System.Drawing.Size(134, 40);
-            this.R6skinButton_Whole_GETRTC_RTEST.TabIndex = 15;
-            this.R6skinButton_Whole_GETRTC_RTEST.Text = "重新测试";
-            this.R6skinButton_Whole_GETRTC_RTEST.UseVisualStyleBackColor = false;
-            this.R6skinButton_Whole_GETRTC_RTEST.Click += new System.EventHandler(this.R6skinButton_Whole_GETRTC_RTEST_Click);
-            // 
-            // skinLabel42
-            // 
-            this.skinLabel42.AutoSize = true;
-            this.skinLabel42.BackColor = System.Drawing.Color.Transparent;
-            this.skinLabel42.BorderColor = System.Drawing.Color.White;
-            this.skinLabel42.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.skinLabel42.Location = new System.Drawing.Point(38, 23);
-            this.skinLabel42.Name = "skinLabel42";
-            this.skinLabel42.Size = new System.Drawing.Size(258, 31);
-            this.skinLabel42.TabIndex = 3;
-            this.skinLabel42.Text = "当前项目:读取RTC时间";
-            // 
-            // skinLabel38
-            // 
-            this.skinLabel38.AutoSize = true;
-            this.skinLabel38.BackColor = System.Drawing.Color.Transparent;
-            this.skinLabel38.BorderColor = System.Drawing.Color.White;
-            this.skinLabel38.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.skinLabel38.Location = new System.Drawing.Point(392, 23);
-            this.skinLabel38.Name = "skinLabel38";
-            this.skinLabel38.Size = new System.Drawing.Size(92, 31);
-            this.skinLabel38.TabIndex = 4;
-            this.skinLabel38.Text = "倒计时:";
-            // 
-            // R6skinLabel_Whole_GETRTC_TIME
-            // 
-            this.R6skinLabel_Whole_GETRTC_TIME.AutoSize = true;
-            this.R6skinLabel_Whole_GETRTC_TIME.BackColor = System.Drawing.Color.Transparent;
-            this.R6skinLabel_Whole_GETRTC_TIME.BorderColor = System.Drawing.Color.White;
-            this.R6skinLabel_Whole_GETRTC_TIME.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.R6skinLabel_Whole_GETRTC_TIME.Location = new System.Drawing.Point(484, 23);
-            this.R6skinLabel_Whole_GETRTC_TIME.Name = "R6skinLabel_Whole_GETRTC_TIME";
-            this.R6skinLabel_Whole_GETRTC_TIME.Size = new System.Drawing.Size(0, 31);
-            this.R6skinLabel_Whole_GETRTC_TIME.TabIndex = 5;
-            // 
-            // R6skinTabPage_Whole_SET_RTC
-            // 
-            this.R6skinTabPage_Whole_SET_RTC.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.R6skinTabPage_Whole_SET_RTC.Controls.Add(this.splitContainer5);
-            this.R6skinTabPage_Whole_SET_RTC.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.R6skinTabPage_Whole_SET_RTC.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.R6skinTabPage_Whole_SET_RTC.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.R6skinTabPage_Whole_SET_RTC.Location = new System.Drawing.Point(100, 0);
-            this.R6skinTabPage_Whole_SET_RTC.Name = "R6skinTabPage_Whole_SET_RTC";
-            this.R6skinTabPage_Whole_SET_RTC.Size = new System.Drawing.Size(779, 683);
-            this.R6skinTabPage_Whole_SET_RTC.TabIndex = 12;
-            this.R6skinTabPage_Whole_SET_RTC.TabItemImage = null;
-            this.R6skinTabPage_Whole_SET_RTC.Text = "更新RTC";
-            this.R6skinTabPage_Whole_SET_RTC.Click += new System.EventHandler(this.R6skinTabPage_Whole_SET_RTC_Click);
-            // 
-            // splitContainer5
-            // 
-            this.splitContainer5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainer5.Location = new System.Drawing.Point(0, 0);
-            this.splitContainer5.Name = "splitContainer5";
-            this.splitContainer5.Orientation = System.Windows.Forms.Orientation.Horizontal;
-            // 
-            // splitContainer5.Panel1
-            // 
-            this.splitContainer5.Panel1.BackColor = System.Drawing.Color.White;
-            this.splitContainer5.Panel1.Controls.Add(this.R6skinLabel_Whole_SETRTC_TIME);
-            this.splitContainer5.Panel1.Controls.Add(this.skinLabel87);
-            this.splitContainer5.Panel1.Controls.Add(this.skinLabel94);
-            this.splitContainer5.Panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.splitContainer5_Panel1_Paint);
-            // 
-            // splitContainer5.Panel2
-            // 
-            this.splitContainer5.Panel2.BackColor = System.Drawing.Color.White;
-            this.splitContainer5.Panel2.Controls.Add(this.R6skinButton_Whole_SETRTC_RTEST);
-            this.splitContainer5.Panel2.Controls.Add(this.R6skinButton_Whole_SETRTC_SKIP);
-            this.splitContainer5.Panel2.Controls.Add(this.R6skinLabel_Whole_SETRTC_RESULT);
-            this.splitContainer5.Panel2.Controls.Add(this.skinLabel95);
-            this.splitContainer5.Size = new System.Drawing.Size(779, 683);
-            this.splitContainer5.SplitterDistance = 99;
-            this.splitContainer5.TabIndex = 0;
-            // 
-            // skinLabel95
-            // 
-            this.skinLabel95.AutoSize = true;
-            this.skinLabel95.BackColor = System.Drawing.Color.Transparent;
-            this.skinLabel95.BorderColor = System.Drawing.Color.White;
-            this.skinLabel95.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.skinLabel95.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.skinLabel95.Location = new System.Drawing.Point(31, 28);
-            this.skinLabel95.Name = "skinLabel95";
-            this.skinLabel95.Size = new System.Drawing.Size(116, 31);
-            this.skinLabel95.TabIndex = 12;
-            this.skinLabel95.Text = "测试结果:";
-            // 
-            // R6skinLabel_Whole_SETRTC_RESULT
-            // 
-            this.R6skinLabel_Whole_SETRTC_RESULT.AutoSize = true;
-            this.R6skinLabel_Whole_SETRTC_RESULT.BackColor = System.Drawing.Color.Transparent;
-            this.R6skinLabel_Whole_SETRTC_RESULT.BorderColor = System.Drawing.Color.White;
-            this.R6skinLabel_Whole_SETRTC_RESULT.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.R6skinLabel_Whole_SETRTC_RESULT.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.R6skinLabel_Whole_SETRTC_RESULT.Location = new System.Drawing.Point(144, 30);
-            this.R6skinLabel_Whole_SETRTC_RESULT.Name = "R6skinLabel_Whole_SETRTC_RESULT";
-            this.R6skinLabel_Whole_SETRTC_RESULT.Size = new System.Drawing.Size(0, 31);
-            this.R6skinLabel_Whole_SETRTC_RESULT.TabIndex = 13;
-            // 
-            // R6skinButton_Whole_SETRTC_SKIP
-            // 
-            this.R6skinButton_Whole_SETRTC_SKIP.BackColor = System.Drawing.Color.Transparent;
-            this.R6skinButton_Whole_SETRTC_SKIP.BaseColor = System.Drawing.Color.DarkGray;
-            this.R6skinButton_Whole_SETRTC_SKIP.BorderColor = System.Drawing.Color.DarkGray;
-            this.R6skinButton_Whole_SETRTC_SKIP.ControlState = CCWin.SkinClass.ControlState.Normal;
-            this.R6skinButton_Whole_SETRTC_SKIP.DownBack = null;
-            this.R6skinButton_Whole_SETRTC_SKIP.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.R6skinButton_Whole_SETRTC_SKIP.Location = new System.Drawing.Point(125, 155);
-            this.R6skinButton_Whole_SETRTC_SKIP.MouseBack = null;
-            this.R6skinButton_Whole_SETRTC_SKIP.Name = "R6skinButton_Whole_SETRTC_SKIP";
-            this.R6skinButton_Whole_SETRTC_SKIP.NormlBack = null;
-            this.R6skinButton_Whole_SETRTC_SKIP.Radius = 15;
-            this.R6skinButton_Whole_SETRTC_SKIP.RoundStyle = CCWin.SkinClass.RoundStyle.All;
-            this.R6skinButton_Whole_SETRTC_SKIP.Size = new System.Drawing.Size(134, 40);
-            this.R6skinButton_Whole_SETRTC_SKIP.TabIndex = 14;
-            this.R6skinButton_Whole_SETRTC_SKIP.Text = "跳过";
-            this.R6skinButton_Whole_SETRTC_SKIP.UseVisualStyleBackColor = false;
-            this.R6skinButton_Whole_SETRTC_SKIP.Click += new System.EventHandler(this.R6skinButton_Whole_SETRTC_SKIP_Click);
-            // 
-            // R6skinButton_Whole_SETRTC_RTEST
-            // 
-            this.R6skinButton_Whole_SETRTC_RTEST.BackColor = System.Drawing.Color.Transparent;
-            this.R6skinButton_Whole_SETRTC_RTEST.BaseColor = System.Drawing.Color.DarkGray;
-            this.R6skinButton_Whole_SETRTC_RTEST.BorderColor = System.Drawing.Color.DarkGray;
-            this.R6skinButton_Whole_SETRTC_RTEST.ControlState = CCWin.SkinClass.ControlState.Normal;
-            this.R6skinButton_Whole_SETRTC_RTEST.DownBack = null;
-            this.R6skinButton_Whole_SETRTC_RTEST.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.R6skinButton_Whole_SETRTC_RTEST.Location = new System.Drawing.Point(325, 155);
-            this.R6skinButton_Whole_SETRTC_RTEST.MouseBack = null;
-            this.R6skinButton_Whole_SETRTC_RTEST.Name = "R6skinButton_Whole_SETRTC_RTEST";
-            this.R6skinButton_Whole_SETRTC_RTEST.NormlBack = null;
-            this.R6skinButton_Whole_SETRTC_RTEST.Radius = 15;
-            this.R6skinButton_Whole_SETRTC_RTEST.RoundStyle = CCWin.SkinClass.RoundStyle.All;
-            this.R6skinButton_Whole_SETRTC_RTEST.Size = new System.Drawing.Size(134, 40);
-            this.R6skinButton_Whole_SETRTC_RTEST.TabIndex = 15;
-            this.R6skinButton_Whole_SETRTC_RTEST.Text = "重新测试";
-            this.R6skinButton_Whole_SETRTC_RTEST.UseVisualStyleBackColor = false;
-            this.R6skinButton_Whole_SETRTC_RTEST.Click += new System.EventHandler(this.R6skinButton_Whole_SETRTC_RTEST_Click);
-            // 
-            // skinLabel94
-            // 
-            this.skinLabel94.AutoSize = true;
-            this.skinLabel94.BackColor = System.Drawing.Color.Transparent;
-            this.skinLabel94.BorderColor = System.Drawing.Color.White;
-            this.skinLabel94.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.skinLabel94.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.skinLabel94.Location = new System.Drawing.Point(31, 24);
-            this.skinLabel94.Name = "skinLabel94";
-            this.skinLabel94.Size = new System.Drawing.Size(258, 31);
-            this.skinLabel94.TabIndex = 3;
-            this.skinLabel94.Text = "当前项目:更新RTC时间";
-            // 
-            // skinLabel87
-            // 
-            this.skinLabel87.AutoSize = true;
-            this.skinLabel87.BackColor = System.Drawing.Color.Transparent;
-            this.skinLabel87.BorderColor = System.Drawing.Color.White;
-            this.skinLabel87.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.skinLabel87.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.skinLabel87.Location = new System.Drawing.Point(385, 24);
-            this.skinLabel87.Name = "skinLabel87";
-            this.skinLabel87.Size = new System.Drawing.Size(92, 31);
-            this.skinLabel87.TabIndex = 4;
-            this.skinLabel87.Text = "倒计时:";
-            // 
-            // R6skinLabel_Whole_SETRTC_TIME
-            // 
-            this.R6skinLabel_Whole_SETRTC_TIME.AutoSize = true;
-            this.R6skinLabel_Whole_SETRTC_TIME.BackColor = System.Drawing.Color.Transparent;
-            this.R6skinLabel_Whole_SETRTC_TIME.BorderColor = System.Drawing.Color.White;
-            this.R6skinLabel_Whole_SETRTC_TIME.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.R6skinLabel_Whole_SETRTC_TIME.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.R6skinLabel_Whole_SETRTC_TIME.Location = new System.Drawing.Point(477, 24);
-            this.R6skinLabel_Whole_SETRTC_TIME.Name = "R6skinLabel_Whole_SETRTC_TIME";
-            this.R6skinLabel_Whole_SETRTC_TIME.Size = new System.Drawing.Size(0, 31);
-            this.R6skinLabel_Whole_SETRTC_TIME.TabIndex = 5;
-            // 
-            // R6skinTabPage_Whole_FLASH
-            // 
-            this.R6skinTabPage_Whole_FLASH.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.R6skinTabPage_Whole_FLASH.Controls.Add(this.splitContainer6);
-            this.R6skinTabPage_Whole_FLASH.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.R6skinTabPage_Whole_FLASH.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.R6skinTabPage_Whole_FLASH.Location = new System.Drawing.Point(100, 0);
-            this.R6skinTabPage_Whole_FLASH.Name = "R6skinTabPage_Whole_FLASH";
-            this.R6skinTabPage_Whole_FLASH.Size = new System.Drawing.Size(779, 683);
-            this.R6skinTabPage_Whole_FLASH.TabIndex = 11;
-            this.R6skinTabPage_Whole_FLASH.TabItemImage = null;
-            this.R6skinTabPage_Whole_FLASH.Text = "FLASH";
-            // 
-            // splitContainer6
-            // 
-            this.splitContainer6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainer6.Location = new System.Drawing.Point(0, 0);
-            this.splitContainer6.Name = "splitContainer6";
-            this.splitContainer6.Orientation = System.Windows.Forms.Orientation.Horizontal;
-            // 
-            // splitContainer6.Panel1
-            // 
-            this.splitContainer6.Panel1.BackColor = System.Drawing.Color.White;
-            this.splitContainer6.Panel1.Controls.Add(this.R6skinLabel_Whole_FLASH_TIME);
-            this.splitContainer6.Panel1.Controls.Add(this.skinLabel12);
-            this.splitContainer6.Panel1.Controls.Add(this.skinLabel17);
-            // 
-            // splitContainer6.Panel2
-            // 
-            this.splitContainer6.Panel2.BackColor = System.Drawing.Color.White;
-            this.splitContainer6.Panel2.Controls.Add(this.R6skinButton_Whole_FLASH_RTEST);
-            this.splitContainer6.Panel2.Controls.Add(this.R6skinButton_Whole_FLASH_SKIP);
-            this.splitContainer6.Panel2.Controls.Add(this.R6skinLabel_Whole_FLASH_RESULT);
-            this.splitContainer6.Panel2.Controls.Add(this.skinLabel22);
-            this.splitContainer6.Size = new System.Drawing.Size(779, 683);
-            this.splitContainer6.SplitterDistance = 79;
-            this.splitContainer6.TabIndex = 0;
-            // 
-            // skinLabel22
-            // 
-            this.skinLabel22.AutoSize = true;
-            this.skinLabel22.BackColor = System.Drawing.Color.Transparent;
-            this.skinLabel22.BorderColor = System.Drawing.Color.White;
-            this.skinLabel22.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.skinLabel22.Location = new System.Drawing.Point(31, 44);
-            this.skinLabel22.Name = "skinLabel22";
-            this.skinLabel22.Size = new System.Drawing.Size(116, 31);
-            this.skinLabel22.TabIndex = 12;
-            this.skinLabel22.Text = "测试结果:";
-            // 
-            // R6skinLabel_Whole_FLASH_RESULT
-            // 
-            this.R6skinLabel_Whole_FLASH_RESULT.AutoSize = true;
-            this.R6skinLabel_Whole_FLASH_RESULT.BackColor = System.Drawing.Color.Transparent;
-            this.R6skinLabel_Whole_FLASH_RESULT.BorderColor = System.Drawing.Color.White;
-            this.R6skinLabel_Whole_FLASH_RESULT.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.R6skinLabel_Whole_FLASH_RESULT.Location = new System.Drawing.Point(144, 46);
-            this.R6skinLabel_Whole_FLASH_RESULT.Name = "R6skinLabel_Whole_FLASH_RESULT";
-            this.R6skinLabel_Whole_FLASH_RESULT.Size = new System.Drawing.Size(0, 31);
-            this.R6skinLabel_Whole_FLASH_RESULT.TabIndex = 13;
-            // 
-            // R6skinButton_Whole_FLASH_SKIP
-            // 
-            this.R6skinButton_Whole_FLASH_SKIP.BackColor = System.Drawing.Color.Transparent;
-            this.R6skinButton_Whole_FLASH_SKIP.BaseColor = System.Drawing.Color.DarkGray;
-            this.R6skinButton_Whole_FLASH_SKIP.BorderColor = System.Drawing.Color.DarkGray;
-            this.R6skinButton_Whole_FLASH_SKIP.ControlState = CCWin.SkinClass.ControlState.Normal;
-            this.R6skinButton_Whole_FLASH_SKIP.DownBack = null;
-            this.R6skinButton_Whole_FLASH_SKIP.Location = new System.Drawing.Point(125, 130);
-            this.R6skinButton_Whole_FLASH_SKIP.MouseBack = null;
-            this.R6skinButton_Whole_FLASH_SKIP.Name = "R6skinButton_Whole_FLASH_SKIP";
-            this.R6skinButton_Whole_FLASH_SKIP.NormlBack = null;
-            this.R6skinButton_Whole_FLASH_SKIP.Radius = 15;
-            this.R6skinButton_Whole_FLASH_SKIP.RoundStyle = CCWin.SkinClass.RoundStyle.All;
-            this.R6skinButton_Whole_FLASH_SKIP.Size = new System.Drawing.Size(134, 40);
-            this.R6skinButton_Whole_FLASH_SKIP.TabIndex = 14;
-            this.R6skinButton_Whole_FLASH_SKIP.Text = "跳过";
-            this.R6skinButton_Whole_FLASH_SKIP.UseVisualStyleBackColor = false;
-            this.R6skinButton_Whole_FLASH_SKIP.Click += new System.EventHandler(this.R6skinButton_Whole_FLASH_SKIP_Click);
-            // 
-            // R6skinButton_Whole_FLASH_RTEST
-            // 
-            this.R6skinButton_Whole_FLASH_RTEST.BackColor = System.Drawing.Color.Transparent;
-            this.R6skinButton_Whole_FLASH_RTEST.BaseColor = System.Drawing.Color.DarkGray;
-            this.R6skinButton_Whole_FLASH_RTEST.BorderColor = System.Drawing.Color.DarkGray;
-            this.R6skinButton_Whole_FLASH_RTEST.ControlState = CCWin.SkinClass.ControlState.Normal;
-            this.R6skinButton_Whole_FLASH_RTEST.DownBack = null;
-            this.R6skinButton_Whole_FLASH_RTEST.Location = new System.Drawing.Point(325, 130);
-            this.R6skinButton_Whole_FLASH_RTEST.MouseBack = null;
-            this.R6skinButton_Whole_FLASH_RTEST.Name = "R6skinButton_Whole_FLASH_RTEST";
-            this.R6skinButton_Whole_FLASH_RTEST.NormlBack = null;
-            this.R6skinButton_Whole_FLASH_RTEST.Radius = 15;
-            this.R6skinButton_Whole_FLASH_RTEST.RoundStyle = CCWin.SkinClass.RoundStyle.All;
-            this.R6skinButton_Whole_FLASH_RTEST.Size = new System.Drawing.Size(134, 40);
-            this.R6skinButton_Whole_FLASH_RTEST.TabIndex = 15;
-            this.R6skinButton_Whole_FLASH_RTEST.Text = "重新测试";
-            this.R6skinButton_Whole_FLASH_RTEST.UseVisualStyleBackColor = false;
-            this.R6skinButton_Whole_FLASH_RTEST.Click += new System.EventHandler(this.R6skinButton_Whole_FLASH_RTEST_Click);
-            // 
-            // skinLabel17
-            // 
-            this.skinLabel17.AutoSize = true;
-            this.skinLabel17.BackColor = System.Drawing.Color.Transparent;
-            this.skinLabel17.BorderColor = System.Drawing.Color.White;
-            this.skinLabel17.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.skinLabel17.Location = new System.Drawing.Point(31, 27);
-            this.skinLabel17.Name = "skinLabel17";
-            this.skinLabel17.Size = new System.Drawing.Size(239, 31);
-            this.skinLabel17.TabIndex = 3;
-            this.skinLabel17.Text = "当前项目:FLASH测试";
-            // 
-            // skinLabel12
-            // 
-            this.skinLabel12.AutoSize = true;
-            this.skinLabel12.BackColor = System.Drawing.Color.Transparent;
-            this.skinLabel12.BorderColor = System.Drawing.Color.White;
-            this.skinLabel12.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.skinLabel12.Location = new System.Drawing.Point(385, 27);
-            this.skinLabel12.Name = "skinLabel12";
-            this.skinLabel12.Size = new System.Drawing.Size(92, 31);
-            this.skinLabel12.TabIndex = 4;
-            this.skinLabel12.Text = "倒计时:";
-            // 
-            // R6skinLabel_Whole_FLASH_TIME
-            // 
-            this.R6skinLabel_Whole_FLASH_TIME.AutoSize = true;
-            this.R6skinLabel_Whole_FLASH_TIME.BackColor = System.Drawing.Color.Transparent;
-            this.R6skinLabel_Whole_FLASH_TIME.BorderColor = System.Drawing.Color.White;
-            this.R6skinLabel_Whole_FLASH_TIME.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.R6skinLabel_Whole_FLASH_TIME.Location = new System.Drawing.Point(477, 27);
-            this.R6skinLabel_Whole_FLASH_TIME.Name = "R6skinLabel_Whole_FLASH_TIME";
-            this.R6skinLabel_Whole_FLASH_TIME.Size = new System.Drawing.Size(0, 31);
-            this.R6skinLabel_Whole_FLASH_TIME.TabIndex = 5;
-            // 
-            // skinTabPage_CHG_2G
-            // 
-            this.skinTabPage_CHG_2G.BackColor = System.Drawing.Color.White;
-            this.skinTabPage_CHG_2G.Controls.Add(this.skinSplitContainer7);
-            this.skinTabPage_CHG_2G.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.skinTabPage_CHG_2G.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.skinTabPage_CHG_2G.Location = new System.Drawing.Point(100, 0);
-            this.skinTabPage_CHG_2G.Name = "skinTabPage_CHG_2G";
-            this.skinTabPage_CHG_2G.Size = new System.Drawing.Size(779, 683);
-            this.skinTabPage_CHG_2G.TabIndex = 10;
-            this.skinTabPage_CHG_2G.TabItemImage = null;
-            this.skinTabPage_CHG_2G.Text = "2G/4G通信";
-            // 
-            // skinSplitContainer7
-            // 
-            this.skinSplitContainer7.Cursor = System.Windows.Forms.Cursors.Default;
-            this.skinSplitContainer7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.skinSplitContainer7.LineBack = System.Drawing.Color.Gray;
-            this.skinSplitContainer7.LineBack2 = System.Drawing.Color.Gray;
-            this.skinSplitContainer7.Location = new System.Drawing.Point(0, 0);
-            this.skinSplitContainer7.Name = "skinSplitContainer7";
-            this.skinSplitContainer7.Orientation = System.Windows.Forms.Orientation.Horizontal;
-            // 
-            // skinSplitContainer7.Panel1
-            // 
-            this.skinSplitContainer7.Panel1.Controls.Add(this.skinLabel47);
-            this.skinSplitContainer7.Panel1.Controls.Add(this.skinLabel_CHG_2G_TIME);
-            this.skinSplitContainer7.Panel1.Controls.Add(this.skinLabel51);
-            this.skinSplitContainer7.Panel1.Controls.Add(this.skinLabel58);
-            // 
-            // skinSplitContainer7.Panel2
-            // 
-            this.skinSplitContainer7.Panel2.Controls.Add(this.skinButton_CHG_2G_RTEST);
-            this.skinSplitContainer7.Panel2.Controls.Add(this.skinButton_CHG_2G_SKIP);
-            this.skinSplitContainer7.Panel2.Controls.Add(this.skinLabel_CHG_2G_RESULT);
-            this.skinSplitContainer7.Panel2.Controls.Add(this.skinLabel67);
-            this.skinSplitContainer7.Panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.skinSplitContainer7_Panel2_Paint);
-            this.skinSplitContainer7.Size = new System.Drawing.Size(779, 683);
-            this.skinSplitContainer7.SplitterDistance = 124;
-            this.skinSplitContainer7.TabIndex = 3;
-            // 
-            // skinLabel67
-            // 
-            this.skinLabel67.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.skinLabel67.AutoEllipsis = true;
-            this.skinLabel67.AutoSize = true;
-            this.skinLabel67.BackColor = System.Drawing.Color.Transparent;
-            this.skinLabel67.BorderColor = System.Drawing.Color.White;
-            this.skinLabel67.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.skinLabel67.Location = new System.Drawing.Point(37, 31);
-            this.skinLabel67.Name = "skinLabel67";
-            this.skinLabel67.Size = new System.Drawing.Size(116, 31);
-            this.skinLabel67.TabIndex = 13;
-            this.skinLabel67.Text = "测试结果:";
-            // 
-            // skinLabel_CHG_2G_RESULT
-            // 
-            this.skinLabel_CHG_2G_RESULT.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.skinLabel_CHG_2G_RESULT.AutoEllipsis = true;
-            this.skinLabel_CHG_2G_RESULT.AutoSize = true;
-            this.skinLabel_CHG_2G_RESULT.BackColor = System.Drawing.Color.Transparent;
-            this.skinLabel_CHG_2G_RESULT.BorderColor = System.Drawing.Color.White;
-            this.skinLabel_CHG_2G_RESULT.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.skinLabel_CHG_2G_RESULT.Location = new System.Drawing.Point(164, 31);
-            this.skinLabel_CHG_2G_RESULT.Name = "skinLabel_CHG_2G_RESULT";
-            this.skinLabel_CHG_2G_RESULT.Size = new System.Drawing.Size(21, 31);
-            this.skinLabel_CHG_2G_RESULT.TabIndex = 14;
-            this.skinLabel_CHG_2G_RESULT.Text = " ";
-            // 
-            // skinButton_CHG_2G_SKIP
-            // 
-            this.skinButton_CHG_2G_SKIP.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.skinButton_CHG_2G_SKIP.BackColor = System.Drawing.Color.Transparent;
-            this.skinButton_CHG_2G_SKIP.BaseColor = System.Drawing.Color.Silver;
-            this.skinButton_CHG_2G_SKIP.BorderColor = System.Drawing.Color.Silver;
-            this.skinButton_CHG_2G_SKIP.ControlState = CCWin.SkinClass.ControlState.Normal;
-            this.skinButton_CHG_2G_SKIP.DownBack = null;
-            this.skinButton_CHG_2G_SKIP.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.skinButton_CHG_2G_SKIP.Location = new System.Drawing.Point(168, 272);
-            this.skinButton_CHG_2G_SKIP.MouseBack = null;
-            this.skinButton_CHG_2G_SKIP.Name = "skinButton_CHG_2G_SKIP";
-            this.skinButton_CHG_2G_SKIP.NormlBack = null;
-            this.skinButton_CHG_2G_SKIP.Radius = 15;
-            this.skinButton_CHG_2G_SKIP.RoundStyle = CCWin.SkinClass.RoundStyle.All;
-            this.skinButton_CHG_2G_SKIP.Size = new System.Drawing.Size(137, 41);
-            this.skinButton_CHG_2G_SKIP.TabIndex = 18;
-            this.skinButton_CHG_2G_SKIP.Text = "跳过";
-            this.skinButton_CHG_2G_SKIP.UseVisualStyleBackColor = false;
-            this.skinButton_CHG_2G_SKIP.Click += new System.EventHandler(this.skinButton_CHG_2G_SKIP_Click);
-            // 
-            // skinButton_CHG_2G_RTEST
-            // 
-            this.skinButton_CHG_2G_RTEST.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.skinButton_CHG_2G_RTEST.BackColor = System.Drawing.Color.Transparent;
-            this.skinButton_CHG_2G_RTEST.BaseColor = System.Drawing.Color.Silver;
-            this.skinButton_CHG_2G_RTEST.BorderColor = System.Drawing.Color.Silver;
-            this.skinButton_CHG_2G_RTEST.ControlState = CCWin.SkinClass.ControlState.Normal;
-            this.skinButton_CHG_2G_RTEST.DownBack = null;
-            this.skinButton_CHG_2G_RTEST.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.skinButton_CHG_2G_RTEST.Location = new System.Drawing.Point(354, 272);
-            this.skinButton_CHG_2G_RTEST.MouseBack = null;
-            this.skinButton_CHG_2G_RTEST.Name = "skinButton_CHG_2G_RTEST";
-            this.skinButton_CHG_2G_RTEST.NormlBack = null;
-            this.skinButton_CHG_2G_RTEST.Radius = 15;
-            this.skinButton_CHG_2G_RTEST.RoundStyle = CCWin.SkinClass.RoundStyle.All;
-            this.skinButton_CHG_2G_RTEST.Size = new System.Drawing.Size(137, 41);
-            this.skinButton_CHG_2G_RTEST.TabIndex = 19;
-            this.skinButton_CHG_2G_RTEST.Text = "重新测试";
-            this.skinButton_CHG_2G_RTEST.UseVisualStyleBackColor = false;
-            this.skinButton_CHG_2G_RTEST.Click += new System.EventHandler(this.skinButton_CHG_2G_RTEST_Click);
-            // 
-            // skinLabel58
-            // 
-            this.skinLabel58.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.skinLabel58.AutoEllipsis = true;
-            this.skinLabel58.AutoSize = true;
-            this.skinLabel58.BackColor = System.Drawing.Color.Transparent;
-            this.skinLabel58.BorderColor = System.Drawing.Color.White;
-            this.skinLabel58.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.skinLabel58.Location = new System.Drawing.Point(37, 13);
-            this.skinLabel58.Name = "skinLabel58";
-            this.skinLabel58.Size = new System.Drawing.Size(286, 31);
-            this.skinLabel58.TabIndex = 9;
-            this.skinLabel58.Text = "当前项目:2G/4G模块测试";
-            // 
-            // skinLabel51
-            // 
-            this.skinLabel51.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.skinLabel51.AutoEllipsis = true;
-            this.skinLabel51.AutoSize = true;
-            this.skinLabel51.BackColor = System.Drawing.Color.Transparent;
-            this.skinLabel51.BorderColor = System.Drawing.Color.White;
-            this.skinLabel51.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.skinLabel51.Location = new System.Drawing.Point(406, 13);
-            this.skinLabel51.Name = "skinLabel51";
-            this.skinLabel51.Size = new System.Drawing.Size(92, 31);
-            this.skinLabel51.TabIndex = 12;
-            this.skinLabel51.Text = "倒计时:";
-            // 
-            // skinLabel_CHG_2G_TIME
-            // 
-            this.skinLabel_CHG_2G_TIME.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.skinLabel_CHG_2G_TIME.AutoEllipsis = true;
-            this.skinLabel_CHG_2G_TIME.AutoSize = true;
-            this.skinLabel_CHG_2G_TIME.BackColor = System.Drawing.Color.Transparent;
-            this.skinLabel_CHG_2G_TIME.BorderColor = System.Drawing.Color.White;
-            this.skinLabel_CHG_2G_TIME.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.skinLabel_CHG_2G_TIME.Location = new System.Drawing.Point(516, 13);
-            this.skinLabel_CHG_2G_TIME.Name = "skinLabel_CHG_2G_TIME";
-            this.skinLabel_CHG_2G_TIME.Size = new System.Drawing.Size(21, 31);
-            this.skinLabel_CHG_2G_TIME.TabIndex = 13;
-            this.skinLabel_CHG_2G_TIME.Text = " ";
-            // 
-            // skinLabel47
-            // 
-            this.skinLabel47.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.skinLabel47.AutoEllipsis = true;
-            this.skinLabel47.AutoSize = true;
-            this.skinLabel47.BackColor = System.Drawing.Color.Transparent;
-            this.skinLabel47.BorderColor = System.Drawing.Color.White;
-            this.skinLabel47.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.skinLabel47.Location = new System.Drawing.Point(37, 53);
-            this.skinLabel47.Name = "skinLabel47";
-            this.skinLabel47.Size = new System.Drawing.Size(364, 31);
-            this.skinLabel47.TabIndex = 14;
-            this.skinLabel47.Text = "请注意确认网络信号值是否达标  ";
-            // 
-            // skinTabPage_WholeChg_2POINT4
-            // 
-            this.skinTabPage_WholeChg_2POINT4.BackColor = System.Drawing.Color.White;
-            this.skinTabPage_WholeChg_2POINT4.Controls.Add(this.skinSplitContainer13);
-            this.skinTabPage_WholeChg_2POINT4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.skinTabPage_WholeChg_2POINT4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.skinTabPage_WholeChg_2POINT4.Location = new System.Drawing.Point(100, 0);
-            this.skinTabPage_WholeChg_2POINT4.Name = "skinTabPage_WholeChg_2POINT4";
-            this.skinTabPage_WholeChg_2POINT4.Size = new System.Drawing.Size(779, 683);
-            this.skinTabPage_WholeChg_2POINT4.TabIndex = 3;
-            this.skinTabPage_WholeChg_2POINT4.TabItemImage = null;
-            this.skinTabPage_WholeChg_2POINT4.Text = "2.4G通信";
-            // 
-            // skinSplitContainer13
-            // 
-            this.skinSplitContainer13.Cursor = System.Windows.Forms.Cursors.Default;
-            this.skinSplitContainer13.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.skinSplitContainer13.LineBack = System.Drawing.Color.Gray;
-            this.skinSplitContainer13.LineBack2 = System.Drawing.Color.Gray;
-            this.skinSplitContainer13.Location = new System.Drawing.Point(0, 0);
-            this.skinSplitContainer13.Name = "skinSplitContainer13";
-            this.skinSplitContainer13.Orientation = System.Windows.Forms.Orientation.Horizontal;
-            // 
-            // skinSplitContainer13.Panel1
-            // 
-            this.skinSplitContainer13.Panel1.Controls.Add(this.skinLabel_WholeChg_2POINT4_Time);
-            this.skinSplitContainer13.Panel1.Controls.Add(this.skinLabel44);
-            this.skinSplitContainer13.Panel1.Controls.Add(this.skinLabel45);
-            // 
-            // skinSplitContainer13.Panel2
-            // 
-            this.skinSplitContainer13.Panel2.Controls.Add(this.skinLabel_CHG_24G_RESULT);
-            this.skinSplitContainer13.Panel2.Controls.Add(this.skinButton_WholeChg_2POINT4_RTest);
-            this.skinSplitContainer13.Panel2.Controls.Add(this.skinButton_WholeChg_2POINT4_Over);
-            this.skinSplitContainer13.Panel2.Controls.Add(this.skinLabel46);
-            this.skinSplitContainer13.Size = new System.Drawing.Size(779, 683);
-            this.skinSplitContainer13.SplitterDistance = 83;
-            this.skinSplitContainer13.TabIndex = 0;
-            // 
-            // skinLabel46
-            // 
-            this.skinLabel46.AutoSize = true;
-            this.skinLabel46.BackColor = System.Drawing.Color.Transparent;
-            this.skinLabel46.BorderColor = System.Drawing.Color.White;
-            this.skinLabel46.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.skinLabel46.Location = new System.Drawing.Point(45, 22);
-            this.skinLabel46.Name = "skinLabel46";
-            this.skinLabel46.Size = new System.Drawing.Size(116, 31);
-            this.skinLabel46.TabIndex = 3;
-            this.skinLabel46.Text = "测试结果:";
-            // 
-            // skinButton_WholeChg_2POINT4_Over
-            // 
-            this.skinButton_WholeChg_2POINT4_Over.BackColor = System.Drawing.Color.Transparent;
-            this.skinButton_WholeChg_2POINT4_Over.BaseColor = System.Drawing.Color.DarkGray;
-            this.skinButton_WholeChg_2POINT4_Over.BorderColor = System.Drawing.Color.DarkGray;
-            this.skinButton_WholeChg_2POINT4_Over.ControlState = CCWin.SkinClass.ControlState.Normal;
-            this.skinButton_WholeChg_2POINT4_Over.DownBack = null;
-            this.skinButton_WholeChg_2POINT4_Over.Location = new System.Drawing.Point(140, 93);
-            this.skinButton_WholeChg_2POINT4_Over.MouseBack = null;
-            this.skinButton_WholeChg_2POINT4_Over.Name = "skinButton_WholeChg_2POINT4_Over";
-            this.skinButton_WholeChg_2POINT4_Over.NormlBack = null;
-            this.skinButton_WholeChg_2POINT4_Over.Radius = 15;
-            this.skinButton_WholeChg_2POINT4_Over.RoundStyle = CCWin.SkinClass.RoundStyle.All;
-            this.skinButton_WholeChg_2POINT4_Over.Size = new System.Drawing.Size(110, 40);
-            this.skinButton_WholeChg_2POINT4_Over.TabIndex = 15;
-            this.skinButton_WholeChg_2POINT4_Over.Text = "跳过";
-            this.skinButton_WholeChg_2POINT4_Over.UseVisualStyleBackColor = false;
-            this.skinButton_WholeChg_2POINT4_Over.Click += new System.EventHandler(this.skinButton_WholeChg_2POINT4_Over_Click);
-            // 
-            // skinButton_WholeChg_2POINT4_RTest
-            // 
-            this.skinButton_WholeChg_2POINT4_RTest.BackColor = System.Drawing.Color.Transparent;
-            this.skinButton_WholeChg_2POINT4_RTest.BaseColor = System.Drawing.Color.DarkGray;
-            this.skinButton_WholeChg_2POINT4_RTest.BorderColor = System.Drawing.Color.DarkGray;
-            this.skinButton_WholeChg_2POINT4_RTest.ControlState = CCWin.SkinClass.ControlState.Normal;
-            this.skinButton_WholeChg_2POINT4_RTest.DownBack = null;
-            this.skinButton_WholeChg_2POINT4_RTest.Location = new System.Drawing.Point(324, 93);
-            this.skinButton_WholeChg_2POINT4_RTest.MouseBack = null;
-            this.skinButton_WholeChg_2POINT4_RTest.Name = "skinButton_WholeChg_2POINT4_RTest";
-            this.skinButton_WholeChg_2POINT4_RTest.NormlBack = null;
-            this.skinButton_WholeChg_2POINT4_RTest.Radius = 15;
-            this.skinButton_WholeChg_2POINT4_RTest.RoundStyle = CCWin.SkinClass.RoundStyle.All;
-            this.skinButton_WholeChg_2POINT4_RTest.Size = new System.Drawing.Size(110, 40);
-            this.skinButton_WholeChg_2POINT4_RTest.TabIndex = 16;
-            this.skinButton_WholeChg_2POINT4_RTest.Text = "重新测试";
-            this.skinButton_WholeChg_2POINT4_RTest.UseVisualStyleBackColor = false;
-            this.skinButton_WholeChg_2POINT4_RTest.Click += new System.EventHandler(this.skinButton_WholeChg_2POINT4_RTest_Click);
-            // 
-            // skinLabel_CHG_24G_RESULT
-            // 
-            this.skinLabel_CHG_24G_RESULT.AutoSize = true;
-            this.skinLabel_CHG_24G_RESULT.BackColor = System.Drawing.Color.Transparent;
-            this.skinLabel_CHG_24G_RESULT.BorderColor = System.Drawing.Color.White;
-            this.skinLabel_CHG_24G_RESULT.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.skinLabel_CHG_24G_RESULT.Location = new System.Drawing.Point(168, 22);
-            this.skinLabel_CHG_24G_RESULT.Name = "skinLabel_CHG_24G_RESULT";
-            this.skinLabel_CHG_24G_RESULT.Size = new System.Drawing.Size(0, 31);
-            this.skinLabel_CHG_24G_RESULT.TabIndex = 17;
-            // 
-            // skinLabel45
-            // 
-            this.skinLabel45.AutoSize = true;
-            this.skinLabel45.BackColor = System.Drawing.Color.Transparent;
-            this.skinLabel45.BorderColor = System.Drawing.Color.White;
-            this.skinLabel45.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.skinLabel45.Location = new System.Drawing.Point(45, 23);
-            this.skinLabel45.Name = "skinLabel45";
-            this.skinLabel45.Size = new System.Drawing.Size(264, 31);
-            this.skinLabel45.TabIndex = 0;
-            this.skinLabel45.Text = "当前项目:2.4G通信测试";
-            // 
-            // skinLabel44
-            // 
-            this.skinLabel44.AutoSize = true;
-            this.skinLabel44.BackColor = System.Drawing.Color.Transparent;
-            this.skinLabel44.BorderColor = System.Drawing.Color.White;
-            this.skinLabel44.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.skinLabel44.Location = new System.Drawing.Point(399, 23);
-            this.skinLabel44.Name = "skinLabel44";
-            this.skinLabel44.Size = new System.Drawing.Size(92, 31);
-            this.skinLabel44.TabIndex = 1;
-            this.skinLabel44.Text = "倒计时:";
-            // 
-            // skinLabel_WholeChg_2POINT4_Time
-            // 
-            this.skinLabel_WholeChg_2POINT4_Time.AutoSize = true;
-            this.skinLabel_WholeChg_2POINT4_Time.BackColor = System.Drawing.Color.Transparent;
-            this.skinLabel_WholeChg_2POINT4_Time.BorderColor = System.Drawing.Color.White;
-            this.skinLabel_WholeChg_2POINT4_Time.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.skinLabel_WholeChg_2POINT4_Time.Location = new System.Drawing.Point(491, 23);
-            this.skinLabel_WholeChg_2POINT4_Time.Name = "skinLabel_WholeChg_2POINT4_Time";
-            this.skinLabel_WholeChg_2POINT4_Time.Size = new System.Drawing.Size(0, 31);
-            this.skinLabel_WholeChg_2POINT4_Time.TabIndex = 2;
-            // 
-            // skinTabPage_WholeChg_Bt
-            // 
-            this.skinTabPage_WholeChg_Bt.BackColor = System.Drawing.Color.White;
-            this.skinTabPage_WholeChg_Bt.Controls.Add(this.skinSplitContainer12);
-            this.skinTabPage_WholeChg_Bt.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.skinTabPage_WholeChg_Bt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.skinTabPage_WholeChg_Bt.Location = new System.Drawing.Point(100, 0);
-            this.skinTabPage_WholeChg_Bt.Name = "skinTabPage_WholeChg_Bt";
-            this.skinTabPage_WholeChg_Bt.Size = new System.Drawing.Size(779, 683);
-            this.skinTabPage_WholeChg_Bt.TabIndex = 2;
-            this.skinTabPage_WholeChg_Bt.TabItemImage = null;
-            this.skinTabPage_WholeChg_Bt.Text = "蓝牙通信";
-            // 
-            // skinSplitContainer12
-            // 
-            this.skinSplitContainer12.Cursor = System.Windows.Forms.Cursors.Default;
-            this.skinSplitContainer12.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.skinSplitContainer12.LineBack = System.Drawing.Color.Silver;
-            this.skinSplitContainer12.LineBack2 = System.Drawing.Color.Silver;
-            this.skinSplitContainer12.Location = new System.Drawing.Point(0, 0);
-            this.skinSplitContainer12.Name = "skinSplitContainer12";
-            this.skinSplitContainer12.Orientation = System.Windows.Forms.Orientation.Horizontal;
-            // 
-            // skinSplitContainer12.Panel1
-            // 
-            this.skinSplitContainer12.Panel1.Controls.Add(this.label6);
-            this.skinSplitContainer12.Panel1.Controls.Add(this.skinLabel_WholeChg_BT_Time);
-            this.skinSplitContainer12.Panel1.Controls.Add(this.skinLabel39);
-            this.skinSplitContainer12.Panel1.Controls.Add(this.skinLabel40);
-            // 
-            // skinSplitContainer12.Panel2
-            // 
-            this.skinSplitContainer12.Panel2.Controls.Add(this.skinLabel_CHG_BT_RESULT);
-            this.skinSplitContainer12.Panel2.Controls.Add(this.skinButton_WholeChg_BT_RTest);
-            this.skinSplitContainer12.Panel2.Controls.Add(this.skinButton_WholeChg_BT_Over);
-            this.skinSplitContainer12.Panel2.Controls.Add(this.skinLabel41);
-            this.skinSplitContainer12.Size = new System.Drawing.Size(779, 683);
-            this.skinSplitContainer12.SplitterDistance = 109;
-            this.skinSplitContainer12.TabIndex = 0;
-            // 
-            // skinLabel41
-            // 
-            this.skinLabel41.AutoSize = true;
-            this.skinLabel41.BackColor = System.Drawing.Color.Transparent;
-            this.skinLabel41.BorderColor = System.Drawing.Color.White;
-            this.skinLabel41.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.skinLabel41.Location = new System.Drawing.Point(28, 23);
-            this.skinLabel41.Name = "skinLabel41";
-            this.skinLabel41.Size = new System.Drawing.Size(116, 31);
-            this.skinLabel41.TabIndex = 8;
-            this.skinLabel41.Text = "测试结果:";
-            // 
-            // skinButton_WholeChg_BT_Over
-            // 
-            this.skinButton_WholeChg_BT_Over.BackColor = System.Drawing.Color.Transparent;
-            this.skinButton_WholeChg_BT_Over.BaseColor = System.Drawing.Color.DarkGray;
-            this.skinButton_WholeChg_BT_Over.BorderColor = System.Drawing.Color.DarkGray;
-            this.skinButton_WholeChg_BT_Over.ControlState = CCWin.SkinClass.ControlState.Normal;
-            this.skinButton_WholeChg_BT_Over.DownBack = null;
-            this.skinButton_WholeChg_BT_Over.Location = new System.Drawing.Point(143, 112);
-            this.skinButton_WholeChg_BT_Over.MouseBack = null;
-            this.skinButton_WholeChg_BT_Over.Name = "skinButton_WholeChg_BT_Over";
-            this.skinButton_WholeChg_BT_Over.NormlBack = null;
-            this.skinButton_WholeChg_BT_Over.Radius = 15;
-            this.skinButton_WholeChg_BT_Over.RoundStyle = CCWin.SkinClass.RoundStyle.All;
-            this.skinButton_WholeChg_BT_Over.Size = new System.Drawing.Size(110, 40);
-            this.skinButton_WholeChg_BT_Over.TabIndex = 11;
-            this.skinButton_WholeChg_BT_Over.Text = "跳过";
-            this.skinButton_WholeChg_BT_Over.UseVisualStyleBackColor = false;
-            this.skinButton_WholeChg_BT_Over.Click += new System.EventHandler(this.skinButton_WholeChg_BT_Over_Click);
-            // 
-            // skinButton_WholeChg_BT_RTest
-            // 
-            this.skinButton_WholeChg_BT_RTest.BackColor = System.Drawing.Color.Transparent;
-            this.skinButton_WholeChg_BT_RTest.BaseColor = System.Drawing.Color.DarkGray;
-            this.skinButton_WholeChg_BT_RTest.BorderColor = System.Drawing.Color.DarkGray;
-            this.skinButton_WholeChg_BT_RTest.ControlState = CCWin.SkinClass.ControlState.Normal;
-            this.skinButton_WholeChg_BT_RTest.DownBack = null;
-            this.skinButton_WholeChg_BT_RTest.Location = new System.Drawing.Point(322, 112);
-            this.skinButton_WholeChg_BT_RTest.MouseBack = null;
-            this.skinButton_WholeChg_BT_RTest.Name = "skinButton_WholeChg_BT_RTest";
-            this.skinButton_WholeChg_BT_RTest.NormlBack = null;
-            this.skinButton_WholeChg_BT_RTest.Radius = 15;
-            this.skinButton_WholeChg_BT_RTest.RoundStyle = CCWin.SkinClass.RoundStyle.All;
-            this.skinButton_WholeChg_BT_RTest.Size = new System.Drawing.Size(110, 40);
-            this.skinButton_WholeChg_BT_RTest.TabIndex = 12;
-            this.skinButton_WholeChg_BT_RTest.Text = "重新测试";
-            this.skinButton_WholeChg_BT_RTest.UseVisualStyleBackColor = false;
-            this.skinButton_WholeChg_BT_RTest.Click += new System.EventHandler(this.skinButton_WholeChg_BT_RTest_Click);
-            // 
-            // skinLabel_CHG_BT_RESULT
-            // 
-            this.skinLabel_CHG_BT_RESULT.AutoSize = true;
-            this.skinLabel_CHG_BT_RESULT.BackColor = System.Drawing.Color.Transparent;
-            this.skinLabel_CHG_BT_RESULT.BorderColor = System.Drawing.Color.White;
-            this.skinLabel_CHG_BT_RESULT.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.skinLabel_CHG_BT_RESULT.Location = new System.Drawing.Point(158, 23);
-            this.skinLabel_CHG_BT_RESULT.Name = "skinLabel_CHG_BT_RESULT";
-            this.skinLabel_CHG_BT_RESULT.Size = new System.Drawing.Size(0, 31);
-            this.skinLabel_CHG_BT_RESULT.TabIndex = 13;
-            // 
-            // skinLabel40
-            // 
-            this.skinLabel40.AutoSize = true;
-            this.skinLabel40.BackColor = System.Drawing.Color.Transparent;
-            this.skinLabel40.BorderColor = System.Drawing.Color.White;
-            this.skinLabel40.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.skinLabel40.Location = new System.Drawing.Point(28, 14);
-            this.skinLabel40.Name = "skinLabel40";
-            this.skinLabel40.Size = new System.Drawing.Size(260, 31);
-            this.skinLabel40.TabIndex = 0;
-            this.skinLabel40.Text = "当前项目:蓝牙通信测试";
-            // 
-            // skinLabel39
-            // 
-            this.skinLabel39.AutoSize = true;
-            this.skinLabel39.BackColor = System.Drawing.Color.Transparent;
-            this.skinLabel39.BorderColor = System.Drawing.Color.White;
-            this.skinLabel39.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.skinLabel39.Location = new System.Drawing.Point(438, 14);
-            this.skinLabel39.Name = "skinLabel39";
-            this.skinLabel39.Size = new System.Drawing.Size(92, 31);
-            this.skinLabel39.TabIndex = 1;
-            this.skinLabel39.Text = "倒计时:";
-            // 
-            // skinLabel_WholeChg_BT_Time
-            // 
-            this.skinLabel_WholeChg_BT_Time.AutoSize = true;
-            this.skinLabel_WholeChg_BT_Time.BackColor = System.Drawing.Color.Transparent;
-            this.skinLabel_WholeChg_BT_Time.BorderColor = System.Drawing.Color.White;
-            this.skinLabel_WholeChg_BT_Time.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.skinLabel_WholeChg_BT_Time.Location = new System.Drawing.Point(518, 14);
-            this.skinLabel_WholeChg_BT_Time.Name = "skinLabel_WholeChg_BT_Time";
-            this.skinLabel_WholeChg_BT_Time.Size = new System.Drawing.Size(0, 31);
-            this.skinLabel_WholeChg_BT_Time.TabIndex = 3;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label6.Location = new System.Drawing.Point(28, 53);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(653, 31);
-            this.label6.TabIndex = 4;
-            this.label6.Text = "蓝牙模块正在初始化...,测试时需要等待20s左右点击重新测试";
-            this.label6.Click += new System.EventHandler(this.label6_Click);
-            // 
-            // skinTabPage_WholeChg_Led
-            // 
-            this.skinTabPage_WholeChg_Led.BackColor = System.Drawing.Color.White;
-            this.skinTabPage_WholeChg_Led.Controls.Add(this.skinSplitContainer11);
-            this.skinTabPage_WholeChg_Led.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.skinTabPage_WholeChg_Led.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.skinTabPage_WholeChg_Led.Location = new System.Drawing.Point(100, 0);
-            this.skinTabPage_WholeChg_Led.Name = "skinTabPage_WholeChg_Led";
-            this.skinTabPage_WholeChg_Led.Size = new System.Drawing.Size(779, 683);
-            this.skinTabPage_WholeChg_Led.TabIndex = 1;
-            this.skinTabPage_WholeChg_Led.TabItemImage = null;
-            this.skinTabPage_WholeChg_Led.Text = "指示灯";
-            // 
-            // skinSplitContainer11
-            // 
-            this.skinSplitContainer11.Cursor = System.Windows.Forms.Cursors.Default;
-            this.skinSplitContainer11.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.skinSplitContainer11.LineBack = System.Drawing.Color.Gray;
-            this.skinSplitContainer11.LineBack2 = System.Drawing.Color.Gray;
-            this.skinSplitContainer11.Location = new System.Drawing.Point(0, 0);
-            this.skinSplitContainer11.Name = "skinSplitContainer11";
-            this.skinSplitContainer11.Orientation = System.Windows.Forms.Orientation.Horizontal;
-            // 
-            // skinSplitContainer11.Panel1
-            // 
-            this.skinSplitContainer11.Panel1.Controls.Add(this.skinLabel_WholeChg_Led_Time);
-            this.skinSplitContainer11.Panel1.Controls.Add(this.skinLabel33);
-            this.skinSplitContainer11.Panel1.Controls.Add(this.skinLabel34);
-            this.skinSplitContainer11.Panel1.Controls.Add(this.skinLabel35);
-            // 
-            // skinSplitContainer11.Panel2
-            // 
-            this.skinSplitContainer11.Panel2.Controls.Add(this.skinLabel_CHG_LED_RESULT);
-            this.skinSplitContainer11.Panel2.Controls.Add(this.skinButton_WholeChg_Led_RTest);
-            this.skinSplitContainer11.Panel2.Controls.Add(this.skinButton_WholeChg_Led_Over);
-            this.skinSplitContainer11.Panel2.Controls.Add(this.skinButton_WholeChg_Led_Fail);
-            this.skinSplitContainer11.Panel2.Controls.Add(this.skinButton_WholeChg_Led_Success);
-            this.skinSplitContainer11.Panel2.Controls.Add(this.skinLabel36);
-            this.skinSplitContainer11.Size = new System.Drawing.Size(779, 683);
-            this.skinSplitContainer11.SplitterDistance = 142;
-            this.skinSplitContainer11.TabIndex = 0;
-            // 
-            // skinLabel36
-            // 
-            this.skinLabel36.AutoSize = true;
-            this.skinLabel36.BackColor = System.Drawing.Color.Transparent;
-            this.skinLabel36.BorderColor = System.Drawing.Color.White;
-            this.skinLabel36.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.skinLabel36.Location = new System.Drawing.Point(21, 21);
-            this.skinLabel36.Name = "skinLabel36";
-            this.skinLabel36.Size = new System.Drawing.Size(116, 31);
-            this.skinLabel36.TabIndex = 0;
-            this.skinLabel36.Text = "测试结果:";
-            // 
-            // skinButton_WholeChg_Led_Success
-            // 
-            this.skinButton_WholeChg_Led_Success.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.skinButton_WholeChg_Led_Success.BackColor = System.Drawing.Color.Transparent;
-            this.skinButton_WholeChg_Led_Success.BaseColor = System.Drawing.Color.Silver;
-            this.skinButton_WholeChg_Led_Success.BorderColor = System.Drawing.Color.Silver;
-            this.skinButton_WholeChg_Led_Success.ControlState = CCWin.SkinClass.ControlState.Normal;
-            this.skinButton_WholeChg_Led_Success.DownBack = null;
-            this.skinButton_WholeChg_Led_Success.Location = new System.Drawing.Point(132, 75);
-            this.skinButton_WholeChg_Led_Success.MouseBack = null;
-            this.skinButton_WholeChg_Led_Success.Name = "skinButton_WholeChg_Led_Success";
-            this.skinButton_WholeChg_Led_Success.NormlBack = null;
-            this.skinButton_WholeChg_Led_Success.Radius = 15;
-            this.skinButton_WholeChg_Led_Success.RoundStyle = CCWin.SkinClass.RoundStyle.All;
-            this.skinButton_WholeChg_Led_Success.Size = new System.Drawing.Size(110, 40);
-            this.skinButton_WholeChg_Led_Success.TabIndex = 1;
-            this.skinButton_WholeChg_Led_Success.Text = "成功";
-            this.skinButton_WholeChg_Led_Success.UseVisualStyleBackColor = false;
-            this.skinButton_WholeChg_Led_Success.Click += new System.EventHandler(this.skinButton_WholeChg_Led_Success_Click);
-            // 
-            // skinButton_WholeChg_Led_Fail
-            // 
-            this.skinButton_WholeChg_Led_Fail.BackColor = System.Drawing.Color.Transparent;
-            this.skinButton_WholeChg_Led_Fail.BaseColor = System.Drawing.Color.Silver;
-            this.skinButton_WholeChg_Led_Fail.BorderColor = System.Drawing.Color.Silver;
-            this.skinButton_WholeChg_Led_Fail.ControlState = CCWin.SkinClass.ControlState.Normal;
-            this.skinButton_WholeChg_Led_Fail.DownBack = null;
-            this.skinButton_WholeChg_Led_Fail.Location = new System.Drawing.Point(295, 75);
-            this.skinButton_WholeChg_Led_Fail.MouseBack = null;
-            this.skinButton_WholeChg_Led_Fail.Name = "skinButton_WholeChg_Led_Fail";
-            this.skinButton_WholeChg_Led_Fail.NormlBack = null;
-            this.skinButton_WholeChg_Led_Fail.Radius = 15;
-            this.skinButton_WholeChg_Led_Fail.RoundStyle = CCWin.SkinClass.RoundStyle.All;
-            this.skinButton_WholeChg_Led_Fail.Size = new System.Drawing.Size(110, 40);
-            this.skinButton_WholeChg_Led_Fail.TabIndex = 2;
-            this.skinButton_WholeChg_Led_Fail.Text = "失败";
-            this.skinButton_WholeChg_Led_Fail.UseVisualStyleBackColor = false;
-            this.skinButton_WholeChg_Led_Fail.Click += new System.EventHandler(this.skinButton_WholeChg_Led_Fail_Click);
-            // 
-            // skinButton_WholeChg_Led_Over
-            // 
-            this.skinButton_WholeChg_Led_Over.BackColor = System.Drawing.Color.Transparent;
-            this.skinButton_WholeChg_Led_Over.BaseColor = System.Drawing.Color.Silver;
-            this.skinButton_WholeChg_Led_Over.BorderColor = System.Drawing.Color.Silver;
-            this.skinButton_WholeChg_Led_Over.ControlState = CCWin.SkinClass.ControlState.Normal;
-            this.skinButton_WholeChg_Led_Over.DownBack = null;
-            this.skinButton_WholeChg_Led_Over.Location = new System.Drawing.Point(132, 143);
-            this.skinButton_WholeChg_Led_Over.MouseBack = null;
-            this.skinButton_WholeChg_Led_Over.Name = "skinButton_WholeChg_Led_Over";
-            this.skinButton_WholeChg_Led_Over.NormlBack = null;
-            this.skinButton_WholeChg_Led_Over.Radius = 15;
-            this.skinButton_WholeChg_Led_Over.RoundStyle = CCWin.SkinClass.RoundStyle.All;
-            this.skinButton_WholeChg_Led_Over.Size = new System.Drawing.Size(110, 40);
-            this.skinButton_WholeChg_Led_Over.TabIndex = 3;
-            this.skinButton_WholeChg_Led_Over.Text = "跳过";
-            this.skinButton_WholeChg_Led_Over.UseVisualStyleBackColor = false;
-            this.skinButton_WholeChg_Led_Over.Click += new System.EventHandler(this.skinButton_WholeChg_Led_Over_Click);
-            // 
-            // skinButton_WholeChg_Led_RTest
-            // 
-            this.skinButton_WholeChg_Led_RTest.BackColor = System.Drawing.Color.Transparent;
-            this.skinButton_WholeChg_Led_RTest.BaseColor = System.Drawing.Color.Silver;
-            this.skinButton_WholeChg_Led_RTest.BorderColor = System.Drawing.Color.Silver;
-            this.skinButton_WholeChg_Led_RTest.ControlState = CCWin.SkinClass.ControlState.Normal;
-            this.skinButton_WholeChg_Led_RTest.DownBack = null;
-            this.skinButton_WholeChg_Led_RTest.Location = new System.Drawing.Point(295, 143);
-            this.skinButton_WholeChg_Led_RTest.MouseBack = null;
-            this.skinButton_WholeChg_Led_RTest.Name = "skinButton_WholeChg_Led_RTest";
-            this.skinButton_WholeChg_Led_RTest.NormlBack = null;
-            this.skinButton_WholeChg_Led_RTest.Radius = 15;
-            this.skinButton_WholeChg_Led_RTest.RoundStyle = CCWin.SkinClass.RoundStyle.All;
-            this.skinButton_WholeChg_Led_RTest.Size = new System.Drawing.Size(110, 40);
-            this.skinButton_WholeChg_Led_RTest.TabIndex = 4;
-            this.skinButton_WholeChg_Led_RTest.Text = "重新测试";
-            this.skinButton_WholeChg_Led_RTest.UseVisualStyleBackColor = false;
-            this.skinButton_WholeChg_Led_RTest.Click += new System.EventHandler(this.skinButton_WholeChg_Led_RTest_Click);
-            // 
-            // skinLabel_CHG_LED_RESULT
-            // 
-            this.skinLabel_CHG_LED_RESULT.AutoSize = true;
-            this.skinLabel_CHG_LED_RESULT.BackColor = System.Drawing.Color.Transparent;
-            this.skinLabel_CHG_LED_RESULT.BorderColor = System.Drawing.Color.White;
-            this.skinLabel_CHG_LED_RESULT.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.skinLabel_CHG_LED_RESULT.Location = new System.Drawing.Point(144, 21);
-            this.skinLabel_CHG_LED_RESULT.Name = "skinLabel_CHG_LED_RESULT";
-            this.skinLabel_CHG_LED_RESULT.Size = new System.Drawing.Size(0, 31);
-            this.skinLabel_CHG_LED_RESULT.TabIndex = 5;
-            // 
-            // skinLabel35
-            // 
-            this.skinLabel35.AutoSize = true;
-            this.skinLabel35.BackColor = System.Drawing.Color.Transparent;
-            this.skinLabel35.BorderColor = System.Drawing.Color.White;
-            this.skinLabel35.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.skinLabel35.Location = new System.Drawing.Point(19, 15);
-            this.skinLabel35.Name = "skinLabel35";
-            this.skinLabel35.Size = new System.Drawing.Size(236, 31);
-            this.skinLabel35.TabIndex = 0;
-            this.skinLabel35.Text = "当前项目:指示灯测试";
-            // 
-            // skinLabel34
-            // 
-            this.skinLabel34.AutoSize = true;
-            this.skinLabel34.BackColor = System.Drawing.Color.Transparent;
-            this.skinLabel34.BorderColor = System.Drawing.Color.White;
-            this.skinLabel34.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.skinLabel34.Location = new System.Drawing.Point(422, 15);
-            this.skinLabel34.Name = "skinLabel34";
-            this.skinLabel34.Size = new System.Drawing.Size(92, 31);
-            this.skinLabel34.TabIndex = 1;
-            this.skinLabel34.Text = "倒计时:";
-            // 
-            // skinLabel33
-            // 
-            this.skinLabel33.AutoSize = true;
-            this.skinLabel33.BackColor = System.Drawing.Color.Transparent;
-            this.skinLabel33.BorderColor = System.Drawing.Color.White;
-            this.skinLabel33.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.skinLabel33.Location = new System.Drawing.Point(19, 54);
-            this.skinLabel33.Name = "skinLabel33";
-            this.skinLabel33.Size = new System.Drawing.Size(302, 31);
-            this.skinLabel33.TabIndex = 2;
-            this.skinLabel33.Text = "请肉眼观察指示灯是否亮起";
-            // 
-            // skinLabel_WholeChg_Led_Time
-            // 
-            this.skinLabel_WholeChg_Led_Time.AutoSize = true;
-            this.skinLabel_WholeChg_Led_Time.BackColor = System.Drawing.Color.Transparent;
-            this.skinLabel_WholeChg_Led_Time.BorderColor = System.Drawing.Color.White;
-            this.skinLabel_WholeChg_Led_Time.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.skinLabel_WholeChg_Led_Time.Location = new System.Drawing.Point(512, 15);
-            this.skinLabel_WholeChg_Led_Time.Name = "skinLabel_WholeChg_Led_Time";
-            this.skinLabel_WholeChg_Led_Time.Size = new System.Drawing.Size(0, 31);
-            this.skinLabel_WholeChg_Led_Time.TabIndex = 3;
-            // 
-            // skinTabPage_WholeChg_SN
-            // 
-            this.skinTabPage_WholeChg_SN.BackColor = System.Drawing.Color.White;
-            this.skinTabPage_WholeChg_SN.Controls.Add(this.skinSplitContainer10);
-            this.skinTabPage_WholeChg_SN.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.skinTabPage_WholeChg_SN.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.skinTabPage_WholeChg_SN.Location = new System.Drawing.Point(100, 0);
-            this.skinTabPage_WholeChg_SN.Name = "skinTabPage_WholeChg_SN";
-            this.skinTabPage_WholeChg_SN.Size = new System.Drawing.Size(779, 683);
-            this.skinTabPage_WholeChg_SN.TabIndex = 0;
-            this.skinTabPage_WholeChg_SN.TabItemImage = null;
-            this.skinTabPage_WholeChg_SN.Text = "桩号";
-            // 
-            // skinSplitContainer10
-            // 
-            this.skinSplitContainer10.Cursor = System.Windows.Forms.Cursors.Default;
-            this.skinSplitContainer10.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.skinSplitContainer10.LineBack = System.Drawing.Color.Gray;
-            this.skinSplitContainer10.LineBack2 = System.Drawing.Color.Gray;
-            this.skinSplitContainer10.Location = new System.Drawing.Point(0, 0);
-            this.skinSplitContainer10.Name = "skinSplitContainer10";
-            this.skinSplitContainer10.Orientation = System.Windows.Forms.Orientation.Horizontal;
-            // 
-            // skinSplitContainer10.Panel1
-            // 
-            this.skinSplitContainer10.Panel1.Controls.Add(this.skinLabel24);
-            // 
-            // skinSplitContainer10.Panel2
-            // 
-            this.skinSplitContainer10.Panel2.Controls.Add(this.skinButton_WholeChg_SN_Confirm);
-            this.skinSplitContainer10.Panel2.Controls.Add(this.skinLabel31);
-            this.skinSplitContainer10.Panel2.Controls.Add(this.textBox_WholeChg_SN_QR);
-            this.skinSplitContainer10.Size = new System.Drawing.Size(779, 683);
-            this.skinSplitContainer10.SplitterDistance = 101;
-            this.skinSplitContainer10.TabIndex = 0;
-            // 
-            // textBox_WholeChg_SN_QR
-            // 
-            this.textBox_WholeChg_SN_QR.Location = new System.Drawing.Point(35, 17);
-            this.textBox_WholeChg_SN_QR.MaxLength = 100;
-            this.textBox_WholeChg_SN_QR.Name = "textBox_WholeChg_SN_QR";
-            this.textBox_WholeChg_SN_QR.Size = new System.Drawing.Size(397, 30);
-            this.textBox_WholeChg_SN_QR.TabIndex = 0;
-            this.textBox_WholeChg_SN_QR.TextChanged += new System.EventHandler(this.textBox_WholeChg_SN_QR_TextChanged);
-            this.textBox_WholeChg_SN_QR.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_WholeChg_SN_QR_KeyPress);
-            // 
-            // skinLabel31
-            // 
-            this.skinLabel31.AutoSize = true;
-            this.skinLabel31.BackColor = System.Drawing.Color.Transparent;
-            this.skinLabel31.BorderColor = System.Drawing.Color.White;
-            this.skinLabel31.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.skinLabel31.Location = new System.Drawing.Point(38, 70);
-            this.skinLabel31.Name = "skinLabel31";
-            this.skinLabel31.Size = new System.Drawing.Size(402, 24);
-            this.skinLabel31.TabIndex = 1;
-            this.skinLabel31.Text = "输入完成按键盘\"回车键\"或以下\"确认键\"开始测试";
-            // 
-            // skinButton_WholeChg_SN_Confirm
-            // 
-            this.skinButton_WholeChg_SN_Confirm.BackColor = System.Drawing.Color.Transparent;
-            this.skinButton_WholeChg_SN_Confirm.BaseColor = System.Drawing.Color.DarkGray;
-            this.skinButton_WholeChg_SN_Confirm.BorderColor = System.Drawing.Color.DarkGray;
-            this.skinButton_WholeChg_SN_Confirm.ControlState = CCWin.SkinClass.ControlState.Normal;
-            this.skinButton_WholeChg_SN_Confirm.DownBack = null;
-            this.skinButton_WholeChg_SN_Confirm.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.skinButton_WholeChg_SN_Confirm.ForeColorSuit = true;
-            this.skinButton_WholeChg_SN_Confirm.Location = new System.Drawing.Point(35, 146);
-            this.skinButton_WholeChg_SN_Confirm.MouseBack = null;
-            this.skinButton_WholeChg_SN_Confirm.Name = "skinButton_WholeChg_SN_Confirm";
-            this.skinButton_WholeChg_SN_Confirm.NormlBack = null;
-            this.skinButton_WholeChg_SN_Confirm.Radius = 15;
-            this.skinButton_WholeChg_SN_Confirm.RoundStyle = CCWin.SkinClass.RoundStyle.All;
-            this.skinButton_WholeChg_SN_Confirm.Size = new System.Drawing.Size(157, 45);
-            this.skinButton_WholeChg_SN_Confirm.TabIndex = 2;
-            this.skinButton_WholeChg_SN_Confirm.Text = "确认";
-            this.skinButton_WholeChg_SN_Confirm.UseVisualStyleBackColor = false;
-            this.skinButton_WholeChg_SN_Confirm.Click += new System.EventHandler(this.skinButton_WholeChg_SN_Confirm_Click);
-            // 
-            // skinLabel24
-            // 
-            this.skinLabel24.AutoSize = true;
-            this.skinLabel24.BackColor = System.Drawing.Color.Transparent;
-            this.skinLabel24.BorderColor = System.Drawing.Color.White;
-            this.skinLabel24.Font = new System.Drawing.Font("微软雅黑", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.skinLabel24.Location = new System.Drawing.Point(30, 21);
-            this.skinLabel24.Name = "skinLabel24";
-            this.skinLabel24.Size = new System.Drawing.Size(315, 33);
-            this.skinLabel24.TabIndex = 0;
-            this.skinLabel24.Text = "请用扫码枪扫描电桩二维码";
-            // 
-            // skinTabControl_WholeChg
-            // 
-            this.skinTabControl_WholeChg.Alignment = System.Windows.Forms.TabAlignment.Left;
-            this.skinTabControl_WholeChg.AnimationStart = true;
-            this.skinTabControl_WholeChg.AnimatorType = CCWin.SkinControl.AnimationType.VertSlide;
-            this.skinTabControl_WholeChg.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.skinTabControl_WholeChg.CloseRect = new System.Drawing.Rectangle(2, 2, 12, 12);
-            this.skinTabControl_WholeChg.Controls.Add(this.skinTabPage_WholeChg_SN);
-            this.skinTabControl_WholeChg.Controls.Add(this.skinTabPage_WholeChg_Led);
-            this.skinTabControl_WholeChg.Controls.Add(this.skinTabPage_WholeChg_Bt);
-            this.skinTabControl_WholeChg.Controls.Add(this.skinTabPage_WholeChg_2POINT4);
-            this.skinTabControl_WholeChg.Controls.Add(this.skinTabPage_CHG_2G);
-            this.skinTabControl_WholeChg.Controls.Add(this.R6skinTabPage_Whole_FLASH);
-            this.skinTabControl_WholeChg.Controls.Add(this.R6skinTabPage_Whole_SET_RTC);
-            this.skinTabControl_WholeChg.Controls.Add(this.R6skinTabPage_Whole_GET_RTC);
-            this.skinTabControl_WholeChg.Controls.Add(this.skinTabPage_CHG_STOP_TEST);
-            this.skinTabControl_WholeChg.HeadBack = null;
-            this.skinTabControl_WholeChg.ImgTxtOffset = new System.Drawing.Point(0, 0);
-            this.skinTabControl_WholeChg.ItemSize = new System.Drawing.Size(50, 100);
-            this.skinTabControl_WholeChg.Location = new System.Drawing.Point(0, 0);
-            this.skinTabControl_WholeChg.Multiline = true;
-            this.skinTabControl_WholeChg.Name = "skinTabControl_WholeChg";
-            this.skinTabControl_WholeChg.PageArrowDown = ((System.Drawing.Image)(resources.GetObject("skinTabControl_WholeChg.PageArrowDown")));
-            this.skinTabControl_WholeChg.PageArrowHover = ((System.Drawing.Image)(resources.GetObject("skinTabControl_WholeChg.PageArrowHover")));
-            this.skinTabControl_WholeChg.PageCloseHover = ((System.Drawing.Image)(resources.GetObject("skinTabControl_WholeChg.PageCloseHover")));
-            this.skinTabControl_WholeChg.PageCloseNormal = ((System.Drawing.Image)(resources.GetObject("skinTabControl_WholeChg.PageCloseNormal")));
-            this.skinTabControl_WholeChg.PageDown = ((System.Drawing.Image)(resources.GetObject("skinTabControl_WholeChg.PageDown")));
-            this.skinTabControl_WholeChg.PageHover = ((System.Drawing.Image)(resources.GetObject("skinTabControl_WholeChg.PageHover")));
-            this.skinTabControl_WholeChg.PageImagePosition = CCWin.SkinControl.SkinTabControl.ePageImagePosition.Left;
-            this.skinTabControl_WholeChg.PageNorml = null;
-            this.skinTabControl_WholeChg.SelectedIndex = 8;
-            this.skinTabControl_WholeChg.Size = new System.Drawing.Size(879, 683);
-            this.skinTabControl_WholeChg.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
-            this.skinTabControl_WholeChg.TabIndex = 2;
-            this.skinTabControl_WholeChg.SelectedIndexChanged += new System.EventHandler(this.skinTabControl_WholeChg_SelectedIndexChanged);
+            // skinButton_MB_433_RTEST
+            // 
+            this.skinButton_MB_433_RTEST.BackColor = System.Drawing.Color.Transparent;
+            this.skinButton_MB_433_RTEST.BaseColor = System.Drawing.Color.DarkGray;
+            this.skinButton_MB_433_RTEST.BorderColor = System.Drawing.Color.DarkGray;
+            this.skinButton_MB_433_RTEST.ControlState = CCWin.SkinClass.ControlState.Normal;
+            this.skinButton_MB_433_RTEST.DownBack = null;
+            this.skinButton_MB_433_RTEST.Location = new System.Drawing.Point(296, 174);
+            this.skinButton_MB_433_RTEST.MouseBack = null;
+            this.skinButton_MB_433_RTEST.Name = "skinButton_MB_433_RTEST";
+            this.skinButton_MB_433_RTEST.NormlBack = null;
+            this.skinButton_MB_433_RTEST.Radius = 15;
+            this.skinButton_MB_433_RTEST.RoundStyle = CCWin.SkinClass.RoundStyle.All;
+            this.skinButton_MB_433_RTEST.Size = new System.Drawing.Size(110, 40);
+            this.skinButton_MB_433_RTEST.TabIndex = 17;
+            this.skinButton_MB_433_RTEST.Text = "重新测试";
+            this.skinButton_MB_433_RTEST.UseVisualStyleBackColor = false;
+            this.skinButton_MB_433_RTEST.Click += new System.EventHandler(this.skinButton_MB_433_RTEST_Click);
             // 
             // MainForm
             // 
@@ -8100,6 +8121,70 @@
             this.skinTabPage_WholeChgTest.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();
+            this.skinTabControl_WholeChg.ResumeLayout(false);
+            this.skinTabPage_WholeChg_SN.ResumeLayout(false);
+            this.skinSplitContainer10.Panel1.ResumeLayout(false);
+            this.skinSplitContainer10.Panel1.PerformLayout();
+            this.skinSplitContainer10.Panel2.ResumeLayout(false);
+            this.skinSplitContainer10.Panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.skinSplitContainer10)).EndInit();
+            this.skinSplitContainer10.ResumeLayout(false);
+            this.skinTabPage_WholeChg_Led.ResumeLayout(false);
+            this.skinSplitContainer11.Panel1.ResumeLayout(false);
+            this.skinSplitContainer11.Panel1.PerformLayout();
+            this.skinSplitContainer11.Panel2.ResumeLayout(false);
+            this.skinSplitContainer11.Panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.skinSplitContainer11)).EndInit();
+            this.skinSplitContainer11.ResumeLayout(false);
+            this.skinTabPage_WholeChg_Bt.ResumeLayout(false);
+            this.skinSplitContainer12.Panel1.ResumeLayout(false);
+            this.skinSplitContainer12.Panel1.PerformLayout();
+            this.skinSplitContainer12.Panel2.ResumeLayout(false);
+            this.skinSplitContainer12.Panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.skinSplitContainer12)).EndInit();
+            this.skinSplitContainer12.ResumeLayout(false);
+            this.skinTabPage_WholeChg_2POINT4.ResumeLayout(false);
+            this.skinSplitContainer13.Panel1.ResumeLayout(false);
+            this.skinSplitContainer13.Panel1.PerformLayout();
+            this.skinSplitContainer13.Panel2.ResumeLayout(false);
+            this.skinSplitContainer13.Panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.skinSplitContainer13)).EndInit();
+            this.skinSplitContainer13.ResumeLayout(false);
+            this.skinTabPage_CHG_2G.ResumeLayout(false);
+            this.skinSplitContainer7.Panel1.ResumeLayout(false);
+            this.skinSplitContainer7.Panel1.PerformLayout();
+            this.skinSplitContainer7.Panel2.ResumeLayout(false);
+            this.skinSplitContainer7.Panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.skinSplitContainer7)).EndInit();
+            this.skinSplitContainer7.ResumeLayout(false);
+            this.R6skinTabPage_Whole_FLASH.ResumeLayout(false);
+            this.splitContainer6.Panel1.ResumeLayout(false);
+            this.splitContainer6.Panel1.PerformLayout();
+            this.splitContainer6.Panel2.ResumeLayout(false);
+            this.splitContainer6.Panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer6)).EndInit();
+            this.splitContainer6.ResumeLayout(false);
+            this.R6skinTabPage_Whole_SET_RTC.ResumeLayout(false);
+            this.splitContainer5.Panel1.ResumeLayout(false);
+            this.splitContainer5.Panel1.PerformLayout();
+            this.splitContainer5.Panel2.ResumeLayout(false);
+            this.splitContainer5.Panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer5)).EndInit();
+            this.splitContainer5.ResumeLayout(false);
+            this.R6skinTabPage_Whole_GET_RTC.ResumeLayout(false);
+            this.splitContainer4.Panel1.ResumeLayout(false);
+            this.splitContainer4.Panel1.PerformLayout();
+            this.splitContainer4.Panel2.ResumeLayout(false);
+            this.splitContainer4.Panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer4)).EndInit();
+            this.splitContainer4.ResumeLayout(false);
+            this.skinTabPage_CHG_STOP_TEST.ResumeLayout(false);
+            this.skinSplitContainer23.Panel1.ResumeLayout(false);
+            this.skinSplitContainer23.Panel1.PerformLayout();
+            this.skinSplitContainer23.Panel2.ResumeLayout(false);
+            this.skinSplitContainer23.Panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.skinSplitContainer23)).EndInit();
+            this.skinSplitContainer23.ResumeLayout(false);
             this.skinTabPage_OnlineTest.ResumeLayout(false);
             this.splitContainer13.Panel1.ResumeLayout(false);
             this.splitContainer13.Panel1.PerformLayout();
@@ -8131,70 +8216,6 @@
             this.groupBox6.PerformLayout();
             this.groupBox5.ResumeLayout(false);
             this.groupBox5.PerformLayout();
-            this.skinTabPage_CHG_STOP_TEST.ResumeLayout(false);
-            this.skinSplitContainer23.Panel1.ResumeLayout(false);
-            this.skinSplitContainer23.Panel1.PerformLayout();
-            this.skinSplitContainer23.Panel2.ResumeLayout(false);
-            this.skinSplitContainer23.Panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.skinSplitContainer23)).EndInit();
-            this.skinSplitContainer23.ResumeLayout(false);
-            this.R6skinTabPage_Whole_GET_RTC.ResumeLayout(false);
-            this.splitContainer4.Panel1.ResumeLayout(false);
-            this.splitContainer4.Panel1.PerformLayout();
-            this.splitContainer4.Panel2.ResumeLayout(false);
-            this.splitContainer4.Panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer4)).EndInit();
-            this.splitContainer4.ResumeLayout(false);
-            this.R6skinTabPage_Whole_SET_RTC.ResumeLayout(false);
-            this.splitContainer5.Panel1.ResumeLayout(false);
-            this.splitContainer5.Panel1.PerformLayout();
-            this.splitContainer5.Panel2.ResumeLayout(false);
-            this.splitContainer5.Panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer5)).EndInit();
-            this.splitContainer5.ResumeLayout(false);
-            this.R6skinTabPage_Whole_FLASH.ResumeLayout(false);
-            this.splitContainer6.Panel1.ResumeLayout(false);
-            this.splitContainer6.Panel1.PerformLayout();
-            this.splitContainer6.Panel2.ResumeLayout(false);
-            this.splitContainer6.Panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer6)).EndInit();
-            this.splitContainer6.ResumeLayout(false);
-            this.skinTabPage_CHG_2G.ResumeLayout(false);
-            this.skinSplitContainer7.Panel1.ResumeLayout(false);
-            this.skinSplitContainer7.Panel1.PerformLayout();
-            this.skinSplitContainer7.Panel2.ResumeLayout(false);
-            this.skinSplitContainer7.Panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.skinSplitContainer7)).EndInit();
-            this.skinSplitContainer7.ResumeLayout(false);
-            this.skinTabPage_WholeChg_2POINT4.ResumeLayout(false);
-            this.skinSplitContainer13.Panel1.ResumeLayout(false);
-            this.skinSplitContainer13.Panel1.PerformLayout();
-            this.skinSplitContainer13.Panel2.ResumeLayout(false);
-            this.skinSplitContainer13.Panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.skinSplitContainer13)).EndInit();
-            this.skinSplitContainer13.ResumeLayout(false);
-            this.skinTabPage_WholeChg_Bt.ResumeLayout(false);
-            this.skinSplitContainer12.Panel1.ResumeLayout(false);
-            this.skinSplitContainer12.Panel1.PerformLayout();
-            this.skinSplitContainer12.Panel2.ResumeLayout(false);
-            this.skinSplitContainer12.Panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.skinSplitContainer12)).EndInit();
-            this.skinSplitContainer12.ResumeLayout(false);
-            this.skinTabPage_WholeChg_Led.ResumeLayout(false);
-            this.skinSplitContainer11.Panel1.ResumeLayout(false);
-            this.skinSplitContainer11.Panel1.PerformLayout();
-            this.skinSplitContainer11.Panel2.ResumeLayout(false);
-            this.skinSplitContainer11.Panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.skinSplitContainer11)).EndInit();
-            this.skinSplitContainer11.ResumeLayout(false);
-            this.skinTabPage_WholeChg_SN.ResumeLayout(false);
-            this.skinSplitContainer10.Panel1.ResumeLayout(false);
-            this.skinSplitContainer10.Panel1.PerformLayout();
-            this.skinSplitContainer10.Panel2.ResumeLayout(false);
-            this.skinSplitContainer10.Panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.skinSplitContainer10)).EndInit();
-            this.skinSplitContainer10.ResumeLayout(false);
-            this.skinTabControl_WholeChg.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -8645,5 +8666,6 @@
         private CCWin.SkinControl.SkinLabel skinLabel123;
         private CCWin.SkinControl.SkinLabel skinLabel124;
         private CCWin.SkinControl.SkinLabel skinLabel125;
+        private CCWin.SkinControl.SkinButton skinButton_MB_433_RTEST;
     }
 }

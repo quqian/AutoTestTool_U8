@@ -30,6 +30,7 @@ namespace AutoTestTool
         public static string savePath = @".\智能报表\";
         public static string testConfigFile = "TestInfo.conf";
         public static string Set433ConfigFile = "Test433Info.conf";
+        public static string UartConfigFile = "UartInfo.conf";
         public static string encryptAccountFile = "private.bin";
         public static string lastLoginUserFile = "lastUser.rd";
         public static string backupMysqlCmdFile = "MysqlCmd.bak";
@@ -981,6 +982,32 @@ namespace AutoTestTool
                     dictionary["SmokeSensor433"] = GetValue(context, "SmokeSensor433:", "\r\n");
                     dictionary["WiFiName"] = GetValue(context, "WiFiName:", "\r\n");
                     dictionary["WiFiPassWd"] = GetValue(context, "WiFiPassWd:", "\r\n");
+                }
+            }
+            return dictionary;
+        }
+
+        public static Dictionary<string, object> UartReadConfig(string filePath, Dictionary<string, object> dictionary)
+        {
+            if (File.Exists(filePath) == false)
+            {
+                WriteConfig(filePath, dictionary);
+            }
+            else
+            {
+                using (StreamReader sr = new StreamReader(filePath))
+                {
+                    string line;
+                    string context = "";
+                    while (null != (line = sr.ReadLine()))
+                    {
+                        context += line + "\r\n";
+                    }
+
+                    Console.WriteLine(context);
+
+                    dictionary["PortNumber"] = GetValue(context, "PortNumber:", "\r\n");
+                    dictionary["BaudRate"] = GetValue(context, "BaudRate:", "\r\n");
                 }
             }
             return dictionary;

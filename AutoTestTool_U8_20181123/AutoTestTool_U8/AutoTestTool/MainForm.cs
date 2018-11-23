@@ -77,6 +77,23 @@ namespace AutoTestTool
             TEST_MODE_STOP
         };
 
+        static int LINK_WANG_TEST = 0x03;
+
+        UInt32 KeyTimeTicks = 0;
+        UInt32 TRUMPETTimeTicks = 0;
+        UInt32 RS232TimeTicks = 0;
+        UInt32 SubCardNumTimeTicks = 0;
+        UInt32 SUB_RS232TimeTicks = 0;
+        UInt32 SubTRUMPETTimeTicks = 0;
+        UInt32 SubFLASHTimeTicks = 0;
+        UInt32 WholeRS232TimeTicks = 0;
+
+
+
+        UInt32 MainBoardStartTimeTicks = 0;
+        UInt32 SubBoardStartTimeTicks = 0;
+        UInt32 BoardStartTimeTicks = 0;
+
         struct GetResult
         {
             public int      testMode;
@@ -240,6 +257,7 @@ namespace AutoTestTool
         };
 
         static byte sequence = 0;
+
         public static bool MBTestingFlag = false;
         public static bool SBTestingFlag = false;
         public static bool ChargerTestingFlag = false;
@@ -488,13 +506,13 @@ namespace AutoTestTool
                                                         }
                                                         showKeyValue(validFrame[18], false);
                                                         LOG("按下的按键个数:  " + KeyCount);
-                                                        if (10 <= KeyCount)
+                                                        if (12 <= KeyCount)
                                                         {
                                                             MBTestResultDir["按键"] = "通过";
                                                             updateControlText(skinLabel_MB_KEY_RESULT, "测试通过", Color.Green);
-                                                            //      if (6 <= (GetCurrentTimeStamp() - cardNumTimeTicks))
+                                                            if (6 <= (GetCurrentTimeStamp() - KeyTimeTicks))
                                                             {
-                                                                //         cardNumTimeTicks = GetCurrentTimeStamp();
+                                                                KeyTimeTicks = GetCurrentTimeStamp();
                                                                 updateTableSelectedIndex(skinTabControl_MB, ++MBTabSelectIndex);
                                                             }
                                                         }
@@ -580,9 +598,9 @@ namespace AutoTestTool
                                                         SBTestResultDir["刷卡"] = "通过";
                                                         SBTestResultDir["卡号"] = GetResultObj.cardNum;
                                                         updateControlText(skinLabel_CARD_Result, "测试通过", Color.Green);
-                                                  //      if (6 <= (GetCurrentTimeStamp() - cardNumTimeTicks))
+                                                        if (6 <= (GetCurrentTimeStamp() - SubCardNumTimeTicks))
                                                         {
-                                                   //         cardNumTimeTicks = GetCurrentTimeStamp();
+                                                            SubCardNumTimeTicks = GetCurrentTimeStamp();
                                                             updateTableSelectedIndex(skinTabControl_SB, ++SBTabSelectIndex);
                                                         }
                                                     }
@@ -739,9 +757,9 @@ namespace AutoTestTool
                                                     {
                                                         MBTestResultDir["RS232"] = "通过";
                                                         updateControlText(skinLabel_MB_RS232_RESULT, "测试通过", Color.Green);
-                                                        //      if (6 <= (GetCurrentTimeStamp() - cardNumTimeTicks))
+                                                        if (6 <= (GetCurrentTimeStamp() - RS232TimeTicks))
                                                         {
-                                                            //         cardNumTimeTicks = GetCurrentTimeStamp();
+                                                            RS232TimeTicks = GetCurrentTimeStamp();
                                                             updateTableSelectedIndex(skinTabControl_MB, ++MBTabSelectIndex);
                                                         }
                                                     }
@@ -758,9 +776,9 @@ namespace AutoTestTool
                                                     {
                                                         SBTestResultDir["副板232"] = "通过";
                                                         updateControlText(skinLabel_SUB_RS232_Result, "测试通过", Color.Green);
-                                                        //      if (6 <= (GetCurrentTimeStamp() - cardNumTimeTicks))
+                                                        if (6 <= (GetCurrentTimeStamp() - SUB_RS232TimeTicks))
                                                         {
-                                                            //         cardNumTimeTicks = GetCurrentTimeStamp();
+                                                            SUB_RS232TimeTicks = GetCurrentTimeStamp();
                                                             updateTableSelectedIndex(skinTabControl_SB, ++SBTabSelectIndex);
                                                         }
                                                     }
@@ -774,7 +792,22 @@ namespace AutoTestTool
                                             }
                                             else if (TestMeunSelectIndex == 2)//整机测试
                                             {
-
+                                                if (0 == GetRS232Value)
+                                                {
+                                                    ChargerTestResultDir["RS232"] = "通过";
+                                                    updateControlText(skinLabel_CHG_RS232_RESULT, "测试通过", Color.Green);
+                                                    if (6 <= (GetCurrentTimeStamp() - WholeRS232TimeTicks))
+                                                    {
+                                                        WholeRS232TimeTicks = GetCurrentTimeStamp();
+                                                        updateTableSelectedIndex(skinTabControl_WholeChg, ++chargerTestSelectIndex);
+                                                    }
+                                                }
+                                                else
+                                                {
+                                                    LOG("副板接收握手包应答错误!");
+                                                    updateTableSelectedIndex(skinTabControl_WholeChg, ++chargerTestSelectIndex);
+                                                    ChargerTestResultDir["RS232"] = "不通过";
+                                                }
                                             }
                                             break;
                                         case (byte)Command.CMD_LCD_TEST://指示灯
@@ -809,9 +842,9 @@ namespace AutoTestTool
                                                     {
                                                         MBTestResultDir["喇叭"] = "通过";
                                                         updateControlText(skinLabel_MB_TRUMPET_RESULT, "测试通过", Color.Green);
-                                                        //      if (6 <= (GetCurrentTimeStamp() - cardNumTimeTicks))
+                                                        if (6 <= (GetCurrentTimeStamp() - TRUMPETTimeTicks))
                                                         {
-                                                            //         cardNumTimeTicks = GetCurrentTimeStamp();
+                                                            TRUMPETTimeTicks = GetCurrentTimeStamp();
                                                             updateTableSelectedIndex(skinTabControl_MB, ++MBTabSelectIndex);
                                                         }
                                                     }
@@ -828,9 +861,9 @@ namespace AutoTestTool
                                                     {
                                                         SBTestResultDir["喇叭"] = "通过";
                                                         updateControlText(skinLabel_SUB_TRUMPET_Result, "测试通过", Color.Green);
-                                                        //      if (6 <= (GetCurrentTimeStamp() - cardNumTimeTicks))
+                                                        if (6 <= (GetCurrentTimeStamp() - SubTRUMPETTimeTicks))
                                                         {
-                                                            //         cardNumTimeTicks = GetCurrentTimeStamp();
+                                                            SubTRUMPETTimeTicks = GetCurrentTimeStamp();
                                                             updateTableSelectedIndex(skinTabControl_SB, ++SBTabSelectIndex);
                                                         }
                                                     }
@@ -924,30 +957,7 @@ namespace AutoTestTool
                                             }
                                             else if (TestMeunSelectIndex == 2)//整机测试
                                             {
-                                                switch (GetResultObj.BLE)
-                                                {
-                                                    case 0x01:
-                                                        ChargerTestResultDir["蓝牙"] = "通过";
-                                                        updateControlText(skinLabel_CHG_BT_RESULT, "测试通过", Color.Green);
-                                                        if (6 < (GetCurrentTimeStamp() - ItemTestTimeBLE))
-                                                        {
-                                                            LOG("整机蓝牙l测试1chargerTestSelectIndex." + chargerTestSelectIndex);
-                                                            ItemTestTimeBLE = GetCurrentTimeStamp();
-                                                            updateTableSelectedIndex(skinTabControl_WholeChg, ++chargerTestSelectIndex);
-                                                        }
-                                                        break;
-                                                    case 0x00:
-                                                        updateControlText(skinLabel_CHG_BT_RESULT, "测试不通过", Color.Red);
-                                                        ChargerTestResultDir["蓝牙"] = "不通过";
-                                                        break;
-                                                    case 0x02:
-                                                        ChargerTestResultDir["蓝牙"] = "无";
-                                                        updateControlText(skinLabel_CHG_BT_RESULT, "此PCB不带蓝牙模块", Color.Black);
-                                                        LOG("整机蓝牙l测试无1chargerTestSelectIndex." + chargerTestSelectIndex);
-                                                        updateTableSelectedIndex(skinTabControl_WholeChg, ++chargerTestSelectIndex);
-                                                        LOG("没有蓝牙模块!");
-                                                        break;
-                                                }
+                                                
                                             }
                                             break;
                                         case (byte)Command.CMD_24G_COMMUNICATION_TEST://24g通信测试
@@ -967,6 +977,7 @@ namespace AutoTestTool
                                             }
                                             else if (TestMeunSelectIndex == 2)//整机测试
                                             {
+                                                /*
                                                 switch (GetResultObj.BLE_24G)
                                                 {
                                                     case 0x01:
@@ -992,6 +1003,7 @@ namespace AutoTestTool
                                                         LOG("没有2.4G模块!");
                                                         break;
                                                 }
+                                                */
                                             }
                                             break;
                                         case (byte)Command.CMD_GET_FW:
@@ -1446,14 +1458,6 @@ namespace AutoTestTool
             updateControlText(skinLabel_CHG_FW_RES_VAL, ChargerTestResultDir["软件版本"], Color.Black);
             updateControlText(skinLabeL_CHG_TEST_RES_VAL, ChargerTestResultDir["测试结果"], decideColor(ChargerTestResultDir["测试结果"]));
             updateControlText(skinLabel_CHG_LED_RES_VAL, ChargerTestResultDir["指示灯"], decideColor(ChargerTestResultDir["指示灯"]));
-            updateControlText(skinLabel_CHG_BT_RES_VAL, ChargerTestResultDir["蓝牙"], decideColor(ChargerTestResultDir["蓝牙"]));
-            updateControlText(skinLabel_CHG_24G_RES_VAL, ChargerTestResultDir["2.4G"], decideColor(ChargerTestResultDir["2.4G"]));
-            updateControlText(skinLabel_CHG_2G_RES_VAL, ChargerTestResultDir["2G模块"], decideColor(ChargerTestResultDir["2G模块"]));
-            updateControlText(skinLabel_CHG_2G_CSQ_RES_VAL, ChargerTestResultDir["信号值"], Color.Black);
-            updateControlText(skinLabel_CHG_2G_ICCID_RES_VAL, ChargerTestResultDir["ICCID"], Color.Black);
-            updateControlText(R6_WHOLE_FLASH_RESULT_VAL, ChargerTestResultDir["FLASH"], decideColor(ChargerTestResultDir["FLASH"]));
-            updateControlText(R6_WHOLE_SET_RTC_RESULT_VAL, ChargerTestResultDir["SETRTC"], decideColor(ChargerTestResultDir["SETRTC"]));
-            updateControlText(R6_WHOLE_GET_RTC_RESULT_VAL, ChargerTestResultDir["GETRTC"], decideColor(ChargerTestResultDir["GETRTC"]));
             updateControlText(skinLabel_CHG_TEST_USEDTIME_RES_VAL, ChargerTestResultDir["测试用时"], Color.Black);
             updateControlText(skinLabel_CHG_TEST_TIME_RES_VAL, ChargerTestResultDir["测试时间"], Color.Black);
         }
@@ -1562,14 +1566,6 @@ namespace AutoTestTool
             updateControlText(skinLabel_CHG_FW_RES_VAL, "");
             updateControlText(skinLabeL_CHG_TEST_RES_VAL, "");
             updateControlText(skinLabel_CHG_LED_RES_VAL, "");
-            updateControlText(skinLabel_CHG_BT_RES_VAL, "");
-            updateControlText(skinLabel_CHG_24G_RES_VAL, "");
-            updateControlText(skinLabel_CHG_2G_RES_VAL, "");
-            updateControlText(skinLabel_CHG_2G_CSQ_RES_VAL, "");
-            updateControlText(skinLabel_CHG_2G_ICCID_RES_VAL, "");
-            updateControlText(R6_WHOLE_FLASH_RESULT_VAL, "");
-            updateControlText(R6_WHOLE_SET_RTC_RESULT_VAL, "");
-            updateControlText(R6_WHOLE_GET_RTC_RESULT_VAL, "");
             updateControlText(skinLabel_CHG_TEST_USEDTIME_RES_VAL, "");
             updateControlText(skinLabel_CHG_TEST_TIME_RES_VAL, "");
         }
@@ -1686,10 +1682,10 @@ namespace AutoTestTool
                         break;
 
                     case 0x05://刷卡
-                        if ((GetCurrentTimeStamp() - ItemTestTime) >= 2)
-                        {
-                            updateControlText(skinLabel_MB_Card_RESULT, "");
-                        }
+                     //   if ((GetCurrentTimeStamp() - ItemTestTime) >= 2)
+                    //    {
+                     //       updateControlText(skinLabel_MB_Card_RESULT, "");
+                     //   }
                         if (selectIndexUpgradeFlag == true)
                         {
                             selectIndexUpgradeFlag = false;
@@ -1839,10 +1835,15 @@ namespace AutoTestTool
                         //             LOG("主板测试记录添加数据库成功");
                         //             ProcTestData.DealBackUpData(ProcTestData.backupMysqlCmdFile);
                         //         }
-                        Thread.Sleep(200);
+                        Thread.Sleep(50);
                         SendDevReboot();
                         updateControlText(textBox_MB_QRCode, "");
                         MBTestingFlag = false;
+                        {
+                            updateControlText(skinButton_PCBA_STARTTEST, "开始测试");
+                            MBTestThread.Abort();
+                            MBTestThread = null;
+                        }
                         break;
                     default:
                         break;
@@ -2016,10 +2017,15 @@ namespace AutoTestTool
                         //          LOG("副板测试记录添加数据库成功");
                         //          ProcTestData.DealBackUpData(ProcTestData.backupMysqlCmdFile);
                         //      }
-                        Thread.Sleep(200);
+                        Thread.Sleep(50);
                         SendDevReboot();
                         updateControlText(textBox_SB_QR, "");
                         SBTestingFlag = false;
+                        {
+                            updateControlText(skinButton_PCBA_STARTTEST, "开始测试");
+                            SBTestThread.Abort();
+                            SBTestThread = null;
+                        }
                         break;
                    
                     default:
@@ -2063,7 +2069,7 @@ namespace AutoTestTool
                             ItemTestTime = GetCurrentTimeStamp();
                             countDownTimeCharger.lcd = countdownTime;
                             ChargerTestResultDir["指示灯"] = "";
-                            updateControlText(skinLabel_CHG_LED_RESULT, "");
+                            updateControlText(skinLabel_CHG_RS232_RESULT, "");
                             LOG("整机指示灯测试.");
                             
                             SendLedTestReq(0, 1);
@@ -2076,183 +2082,12 @@ namespace AutoTestTool
                         {
                             LOG("整机指示灯测试超时.");
                             ChargerTestResultDir["指示灯"] = "不通过";
-                            updateControlText(skinLabel_CHG_LED_RESULT, "不通过", Color.Red);
+                            updateControlText(skinLabel_CHG_RS232_RESULT, "不通过", Color.Red);
                             LOG("灯1chargerTestSelectIndex." + chargerTestSelectIndex);
                             updateTableSelectedIndex(skinTabControl_WholeChg, ++chargerTestSelectIndex);
                         }
                         break;
-                    case 0x02:  //蓝牙
-                        if (selectIndexUpgradeFlag == true)
-                        {
-                            selectIndexUpgradeFlag = false;
-                            ItemTestTime = GetCurrentTimeStamp();
-                            countDownTimeCharger.BLE = 60;
-                           // countDownTimeCharger.BLE = countdownTime;
-                            ChargerTestResultDir["蓝牙"] = "";
-                            updateControlText(skinLabel_CHG_BT_RESULT, "");
-
-                            X6SendBlueToothTestReq();
-                            LOG("整机蓝牙测试.");
-                        }
-                        if ((GetCurrentTimeStamp() - ItemTestTime) >= 10)
-                        {
-                            ItemTestTime = GetCurrentTimeStamp();
-
-                            R6Wholesend2GTestCnt++;
-
-                            if (R6Wholesend2GTestCnt < 6)
-                            {
-                                X6SendBlueToothTestReq();
-                            }
-                        }
-
-                        //3次过后超时处理
-                        if (R6Wholesend2GTestCnt > 6)
-                        {
-                            R6Wholesend2GTestCnt = 0;
-                            LOG("整机蓝牙测试超时.");
-                            ChargerTestResultDir["蓝牙"] = "不通过";
-                            updateControlText(skinLabel_CHG_BT_RESULT, "不通过", Color.Red);
-                            LOG("蓝牙1chargerTestSelectIndex." + chargerTestSelectIndex);
-                            updateTableSelectedIndex(skinTabControl_WholeChg, ++chargerTestSelectIndex);
-                        }
-                        break;
-                    case 0x03:  //2.4G
-                        if (selectIndexUpgradeFlag == true)
-                        {
-                            selectIndexUpgradeFlag = false;
-                            ItemTestTime = GetCurrentTimeStamp();
-                            countDownTimeCharger._2_4G = countdownTime;
-                            ChargerTestResultDir["2.4G"] = "";
-                            updateControlText(skinLabel_CHG_24G_RESULT, "");
-                            R6Send24G_COMMUNICATION_TestReq();
-                            LOG("整机2.4G测试.");
-                        }
-                        
-                        if ((GetCurrentTimeStamp() - ItemTestTime) >= 10)
-                        {
-                            ItemTestTime = GetCurrentTimeStamp();
-
-                            R6Wholesend2GTestCnt++;
-
-                            if (R6Wholesend2GTestCnt < 3)
-                            {
-                                R6Send24G_COMMUNICATION_TestReq();
-                            }
-                        }
-
-                        //3次过后超时处理
-                        if (R6Wholesend2GTestCnt > 3)
-                        {
-                            R6Wholesend2GTestCnt = 0;
-                            LOG("整机2.4G测试超时.");
-                            ChargerTestResultDir["2.4G"] = "不通过";
-                            updateControlText(skinLabel_CHG_24G_RESULT, "不通过", Color.Red);
-                            LOG("2.4g1chargerTestSelectIndex." + chargerTestSelectIndex);
-                            updateTableSelectedIndex(skinTabControl_WholeChg, ++chargerTestSelectIndex);
-                        }
-                        break;
-                    case 0x04://2G/4G模块测试
-                        LOG("整机2G/4G测试qqqqqqqqqq.");
-                        if (selectIndexUpgradeFlag == true)
-                        {
-                            selectIndexUpgradeFlag = false;
-                            LOG("整机2G/4G测试.");
-                            ItemTestTime = GetCurrentTimeStamp();
-                            countDownTimeCharger._2G = 120;
-                            ChargerTestResultDir["2G模块"] = "";
-                            updateControlText(skinLabel_CHG_2G_RESULT, "");
-                            send2GTestCnt = 0;
-                            Send2GTestReq();
-                        }
-
-                        //每隔30S发一次
-                        if ((GetCurrentTimeStamp() - ItemTestTime) >= 30)
-                        {
-                            ItemTestTime = GetCurrentTimeStamp();
-
-                            send2GTestCnt++;
-                            if (send2GTestCnt < 4)
-                            {
-                                Send2GTestReq();
-                            }
-                        }
-
-                        //3次过后超时处理
-                        if (send2GTestCnt > 4)
-                        {
-                            send2GTestCnt = 0;
-                            LOG("整机2G/4G测试超时.");
-                            ChargerTestResultDir["2G模块"] = "不通过";
-                            updateControlText(skinLabel_CHG_2G_RESULT, "不通过", Color.Red);
-                            LOG("2G/ 4G1chargerTestSelectIndex." + chargerTestSelectIndex);
-                            updateTableSelectedIndex(skinTabControl_WholeChg, ++chargerTestSelectIndex);
-                        }
-                        break;
-
-                    case 0x05://flash
-                        if (selectIndexUpgradeFlag == true)
-                        {
-                            selectIndexUpgradeFlag = false;
-                            ItemTestTime = GetCurrentTimeStamp();
-                            countDownTimeCharger.flash = countdownTime;
-                            ChargerTestResultDir["FLASH"] = "";
-                            updateControlText(R6skinLabel_Whole_FLASH_RESULT, "");
-                            LOG("FLASH测试.");
-                            //发送FLASH测试指令
-                            SendFlashTestReq();
-                        }
-                        if ((GetCurrentTimeStamp() - ItemTestTime) >= 30)//超时
-                        {
-                            LOG("FLASH测试超时.");
-                            ChargerTestResultDir["FLASH"] = "不通过";
-                            updateControlText(R6skinLabel_Whole_FLASH_RESULT, "不通过", Color.Red);
-                            updateTableSelectedIndex(skinTabControl_WholeChg, ++chargerTestSelectIndex);
-                        }
-                        break;
-                    case 0x06://setRTC
-                        if (selectIndexUpgradeFlag == true)
-                        {
-                            selectIndexUpgradeFlag = false;
-                            ItemTestTime = GetCurrentTimeStamp();
-                            countDownTimeCharger.setRtc = countdownTime;
-                            ChargerTestResultDir["SETRTC"] = "";
-                            updateControlText(R6skinLabel_Whole_SETRTC_RESULT, "");
-                            LOG("设置RTC时间.");
-                            //发送设置RTC时间指令
-                            SendSetRtcTestReq();
-                        }
-                        if ((GetCurrentTimeStamp() - ItemTestTime) >= 30)//超时
-                        {
-                            LOG("设置RTC时间超时.");
-                            ChargerTestResultDir["SETRTC"] = "不通过";
-                            updateControlText(R6skinLabel_Whole_SETRTC_RESULT, "不通过", Color.Red);
-                            updateTableSelectedIndex(skinTabControl_WholeChg, ++chargerTestSelectIndex);
-                        }
-                        break;
-
-                    case 0x07://getRTC
-                        if (selectIndexUpgradeFlag == true)
-                        {
-                            selectIndexUpgradeFlag = false;
-                            ItemTestTime = GetCurrentTimeStamp();
-                            countDownTimeCharger.getRtc = countdownTime;
-                            ChargerTestResultDir["GETRTC"] = "";
-                            updateControlText(R6skinLabel_Whole_GETRTC_RESULT, "");
-                            LOG("读取RTC时间.");
-                            //发送读取RTC时间指令
-                            SendGetRtcTestReq();
-                        }
-                        if ((GetCurrentTimeStamp() - ItemTestTime) >= 30)//超时
-                        {
-                            LOG("读取RTC时间超时.");
-                            ChargerTestResultDir["GETRTC"] = "不通过";
-                            updateControlText(R6skinLabel_Whole_GETRTC_RESULT, "不通过", Color.Red);
-                            updateTableSelectedIndex(skinTabControl_WholeChg, ++chargerTestSelectIndex);
-                        }
-                        break;
-
-                    case 0x08:
+                    case 0x02:
                         SendGetFwVersionReq(0x00);
                         Thread.Sleep(200);
                         SendGetPcdCode(0x00);
@@ -2275,6 +2110,7 @@ namespace AutoTestTool
                         //写入excel表
                         ProcTestData.WriteReport(TestSettingInfo["ChargerModel"] + "_整机测试.xlsx", TestSettingInfo["ChargerModel"] + "_整机测试", ChargerTestResultDir);
 
+/*
                         string cmd = ProcTestData.ChargerTestMysqlCommand (
                                 TestSettingInfo["ChargerModel"].ToString(),
                                 ChargerTestResultDir["电桩号"],
@@ -2297,10 +2133,15 @@ namespace AutoTestTool
                             LOG("整机测试记录添加数据库成功");
                             ProcTestData.DealBackUpData(ProcTestData.backupMysqlCmdFile);
                         }
-
+*/
                         updateControlText(textBox_WholeChg_SN_QR, "");
                         ChargerTestingFlag = false;
                         SendRebootReq();
+                        {
+                            updateControlText(skinButton_WholeChg_StartTest, "开始测试");
+                            ChargerTestThread.Abort();
+                            ChargerTestThread = null;
+                        }
                         break;
      
                     default:
@@ -2316,7 +2157,7 @@ namespace AutoTestTool
         {
             byte[] data = { mode };
             int wait = 0, n = 0;
-            int WaitTimes = 2;
+            int WaitTimes = 5;
 
             GetResultObj.testMode = -1;
             GetResultObj.testModeAllow = -1;
@@ -2395,7 +2236,7 @@ namespace AutoTestTool
             while (getRS232Flag == -1)
             {
                 Thread.Sleep(100);
-                if (wait++ > 10)
+                if (wait++ > 5)
                 {
                     wait = 0;
                     n++;
@@ -3147,52 +2988,7 @@ namespace AutoTestTool
             }
             else if (TestMeunSelectIndex == 2)//整机测试
             {
-                if (GetResultObj._2G == 0x00)//通过
-                {
-                    //加入信号值判断
-                    if ((GetResultObj._2gCSQ >= Convert.ToByte(TestSettingInfo["CsqLowerLimit"])
-                        && GetResultObj._2gCSQ <= Convert.ToByte(TestSettingInfo["CsqUpperLimit"]))
-                        && (GetResultObj._2G_Iccid != null))
-                    {
-                        updateControlText(skinLabel_SUB_TRUMPET_Result, "通过\r\n信号值:" + GetResultObj._2gCSQ, Color.Green);
-                        ChargerTestResultDir["2G模块"] = "通过";
-                        updateControlText(skinLabel_CHG_2G_RESULT, "测试通过", Color.Green);
-                        ChargerTestResultDir["信号值"] = GetResultObj._2gCSQ.ToString();
-                        LOG("整机2G通信成功!");
-                        Thread.Sleep(500);
-                        
-                        ChargerTestResultDir["ICCID"] = GetResultObj._2G_Iccid;
-                        LOG("ICCID值:" + ChargerTestResultDir["ICCID"]);
-                        LOG("信号值:" + ChargerTestResultDir["信号值"]);
-                        LOG("2G模块:" + ChargerTestResultDir["2G模块"]);
-                        if (6 < (GetCurrentTimeStamp() - ItemTestTime4G))
-                        {
-                            LOG("整机2G测试1chargerTestSelectIndex." + chargerTestSelectIndex);
-                            ItemTestTime4G = GetCurrentTimeStamp();
-                            updateTableSelectedIndex(skinTabControl_WholeChg, ++chargerTestSelectIndex);
-                        }
-                    }
-                    else
-                    {
-                        updateControlText(skinLabel_SUB_TRUMPET_Result, "不通过\r\n信号值:" + GetResultObj._2gCSQ, Color.Red);
-                        ChargerTestResultDir["2G模块"] = "不通过";
-                        ChargerTestResultDir["信号值"] = GetResultObj._2gCSQ.ToString();
-                        ChargerTestResultDir["ICCID"] = "00000000000";
-                        LOG("整机2G通信不成功!");
-                        LOG("ICCID值:" + ChargerTestResultDir["ICCID"]);
-                        LOG("信号值:" + ChargerTestResultDir["信号值"]);
-                        LOG("2G模块:" + ChargerTestResultDir["2G模块"]);
-                    }
-                }
-                else
-                {
-                    updateControlText(skinLabel_SUB_TRUMPET_Result, "不通过", Color.Red);
-                    ChargerTestResultDir["2G模块"] = "不通过";
-                    updateControlText(skinLabel_CHG_2G_RESULT, "测试不通过", Color.Green);
-                    ChargerTestResultDir["信号值"] = GetResultObj._2gCSQ.ToString();
-                    ChargerTestResultDir["ICCID"] = "00000000000";
-                    LOG("整机2G通信不不成功!");
-                }
+                
             }
             else if (TestMeunSelectIndex == 3)
             {
@@ -3258,8 +3054,11 @@ namespace AutoTestTool
                         SBTestResultDir["FLASH"] = "通过";
                         updateControlText(skinLabel_SB_FLASH_RESULT, "通过", Color.Green);
 
+
+                        if (6 <= (GetCurrentTimeStamp() - SubFLASHTimeTicks))
                         {
-                            LOG("SBTabSelectIndexQQQ." + SBTabSelectIndex);
+                            SubFLASHTimeTicks = GetCurrentTimeStamp();
+                           // LOG("SBTabSelectIndexQQQ." + SBTabSelectIndex);
                             updateTableSelectedIndex(skinTabControl_SB, ++SBTabSelectIndex);
                         }
                     }
@@ -3273,6 +3072,7 @@ namespace AutoTestTool
             }
             else if (TestMeunSelectIndex == 2)//整机测试
             {
+                /*
                 if (pkt[17] == 0x00)//成功
                 {
                     LOG("FLASH测试成功.");
@@ -3292,6 +3092,7 @@ namespace AutoTestTool
                     ChargerTestResultDir["FLASH"] = "不通过";
                     updateControlText(R6skinLabel_Whole_FLASH_RESULT, "不通过", Color.Red);
                 }
+                */
             }
         }
 
@@ -3320,6 +3121,7 @@ namespace AutoTestTool
             }
             else if (TestMeunSelectIndex == 2)//整机测试
             {
+                /*
                 if (pkt[17] == 0x00)//成功
                 {
                     LOG("设置RTC时间成功.");
@@ -3339,6 +3141,7 @@ namespace AutoTestTool
                     ChargerTestResultDir["SETRTC"] = "不通过";
                     updateControlText(R6skinLabel_Whole_SETRTC_RESULT, "不通过", Color.Red);
                 }
+                */
             }
         }
 
@@ -3394,6 +3197,7 @@ namespace AutoTestTool
             }
             else if (TestMeunSelectIndex == 2)//整机测试
             {
+                /*
                 UInt32 StationRtcCount = (UInt32)((pkt[17] << 24) | (pkt[18] << 16) | (pkt[19] << 8) | pkt[20]);
                 UInt32 CurrentCount = GetCurrentTimeStamp();
                 UInt32 TmpCount = 0;
@@ -3435,6 +3239,7 @@ namespace AutoTestTool
                         updateControlText(R6skinLabel_Whole_GETRTC_RESULT, "不通过", Color.Red);
                     }
                 }
+                */
             }
         }
 
@@ -3522,7 +3327,27 @@ namespace AutoTestTool
         //主板PCB确认键
         private void skinButton_MB_Confirm_Click(object sender, EventArgs e)
         {
-            skinButton_PCBA_STARTTEST_Click(sender, e);
+            if (2 <= (GetCurrentTimeStamp() - MainBoardStartTimeTicks))
+            {
+                MainBoardStartTimeTicks = GetCurrentTimeStamp();
+                //    skinButton_PCBA_STARTTEST_Click(sender, e);
+                {
+                    if ((textBox_MB_QRCode.Text == "" && skinTabControl_PCBATest.SelectedTab == skinTabPage_MainBoard)
+                            || (textBox_SB_QR.Text == "" && skinTabControl_PCBATest.SelectedTab == skinTabPage_SubBoard))
+                    {
+                        MessageBox.Show("PCB编码不能为空", "提示", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        textBox_MB_QRCode.Text = "";
+                        textBox_SB_QR.Text = "";
+                        TestSettingInfo["ChargerModel"] = skinComboBox_ChgType.SelectedItem;
+                        return;
+                    }
+
+                    PCBATestSelectIndex = skinTabControl_PCBATest.SelectedIndex;
+
+                    LOG("主板请求开始测试.");
+                    SendTestModeReq((byte)TEST_MODE.TEST_MODE_START);
+                }
+            }//    Thread.Sleep(50);
         }
 
 
@@ -3545,32 +3370,36 @@ namespace AutoTestTool
                 return;
             }
 
-            PCBATestSelectIndex = skinTabControl_PCBATest.SelectedIndex;
+            if (2 <= (GetCurrentTimeStamp() - BoardStartTimeTicks))
+            {
+                BoardStartTimeTicks = GetCurrentTimeStamp();
+                PCBATestSelectIndex = skinTabControl_PCBATest.SelectedIndex;
 
-            if (skinTabControl_PCBATest.SelectedIndex == 0)//主板
-            {
-                if (MBTestingFlag == false)
+                if (skinTabControl_PCBATest.SelectedIndex == 0)//主板
                 {
-                    LOG("主板请求开始测试.");
-                    SendTestModeReq((byte)TEST_MODE.TEST_MODE_START);
+                    if (MBTestingFlag == false)
+                    {
+                        LOG("主板请求开始测试.");
+                        SendTestModeReq((byte)TEST_MODE.TEST_MODE_START);
+                    }
+                    else
+                    {
+                        LOG("主板请求结束测试.");
+                        SendTestModeReq((byte)TEST_MODE.TEST_MODE_STOP);
+                    }
                 }
-                else
+                else if (skinTabControl_PCBATest.SelectedIndex == 1) //副板
                 {
-                    LOG("主板请求结束测试.");
-                    SendTestModeReq((byte)TEST_MODE.TEST_MODE_STOP);
-                }
-            }
-            else if (skinTabControl_PCBATest.SelectedIndex == 1) //副板
-            {
-                if (SBTestingFlag == false)
-                {
-                    LOG("副板请求开始测试.");
-                    SendTestModeReq((byte)TEST_MODE.TEST_MODE_START);
-                }
-                else
-                {
-                    LOG("副板请求结束测试.");
-                    SendTestModeReq((byte)TEST_MODE.TEST_MODE_STOP);
+                    if (SBTestingFlag == false)
+                    {
+                        LOG("副板请求开始测试.");
+                        SendTestModeReq((byte)TEST_MODE.TEST_MODE_START);
+                    }
+                    else
+                    {
+                        LOG("主板请求结束测试.");
+                        SendTestModeReq((byte)TEST_MODE.TEST_MODE_STOP);
+                    }
                 }
             }
         }
@@ -3700,7 +3529,29 @@ namespace AutoTestTool
 
         private void skinButton_SB_CONFIRM_Click(object sender, EventArgs e)
         {
-            skinButton_PCBA_STARTTEST_Click(sender, e);
+            if (2 <= (GetCurrentTimeStamp() - SubBoardStartTimeTicks))
+            {
+                SubBoardStartTimeTicks = GetCurrentTimeStamp();
+                   skinButton_PCBA_STARTTEST_Click(sender, e);
+                {
+                    if ((textBox_MB_QRCode.Text == "" && skinTabControl_PCBATest.SelectedTab == skinTabPage_MainBoard)
+                            || (textBox_SB_QR.Text == "" && skinTabControl_PCBATest.SelectedTab == skinTabPage_SubBoard))
+                    {
+                        MessageBox.Show("PCB编码不能为空", "提示", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        textBox_MB_QRCode.Text = "";
+                        textBox_SB_QR.Text = "";
+                        TestSettingInfo["ChargerModel"] = skinComboBox_ChgType.SelectedItem;
+                        return;
+                    }
+
+                    PCBATestSelectIndex = skinTabControl_PCBATest.SelectedIndex;
+
+                    {
+                        LOG("副板请求开始测试.");
+                        SendTestModeReq((byte)TEST_MODE.TEST_MODE_START);
+                    }
+                }
+            }
         }
 
         private void skinButton_SB_BT_SUCCESS_Click(object sender, EventArgs e)
@@ -3811,7 +3662,7 @@ namespace AutoTestTool
         {
             LOG("整机指示灯测试成功.");
             ChargerTestResultDir["指示灯"] = "通过";
-            updateControlText(skinLabel_CHG_LED_RESULT, "通过", Color.Green);
+            updateControlText(skinLabel_CHG_RS232_RESULT, "通过", Color.Green);
             LOG("灯按键成功1chargerTestSelectIndex." + chargerTestSelectIndex);
             updateTableSelectedIndex(skinTabControl_WholeChg, ++chargerTestSelectIndex);
         }
@@ -3820,127 +3671,29 @@ namespace AutoTestTool
         {
             LOG("整机指示灯测试失败.");
             ChargerTestResultDir["指示灯"] = "不通过";
-            updateControlText(skinLabel_CHG_LED_RESULT, "不通过", Color.Red);
+            updateControlText(skinLabel_CHG_RS232_RESULT, "不通过", Color.Red);
             LOG("灯按键失败1chargerTestSelectIndex." + chargerTestSelectIndex);
             updateTableSelectedIndex(skinTabControl_WholeChg, ++chargerTestSelectIndex);
         }
-
-        private void skinButton_WholeChg_Led_Over_Click(object sender, EventArgs e)
+        
+        private void skinButton_WholeChg_RS232_Over_Click(object sender, EventArgs e)
         {
-            LOG("跳过整机指示灯测试.");
-            updateControlText(skinLabel_CHG_LED_RESULT, "跳过", Color.Green);
-            LOG("灯按键跳过1chargerTestSelectIndex." + chargerTestSelectIndex);
+            LOG("跳过整机232测试.");
+            updateControlText(skinLabel_CHG_RS232_RESULT, "跳过", Color.Green);
+            //   LOG("灯按键跳过1chargerTestSelectIndex." + chargerTestSelectIndex);
             updateTableSelectedIndex(skinTabControl_WholeChg, ++chargerTestSelectIndex);
         }
-
-        private void skinButton_WholeChg_Led_RTest_Click(object sender, EventArgs e)
+        
+        private void skinButton_WholeChg_RS232_RTest_Click(object sender, EventArgs e)
         {
             ItemTestTime = GetCurrentTimeStamp();
-            countDownTimeCharger.lcd = countdownTime;
-            ChargerTestResultDir["指示灯"] = "";
-            updateControlText(skinLabel_CHG_LED_RESULT, "");
-            LOG("整机指示灯重新测试.");
-            //发送指示灯测试指令
-            SendLedTestReq(0, 1);
-            Thread.Sleep(500);
-            SendLedTestReq(1, 1);
-            Thread.Sleep(500);
-            SendLedTestReq(2, 1);
+            countDownTimeCharger.RS232 = countdownTime;
+            ChargerTestResultDir["RS232"] = "";
+            updateControlText(skinLabel_CHG_RS232_RESULT, "");
+            LOG("整机RS232重新测试.");
+            //发送RS232测试指令
+            SendRS232TestReq();
         }
-
-        private void skinButton_WholeChg_BT_Success_Click(object sender, EventArgs e)
-        {
-            LOG("整机蓝牙测试成功.");
-            ChargerTestResultDir["蓝牙"] = "通过";
-            updateControlText(skinLabel_CHG_BT_RESULT, "通过", Color.Green);
-            LOG("蓝牙成功1chargerTestSelectIndex." + chargerTestSelectIndex);
-            updateTableSelectedIndex(skinTabControl_WholeChg, ++chargerTestSelectIndex);
-        }
-
-        private void skinButton_WholeChg_BT_Fail_Click(object sender, EventArgs e)
-        {
-            LOG("整机蓝牙测试失败.");
-            ChargerTestResultDir["蓝牙"] = "不通过";
-            updateControlText(skinLabel_CHG_BT_RESULT, "不通过", Color.Red);
-            LOG("蓝牙失败1chargerTestSelectIndex." + chargerTestSelectIndex);
-            updateTableSelectedIndex(skinTabControl_WholeChg, ++chargerTestSelectIndex);
-        }
-
-        private void skinButton_WholeChg_BT_Over_Click(object sender, EventArgs e)
-        {
-            LOG("跳过整机蓝牙测试.");
-            updateControlText(skinLabel_CHG_BT_RESULT, "跳过", Color.Green);
-            LOG("蓝牙跳过1chargerTestSelectIndex." + chargerTestSelectIndex);
-            updateTableSelectedIndex(skinTabControl_WholeChg, ++chargerTestSelectIndex);
-        }
-
-        private void skinButton_WholeChg_BT_RTest_Click(object sender, EventArgs e)
-        {
-            ItemTestTime = GetCurrentTimeStamp();
-            //countDownTimeCharger.BLE = countdownTime;
-            countDownTimeCharger.BLE = 60;
-            ChargerTestResultDir["蓝牙"] = "";
-            updateControlText(skinLabel_CHG_BT_RESULT, "");
-
-            X6SendBlueToothTestReq();
-            LOG("蓝牙重新测试.");
-        }
-
-        private void skinButton_WholeChg_2POINT4_Success_Click(object sender, EventArgs e)
-        {
-            LOG("整机2.4G测试成功.");
-            ChargerTestResultDir["2.4G"] = "通过";
-            updateControlText(skinLabel_CHG_24G_RESULT, "通过", Color.Green);
-            LOG("2.4g成功1chargerTestSelectIndex." + chargerTestSelectIndex);
-            updateTableSelectedIndex(skinTabControl_WholeChg, ++chargerTestSelectIndex);
-        }
-
-        private void skinButton_WholeChg_2POINT4_Fail_Click(object sender, EventArgs e)
-        {
-            LOG("整机2.4G测试失败.");
-            ChargerTestResultDir["2.4G"] = "不通过";
-            updateControlText(skinLabel_CHG_24G_RESULT, "不通过", Color.Red);
-            LOG("2.4g失败1chargerTestSelectIndex." + chargerTestSelectIndex);
-            updateTableSelectedIndex(skinTabControl_WholeChg, ++chargerTestSelectIndex);
-        }
-
-        private void skinButton_WholeChg_2POINT4_Over_Click(object sender, EventArgs e)
-        {
-            LOG("跳过整机2.4G测试.");
-            updateControlText(skinLabel_CHG_24G_RESULT, "跳过", Color.Green);
-            LOG("2.4g跳过1chargerTestSelectIndex." + chargerTestSelectIndex);
-            updateTableSelectedIndex(skinTabControl_WholeChg, ++chargerTestSelectIndex);
-        }
-
-        private void skinButton_WholeChg_2POINT4_RTest_Click(object sender, EventArgs e)
-        {
-            ItemTestTime = GetCurrentTimeStamp();
-            countDownTimeCharger._2_4G = countdownTime;
-            ChargerTestResultDir["2.4G"] = "";
-            updateControlText(skinLabel_CHG_24G_RESULT, "");
-
-            R6Send24G_COMMUNICATION_TestReq();
-            LOG("整机2.4G重新测试.");
-        }
-
-        private void skinButton_CHG_2G_SKIP_Click(object sender, EventArgs e)
-        {
-            LOG("跳过2G/4G测试.");
-            updateControlText(skinLabel_CHG_2G_RESULT, "跳过", Color.Green);
-            LOG("4g/ 2G跳过1chargerTestSelectIndex." + chargerTestSelectIndex);
-            updateTableSelectedIndex(skinTabControl_WholeChg, ++chargerTestSelectIndex);
-        }
-
-        private void skinButton_CHG_2G_RTEST_Click(object sender, EventArgs e)
-        {
-            LOG("整机2G/4G重新测试.");
-            ItemTestTime = GetCurrentTimeStamp();
-            countDownTimeCharger._2G = 120;
-            ChargerTestResultDir["2G模块"] = "";
-            updateControlText(skinLabel_CHG_2G_RESULT, "");
-            send2GTestCnt = 0;
-        }
-
 
         //菜单测试项索引更新监听
         private void skinTabControl_TestMenu_SelectedIndexChanged(object sender, EventArgs e)
@@ -4201,13 +3954,7 @@ namespace AutoTestTool
                 }
                 else if (ChargerTestingFlag)
                 {
-                    countDownTimeCharger.lcd = ItemCountDown(countDownTimeCharger.lcd, skinLabel_WholeChg_Led_Time, skinTabControl_WholeChg, skinTabPage_WholeChg_Led);
-                    countDownTimeCharger.BLE = ItemCountDown(countDownTimeCharger.BLE, skinLabel_WholeChg_BT_Time, skinTabControl_WholeChg, skinTabPage_WholeChg_Bt);
-                    countDownTimeCharger._2_4G = ItemCountDown(countDownTimeCharger._2_4G, skinLabel_WholeChg_2POINT4_Time, skinTabControl_WholeChg, skinTabPage_WholeChg_2POINT4);
-                    countDownTimeCharger._2G = ItemCountDown(countDownTimeCharger._2G, skinLabel_CHG_2G_TIME, skinTabControl_WholeChg, skinTabPage_CHG_2G);
-                    countDownTimeCharger.flash = ItemCountDown(countDownTimeCharger.flash, R6skinLabel_Whole_FLASH_TIME, skinTabControl_WholeChg, R6skinTabPage_Whole_FLASH);
-                    countDownTimeCharger.setRtc = ItemCountDown(countDownTimeCharger.setRtc, R6skinLabel_Whole_SETRTC_TIME, skinTabControl_WholeChg, R6skinTabPage_Whole_SET_RTC);
-                    countDownTimeCharger.getRtc = ItemCountDown(countDownTimeCharger.getRtc, R6skinLabel_Whole_GETRTC_TIME, skinTabControl_WholeChg, R6skinTabPage_Whole_GET_RTC);
+                    countDownTimeCharger.RS232 = ItemCountDown(countDownTimeCharger.RS232, skinLabel_WholeChg_RS232_Time, skinTabControl_WholeChg, skinTabPage_WholeChg_RS232);
                 }
                 else if (onlineDectecFlag)
                 {
@@ -4948,66 +4695,12 @@ namespace AutoTestTool
         {
 
         }
-
-        private void R6skinButton_Whole_GETRTC_SKIP_Click(object sender, EventArgs e)
-        {
-            LOG("跳过读取RTC时间.");
-            updateControlText(R6skinLabel_Whole_GETRTC_RESULT, "跳过", Color.Green);
-            updateTableSelectedIndex(skinTabControl_WholeChg, ++chargerTestSelectIndex);
-        }
-
-        private void R6skinButton_Whole_GETRTC_RTEST_Click(object sender, EventArgs e)
-        {
-            ItemTestTime = GetCurrentTimeStamp();
-            countDownTimeCharger.getRtc = countdownTime;
-            ChargerTestResultDir["GETRTC"] = "";
-            updateControlText(R6skinLabel_Whole_GETRTC_RESULT, "");
-            LOG("重新读取RTC时间.");
-            //发送读取RTC时间指令
-            SendGetRtcTestReq();
-        }
-
-        private void R6skinButton_Whole_FLASH_SKIP_Click(object sender, EventArgs e)
-        {
-            LOG("跳过FLASH测试.");
-            //MBTestResultDir["Flash"] = "跳过";
-            updateControlText(R6skinLabel_Whole_FLASH_RESULT, "跳过", Color.Green);
-            updateTableSelectedIndex(skinTabControl_WholeChg, ++chargerTestSelectIndex);
-        }
-
-        private void R6skinButton_Whole_FLASH_RTEST_Click(object sender, EventArgs e)
-        {
-            ItemTestTime = GetCurrentTimeStamp();
-            countDownTimeCharger.flash = countdownTime;
-            ChargerTestResultDir["FLASH"] = "";
-            updateControlText(R6skinLabel_Whole_FLASH_RESULT, "");
-            LOG("FLASH重新测试.");
-            //发送FLASH测试指令
-            SendFlashTestReq();
-        }
-
+        
         private void splitContainer5_Panel1_Paint(object sender, PaintEventArgs e)
         {
 
         }
-
-        private void R6skinButton_Whole_SETRTC_RTEST_Click(object sender, EventArgs e)
-        {
-            ItemTestTime = GetCurrentTimeStamp();
-            countDownTimeCharger.setRtc = countdownTime;
-            ChargerTestResultDir["SETRTC"] = "";
-            updateControlText(R6skinLabel_Whole_SETRTC_RESULT, "");
-            LOG("重新设置RTC时间.");
-            //发送设置RTC时间指令
-            SendSetRtcTestReq();
-        }
-
-        private void R6skinButton_Whole_SETRTC_SKIP_Click(object sender, EventArgs e)
-        {
-            LOG("跳过设置RTC时间.");
-            updateControlText(R6skinLabel_Whole_SETRTC_RESULT, "跳过", Color.Green);
-            updateTableSelectedIndex(skinTabControl_WholeChg, ++chargerTestSelectIndex);
-        }
+        
 
         private void textBoxDebug_TextChanged(object sender, EventArgs e)
         {
@@ -5580,7 +5273,7 @@ namespace AutoTestTool
             if (WiFiOnlineDectecFlag == false)
             {
                 WiFiOnlineDectecFlag = true;
-                LOG("WiFiOnlineDectecFlag:" + WiFiOnlineDectecFlag);
+            //    LOG("WiFiOnlineDectecFlag:" + WiFiOnlineDectecFlag);
             //    skinButton_WiFiOnlineStartDetect.Text = "停止检测";
                 updateControlText(skinButton_WiFiOnlineStartDetect, "停止检测");
                 SendTestModeReq((byte)TEST_MODE.TEST_MODE_START);
@@ -5834,6 +5527,16 @@ namespace AutoTestTool
             updateControlText(skinLabel_MB_433_RESULT, "");
             LOG("主板烟感重新测试.");
             SendSetSmokeSensor433();
+        }
+
+        private void skinSplitContainer11_Panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void skinLabel35_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

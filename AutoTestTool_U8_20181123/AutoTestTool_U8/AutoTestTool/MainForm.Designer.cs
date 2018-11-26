@@ -602,7 +602,7 @@
             this.skinTabControl_TestMenu.PageHover = ((System.Drawing.Image)(resources.GetObject("skinTabControl_TestMenu.PageHover")));
             this.skinTabControl_TestMenu.PageImagePosition = CCWin.SkinControl.SkinTabControl.ePageImagePosition.Left;
             this.skinTabControl_TestMenu.PageNorml = null;
-            this.skinTabControl_TestMenu.SelectedIndex = 2;
+            this.skinTabControl_TestMenu.SelectedIndex = 1;
             this.skinTabControl_TestMenu.Size = new System.Drawing.Size(1322, 813);
             this.skinTabControl_TestMenu.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.skinTabControl_TestMenu.TabIndex = 0;
@@ -667,7 +667,7 @@
             this.label5.Location = new System.Drawing.Point(565, 0);
             this.label5.Name = "label5";
             this.label5.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label5.Size = new System.Drawing.Size(179, 36);
+            this.label5.Size = new System.Drawing.Size(145, 29);
             this.label5.TabIndex = 28;
             this.label5.Text = "测试项设置:";
             this.label5.Click += new System.EventHandler(this.label5_Click);
@@ -706,9 +706,9 @@
             this.skinLabel61.BackColor = System.Drawing.Color.Transparent;
             this.skinLabel61.BorderColor = System.Drawing.Color.White;
             this.skinLabel61.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.skinLabel61.Location = new System.Drawing.Point(3, 5);
+            this.skinLabel61.Location = new System.Drawing.Point(3, 8);
             this.skinLabel61.Name = "skinLabel61";
-            this.skinLabel61.Size = new System.Drawing.Size(58, 27);
+            this.skinLabel61.Size = new System.Drawing.Size(47, 22);
             this.skinLabel61.TabIndex = 21;
             this.skinLabel61.Text = "上限:";
             // 
@@ -716,7 +716,7 @@
             // 
             this.skinNumericUpDown_CSQUpperLimit.Location = new System.Drawing.Point(72, 3);
             this.skinNumericUpDown_CSQUpperLimit.Name = "skinNumericUpDown_CSQUpperLimit";
-            this.skinNumericUpDown_CSQUpperLimit.Size = new System.Drawing.Size(120, 30);
+            this.skinNumericUpDown_CSQUpperLimit.Size = new System.Drawing.Size(120, 26);
             this.skinNumericUpDown_CSQUpperLimit.TabIndex = 22;
             // 
             // tableLayoutPanel4
@@ -742,9 +742,9 @@
             this.skinLabel59.BackColor = System.Drawing.Color.Transparent;
             this.skinLabel59.BorderColor = System.Drawing.Color.White;
             this.skinLabel59.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.skinLabel59.Location = new System.Drawing.Point(3, 5);
+            this.skinLabel59.Location = new System.Drawing.Point(3, 8);
             this.skinLabel59.Name = "skinLabel59";
-            this.skinLabel59.Size = new System.Drawing.Size(58, 27);
+            this.skinLabel59.Size = new System.Drawing.Size(47, 22);
             this.skinLabel59.TabIndex = 19;
             this.skinLabel59.Text = "下限:";
             this.skinLabel59.Click += new System.EventHandler(this.skinLabel59_Click);
@@ -753,7 +753,7 @@
             // 
             this.skinNumericUpDown_CSQLowerLimit.Location = new System.Drawing.Point(72, 3);
             this.skinNumericUpDown_CSQLowerLimit.Name = "skinNumericUpDown_CSQLowerLimit";
-            this.skinNumericUpDown_CSQLowerLimit.Size = new System.Drawing.Size(120, 30);
+            this.skinNumericUpDown_CSQLowerLimit.Size = new System.Drawing.Size(120, 26);
             this.skinNumericUpDown_CSQLowerLimit.TabIndex = 20;
             // 
             // skinLabel56
@@ -765,7 +765,7 @@
             this.skinLabel56.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.skinLabel56.Location = new System.Drawing.Point(404, 190);
             this.skinLabel56.Name = "skinLabel56";
-            this.skinLabel56.Size = new System.Drawing.Size(118, 27);
+            this.skinLabel56.Size = new System.Drawing.Size(95, 22);
             this.skinLabel56.TabIndex = 22;
             this.skinLabel56.Text = "信号值范围:";
             this.skinLabel56.Click += new System.EventHandler(this.skinLabel56_Click);
@@ -774,7 +774,7 @@
             // 
             this.textBox_TestCardNum.Location = new System.Drawing.Point(570, 146);
             this.textBox_TestCardNum.Name = "textBox_TestCardNum";
-            this.textBox_TestCardNum.Size = new System.Drawing.Size(205, 36);
+            this.textBox_TestCardNum.Size = new System.Drawing.Size(205, 30);
             this.textBox_TestCardNum.TabIndex = 21;
             this.textBox_TestCardNum.Text = "A10001395";
             // 
@@ -787,7 +787,7 @@
             this.skinLabel55.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.skinLabel55.Location = new System.Drawing.Point(424, 143);
             this.skinLabel55.Name = "skinLabel55";
-            this.skinLabel55.Size = new System.Drawing.Size(98, 27);
+            this.skinLabel55.Size = new System.Drawing.Size(79, 22);
             this.skinLabel55.TabIndex = 20;
             this.skinLabel55.Text = "测试卡号:";
             // 
@@ -795,7 +795,7 @@
             // 
             this.skinNumericUpDown_TestOverTime.Location = new System.Drawing.Point(570, 101);
             this.skinNumericUpDown_TestOverTime.Name = "skinNumericUpDown_TestOverTime";
-            this.skinNumericUpDown_TestOverTime.Size = new System.Drawing.Size(205, 36);
+            this.skinNumericUpDown_TestOverTime.Size = new System.Drawing.Size(205, 30);
             this.skinNumericUpDown_TestOverTime.TabIndex = 19;
             this.skinNumericUpDown_TestOverTime.Value = new decimal(new int[] {
             30,
@@ -813,7 +813,7 @@
             this.skinLabel54.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.skinLabel54.Location = new System.Drawing.Point(384, 98);
             this.skinLabel54.Name = "skinLabel54";
-            this.skinLabel54.Size = new System.Drawing.Size(138, 27);
+            this.skinLabel54.Size = new System.Drawing.Size(111, 22);
             this.skinLabel54.TabIndex = 18;
             this.skinLabel54.Text = "测试超时时间:";
             // 
@@ -828,7 +828,7 @@
             "U8"});
             this.skinComboBox_ChgType.Location = new System.Drawing.Point(570, 60);
             this.skinComboBox_ChgType.Name = "skinComboBox_ChgType";
-            this.skinComboBox_ChgType.Size = new System.Drawing.Size(205, 31);
+            this.skinComboBox_ChgType.Size = new System.Drawing.Size(205, 27);
             this.skinComboBox_ChgType.TabIndex = 17;
             this.skinComboBox_ChgType.Text = "U8";
             this.skinComboBox_ChgType.WaterText = "";
@@ -842,7 +842,7 @@
             this.skinLabel53.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.skinLabel53.Location = new System.Drawing.Point(424, 59);
             this.skinLabel53.Name = "skinLabel53";
-            this.skinLabel53.Size = new System.Drawing.Size(98, 27);
+            this.skinLabel53.Size = new System.Drawing.Size(79, 22);
             this.skinLabel53.TabIndex = 9;
             this.skinLabel53.Text = "电桩型号:";
             this.skinLabel53.Click += new System.EventHandler(this.skinLabel53_Click);
@@ -871,7 +871,7 @@
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(576, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(148, 36);
+            this.label7.Size = new System.Drawing.Size(120, 29);
             this.label7.TabIndex = 10;
             this.label7.Text = "串口设置:";
             // 
@@ -884,7 +884,7 @@
             this.skinLabel37.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.skinLabel37.Location = new System.Drawing.Point(450, 47);
             this.skinLabel37.Name = "skinLabel37";
-            this.skinLabel37.Size = new System.Drawing.Size(78, 27);
+            this.skinLabel37.Size = new System.Drawing.Size(63, 22);
             this.skinLabel37.TabIndex = 2;
             this.skinLabel37.Text = "端口号:";
             // 
@@ -909,7 +909,7 @@
             this.skinComboBox_SerialPortSelect.FormattingEnabled = true;
             this.skinComboBox_SerialPortSelect.Location = new System.Drawing.Point(573, 47);
             this.skinComboBox_SerialPortSelect.Name = "skinComboBox_SerialPortSelect";
-            this.skinComboBox_SerialPortSelect.Size = new System.Drawing.Size(205, 31);
+            this.skinComboBox_SerialPortSelect.Size = new System.Drawing.Size(205, 27);
             this.skinComboBox_SerialPortSelect.TabIndex = 5;
             this.skinComboBox_SerialPortSelect.WaterText = "";
             // 
@@ -922,7 +922,7 @@
             this.skinLabel48.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.skinLabel48.Location = new System.Drawing.Point(430, 148);
             this.skinLabel48.Name = "skinLabel48";
-            this.skinLabel48.Size = new System.Drawing.Size(98, 27);
+            this.skinLabel48.Size = new System.Drawing.Size(79, 22);
             this.skinLabel48.TabIndex = 8;
             this.skinLabel48.Text = "串口控制:";
             // 
@@ -935,7 +935,7 @@
             this.skinLabel43.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.skinLabel43.Location = new System.Drawing.Point(450, 97);
             this.skinLabel43.Name = "skinLabel43";
-            this.skinLabel43.Size = new System.Drawing.Size(78, 27);
+            this.skinLabel43.Size = new System.Drawing.Size(63, 22);
             this.skinLabel43.TabIndex = 6;
             this.skinLabel43.Text = "波特率:";
             // 
@@ -958,7 +958,7 @@
             "4800"});
             this.skinComboBox_SerialBuateSelect.Location = new System.Drawing.Point(573, 97);
             this.skinComboBox_SerialBuateSelect.Name = "skinComboBox_SerialBuateSelect";
-            this.skinComboBox_SerialBuateSelect.Size = new System.Drawing.Size(205, 31);
+            this.skinComboBox_SerialBuateSelect.Size = new System.Drawing.Size(205, 27);
             this.skinComboBox_SerialBuateSelect.TabIndex = 7;
             this.skinComboBox_SerialBuateSelect.WaterText = "";
             // 
@@ -996,7 +996,7 @@
             this.skinTabControl_PCBATest.PageHover = ((System.Drawing.Image)(resources.GetObject("skinTabControl_PCBATest.PageHover")));
             this.skinTabControl_PCBATest.PageImagePosition = CCWin.SkinControl.SkinTabControl.ePageImagePosition.Left;
             this.skinTabControl_PCBATest.PageNorml = null;
-            this.skinTabControl_PCBATest.SelectedIndex = 1;
+            this.skinTabControl_PCBATest.SelectedIndex = 0;
             this.skinTabControl_PCBATest.Size = new System.Drawing.Size(888, 733);
             this.skinTabControl_PCBATest.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.skinTabControl_PCBATest.TabIndex = 0;
@@ -1047,7 +1047,7 @@
             this.skinTabControl_MB.PageImagePosition = CCWin.SkinControl.SkinTabControl.ePageImagePosition.Left;
             this.skinTabControl_MB.PageNorml = null;
             this.skinTabControl_MB.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.skinTabControl_MB.SelectedIndex = 4;
+            this.skinTabControl_MB.SelectedIndex = 5;
             this.skinTabControl_MB.Size = new System.Drawing.Size(885, 696);
             this.skinTabControl_MB.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.skinTabControl_MB.TabIndex = 0;
@@ -1101,7 +1101,7 @@
             this.skinLabel_PCBANumTip.Font = new System.Drawing.Font("微软雅黑", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.skinLabel_PCBANumTip.Location = new System.Drawing.Point(35, 26);
             this.skinLabel_PCBANumTip.Name = "skinLabel_PCBANumTip";
-            this.skinLabel_PCBANumTip.Size = new System.Drawing.Size(315, 33);
+            this.skinLabel_PCBANumTip.Size = new System.Drawing.Size(252, 27);
             this.skinLabel_PCBANumTip.TabIndex = 0;
             this.skinLabel_PCBANumTip.Text = "请用扫码枪扫描主板二维码";
             this.skinLabel_PCBANumTip.Click += new System.EventHandler(this.skinLabel_PCBANumTip_Click);
@@ -1135,7 +1135,7 @@
             this.skinLabel_PCBANumStartTip.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.skinLabel_PCBANumStartTip.Location = new System.Drawing.Point(38, 70);
             this.skinLabel_PCBANumStartTip.Name = "skinLabel_PCBANumStartTip";
-            this.skinLabel_PCBANumStartTip.Size = new System.Drawing.Size(402, 24);
+            this.skinLabel_PCBANumStartTip.Size = new System.Drawing.Size(313, 20);
             this.skinLabel_PCBANumStartTip.TabIndex = 1;
             this.skinLabel_PCBANumStartTip.Text = "输入完成按键盘\"回车键\"或以下\"确认键\"开始测试";
             // 
@@ -1146,7 +1146,7 @@
             this.textBox_MB_QRCode.MaxLength = 100;
             this.textBox_MB_QRCode.Name = "textBox_MB_QRCode";
             this.textBox_MB_QRCode.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.textBox_MB_QRCode.Size = new System.Drawing.Size(380, 30);
+            this.textBox_MB_QRCode.Size = new System.Drawing.Size(380, 26);
             this.textBox_MB_QRCode.TabIndex = 0;
             this.textBox_MB_QRCode.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_MB_QRCode_KeyPress);
             // 
@@ -1204,7 +1204,7 @@
             this.skinLabel_MB_PowerTimeCountDown.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.skinLabel_MB_PowerTimeCountDown.Location = new System.Drawing.Point(512, 15);
             this.skinLabel_MB_PowerTimeCountDown.Name = "skinLabel_MB_PowerTimeCountDown";
-            this.skinLabel_MB_PowerTimeCountDown.Size = new System.Drawing.Size(0, 31);
+            this.skinLabel_MB_PowerTimeCountDown.Size = new System.Drawing.Size(0, 25);
             this.skinLabel_MB_PowerTimeCountDown.TabIndex = 3;
             // 
             // skinLabel3
@@ -1215,7 +1215,7 @@
             this.skinLabel3.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.skinLabel3.Location = new System.Drawing.Point(19, 54);
             this.skinLabel3.Name = "skinLabel3";
-            this.skinLabel3.Size = new System.Drawing.Size(542, 31);
+            this.skinLabel3.Size = new System.Drawing.Size(430, 26);
             this.skinLabel3.TabIndex = 2;
             this.skinLabel3.Text = "请在夹具右上方看电压表电压值是否在正常范围内";
             // 
@@ -1227,7 +1227,7 @@
             this.skinLabel2.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.skinLabel2.Location = new System.Drawing.Point(422, 15);
             this.skinLabel2.Name = "skinLabel2";
-            this.skinLabel2.Size = new System.Drawing.Size(92, 31);
+            this.skinLabel2.Size = new System.Drawing.Size(74, 25);
             this.skinLabel2.TabIndex = 1;
             this.skinLabel2.Text = "倒计时:";
             // 
@@ -1239,7 +1239,7 @@
             this.skinLabel1.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.skinLabel1.Location = new System.Drawing.Point(19, 15);
             this.skinLabel1.Name = "skinLabel1";
-            this.skinLabel1.Size = new System.Drawing.Size(212, 31);
+            this.skinLabel1.Size = new System.Drawing.Size(169, 25);
             this.skinLabel1.TabIndex = 0;
             this.skinLabel1.Text = "当前项目:电源测试";
             // 
@@ -1251,7 +1251,7 @@
             this.skinLabel_MB_POWER_RESULT.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.skinLabel_MB_POWER_RESULT.Location = new System.Drawing.Point(136, 21);
             this.skinLabel_MB_POWER_RESULT.Name = "skinLabel_MB_POWER_RESULT";
-            this.skinLabel_MB_POWER_RESULT.Size = new System.Drawing.Size(0, 31);
+            this.skinLabel_MB_POWER_RESULT.Size = new System.Drawing.Size(0, 25);
             this.skinLabel_MB_POWER_RESULT.TabIndex = 5;
             // 
             // skinButton_MB_Power_rTest
@@ -1339,7 +1339,7 @@
             this.skinLabel4.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.skinLabel4.Location = new System.Drawing.Point(21, 21);
             this.skinLabel4.Name = "skinLabel4";
-            this.skinLabel4.Size = new System.Drawing.Size(116, 31);
+            this.skinLabel4.Size = new System.Drawing.Size(93, 25);
             this.skinLabel4.TabIndex = 0;
             this.skinLabel4.Text = "测试结果:";
             // 
@@ -1396,7 +1396,7 @@
             this.skinLabel_MB_LED_TIMECOUNTDOWN.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.skinLabel_MB_LED_TIMECOUNTDOWN.Location = new System.Drawing.Point(518, 14);
             this.skinLabel_MB_LED_TIMECOUNTDOWN.Name = "skinLabel_MB_LED_TIMECOUNTDOWN";
-            this.skinLabel_MB_LED_TIMECOUNTDOWN.Size = new System.Drawing.Size(0, 31);
+            this.skinLabel_MB_LED_TIMECOUNTDOWN.Size = new System.Drawing.Size(0, 25);
             this.skinLabel_MB_LED_TIMECOUNTDOWN.TabIndex = 3;
             // 
             // skinLabel7
@@ -1407,7 +1407,7 @@
             this.skinLabel7.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.skinLabel7.Location = new System.Drawing.Point(28, 55);
             this.skinLabel7.Name = "skinLabel7";
-            this.skinLabel7.Size = new System.Drawing.Size(302, 31);
+            this.skinLabel7.Size = new System.Drawing.Size(240, 26);
             this.skinLabel7.TabIndex = 2;
             this.skinLabel7.Text = "请肉眼观察指示灯是否亮起";
             // 
@@ -1419,7 +1419,7 @@
             this.skinLabel6.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.skinLabel6.Location = new System.Drawing.Point(438, 14);
             this.skinLabel6.Name = "skinLabel6";
-            this.skinLabel6.Size = new System.Drawing.Size(92, 31);
+            this.skinLabel6.Size = new System.Drawing.Size(74, 25);
             this.skinLabel6.TabIndex = 1;
             this.skinLabel6.Text = "倒计时:";
             // 
@@ -1431,7 +1431,7 @@
             this.skinLabel5.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.skinLabel5.Location = new System.Drawing.Point(28, 14);
             this.skinLabel5.Name = "skinLabel5";
-            this.skinLabel5.Size = new System.Drawing.Size(236, 31);
+            this.skinLabel5.Size = new System.Drawing.Size(188, 25);
             this.skinLabel5.TabIndex = 0;
             this.skinLabel5.Text = "当前项目:指示灯测试";
             // 
@@ -1443,7 +1443,7 @@
             this.skinLabel_MB_LED_RESULT.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.skinLabel_MB_LED_RESULT.Location = new System.Drawing.Point(183, 28);
             this.skinLabel_MB_LED_RESULT.Name = "skinLabel_MB_LED_RESULT";
-            this.skinLabel_MB_LED_RESULT.Size = new System.Drawing.Size(0, 31);
+            this.skinLabel_MB_LED_RESULT.Size = new System.Drawing.Size(0, 25);
             this.skinLabel_MB_LED_RESULT.TabIndex = 13;
             // 
             // skinButton_MB_LED_RTEST
@@ -1530,7 +1530,7 @@
             this.skinLabel8.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.skinLabel8.Location = new System.Drawing.Point(28, 28);
             this.skinLabel8.Name = "skinLabel8";
-            this.skinLabel8.Size = new System.Drawing.Size(116, 31);
+            this.skinLabel8.Size = new System.Drawing.Size(93, 25);
             this.skinLabel8.TabIndex = 8;
             this.skinLabel8.Text = "测试结果:";
             // 
@@ -1585,7 +1585,7 @@
             this.skinLabel_MB_FLASH_TIME.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.skinLabel_MB_FLASH_TIME.Location = new System.Drawing.Point(500, 23);
             this.skinLabel_MB_FLASH_TIME.Name = "skinLabel_MB_FLASH_TIME";
-            this.skinLabel_MB_FLASH_TIME.Size = new System.Drawing.Size(0, 31);
+            this.skinLabel_MB_FLASH_TIME.Size = new System.Drawing.Size(0, 25);
             this.skinLabel_MB_FLASH_TIME.TabIndex = 2;
             // 
             // skinLabel69
@@ -1596,7 +1596,7 @@
             this.skinLabel69.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.skinLabel69.Location = new System.Drawing.Point(371, 23);
             this.skinLabel69.Name = "skinLabel69";
-            this.skinLabel69.Size = new System.Drawing.Size(92, 31);
+            this.skinLabel69.Size = new System.Drawing.Size(74, 25);
             this.skinLabel69.TabIndex = 1;
             this.skinLabel69.Text = "倒计时:";
             // 
@@ -1608,7 +1608,7 @@
             this.skinLabel70.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.skinLabel70.Location = new System.Drawing.Point(45, 23);
             this.skinLabel70.Name = "skinLabel70";
-            this.skinLabel70.Size = new System.Drawing.Size(239, 31);
+            this.skinLabel70.Size = new System.Drawing.Size(190, 25);
             this.skinLabel70.TabIndex = 0;
             this.skinLabel70.Text = "当前项目:FLASH测试";
             // 
@@ -1658,7 +1658,7 @@
             this.skinLabel_MB_FLASH_RESULT.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.skinLabel_MB_FLASH_RESULT.Location = new System.Drawing.Point(189, 24);
             this.skinLabel_MB_FLASH_RESULT.Name = "skinLabel_MB_FLASH_RESULT";
-            this.skinLabel_MB_FLASH_RESULT.Size = new System.Drawing.Size(0, 31);
+            this.skinLabel_MB_FLASH_RESULT.Size = new System.Drawing.Size(0, 25);
             this.skinLabel_MB_FLASH_RESULT.TabIndex = 4;
             // 
             // skinLabel72
@@ -1669,7 +1669,7 @@
             this.skinLabel72.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.skinLabel72.Location = new System.Drawing.Point(45, 24);
             this.skinLabel72.Name = "skinLabel72";
-            this.skinLabel72.Size = new System.Drawing.Size(116, 31);
+            this.skinLabel72.Size = new System.Drawing.Size(93, 25);
             this.skinLabel72.TabIndex = 3;
             this.skinLabel72.Text = "测试结果:";
             // 
@@ -1726,7 +1726,7 @@
             this.skinLabel32.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.skinLabel32.Location = new System.Drawing.Point(35, 63);
             this.skinLabel32.Name = "skinLabel32";
-            this.skinLabel32.Size = new System.Drawing.Size(326, 31);
+            this.skinLabel32.Size = new System.Drawing.Size(259, 25);
             this.skinLabel32.TabIndex = 6;
             this.skinLabel32.Text = "按下烟感报警器按钮进行测试";
             // 
@@ -1738,7 +1738,7 @@
             this.skinLabel_MB_433_TIME.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.skinLabel_MB_433_TIME.Location = new System.Drawing.Point(490, 19);
             this.skinLabel_MB_433_TIME.Name = "skinLabel_MB_433_TIME";
-            this.skinLabel_MB_433_TIME.Size = new System.Drawing.Size(0, 31);
+            this.skinLabel_MB_433_TIME.Size = new System.Drawing.Size(0, 25);
             this.skinLabel_MB_433_TIME.TabIndex = 5;
             // 
             // skinLabel50
@@ -1749,7 +1749,7 @@
             this.skinLabel50.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.skinLabel50.Location = new System.Drawing.Point(361, 19);
             this.skinLabel50.Name = "skinLabel50";
-            this.skinLabel50.Size = new System.Drawing.Size(92, 31);
+            this.skinLabel50.Size = new System.Drawing.Size(74, 25);
             this.skinLabel50.TabIndex = 4;
             this.skinLabel50.Text = "倒计时:";
             // 
@@ -1761,7 +1761,7 @@
             this.skinLabel66.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.skinLabel66.Location = new System.Drawing.Point(35, 19);
             this.skinLabel66.Name = "skinLabel66";
-            this.skinLabel66.Size = new System.Drawing.Size(254, 31);
+            this.skinLabel66.Size = new System.Drawing.Size(202, 25);
             this.skinLabel66.TabIndex = 3;
             this.skinLabel66.Text = "当前项目:433烟感测试";
             // 
@@ -1849,7 +1849,7 @@
             this.skinLabel_MB_433_RESULT.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.skinLabel_MB_433_RESULT.Location = new System.Drawing.Point(190, 34);
             this.skinLabel_MB_433_RESULT.Name = "skinLabel_MB_433_RESULT";
-            this.skinLabel_MB_433_RESULT.Size = new System.Drawing.Size(0, 31);
+            this.skinLabel_MB_433_RESULT.Size = new System.Drawing.Size(0, 25);
             this.skinLabel_MB_433_RESULT.TabIndex = 13;
             // 
             // skinLabel68
@@ -1860,7 +1860,7 @@
             this.skinLabel68.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.skinLabel68.Location = new System.Drawing.Point(46, 34);
             this.skinLabel68.Name = "skinLabel68";
-            this.skinLabel68.Size = new System.Drawing.Size(116, 31);
+            this.skinLabel68.Size = new System.Drawing.Size(93, 25);
             this.skinLabel68.TabIndex = 12;
             this.skinLabel68.Text = "测试结果:";
             // 
@@ -1919,9 +1919,9 @@
             this.skinLabel10.Location = new System.Drawing.Point(11, 69);
             this.skinLabel10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.skinLabel10.Name = "skinLabel10";
-            this.skinLabel10.Size = new System.Drawing.Size(628, 31);
+            this.skinLabel10.Size = new System.Drawing.Size(556, 26);
             this.skinLabel10.TabIndex = 20;
-            this.skinLabel10.Text = "请在刷卡区刷卡并能听到喇叭“滴”一声，并能显示卡号  ";
+            this.skinLabel10.Text = "请在刷卡区刷卡并能听到喇叭“正在读卡”一声，并能显示卡号  ";
             // 
             // skinLabel_MB_Card_TIME
             // 
@@ -1936,7 +1936,7 @@
             this.skinLabel_MB_Card_TIME.Location = new System.Drawing.Point(563, 23);
             this.skinLabel_MB_Card_TIME.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.skinLabel_MB_Card_TIME.Name = "skinLabel_MB_Card_TIME";
-            this.skinLabel_MB_Card_TIME.Size = new System.Drawing.Size(21, 31);
+            this.skinLabel_MB_Card_TIME.Size = new System.Drawing.Size(18, 25);
             this.skinLabel_MB_Card_TIME.TabIndex = 19;
             this.skinLabel_MB_Card_TIME.Text = " ";
             this.skinLabel_MB_Card_TIME.Click += new System.EventHandler(this.skinLabel_MB_Card_TIME_Click);
@@ -1954,7 +1954,7 @@
             this.skinLabel82.Location = new System.Drawing.Point(419, 23);
             this.skinLabel82.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.skinLabel82.Name = "skinLabel82";
-            this.skinLabel82.Size = new System.Drawing.Size(92, 31);
+            this.skinLabel82.Size = new System.Drawing.Size(74, 25);
             this.skinLabel82.TabIndex = 18;
             this.skinLabel82.Text = "倒计时:";
             // 
@@ -1971,7 +1971,7 @@
             this.skinLabel83.Location = new System.Drawing.Point(15, 23);
             this.skinLabel83.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.skinLabel83.Name = "skinLabel83";
-            this.skinLabel83.Size = new System.Drawing.Size(212, 31);
+            this.skinLabel83.Size = new System.Drawing.Size(169, 25);
             this.skinLabel83.TabIndex = 17;
             this.skinLabel83.Text = "当前项目:刷卡测试";
             // 
@@ -2032,7 +2032,7 @@
             this.skinLabel_MB_Card_RESULT.Location = new System.Drawing.Point(195, 40);
             this.skinLabel_MB_Card_RESULT.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.skinLabel_MB_Card_RESULT.Name = "skinLabel_MB_Card_RESULT";
-            this.skinLabel_MB_Card_RESULT.Size = new System.Drawing.Size(21, 31);
+            this.skinLabel_MB_Card_RESULT.Size = new System.Drawing.Size(18, 25);
             this.skinLabel_MB_Card_RESULT.TabIndex = 23;
             this.skinLabel_MB_Card_RESULT.Text = " ";
             // 
@@ -2049,7 +2049,7 @@
             this.skinLabel86.Location = new System.Drawing.Point(25, 40);
             this.skinLabel86.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.skinLabel86.Name = "skinLabel86";
-            this.skinLabel86.Size = new System.Drawing.Size(116, 31);
+            this.skinLabel86.Size = new System.Drawing.Size(93, 25);
             this.skinLabel86.TabIndex = 22;
             this.skinLabel86.Text = "测试结果:";
             // 
@@ -2102,7 +2102,7 @@
             this.skinLabel_MB_MRS232_TIME.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.skinLabel_MB_MRS232_TIME.Location = new System.Drawing.Point(491, 35);
             this.skinLabel_MB_MRS232_TIME.Name = "skinLabel_MB_MRS232_TIME";
-            this.skinLabel_MB_MRS232_TIME.Size = new System.Drawing.Size(0, 31);
+            this.skinLabel_MB_MRS232_TIME.Size = new System.Drawing.Size(0, 25);
             this.skinLabel_MB_MRS232_TIME.TabIndex = 8;
             // 
             // skinLabel106
@@ -2113,7 +2113,7 @@
             this.skinLabel106.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.skinLabel106.Location = new System.Drawing.Point(362, 35);
             this.skinLabel106.Name = "skinLabel106";
-            this.skinLabel106.Size = new System.Drawing.Size(92, 31);
+            this.skinLabel106.Size = new System.Drawing.Size(74, 25);
             this.skinLabel106.TabIndex = 7;
             this.skinLabel106.Text = "倒计时:";
             // 
@@ -2125,7 +2125,7 @@
             this.skinLabel108.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.skinLabel108.Location = new System.Drawing.Point(36, 35);
             this.skinLabel108.Name = "skinLabel108";
-            this.skinLabel108.Size = new System.Drawing.Size(182, 31);
+            this.skinLabel108.Size = new System.Drawing.Size(144, 25);
             this.skinLabel108.TabIndex = 6;
             this.skinLabel108.Text = "主板RS232测试";
             // 
@@ -2186,7 +2186,7 @@
             this.skinLabel_MB_RS232_RESULT.Location = new System.Drawing.Point(206, 48);
             this.skinLabel_MB_RS232_RESULT.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.skinLabel_MB_RS232_RESULT.Name = "skinLabel_MB_RS232_RESULT";
-            this.skinLabel_MB_RS232_RESULT.Size = new System.Drawing.Size(21, 31);
+            this.skinLabel_MB_RS232_RESULT.Size = new System.Drawing.Size(18, 25);
             this.skinLabel_MB_RS232_RESULT.TabIndex = 27;
             this.skinLabel_MB_RS232_RESULT.Text = " ";
             // 
@@ -2203,7 +2203,7 @@
             this.skinLabel109.Location = new System.Drawing.Point(36, 48);
             this.skinLabel109.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.skinLabel109.Name = "skinLabel109";
-            this.skinLabel109.Size = new System.Drawing.Size(116, 31);
+            this.skinLabel109.Size = new System.Drawing.Size(93, 25);
             this.skinLabel109.TabIndex = 26;
             this.skinLabel109.Text = "测试结果:";
             // 
@@ -2260,7 +2260,7 @@
             this.skinLabel96.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.skinLabel96.Location = new System.Drawing.Point(41, 65);
             this.skinLabel96.Name = "skinLabel96";
-            this.skinLabel96.Size = new System.Drawing.Size(424, 31);
+            this.skinLabel96.Size = new System.Drawing.Size(336, 26);
             this.skinLabel96.TabIndex = 11;
             this.skinLabel96.Text = "请细听喇叭是否有播报语音\"欢迎使用\"";
             // 
@@ -2272,7 +2272,7 @@
             this.skinLabel_MB_TRUMPET_TIME.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.skinLabel_MB_TRUMPET_TIME.Location = new System.Drawing.Point(477, 23);
             this.skinLabel_MB_TRUMPET_TIME.Name = "skinLabel_MB_TRUMPET_TIME";
-            this.skinLabel_MB_TRUMPET_TIME.Size = new System.Drawing.Size(0, 31);
+            this.skinLabel_MB_TRUMPET_TIME.Size = new System.Drawing.Size(0, 25);
             this.skinLabel_MB_TRUMPET_TIME.TabIndex = 10;
             // 
             // skinLabel110
@@ -2283,7 +2283,7 @@
             this.skinLabel110.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.skinLabel110.Location = new System.Drawing.Point(349, 23);
             this.skinLabel110.Name = "skinLabel110";
-            this.skinLabel110.Size = new System.Drawing.Size(92, 31);
+            this.skinLabel110.Size = new System.Drawing.Size(74, 25);
             this.skinLabel110.TabIndex = 9;
             this.skinLabel110.Text = "倒计时:";
             // 
@@ -2295,7 +2295,7 @@
             this.skinLabel111.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.skinLabel111.Location = new System.Drawing.Point(41, 23);
             this.skinLabel111.Name = "skinLabel111";
-            this.skinLabel111.Size = new System.Drawing.Size(212, 31);
+            this.skinLabel111.Size = new System.Drawing.Size(169, 25);
             this.skinLabel111.TabIndex = 8;
             this.skinLabel111.Text = "当前项目:喇叭测试";
             // 
@@ -2307,7 +2307,7 @@
             this.skinLabel_MB_TRUMPET_RESULT.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.skinLabel_MB_TRUMPET_RESULT.Location = new System.Drawing.Point(200, 52);
             this.skinLabel_MB_TRUMPET_RESULT.Name = "skinLabel_MB_TRUMPET_RESULT";
-            this.skinLabel_MB_TRUMPET_RESULT.Size = new System.Drawing.Size(0, 31);
+            this.skinLabel_MB_TRUMPET_RESULT.Size = new System.Drawing.Size(0, 25);
             this.skinLabel_MB_TRUMPET_RESULT.TabIndex = 19;
             // 
             // skinButton_MB_TRUMPET_RTEST
@@ -2394,7 +2394,7 @@
             this.skinLabel114.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.skinLabel114.Location = new System.Drawing.Point(45, 52);
             this.skinLabel114.Name = "skinLabel114";
-            this.skinLabel114.Size = new System.Drawing.Size(116, 31);
+            this.skinLabel114.Size = new System.Drawing.Size(93, 25);
             this.skinLabel114.TabIndex = 14;
             this.skinLabel114.Text = "测试结果:";
             // 
@@ -2461,7 +2461,7 @@
             this.skinLabel14.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.skinLabel14.Location = new System.Drawing.Point(24, 61);
             this.skinLabel14.Name = "skinLabel14";
-            this.skinLabel14.Size = new System.Drawing.Size(652, 31);
+            this.skinLabel14.Size = new System.Drawing.Size(517, 26);
             this.skinLabel14.TabIndex = 15;
             this.skinLabel14.Text = "请按下任意两个按键,并确认测试软件是否显示被按下的数字 ";
             this.skinLabel14.Click += new System.EventHandler(this.skinLabel14_Click);
@@ -2474,7 +2474,7 @@
             this.skinLabel_MB_KEY_TIME.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.skinLabel_MB_KEY_TIME.Location = new System.Drawing.Point(479, 16);
             this.skinLabel_MB_KEY_TIME.Name = "skinLabel_MB_KEY_TIME";
-            this.skinLabel_MB_KEY_TIME.Size = new System.Drawing.Size(0, 31);
+            this.skinLabel_MB_KEY_TIME.Size = new System.Drawing.Size(0, 25);
             this.skinLabel_MB_KEY_TIME.TabIndex = 14;
             this.skinLabel_MB_KEY_TIME.Click += new System.EventHandler(this.skinLabel_MB_KEY_TIME_Click);
             // 
@@ -2486,7 +2486,7 @@
             this.skinLabel130.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.skinLabel130.Location = new System.Drawing.Point(351, 16);
             this.skinLabel130.Name = "skinLabel130";
-            this.skinLabel130.Size = new System.Drawing.Size(92, 31);
+            this.skinLabel130.Size = new System.Drawing.Size(74, 25);
             this.skinLabel130.TabIndex = 13;
             this.skinLabel130.Text = "倒计时:";
             this.skinLabel130.Click += new System.EventHandler(this.skinLabel130_Click);
@@ -2499,7 +2499,7 @@
             this.skinLabel131.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.skinLabel131.Location = new System.Drawing.Point(43, 16);
             this.skinLabel131.Name = "skinLabel131";
-            this.skinLabel131.Size = new System.Drawing.Size(212, 31);
+            this.skinLabel131.Size = new System.Drawing.Size(169, 25);
             this.skinLabel131.TabIndex = 12;
             this.skinLabel131.Text = "当前项目:按键测试";
             this.skinLabel131.Click += new System.EventHandler(this.skinLabel131_Click);
@@ -2555,7 +2555,7 @@
             this.skinLabel_MB_KEY_RESULT.Location = new System.Drawing.Point(204, 250);
             this.skinLabel_MB_KEY_RESULT.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.skinLabel_MB_KEY_RESULT.Name = "skinLabel_MB_KEY_RESULT";
-            this.skinLabel_MB_KEY_RESULT.Size = new System.Drawing.Size(21, 31);
+            this.skinLabel_MB_KEY_RESULT.Size = new System.Drawing.Size(18, 25);
             this.skinLabel_MB_KEY_RESULT.TabIndex = 50;
             this.skinLabel_MB_KEY_RESULT.Text = " ";
             // 
@@ -2572,7 +2572,7 @@
             this.skinLabel_MB_KEY_Comfirm.Location = new System.Drawing.Point(443, 188);
             this.skinLabel_MB_KEY_Comfirm.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.skinLabel_MB_KEY_Comfirm.Name = "skinLabel_MB_KEY_Comfirm";
-            this.skinLabel_MB_KEY_Comfirm.Size = new System.Drawing.Size(27, 29);
+            this.skinLabel_MB_KEY_Comfirm.Size = new System.Drawing.Size(22, 24);
             this.skinLabel_MB_KEY_Comfirm.TabIndex = 49;
             this.skinLabel_MB_KEY_Comfirm.Text = "  ";
             this.skinLabel_MB_KEY_Comfirm.Click += new System.EventHandler(this.skinLabelKeyComfirm_Click);
@@ -2590,7 +2590,7 @@
             this.skinLabel_MB_KEY9_RESULT.Location = new System.Drawing.Point(443, 138);
             this.skinLabel_MB_KEY9_RESULT.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.skinLabel_MB_KEY9_RESULT.Name = "skinLabel_MB_KEY9_RESULT";
-            this.skinLabel_MB_KEY9_RESULT.Size = new System.Drawing.Size(27, 29);
+            this.skinLabel_MB_KEY9_RESULT.Size = new System.Drawing.Size(22, 24);
             this.skinLabel_MB_KEY9_RESULT.TabIndex = 48;
             this.skinLabel_MB_KEY9_RESULT.Text = "  ";
             // 
@@ -2607,7 +2607,7 @@
             this.skinLabel_MB_KEY6_RESULT.Location = new System.Drawing.Point(443, 88);
             this.skinLabel_MB_KEY6_RESULT.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.skinLabel_MB_KEY6_RESULT.Name = "skinLabel_MB_KEY6_RESULT";
-            this.skinLabel_MB_KEY6_RESULT.Size = new System.Drawing.Size(27, 29);
+            this.skinLabel_MB_KEY6_RESULT.Size = new System.Drawing.Size(22, 24);
             this.skinLabel_MB_KEY6_RESULT.TabIndex = 47;
             this.skinLabel_MB_KEY6_RESULT.Text = "  ";
             // 
@@ -2624,7 +2624,7 @@
             this.skinLabel_MB_KEY3_RESULT.Location = new System.Drawing.Point(443, 38);
             this.skinLabel_MB_KEY3_RESULT.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.skinLabel_MB_KEY3_RESULT.Name = "skinLabel_MB_KEY3_RESULT";
-            this.skinLabel_MB_KEY3_RESULT.Size = new System.Drawing.Size(27, 29);
+            this.skinLabel_MB_KEY3_RESULT.Size = new System.Drawing.Size(22, 24);
             this.skinLabel_MB_KEY3_RESULT.TabIndex = 46;
             this.skinLabel_MB_KEY3_RESULT.Text = "  ";
             // 
@@ -2641,7 +2641,7 @@
             this.skinLabel_MB_KEY0_RESULT.Location = new System.Drawing.Point(324, 188);
             this.skinLabel_MB_KEY0_RESULT.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.skinLabel_MB_KEY0_RESULT.Name = "skinLabel_MB_KEY0_RESULT";
-            this.skinLabel_MB_KEY0_RESULT.Size = new System.Drawing.Size(27, 29);
+            this.skinLabel_MB_KEY0_RESULT.Size = new System.Drawing.Size(22, 24);
             this.skinLabel_MB_KEY0_RESULT.TabIndex = 45;
             this.skinLabel_MB_KEY0_RESULT.Text = "  ";
             // 
@@ -2658,7 +2658,7 @@
             this.skinLabel_MB_KEY8_RESULT.Location = new System.Drawing.Point(324, 138);
             this.skinLabel_MB_KEY8_RESULT.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.skinLabel_MB_KEY8_RESULT.Name = "skinLabel_MB_KEY8_RESULT";
-            this.skinLabel_MB_KEY8_RESULT.Size = new System.Drawing.Size(27, 29);
+            this.skinLabel_MB_KEY8_RESULT.Size = new System.Drawing.Size(22, 24);
             this.skinLabel_MB_KEY8_RESULT.TabIndex = 44;
             this.skinLabel_MB_KEY8_RESULT.Text = "  ";
             this.skinLabel_MB_KEY8_RESULT.Click += new System.EventHandler(this.skinLabelKey8_Click);
@@ -2676,7 +2676,7 @@
             this.skinLabel_MB_KEY5_RESULT.Location = new System.Drawing.Point(324, 88);
             this.skinLabel_MB_KEY5_RESULT.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.skinLabel_MB_KEY5_RESULT.Name = "skinLabel_MB_KEY5_RESULT";
-            this.skinLabel_MB_KEY5_RESULT.Size = new System.Drawing.Size(27, 29);
+            this.skinLabel_MB_KEY5_RESULT.Size = new System.Drawing.Size(22, 24);
             this.skinLabel_MB_KEY5_RESULT.TabIndex = 43;
             this.skinLabel_MB_KEY5_RESULT.Text = "  ";
             // 
@@ -2693,7 +2693,7 @@
             this.skinLabel_MB_KEY2_RESULT.Location = new System.Drawing.Point(324, 38);
             this.skinLabel_MB_KEY2_RESULT.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.skinLabel_MB_KEY2_RESULT.Name = "skinLabel_MB_KEY2_RESULT";
-            this.skinLabel_MB_KEY2_RESULT.Size = new System.Drawing.Size(27, 29);
+            this.skinLabel_MB_KEY2_RESULT.Size = new System.Drawing.Size(22, 24);
             this.skinLabel_MB_KEY2_RESULT.TabIndex = 42;
             this.skinLabel_MB_KEY2_RESULT.Text = "  ";
             // 
@@ -2710,7 +2710,7 @@
             this.skinLabel_MB_KEY_Return.Location = new System.Drawing.Point(206, 188);
             this.skinLabel_MB_KEY_Return.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.skinLabel_MB_KEY_Return.Name = "skinLabel_MB_KEY_Return";
-            this.skinLabel_MB_KEY_Return.Size = new System.Drawing.Size(27, 29);
+            this.skinLabel_MB_KEY_Return.Size = new System.Drawing.Size(22, 24);
             this.skinLabel_MB_KEY_Return.TabIndex = 41;
             this.skinLabel_MB_KEY_Return.Text = "  ";
             // 
@@ -2727,7 +2727,7 @@
             this.skinLabel_MB_KEY7_RESULT.Location = new System.Drawing.Point(206, 138);
             this.skinLabel_MB_KEY7_RESULT.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.skinLabel_MB_KEY7_RESULT.Name = "skinLabel_MB_KEY7_RESULT";
-            this.skinLabel_MB_KEY7_RESULT.Size = new System.Drawing.Size(27, 29);
+            this.skinLabel_MB_KEY7_RESULT.Size = new System.Drawing.Size(22, 24);
             this.skinLabel_MB_KEY7_RESULT.TabIndex = 40;
             this.skinLabel_MB_KEY7_RESULT.Text = "  ";
             // 
@@ -2744,7 +2744,7 @@
             this.skinLabel_MB_KEY4_RESULT.Location = new System.Drawing.Point(206, 88);
             this.skinLabel_MB_KEY4_RESULT.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.skinLabel_MB_KEY4_RESULT.Name = "skinLabel_MB_KEY4_RESULT";
-            this.skinLabel_MB_KEY4_RESULT.Size = new System.Drawing.Size(27, 29);
+            this.skinLabel_MB_KEY4_RESULT.Size = new System.Drawing.Size(22, 24);
             this.skinLabel_MB_KEY4_RESULT.TabIndex = 39;
             this.skinLabel_MB_KEY4_RESULT.Text = "  ";
             // 
@@ -2761,7 +2761,7 @@
             this.skinLabel_MB_KEY1_RESULT.Location = new System.Drawing.Point(206, 38);
             this.skinLabel_MB_KEY1_RESULT.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.skinLabel_MB_KEY1_RESULT.Name = "skinLabel_MB_KEY1_RESULT";
-            this.skinLabel_MB_KEY1_RESULT.Size = new System.Drawing.Size(27, 29);
+            this.skinLabel_MB_KEY1_RESULT.Size = new System.Drawing.Size(22, 24);
             this.skinLabel_MB_KEY1_RESULT.TabIndex = 38;
             this.skinLabel_MB_KEY1_RESULT.Text = "  ";
             // 
@@ -2778,7 +2778,7 @@
             this.skinLabel129.Location = new System.Drawing.Point(24, 23);
             this.skinLabel129.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.skinLabel129.Name = "skinLabel129";
-            this.skinLabel129.Size = new System.Drawing.Size(116, 31);
+            this.skinLabel129.Size = new System.Drawing.Size(93, 25);
             this.skinLabel129.TabIndex = 37;
             this.skinLabel129.Text = "测试结果:";
             // 
@@ -2833,7 +2833,7 @@
             this.skinLabel_MB_DOOR_TIME.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.skinLabel_MB_DOOR_TIME.Location = new System.Drawing.Point(489, 41);
             this.skinLabel_MB_DOOR_TIME.Name = "skinLabel_MB_DOOR_TIME";
-            this.skinLabel_MB_DOOR_TIME.Size = new System.Drawing.Size(0, 31);
+            this.skinLabel_MB_DOOR_TIME.Size = new System.Drawing.Size(0, 25);
             this.skinLabel_MB_DOOR_TIME.TabIndex = 14;
             this.skinLabel_MB_DOOR_TIME.Click += new System.EventHandler(this.skinLabel132_Click);
             // 
@@ -2845,7 +2845,7 @@
             this.skinLabel137.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.skinLabel137.Location = new System.Drawing.Point(360, 41);
             this.skinLabel137.Name = "skinLabel137";
-            this.skinLabel137.Size = new System.Drawing.Size(92, 31);
+            this.skinLabel137.Size = new System.Drawing.Size(74, 25);
             this.skinLabel137.TabIndex = 13;
             this.skinLabel137.Text = "倒计时:";
             this.skinLabel137.Click += new System.EventHandler(this.skinLabel137_Click);
@@ -2858,7 +2858,7 @@
             this.skinLabel138.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.skinLabel138.Location = new System.Drawing.Point(65, 41);
             this.skinLabel138.Name = "skinLabel138";
-            this.skinLabel138.Size = new System.Drawing.Size(110, 31);
+            this.skinLabel138.Size = new System.Drawing.Size(88, 25);
             this.skinLabel138.TabIndex = 12;
             this.skinLabel138.Text = "门锁控制";
             this.skinLabel138.Click += new System.EventHandler(this.skinLabel138_Click);
@@ -2958,7 +2958,7 @@
             this.skinLabel_MB_DOOR_RESULT.Location = new System.Drawing.Point(235, 44);
             this.skinLabel_MB_DOOR_RESULT.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.skinLabel_MB_DOOR_RESULT.Name = "skinLabel_MB_DOOR_RESULT";
-            this.skinLabel_MB_DOOR_RESULT.Size = new System.Drawing.Size(21, 31);
+            this.skinLabel_MB_DOOR_RESULT.Size = new System.Drawing.Size(18, 25);
             this.skinLabel_MB_DOOR_RESULT.TabIndex = 35;
             this.skinLabel_MB_DOOR_RESULT.Text = " ";
             // 
@@ -2975,7 +2975,7 @@
             this.skinLabel139.Location = new System.Drawing.Point(65, 44);
             this.skinLabel139.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.skinLabel139.Name = "skinLabel139";
-            this.skinLabel139.Size = new System.Drawing.Size(116, 31);
+            this.skinLabel139.Size = new System.Drawing.Size(93, 25);
             this.skinLabel139.TabIndex = 34;
             this.skinLabel139.Text = "测试结果:";
             // 
@@ -3057,7 +3057,7 @@
             this.skinLabel15.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.skinLabel15.Location = new System.Drawing.Point(287, 23);
             this.skinLabel15.Name = "skinLabel15";
-            this.skinLabel15.Size = new System.Drawing.Size(122, 31);
+            this.skinLabel15.Size = new System.Drawing.Size(96, 25);
             this.skinLabel15.TabIndex = 15;
             this.skinLabel15.Text = "测试结果";
             // 
@@ -3074,7 +3074,7 @@
             this.MB_DOOR_RESULT_VAL.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.MB_DOOR_RESULT_VAL.Location = new System.Drawing.Point(408, 367);
             this.MB_DOOR_RESULT_VAL.Name = "MB_DOOR_RESULT_VAL";
-            this.MB_DOOR_RESULT_VAL.Size = new System.Drawing.Size(28, 31);
+            this.MB_DOOR_RESULT_VAL.Size = new System.Drawing.Size(24, 25);
             this.MB_DOOR_RESULT_VAL.TabIndex = 70;
             this.MB_DOOR_RESULT_VAL.Text = "  ";
             // 
@@ -3091,7 +3091,7 @@
             this.skinLabel140.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.skinLabel140.Location = new System.Drawing.Point(143, 367);
             this.skinLabel140.Name = "skinLabel140";
-            this.skinLabel140.Size = new System.Drawing.Size(130, 31);
+            this.skinLabel140.Size = new System.Drawing.Size(105, 25);
             this.skinLabel140.TabIndex = 69;
             this.skinLabel140.Text = "  门锁控制:";
             // 
@@ -3108,7 +3108,7 @@
             this.MB_KEY_RESULT_VAL.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.MB_KEY_RESULT_VAL.Location = new System.Drawing.Point(408, 336);
             this.MB_KEY_RESULT_VAL.Name = "MB_KEY_RESULT_VAL";
-            this.MB_KEY_RESULT_VAL.Size = new System.Drawing.Size(28, 31);
+            this.MB_KEY_RESULT_VAL.Size = new System.Drawing.Size(24, 25);
             this.MB_KEY_RESULT_VAL.TabIndex = 66;
             this.MB_KEY_RESULT_VAL.Text = "  ";
             // 
@@ -3125,7 +3125,7 @@
             this.skinLabel127.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.skinLabel127.Location = new System.Drawing.Point(143, 336);
             this.skinLabel127.Name = "skinLabel127";
-            this.skinLabel127.Size = new System.Drawing.Size(82, 31);
+            this.skinLabel127.Size = new System.Drawing.Size(67, 25);
             this.skinLabel127.TabIndex = 65;
             this.skinLabel127.Text = "  按键:";
             // 
@@ -3142,7 +3142,7 @@
             this.MB_TRUMPET_RESULT_VAL.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.MB_TRUMPET_RESULT_VAL.Location = new System.Drawing.Point(408, 305);
             this.MB_TRUMPET_RESULT_VAL.Name = "MB_TRUMPET_RESULT_VAL";
-            this.MB_TRUMPET_RESULT_VAL.Size = new System.Drawing.Size(28, 31);
+            this.MB_TRUMPET_RESULT_VAL.Size = new System.Drawing.Size(24, 25);
             this.MB_TRUMPET_RESULT_VAL.TabIndex = 64;
             this.MB_TRUMPET_RESULT_VAL.Text = "  ";
             this.MB_TRUMPET_RESULT_VAL.Click += new System.EventHandler(this.MB_TRUMPET_RESULT_VAL_Click);
@@ -3160,7 +3160,7 @@
             this.skinLabel26.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.skinLabel26.Location = new System.Drawing.Point(143, 305);
             this.skinLabel26.Name = "skinLabel26";
-            this.skinLabel26.Size = new System.Drawing.Size(82, 31);
+            this.skinLabel26.Size = new System.Drawing.Size(67, 25);
             this.skinLabel26.TabIndex = 63;
             this.skinLabel26.Text = "  喇叭:";
             // 
@@ -3177,7 +3177,7 @@
             this.MB_RS232_RESULT_VAL.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.MB_RS232_RESULT_VAL.Location = new System.Drawing.Point(408, 276);
             this.MB_RS232_RESULT_VAL.Name = "MB_RS232_RESULT_VAL";
-            this.MB_RS232_RESULT_VAL.Size = new System.Drawing.Size(28, 31);
+            this.MB_RS232_RESULT_VAL.Size = new System.Drawing.Size(24, 25);
             this.MB_RS232_RESULT_VAL.TabIndex = 62;
             this.MB_RS232_RESULT_VAL.Text = "  ";
             // 
@@ -3194,7 +3194,7 @@
             this.skinLabel128.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.skinLabel128.Location = new System.Drawing.Point(152, 274);
             this.skinLabel128.Name = "skinLabel128";
-            this.skinLabel128.Size = new System.Drawing.Size(110, 31);
+            this.skinLabel128.Size = new System.Drawing.Size(88, 25);
             this.skinLabel128.TabIndex = 61;
             this.skinLabel128.Text = "主板232:";
             // 
@@ -3211,7 +3211,7 @@
             this.MB_SMOKE_SENSOR_RESULT_VAL.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.MB_SMOKE_SENSOR_RESULT_VAL.Location = new System.Drawing.Point(408, 216);
             this.MB_SMOKE_SENSOR_RESULT_VAL.Name = "MB_SMOKE_SENSOR_RESULT_VAL";
-            this.MB_SMOKE_SENSOR_RESULT_VAL.Size = new System.Drawing.Size(28, 31);
+            this.MB_SMOKE_SENSOR_RESULT_VAL.Size = new System.Drawing.Size(24, 25);
             this.MB_SMOKE_SENSOR_RESULT_VAL.TabIndex = 60;
             this.MB_SMOKE_SENSOR_RESULT_VAL.Text = "  ";
             // 
@@ -3228,7 +3228,7 @@
             this.MB_CARD_RESULT_VAL.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.MB_CARD_RESULT_VAL.Location = new System.Drawing.Point(408, 245);
             this.MB_CARD_RESULT_VAL.Name = "MB_CARD_RESULT_VAL";
-            this.MB_CARD_RESULT_VAL.Size = new System.Drawing.Size(28, 31);
+            this.MB_CARD_RESULT_VAL.Size = new System.Drawing.Size(24, 25);
             this.MB_CARD_RESULT_VAL.TabIndex = 59;
             this.MB_CARD_RESULT_VAL.Text = "  ";
             this.MB_CARD_RESULT_VAL.Click += new System.EventHandler(this.MB_CARD_RESULT_VAL_Click);
@@ -3246,7 +3246,7 @@
             this.MB_GET_RTC_RESULT.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.MB_GET_RTC_RESULT.Location = new System.Drawing.Point(143, 245);
             this.MB_GET_RTC_RESULT.Name = "MB_GET_RTC_RESULT";
-            this.MB_GET_RTC_RESULT.Size = new System.Drawing.Size(82, 31);
+            this.MB_GET_RTC_RESULT.Size = new System.Drawing.Size(67, 25);
             this.MB_GET_RTC_RESULT.TabIndex = 58;
             this.MB_GET_RTC_RESULT.Text = "  刷卡:";
             // 
@@ -3263,7 +3263,7 @@
             this.MB_SET_RTC_RESULT.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.MB_SET_RTC_RESULT.Location = new System.Drawing.Point(143, 216);
             this.MB_SET_RTC_RESULT.Name = "MB_SET_RTC_RESULT";
-            this.MB_SET_RTC_RESULT.Size = new System.Drawing.Size(82, 31);
+            this.MB_SET_RTC_RESULT.Size = new System.Drawing.Size(67, 25);
             this.MB_SET_RTC_RESULT.TabIndex = 57;
             this.MB_SET_RTC_RESULT.Text = "  烟感:";
             // 
@@ -3280,7 +3280,7 @@
             this.skinLabel_MB_TEST_START_TIME.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.skinLabel_MB_TEST_START_TIME.Location = new System.Drawing.Point(408, 427);
             this.skinLabel_MB_TEST_START_TIME.Name = "skinLabel_MB_TEST_START_TIME";
-            this.skinLabel_MB_TEST_START_TIME.Size = new System.Drawing.Size(28, 31);
+            this.skinLabel_MB_TEST_START_TIME.Size = new System.Drawing.Size(24, 25);
             this.skinLabel_MB_TEST_START_TIME.TabIndex = 54;
             this.skinLabel_MB_TEST_START_TIME.Text = "  ";
             // 
@@ -3297,7 +3297,7 @@
             this.skinLabel85.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.skinLabel85.Location = new System.Drawing.Point(143, 427);
             this.skinLabel85.Name = "skinLabel85";
-            this.skinLabel85.Size = new System.Drawing.Size(130, 31);
+            this.skinLabel85.Size = new System.Drawing.Size(105, 25);
             this.skinLabel85.TabIndex = 53;
             this.skinLabel85.Text = "  测试时间:";
             // 
@@ -3314,7 +3314,7 @@
             this.MB_TEST_USED_TIME_VAL.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.MB_TEST_USED_TIME_VAL.Location = new System.Drawing.Point(408, 398);
             this.MB_TEST_USED_TIME_VAL.Name = "MB_TEST_USED_TIME_VAL";
-            this.MB_TEST_USED_TIME_VAL.Size = new System.Drawing.Size(28, 31);
+            this.MB_TEST_USED_TIME_VAL.Size = new System.Drawing.Size(24, 25);
             this.MB_TEST_USED_TIME_VAL.TabIndex = 52;
             this.MB_TEST_USED_TIME_VAL.Text = "  ";
             // 
@@ -3331,7 +3331,7 @@
             this.MB_FLASH_RESULT_VAL.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.MB_FLASH_RESULT_VAL.Location = new System.Drawing.Point(408, 191);
             this.MB_FLASH_RESULT_VAL.Name = "MB_FLASH_RESULT_VAL";
-            this.MB_FLASH_RESULT_VAL.Size = new System.Drawing.Size(28, 31);
+            this.MB_FLASH_RESULT_VAL.Size = new System.Drawing.Size(24, 25);
             this.MB_FLASH_RESULT_VAL.TabIndex = 49;
             this.MB_FLASH_RESULT_VAL.Text = "  ";
             // 
@@ -3348,7 +3348,7 @@
             this.MB_LED_RESULT_VAL.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.MB_LED_RESULT_VAL.Location = new System.Drawing.Point(408, 162);
             this.MB_LED_RESULT_VAL.Name = "MB_LED_RESULT_VAL";
-            this.MB_LED_RESULT_VAL.Size = new System.Drawing.Size(28, 31);
+            this.MB_LED_RESULT_VAL.Size = new System.Drawing.Size(24, 25);
             this.MB_LED_RESULT_VAL.TabIndex = 45;
             this.MB_LED_RESULT_VAL.Text = "  ";
             // 
@@ -3365,7 +3365,7 @@
             this.MB_POWER_RESULT_VAL.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.MB_POWER_RESULT_VAL.Location = new System.Drawing.Point(408, 133);
             this.MB_POWER_RESULT_VAL.Name = "MB_POWER_RESULT_VAL";
-            this.MB_POWER_RESULT_VAL.Size = new System.Drawing.Size(28, 31);
+            this.MB_POWER_RESULT_VAL.Size = new System.Drawing.Size(24, 25);
             this.MB_POWER_RESULT_VAL.TabIndex = 44;
             this.MB_POWER_RESULT_VAL.Text = "  ";
             // 
@@ -3382,7 +3382,7 @@
             this.MB_ALL_RESULT_VAL.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.MB_ALL_RESULT_VAL.Location = new System.Drawing.Point(408, 104);
             this.MB_ALL_RESULT_VAL.Name = "MB_ALL_RESULT_VAL";
-            this.MB_ALL_RESULT_VAL.Size = new System.Drawing.Size(28, 31);
+            this.MB_ALL_RESULT_VAL.Size = new System.Drawing.Size(24, 25);
             this.MB_ALL_RESULT_VAL.TabIndex = 43;
             this.MB_ALL_RESULT_VAL.Text = "  ";
             // 
@@ -3399,7 +3399,7 @@
             this.MB_FW_RESULT_VAL.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.MB_FW_RESULT_VAL.Location = new System.Drawing.Point(408, 75);
             this.MB_FW_RESULT_VAL.Name = "MB_FW_RESULT_VAL";
-            this.MB_FW_RESULT_VAL.Size = new System.Drawing.Size(28, 31);
+            this.MB_FW_RESULT_VAL.Size = new System.Drawing.Size(24, 25);
             this.MB_FW_RESULT_VAL.TabIndex = 42;
             this.MB_FW_RESULT_VAL.Text = "  ";
             // 
@@ -3416,7 +3416,7 @@
             this.MB_TESTOR_RESULT_VAL.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.MB_TESTOR_RESULT_VAL.Location = new System.Drawing.Point(408, 46);
             this.MB_TESTOR_RESULT_VAL.Name = "MB_TESTOR_RESULT_VAL";
-            this.MB_TESTOR_RESULT_VAL.Size = new System.Drawing.Size(28, 31);
+            this.MB_TESTOR_RESULT_VAL.Size = new System.Drawing.Size(24, 25);
             this.MB_TESTOR_RESULT_VAL.TabIndex = 41;
             this.MB_TESTOR_RESULT_VAL.Text = "  ";
             // 
@@ -3433,7 +3433,7 @@
             this.MB_PCB_RESULT_VAL.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.MB_PCB_RESULT_VAL.Location = new System.Drawing.Point(408, 17);
             this.MB_PCB_RESULT_VAL.Name = "MB_PCB_RESULT_VAL";
-            this.MB_PCB_RESULT_VAL.Size = new System.Drawing.Size(28, 31);
+            this.MB_PCB_RESULT_VAL.Size = new System.Drawing.Size(24, 25);
             this.MB_PCB_RESULT_VAL.TabIndex = 40;
             this.MB_PCB_RESULT_VAL.Text = "  ";
             // 
@@ -3450,7 +3450,7 @@
             this.MB_TEST_USED_TIME.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.MB_TEST_USED_TIME.Location = new System.Drawing.Point(143, 398);
             this.MB_TEST_USED_TIME.Name = "MB_TEST_USED_TIME";
-            this.MB_TEST_USED_TIME.Size = new System.Drawing.Size(130, 31);
+            this.MB_TEST_USED_TIME.Size = new System.Drawing.Size(105, 25);
             this.MB_TEST_USED_TIME.TabIndex = 39;
             this.MB_TEST_USED_TIME.Text = "  测试用时:";
             this.MB_TEST_USED_TIME.Click += new System.EventHandler(this.MB_TEST_USED_TIME_Click);
@@ -3468,7 +3468,7 @@
             this.MB_FLASH_RESULT.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.MB_FLASH_RESULT.Location = new System.Drawing.Point(143, 191);
             this.MB_FLASH_RESULT.Name = "MB_FLASH_RESULT";
-            this.MB_FLASH_RESULT.Size = new System.Drawing.Size(109, 31);
+            this.MB_FLASH_RESULT.Size = new System.Drawing.Size(88, 25);
             this.MB_FLASH_RESULT.TabIndex = 36;
             this.MB_FLASH_RESULT.Text = "  FLASH:";
             // 
@@ -3485,7 +3485,7 @@
             this.MB_LED_RESULT.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.MB_LED_RESULT.Location = new System.Drawing.Point(143, 162);
             this.MB_LED_RESULT.Name = "MB_LED_RESULT";
-            this.MB_LED_RESULT.Size = new System.Drawing.Size(106, 31);
+            this.MB_LED_RESULT.Size = new System.Drawing.Size(86, 25);
             this.MB_LED_RESULT.TabIndex = 32;
             this.MB_LED_RESULT.Text = "  指示灯:";
             // 
@@ -3502,7 +3502,7 @@
             this.MB_POWER_RESULT.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.MB_POWER_RESULT.Location = new System.Drawing.Point(143, 133);
             this.MB_POWER_RESULT.Name = "MB_POWER_RESULT";
-            this.MB_POWER_RESULT.Size = new System.Drawing.Size(82, 31);
+            this.MB_POWER_RESULT.Size = new System.Drawing.Size(67, 25);
             this.MB_POWER_RESULT.TabIndex = 31;
             this.MB_POWER_RESULT.Text = "  电源:";
             // 
@@ -3519,7 +3519,7 @@
             this.MB_ALL_RESULT.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.MB_ALL_RESULT.Location = new System.Drawing.Point(143, 104);
             this.MB_ALL_RESULT.Name = "MB_ALL_RESULT";
-            this.MB_ALL_RESULT.Size = new System.Drawing.Size(130, 31);
+            this.MB_ALL_RESULT.Size = new System.Drawing.Size(105, 25);
             this.MB_ALL_RESULT.TabIndex = 30;
             this.MB_ALL_RESULT.Text = "  测试结果:";
             // 
@@ -3536,7 +3536,7 @@
             this.MB_FW_RESULT.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.MB_FW_RESULT.Location = new System.Drawing.Point(143, 75);
             this.MB_FW_RESULT.Name = "MB_FW_RESULT";
-            this.MB_FW_RESULT.Size = new System.Drawing.Size(130, 31);
+            this.MB_FW_RESULT.Size = new System.Drawing.Size(105, 25);
             this.MB_FW_RESULT.TabIndex = 29;
             this.MB_FW_RESULT.Text = "  软件版本:";
             // 
@@ -3553,7 +3553,7 @@
             this.MB_TESTOR_RESULT.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.MB_TESTOR_RESULT.Location = new System.Drawing.Point(143, 46);
             this.MB_TESTOR_RESULT.Name = "MB_TESTOR_RESULT";
-            this.MB_TESTOR_RESULT.Size = new System.Drawing.Size(106, 31);
+            this.MB_TESTOR_RESULT.Size = new System.Drawing.Size(86, 25);
             this.MB_TESTOR_RESULT.TabIndex = 28;
             this.MB_TESTOR_RESULT.Text = "  测试员:";
             // 
@@ -3570,7 +3570,7 @@
             this.MB_PCB_RESULT.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.MB_PCB_RESULT.Location = new System.Drawing.Point(143, 17);
             this.MB_PCB_RESULT.Name = "MB_PCB_RESULT";
-            this.MB_PCB_RESULT.Size = new System.Drawing.Size(128, 31);
+            this.MB_PCB_RESULT.Size = new System.Drawing.Size(104, 25);
             this.MB_PCB_RESULT.TabIndex = 27;
             this.MB_PCB_RESULT.Text = "  PCB编号:";
             // 
@@ -3666,7 +3666,7 @@
             this.skinLabel11.Font = new System.Drawing.Font("微软雅黑", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.skinLabel11.Location = new System.Drawing.Point(30, 21);
             this.skinLabel11.Name = "skinLabel11";
-            this.skinLabel11.Size = new System.Drawing.Size(315, 33);
+            this.skinLabel11.Size = new System.Drawing.Size(252, 27);
             this.skinLabel11.TabIndex = 0;
             this.skinLabel11.Text = "请用扫码枪扫描副板二维码";
             // 
@@ -3699,7 +3699,7 @@
             this.skinLabel13.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.skinLabel13.Location = new System.Drawing.Point(38, 70);
             this.skinLabel13.Name = "skinLabel13";
-            this.skinLabel13.Size = new System.Drawing.Size(402, 24);
+            this.skinLabel13.Size = new System.Drawing.Size(313, 20);
             this.skinLabel13.TabIndex = 1;
             this.skinLabel13.Text = "输入完成按键盘\"回车键\"或以下\"确认键\"开始测试";
             // 
@@ -3708,7 +3708,7 @@
             this.textBox_SB_QR.Location = new System.Drawing.Point(35, 17);
             this.textBox_SB_QR.MaxLength = 1000;
             this.textBox_SB_QR.Name = "textBox_SB_QR";
-            this.textBox_SB_QR.Size = new System.Drawing.Size(380, 30);
+            this.textBox_SB_QR.Size = new System.Drawing.Size(380, 26);
             this.textBox_SB_QR.TabIndex = 0;
             this.textBox_SB_QR.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_SB_QR_KeyPress);
             // 
@@ -3761,7 +3761,7 @@
             this.skinLabel_SB_RS232_TIME.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.skinLabel_SB_RS232_TIME.Location = new System.Drawing.Point(485, 28);
             this.skinLabel_SB_RS232_TIME.Name = "skinLabel_SB_RS232_TIME";
-            this.skinLabel_SB_RS232_TIME.Size = new System.Drawing.Size(0, 31);
+            this.skinLabel_SB_RS232_TIME.Size = new System.Drawing.Size(0, 25);
             this.skinLabel_SB_RS232_TIME.TabIndex = 11;
             // 
             // skinLabel19
@@ -3772,7 +3772,7 @@
             this.skinLabel19.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.skinLabel19.Location = new System.Drawing.Point(356, 28);
             this.skinLabel19.Name = "skinLabel19";
-            this.skinLabel19.Size = new System.Drawing.Size(92, 31);
+            this.skinLabel19.Size = new System.Drawing.Size(74, 25);
             this.skinLabel19.TabIndex = 10;
             this.skinLabel19.Text = "倒计时:";
             // 
@@ -3784,7 +3784,7 @@
             this.skinLabel25.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.skinLabel25.Location = new System.Drawing.Point(30, 28);
             this.skinLabel25.Name = "skinLabel25";
-            this.skinLabel25.Size = new System.Drawing.Size(182, 31);
+            this.skinLabel25.Size = new System.Drawing.Size(144, 25);
             this.skinLabel25.TabIndex = 9;
             this.skinLabel25.Text = "主板RS232测试";
             // 
@@ -3796,7 +3796,7 @@
             this.skinLabel_SUB_RS232_Result.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.skinLabel_SUB_RS232_Result.Location = new System.Drawing.Point(179, 22);
             this.skinLabel_SUB_RS232_Result.Name = "skinLabel_SUB_RS232_Result";
-            this.skinLabel_SUB_RS232_Result.Size = new System.Drawing.Size(0, 31);
+            this.skinLabel_SUB_RS232_Result.Size = new System.Drawing.Size(0, 25);
             this.skinLabel_SUB_RS232_Result.TabIndex = 17;
             // 
             // skinButton_SUB_RS232_ReTest
@@ -3845,7 +3845,7 @@
             this.skinLabel27.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.skinLabel27.Location = new System.Drawing.Point(45, 22);
             this.skinLabel27.Name = "skinLabel27";
-            this.skinLabel27.Size = new System.Drawing.Size(116, 31);
+            this.skinLabel27.Size = new System.Drawing.Size(93, 25);
             this.skinLabel27.TabIndex = 3;
             this.skinLabel27.Text = "测试结果:";
             // 
@@ -3903,9 +3903,9 @@
             this.skinLabel16.Location = new System.Drawing.Point(9, 66);
             this.skinLabel16.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.skinLabel16.Name = "skinLabel16";
-            this.skinLabel16.Size = new System.Drawing.Size(628, 31);
+            this.skinLabel16.Size = new System.Drawing.Size(556, 26);
             this.skinLabel16.TabIndex = 24;
-            this.skinLabel16.Text = "请在刷卡区刷卡并能听到喇叭“滴”一声，并能显示卡号  ";
+            this.skinLabel16.Text = "请在刷卡区刷卡并能听到喇叭“正在读卡”一声，并能显示卡号  ";
             // 
             // skinLabel_SB_CARD_TIME
             // 
@@ -3920,7 +3920,7 @@
             this.skinLabel_SB_CARD_TIME.Location = new System.Drawing.Point(561, 20);
             this.skinLabel_SB_CARD_TIME.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.skinLabel_SB_CARD_TIME.Name = "skinLabel_SB_CARD_TIME";
-            this.skinLabel_SB_CARD_TIME.Size = new System.Drawing.Size(21, 31);
+            this.skinLabel_SB_CARD_TIME.Size = new System.Drawing.Size(18, 25);
             this.skinLabel_SB_CARD_TIME.TabIndex = 23;
             this.skinLabel_SB_CARD_TIME.Text = " ";
             // 
@@ -3937,7 +3937,7 @@
             this.skinLabel28.Location = new System.Drawing.Point(417, 20);
             this.skinLabel28.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.skinLabel28.Name = "skinLabel28";
-            this.skinLabel28.Size = new System.Drawing.Size(92, 31);
+            this.skinLabel28.Size = new System.Drawing.Size(74, 25);
             this.skinLabel28.TabIndex = 22;
             this.skinLabel28.Text = "倒计时:";
             // 
@@ -3954,7 +3954,7 @@
             this.skinLabel29.Location = new System.Drawing.Point(13, 20);
             this.skinLabel29.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.skinLabel29.Name = "skinLabel29";
-            this.skinLabel29.Size = new System.Drawing.Size(212, 31);
+            this.skinLabel29.Size = new System.Drawing.Size(169, 25);
             this.skinLabel29.TabIndex = 21;
             this.skinLabel29.Text = "当前项目:刷卡测试";
             // 
@@ -3966,7 +3966,7 @@
             this.skinLabel_CARD_Result.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.skinLabel_CARD_Result.Location = new System.Drawing.Point(179, 22);
             this.skinLabel_CARD_Result.Name = "skinLabel_CARD_Result";
-            this.skinLabel_CARD_Result.Size = new System.Drawing.Size(0, 31);
+            this.skinLabel_CARD_Result.Size = new System.Drawing.Size(0, 25);
             this.skinLabel_CARD_Result.TabIndex = 18;
             // 
             // skinButton_CARD_ReTest
@@ -4015,7 +4015,7 @@
             this.skinLabel30.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.skinLabel30.Location = new System.Drawing.Point(45, 22);
             this.skinLabel30.Name = "skinLabel30";
-            this.skinLabel30.Size = new System.Drawing.Size(116, 31);
+            this.skinLabel30.Size = new System.Drawing.Size(93, 25);
             this.skinLabel30.TabIndex = 3;
             this.skinLabel30.Text = "测试结果:";
             // 
@@ -4067,7 +4067,7 @@
             this.skinLabel9.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.skinLabel9.Location = new System.Drawing.Point(37, 62);
             this.skinLabel9.Name = "skinLabel9";
-            this.skinLabel9.Size = new System.Drawing.Size(424, 31);
+            this.skinLabel9.Size = new System.Drawing.Size(336, 26);
             this.skinLabel9.TabIndex = 15;
             this.skinLabel9.Text = "请细听喇叭是否有播报语音\"欢迎使用\"";
             // 
@@ -4079,7 +4079,7 @@
             this.skinLabel_SB_TRUMPET_TIME.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.skinLabel_SB_TRUMPET_TIME.Location = new System.Drawing.Point(473, 20);
             this.skinLabel_SB_TRUMPET_TIME.Name = "skinLabel_SB_TRUMPET_TIME";
-            this.skinLabel_SB_TRUMPET_TIME.Size = new System.Drawing.Size(0, 31);
+            this.skinLabel_SB_TRUMPET_TIME.Size = new System.Drawing.Size(0, 25);
             this.skinLabel_SB_TRUMPET_TIME.TabIndex = 14;
             // 
             // skinLabel62
@@ -4090,7 +4090,7 @@
             this.skinLabel62.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.skinLabel62.Location = new System.Drawing.Point(345, 20);
             this.skinLabel62.Name = "skinLabel62";
-            this.skinLabel62.Size = new System.Drawing.Size(92, 31);
+            this.skinLabel62.Size = new System.Drawing.Size(74, 25);
             this.skinLabel62.TabIndex = 13;
             this.skinLabel62.Text = "倒计时:";
             // 
@@ -4102,7 +4102,7 @@
             this.skinLabel112.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.skinLabel112.Location = new System.Drawing.Point(37, 20);
             this.skinLabel112.Name = "skinLabel112";
-            this.skinLabel112.Size = new System.Drawing.Size(212, 31);
+            this.skinLabel112.Size = new System.Drawing.Size(169, 25);
             this.skinLabel112.TabIndex = 12;
             this.skinLabel112.Text = "当前项目:喇叭测试";
             // 
@@ -4160,7 +4160,7 @@
             this.skinLabel_SUB_TRUMPET_Result.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.skinLabel_SUB_TRUMPET_Result.Location = new System.Drawing.Point(164, 31);
             this.skinLabel_SUB_TRUMPET_Result.Name = "skinLabel_SUB_TRUMPET_Result";
-            this.skinLabel_SUB_TRUMPET_Result.Size = new System.Drawing.Size(21, 31);
+            this.skinLabel_SUB_TRUMPET_Result.Size = new System.Drawing.Size(18, 25);
             this.skinLabel_SUB_TRUMPET_Result.TabIndex = 14;
             this.skinLabel_SUB_TRUMPET_Result.Text = " ";
             // 
@@ -4176,7 +4176,7 @@
             this.skinLabel20.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.skinLabel20.Location = new System.Drawing.Point(37, 31);
             this.skinLabel20.Name = "skinLabel20";
-            this.skinLabel20.Size = new System.Drawing.Size(116, 31);
+            this.skinLabel20.Size = new System.Drawing.Size(93, 25);
             this.skinLabel20.TabIndex = 13;
             this.skinLabel20.Text = "测试结果:";
             // 
@@ -4228,7 +4228,7 @@
             this.skinLabel_SB_FLASH_TIME.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.skinLabel_SB_FLASH_TIME.Location = new System.Drawing.Point(502, 35);
             this.skinLabel_SB_FLASH_TIME.Name = "skinLabel_SB_FLASH_TIME";
-            this.skinLabel_SB_FLASH_TIME.Size = new System.Drawing.Size(0, 31);
+            this.skinLabel_SB_FLASH_TIME.Size = new System.Drawing.Size(0, 25);
             this.skinLabel_SB_FLASH_TIME.TabIndex = 5;
             // 
             // skinLabel119
@@ -4239,7 +4239,7 @@
             this.skinLabel119.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.skinLabel119.Location = new System.Drawing.Point(373, 35);
             this.skinLabel119.Name = "skinLabel119";
-            this.skinLabel119.Size = new System.Drawing.Size(92, 31);
+            this.skinLabel119.Size = new System.Drawing.Size(74, 25);
             this.skinLabel119.TabIndex = 4;
             this.skinLabel119.Text = "倒计时:";
             // 
@@ -4251,7 +4251,7 @@
             this.skinLabel120.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.skinLabel120.Location = new System.Drawing.Point(47, 35);
             this.skinLabel120.Name = "skinLabel120";
-            this.skinLabel120.Size = new System.Drawing.Size(239, 31);
+            this.skinLabel120.Size = new System.Drawing.Size(190, 25);
             this.skinLabel120.TabIndex = 3;
             this.skinLabel120.Text = "当前项目:FLASH测试";
             // 
@@ -4309,7 +4309,7 @@
             this.skinLabel_SB_FLASH_RESULT.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.skinLabel_SB_FLASH_RESULT.Location = new System.Drawing.Point(174, 40);
             this.skinLabel_SB_FLASH_RESULT.Name = "skinLabel_SB_FLASH_RESULT";
-            this.skinLabel_SB_FLASH_RESULT.Size = new System.Drawing.Size(21, 31);
+            this.skinLabel_SB_FLASH_RESULT.Size = new System.Drawing.Size(18, 25);
             this.skinLabel_SB_FLASH_RESULT.TabIndex = 21;
             this.skinLabel_SB_FLASH_RESULT.Text = " ";
             // 
@@ -4325,7 +4325,7 @@
             this.skinLabel126.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.skinLabel126.Location = new System.Drawing.Point(47, 40);
             this.skinLabel126.Name = "skinLabel126";
-            this.skinLabel126.Size = new System.Drawing.Size(116, 31);
+            this.skinLabel126.Size = new System.Drawing.Size(93, 25);
             this.skinLabel126.TabIndex = 20;
             this.skinLabel126.Text = "测试结果:";
             // 
@@ -4392,7 +4392,7 @@
             this.skinLabel21.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.skinLabel21.Location = new System.Drawing.Point(245, 27);
             this.skinLabel21.Name = "skinLabel21";
-            this.skinLabel21.Size = new System.Drawing.Size(122, 31);
+            this.skinLabel21.Size = new System.Drawing.Size(96, 25);
             this.skinLabel21.TabIndex = 16;
             this.skinLabel21.Text = "测试结果";
             // 
@@ -4409,7 +4409,7 @@
             this.skinLabel_SB_CARD_VAL.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.skinLabel_SB_CARD_VAL.Location = new System.Drawing.Point(372, 169);
             this.skinLabel_SB_CARD_VAL.Name = "skinLabel_SB_CARD_VAL";
-            this.skinLabel_SB_CARD_VAL.Size = new System.Drawing.Size(28, 31);
+            this.skinLabel_SB_CARD_VAL.Size = new System.Drawing.Size(24, 25);
             this.skinLabel_SB_CARD_VAL.TabIndex = 70;
             this.skinLabel_SB_CARD_VAL.Text = "  ";
             // 
@@ -4426,7 +4426,7 @@
             this.skinLabel_SB_FLASH_VAL.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.skinLabel_SB_FLASH_VAL.Location = new System.Drawing.Point(372, 224);
             this.skinLabel_SB_FLASH_VAL.Name = "skinLabel_SB_FLASH_VAL";
-            this.skinLabel_SB_FLASH_VAL.Size = new System.Drawing.Size(28, 31);
+            this.skinLabel_SB_FLASH_VAL.Size = new System.Drawing.Size(24, 25);
             this.skinLabel_SB_FLASH_VAL.TabIndex = 76;
             this.skinLabel_SB_FLASH_VAL.Text = "  ";
             // 
@@ -4443,7 +4443,7 @@
             this.skinLabel_SB_TESTOR_VAL.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.skinLabel_SB_TESTOR_VAL.Location = new System.Drawing.Point(376, 55);
             this.skinLabel_SB_TESTOR_VAL.Name = "skinLabel_SB_TESTOR_VAL";
-            this.skinLabel_SB_TESTOR_VAL.Size = new System.Drawing.Size(28, 31);
+            this.skinLabel_SB_TESTOR_VAL.Size = new System.Drawing.Size(24, 25);
             this.skinLabel_SB_TESTOR_VAL.TabIndex = 66;
             this.skinLabel_SB_TESTOR_VAL.Text = "  ";
             // 
@@ -4460,7 +4460,7 @@
             this.skinLabel_SB_TEST_RESULT_VAL.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.skinLabel_SB_TEST_RESULT_VAL.Location = new System.Drawing.Point(376, 112);
             this.skinLabel_SB_TEST_RESULT_VAL.Name = "skinLabel_SB_TEST_RESULT_VAL";
-            this.skinLabel_SB_TEST_RESULT_VAL.Size = new System.Drawing.Size(28, 31);
+            this.skinLabel_SB_TEST_RESULT_VAL.Size = new System.Drawing.Size(24, 25);
             this.skinLabel_SB_TEST_RESULT_VAL.TabIndex = 68;
             this.skinLabel_SB_TEST_RESULT_VAL.Text = "  ";
             // 
@@ -4477,7 +4477,7 @@
             this.skinLabel_SB_PCB_VAL.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.skinLabel_SB_PCB_VAL.Location = new System.Drawing.Point(376, 25);
             this.skinLabel_SB_PCB_VAL.Name = "skinLabel_SB_PCB_VAL";
-            this.skinLabel_SB_PCB_VAL.Size = new System.Drawing.Size(28, 31);
+            this.skinLabel_SB_PCB_VAL.Size = new System.Drawing.Size(24, 25);
             this.skinLabel_SB_PCB_VAL.TabIndex = 65;
             this.skinLabel_SB_PCB_VAL.Text = "  ";
             // 
@@ -4494,7 +4494,7 @@
             this.skinLabel23.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.skinLabel23.Location = new System.Drawing.Point(116, 227);
             this.skinLabel23.Name = "skinLabel23";
-            this.skinLabel23.Size = new System.Drawing.Size(102, 31);
+            this.skinLabel23.Size = new System.Drawing.Size(82, 25);
             this.skinLabel23.TabIndex = 75;
             this.skinLabel23.Text = " FLASH:";
             this.skinLabel23.Click += new System.EventHandler(this.skinLabel23_Click);
@@ -4512,7 +4512,7 @@
             this.skinLabel_SB_FW_VAL.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.skinLabel_SB_FW_VAL.Location = new System.Drawing.Point(376, 85);
             this.skinLabel_SB_FW_VAL.Name = "skinLabel_SB_FW_VAL";
-            this.skinLabel_SB_FW_VAL.Size = new System.Drawing.Size(28, 31);
+            this.skinLabel_SB_FW_VAL.Size = new System.Drawing.Size(24, 25);
             this.skinLabel_SB_FW_VAL.TabIndex = 67;
             this.skinLabel_SB_FW_VAL.Text = "  ";
             // 
@@ -4529,7 +4529,7 @@
             this.skinLabel79.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.skinLabel79.Location = new System.Drawing.Point(111, 25);
             this.skinLabel79.Name = "skinLabel79";
-            this.skinLabel79.Size = new System.Drawing.Size(128, 31);
+            this.skinLabel79.Size = new System.Drawing.Size(104, 25);
             this.skinLabel79.TabIndex = 57;
             this.skinLabel79.Text = "  PCB编号:";
             // 
@@ -4546,7 +4546,7 @@
             this.skinLabel71.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.skinLabel71.Location = new System.Drawing.Point(107, 258);
             this.skinLabel71.Name = "skinLabel71";
-            this.skinLabel71.Size = new System.Drawing.Size(130, 31);
+            this.skinLabel71.Size = new System.Drawing.Size(105, 25);
             this.skinLabel71.TabIndex = 64;
             this.skinLabel71.Text = "  测试用时:";
             // 
@@ -4563,7 +4563,7 @@
             this.skinLabel_SB_TEST_TIME_VAL.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.skinLabel_SB_TEST_TIME_VAL.Location = new System.Drawing.Point(372, 280);
             this.skinLabel_SB_TEST_TIME_VAL.Name = "skinLabel_SB_TEST_TIME_VAL";
-            this.skinLabel_SB_TEST_TIME_VAL.Size = new System.Drawing.Size(28, 31);
+            this.skinLabel_SB_TEST_TIME_VAL.Size = new System.Drawing.Size(24, 25);
             this.skinLabel_SB_TEST_TIME_VAL.TabIndex = 74;
             this.skinLabel_SB_TEST_TIME_VAL.Text = "  ";
             // 
@@ -4580,7 +4580,7 @@
             this.skinLabel73.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.skinLabel73.Location = new System.Drawing.Point(116, 198);
             this.skinLabel73.Name = "skinLabel73";
-            this.skinLabel73.Size = new System.Drawing.Size(110, 31);
+            this.skinLabel73.Size = new System.Drawing.Size(91, 25);
             this.skinLabel73.TabIndex = 63;
             this.skinLabel73.Text = " 喇     叭:";
             this.skinLabel73.Click += new System.EventHandler(this.skinLabel73_Click);
@@ -4598,7 +4598,7 @@
             this.skinLabel78.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.skinLabel78.Location = new System.Drawing.Point(111, 55);
             this.skinLabel78.Name = "skinLabel78";
-            this.skinLabel78.Size = new System.Drawing.Size(106, 31);
+            this.skinLabel78.Size = new System.Drawing.Size(86, 25);
             this.skinLabel78.TabIndex = 58;
             this.skinLabel78.Text = "  测试员:";
             // 
@@ -4615,7 +4615,7 @@
             this.skinLabel_SB_RS232_VAL.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.skinLabel_SB_RS232_VAL.Location = new System.Drawing.Point(376, 139);
             this.skinLabel_SB_RS232_VAL.Name = "skinLabel_SB_RS232_VAL";
-            this.skinLabel_SB_RS232_VAL.Size = new System.Drawing.Size(28, 31);
+            this.skinLabel_SB_RS232_VAL.Size = new System.Drawing.Size(24, 25);
             this.skinLabel_SB_RS232_VAL.TabIndex = 69;
             this.skinLabel_SB_RS232_VAL.Text = "  ";
             // 
@@ -4632,7 +4632,7 @@
             this.skinLabel49.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.skinLabel49.Location = new System.Drawing.Point(107, 287);
             this.skinLabel49.Name = "skinLabel49";
-            this.skinLabel49.Size = new System.Drawing.Size(130, 31);
+            this.skinLabel49.Size = new System.Drawing.Size(105, 25);
             this.skinLabel49.TabIndex = 73;
             this.skinLabel49.Text = "  测试时间:";
             // 
@@ -4649,7 +4649,7 @@
             this.skinLabel74.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.skinLabel74.Location = new System.Drawing.Point(123, 169);
             this.skinLabel74.Name = "skinLabel74";
-            this.skinLabel74.Size = new System.Drawing.Size(103, 31);
+            this.skinLabel74.Size = new System.Drawing.Size(85, 25);
             this.skinLabel74.TabIndex = 62;
             this.skinLabel74.Text = "刷     卡:";
             this.skinLabel74.Click += new System.EventHandler(this.skinLabel74_Click);
@@ -4667,7 +4667,7 @@
             this.skinLabel77.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.skinLabel77.Location = new System.Drawing.Point(111, 85);
             this.skinLabel77.Name = "skinLabel77";
-            this.skinLabel77.Size = new System.Drawing.Size(130, 31);
+            this.skinLabel77.Size = new System.Drawing.Size(105, 25);
             this.skinLabel77.TabIndex = 59;
             this.skinLabel77.Text = "  软件版本:";
             // 
@@ -4684,7 +4684,7 @@
             this.skinLabel75.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.skinLabel75.Location = new System.Drawing.Point(111, 141);
             this.skinLabel75.Name = "skinLabel75";
-            this.skinLabel75.Size = new System.Drawing.Size(124, 31);
+            this.skinLabel75.Size = new System.Drawing.Size(100, 25);
             this.skinLabel75.TabIndex = 61;
             this.skinLabel75.Text = "  副板232:";
             // 
@@ -4701,7 +4701,7 @@
             this.skinLabel_SB_TEST_USE_TIME_VAL.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.skinLabel_SB_TEST_USE_TIME_VAL.Location = new System.Drawing.Point(372, 252);
             this.skinLabel_SB_TEST_USE_TIME_VAL.Name = "skinLabel_SB_TEST_USE_TIME_VAL";
-            this.skinLabel_SB_TEST_USE_TIME_VAL.Size = new System.Drawing.Size(28, 31);
+            this.skinLabel_SB_TEST_USE_TIME_VAL.Size = new System.Drawing.Size(24, 25);
             this.skinLabel_SB_TEST_USE_TIME_VAL.TabIndex = 72;
             this.skinLabel_SB_TEST_USE_TIME_VAL.Text = "  ";
             this.skinLabel_SB_TEST_USE_TIME_VAL.Click += new System.EventHandler(this.skinLabel_SB_TEST_USE_TIME_VAL_Click);
@@ -4719,7 +4719,7 @@
             this.skinLabel_SB_TRUMPET_VAL.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.skinLabel_SB_TRUMPET_VAL.Location = new System.Drawing.Point(372, 196);
             this.skinLabel_SB_TRUMPET_VAL.Name = "skinLabel_SB_TRUMPET_VAL";
-            this.skinLabel_SB_TRUMPET_VAL.Size = new System.Drawing.Size(28, 31);
+            this.skinLabel_SB_TRUMPET_VAL.Size = new System.Drawing.Size(24, 25);
             this.skinLabel_SB_TRUMPET_VAL.TabIndex = 71;
             this.skinLabel_SB_TRUMPET_VAL.Text = "  ";
             this.skinLabel_SB_TRUMPET_VAL.Click += new System.EventHandler(this.skinLabel_SB_2G_VAL_Click);
@@ -4737,7 +4737,7 @@
             this.skinLabel76.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.skinLabel76.Location = new System.Drawing.Point(111, 113);
             this.skinLabel76.Name = "skinLabel76";
-            this.skinLabel76.Size = new System.Drawing.Size(130, 31);
+            this.skinLabel76.Size = new System.Drawing.Size(105, 25);
             this.skinLabel76.TabIndex = 60;
             this.skinLabel76.Text = "  测试结果:";
             // 
@@ -4782,7 +4782,7 @@
             this.skinLabel18.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.skinLabel18.Location = new System.Drawing.Point(287, 23);
             this.skinLabel18.Name = "skinLabel18";
-            this.skinLabel18.Size = new System.Drawing.Size(122, 31);
+            this.skinLabel18.Size = new System.Drawing.Size(96, 25);
             this.skinLabel18.TabIndex = 15;
             this.skinLabel18.Text = "测试结果";
             // 
@@ -4799,7 +4799,7 @@
             this.skinLabel_SB_TEST_START_TIME.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.skinLabel_SB_TEST_START_TIME.Location = new System.Drawing.Point(408, 246);
             this.skinLabel_SB_TEST_START_TIME.Name = "skinLabel_SB_TEST_START_TIME";
-            this.skinLabel_SB_TEST_START_TIME.Size = new System.Drawing.Size(28, 31);
+            this.skinLabel_SB_TEST_START_TIME.Size = new System.Drawing.Size(24, 25);
             this.skinLabel_SB_TEST_START_TIME.TabIndex = 54;
             this.skinLabel_SB_TEST_START_TIME.Text = "  ";
             // 
@@ -4816,7 +4816,7 @@
             this.skinLabel88.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.skinLabel88.Location = new System.Drawing.Point(143, 246);
             this.skinLabel88.Name = "skinLabel88";
-            this.skinLabel88.Size = new System.Drawing.Size(130, 31);
+            this.skinLabel88.Size = new System.Drawing.Size(105, 25);
             this.skinLabel88.TabIndex = 53;
             this.skinLabel88.Text = "  测试时间:";
             // 
@@ -4833,7 +4833,7 @@
             this.skinLabel91.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.skinLabel91.Location = new System.Drawing.Point(143, 221);
             this.skinLabel91.Name = "skinLabel91";
-            this.skinLabel91.Size = new System.Drawing.Size(130, 31);
+            this.skinLabel91.Size = new System.Drawing.Size(105, 25);
             this.skinLabel91.TabIndex = 39;
             this.skinLabel91.Text = "  测试用时:";
             // 
@@ -4850,7 +4850,7 @@
             this.skinLabel97.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.skinLabel97.Location = new System.Drawing.Point(143, 194);
             this.skinLabel97.Name = "skinLabel97";
-            this.skinLabel97.Size = new System.Drawing.Size(134, 31);
+            this.skinLabel97.Size = new System.Drawing.Size(108, 25);
             this.skinLabel97.TabIndex = 33;
             this.skinLabel97.Text = "  2.4G通信:";
             // 
@@ -4867,7 +4867,7 @@
             this.skinLabel98.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.skinLabel98.Location = new System.Drawing.Point(143, 167);
             this.skinLabel98.Name = "skinLabel98";
-            this.skinLabel98.Size = new System.Drawing.Size(130, 31);
+            this.skinLabel98.Size = new System.Drawing.Size(105, 25);
             this.skinLabel98.TabIndex = 32;
             this.skinLabel98.Text = "  蓝牙通信:";
             // 
@@ -4884,7 +4884,7 @@
             this.skinLabel99.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.skinLabel99.Location = new System.Drawing.Point(143, 137);
             this.skinLabel99.Name = "skinLabel99";
-            this.skinLabel99.Size = new System.Drawing.Size(82, 31);
+            this.skinLabel99.Size = new System.Drawing.Size(67, 25);
             this.skinLabel99.TabIndex = 31;
             this.skinLabel99.Text = "  刷卡:";
             // 
@@ -4901,7 +4901,7 @@
             this.skinLabel100.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.skinLabel100.Location = new System.Drawing.Point(143, 107);
             this.skinLabel100.Name = "skinLabel100";
-            this.skinLabel100.Size = new System.Drawing.Size(130, 31);
+            this.skinLabel100.Size = new System.Drawing.Size(105, 25);
             this.skinLabel100.TabIndex = 30;
             this.skinLabel100.Text = "  测试结果:";
             // 
@@ -4918,7 +4918,7 @@
             this.skinLabel101.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.skinLabel101.Location = new System.Drawing.Point(143, 77);
             this.skinLabel101.Name = "skinLabel101";
-            this.skinLabel101.Size = new System.Drawing.Size(130, 31);
+            this.skinLabel101.Size = new System.Drawing.Size(105, 25);
             this.skinLabel101.TabIndex = 29;
             this.skinLabel101.Text = "  软件版本:";
             // 
@@ -4935,7 +4935,7 @@
             this.skinLabel102.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.skinLabel102.Location = new System.Drawing.Point(143, 47);
             this.skinLabel102.Name = "skinLabel102";
-            this.skinLabel102.Size = new System.Drawing.Size(106, 31);
+            this.skinLabel102.Size = new System.Drawing.Size(86, 25);
             this.skinLabel102.TabIndex = 28;
             this.skinLabel102.Text = "  测试员:";
             // 
@@ -4952,7 +4952,7 @@
             this.skinLabel103.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.skinLabel103.Location = new System.Drawing.Point(143, 17);
             this.skinLabel103.Name = "skinLabel103";
-            this.skinLabel103.Size = new System.Drawing.Size(128, 31);
+            this.skinLabel103.Size = new System.Drawing.Size(104, 25);
             this.skinLabel103.TabIndex = 27;
             this.skinLabel103.Text = "  PCB编号:";
             // 
@@ -5257,7 +5257,7 @@
             this.skinLabel24.Font = new System.Drawing.Font("微软雅黑", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.skinLabel24.Location = new System.Drawing.Point(30, 21);
             this.skinLabel24.Name = "skinLabel24";
-            this.skinLabel24.Size = new System.Drawing.Size(315, 33);
+            this.skinLabel24.Size = new System.Drawing.Size(252, 27);
             this.skinLabel24.TabIndex = 0;
             this.skinLabel24.Text = "请用扫码枪扫描电桩二维码";
             // 
@@ -5290,7 +5290,7 @@
             this.skinLabel31.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.skinLabel31.Location = new System.Drawing.Point(38, 70);
             this.skinLabel31.Name = "skinLabel31";
-            this.skinLabel31.Size = new System.Drawing.Size(402, 24);
+            this.skinLabel31.Size = new System.Drawing.Size(313, 20);
             this.skinLabel31.TabIndex = 1;
             this.skinLabel31.Text = "输入完成按键盘\"回车键\"或以下\"确认键\"开始测试";
             // 
@@ -5299,7 +5299,7 @@
             this.textBox_WholeChg_SN_QR.Location = new System.Drawing.Point(35, 17);
             this.textBox_WholeChg_SN_QR.MaxLength = 100;
             this.textBox_WholeChg_SN_QR.Name = "textBox_WholeChg_SN_QR";
-            this.textBox_WholeChg_SN_QR.Size = new System.Drawing.Size(397, 30);
+            this.textBox_WholeChg_SN_QR.Size = new System.Drawing.Size(397, 26);
             this.textBox_WholeChg_SN_QR.TabIndex = 0;
             this.textBox_WholeChg_SN_QR.TextChanged += new System.EventHandler(this.textBox_WholeChg_SN_QR_TextChanged);
             this.textBox_WholeChg_SN_QR.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_WholeChg_SN_QR_KeyPress);
@@ -5353,7 +5353,7 @@
             this.skinLabel_WholeChg_RS232_Time.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.skinLabel_WholeChg_RS232_Time.Location = new System.Drawing.Point(569, 15);
             this.skinLabel_WholeChg_RS232_Time.Name = "skinLabel_WholeChg_RS232_Time";
-            this.skinLabel_WholeChg_RS232_Time.Size = new System.Drawing.Size(0, 31);
+            this.skinLabel_WholeChg_RS232_Time.Size = new System.Drawing.Size(0, 25);
             this.skinLabel_WholeChg_RS232_Time.TabIndex = 3;
             // 
             // skinLabel33
@@ -5364,7 +5364,7 @@
             this.skinLabel33.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.skinLabel33.Location = new System.Drawing.Point(19, 54);
             this.skinLabel33.Name = "skinLabel33";
-            this.skinLabel33.Size = new System.Drawing.Size(302, 31);
+            this.skinLabel33.Size = new System.Drawing.Size(240, 26);
             this.skinLabel33.TabIndex = 2;
             this.skinLabel33.Text = "请肉眼观察指示灯是否亮起";
             // 
@@ -5376,7 +5376,7 @@
             this.skinLabel34.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.skinLabel34.Location = new System.Drawing.Point(439, 15);
             this.skinLabel34.Name = "skinLabel34";
-            this.skinLabel34.Size = new System.Drawing.Size(92, 31);
+            this.skinLabel34.Size = new System.Drawing.Size(74, 25);
             this.skinLabel34.TabIndex = 1;
             this.skinLabel34.Text = "倒计时:";
             // 
@@ -5388,7 +5388,7 @@
             this.skinLabel35.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.skinLabel35.Location = new System.Drawing.Point(19, 15);
             this.skinLabel35.Name = "skinLabel35";
-            this.skinLabel35.Size = new System.Drawing.Size(236, 31);
+            this.skinLabel35.Size = new System.Drawing.Size(188, 25);
             this.skinLabel35.TabIndex = 0;
             this.skinLabel35.Text = "当前项目:指示灯测试";
             this.skinLabel35.Click += new System.EventHandler(this.skinLabel35_Click);
@@ -5401,7 +5401,7 @@
             this.skinLabel_CHG_RS232_RESULT.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.skinLabel_CHG_RS232_RESULT.Location = new System.Drawing.Point(144, 21);
             this.skinLabel_CHG_RS232_RESULT.Name = "skinLabel_CHG_RS232_RESULT";
-            this.skinLabel_CHG_RS232_RESULT.Size = new System.Drawing.Size(0, 31);
+            this.skinLabel_CHG_RS232_RESULT.Size = new System.Drawing.Size(0, 25);
             this.skinLabel_CHG_RS232_RESULT.TabIndex = 5;
             // 
             // skinButton_WholeChg_RS232_RTest
@@ -5450,7 +5450,7 @@
             this.skinLabel36.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.skinLabel36.Location = new System.Drawing.Point(21, 21);
             this.skinLabel36.Name = "skinLabel36";
-            this.skinLabel36.Size = new System.Drawing.Size(116, 31);
+            this.skinLabel36.Size = new System.Drawing.Size(93, 25);
             this.skinLabel36.TabIndex = 0;
             this.skinLabel36.Text = "测试结果:";
             // 
@@ -5516,7 +5516,7 @@
             this.skinLabel81.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.skinLabel81.Location = new System.Drawing.Point(287, 23);
             this.skinLabel81.Name = "skinLabel81";
-            this.skinLabel81.Size = new System.Drawing.Size(122, 31);
+            this.skinLabel81.Size = new System.Drawing.Size(96, 25);
             this.skinLabel81.TabIndex = 15;
             this.skinLabel81.Text = "测试结果";
             // 
@@ -5533,7 +5533,7 @@
             this.skinLabel_CHG_TEST_TIME_RES_VAL.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.skinLabel_CHG_TEST_TIME_RES_VAL.Location = new System.Drawing.Point(318, 218);
             this.skinLabel_CHG_TEST_TIME_RES_VAL.Name = "skinLabel_CHG_TEST_TIME_RES_VAL";
-            this.skinLabel_CHG_TEST_TIME_RES_VAL.Size = new System.Drawing.Size(28, 31);
+            this.skinLabel_CHG_TEST_TIME_RES_VAL.Size = new System.Drawing.Size(24, 25);
             this.skinLabel_CHG_TEST_TIME_RES_VAL.TabIndex = 54;
             this.skinLabel_CHG_TEST_TIME_RES_VAL.Text = "  ";
             this.skinLabel_CHG_TEST_TIME_RES_VAL.Click += new System.EventHandler(this.skinLabel_CHG_TEST_TIME_RES_VAL_Click);
@@ -5551,7 +5551,7 @@
             this.skinLabel92.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.skinLabel92.Location = new System.Drawing.Point(84, 218);
             this.skinLabel92.Name = "skinLabel92";
-            this.skinLabel92.Size = new System.Drawing.Size(130, 31);
+            this.skinLabel92.Size = new System.Drawing.Size(105, 25);
             this.skinLabel92.TabIndex = 53;
             this.skinLabel92.Text = "  测试时间:";
             this.skinLabel92.Click += new System.EventHandler(this.skinLabel92_Click);
@@ -5569,7 +5569,7 @@
             this.skinLabel_CHG_TEST_USEDTIME_RES_VAL.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.skinLabel_CHG_TEST_USEDTIME_RES_VAL.Location = new System.Drawing.Point(318, 191);
             this.skinLabel_CHG_TEST_USEDTIME_RES_VAL.Name = "skinLabel_CHG_TEST_USEDTIME_RES_VAL";
-            this.skinLabel_CHG_TEST_USEDTIME_RES_VAL.Size = new System.Drawing.Size(28, 31);
+            this.skinLabel_CHG_TEST_USEDTIME_RES_VAL.Size = new System.Drawing.Size(24, 25);
             this.skinLabel_CHG_TEST_USEDTIME_RES_VAL.TabIndex = 52;
             this.skinLabel_CHG_TEST_USEDTIME_RES_VAL.Text = "  ";
             this.skinLabel_CHG_TEST_USEDTIME_RES_VAL.Click += new System.EventHandler(this.skinLabel_CHG_TEST_USEDTIME_RES_VAL_Click);
@@ -5587,7 +5587,7 @@
             this.skinLabel_CHG_MB_QR_RES_VAL.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.skinLabel_CHG_MB_QR_RES_VAL.Location = new System.Drawing.Point(318, 52);
             this.skinLabel_CHG_MB_QR_RES_VAL.Name = "skinLabel_CHG_MB_QR_RES_VAL";
-            this.skinLabel_CHG_MB_QR_RES_VAL.Size = new System.Drawing.Size(28, 31);
+            this.skinLabel_CHG_MB_QR_RES_VAL.Size = new System.Drawing.Size(24, 25);
             this.skinLabel_CHG_MB_QR_RES_VAL.TabIndex = 51;
             this.skinLabel_CHG_MB_QR_RES_VAL.Text = "  ";
             this.skinLabel_CHG_MB_QR_RES_VAL.Click += new System.EventHandler(this.skinLabel_CHG_MB_QR_RES_VAL_Click);
@@ -5605,7 +5605,7 @@
             this.skinLabel_CHG_LED_RES_VAL.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.skinLabel_CHG_LED_RES_VAL.Location = new System.Drawing.Point(318, 160);
             this.skinLabel_CHG_LED_RES_VAL.Name = "skinLabel_CHG_LED_RES_VAL";
-            this.skinLabel_CHG_LED_RES_VAL.Size = new System.Drawing.Size(28, 31);
+            this.skinLabel_CHG_LED_RES_VAL.Size = new System.Drawing.Size(24, 25);
             this.skinLabel_CHG_LED_RES_VAL.TabIndex = 44;
             this.skinLabel_CHG_LED_RES_VAL.Text = "  ";
             this.skinLabel_CHG_LED_RES_VAL.Click += new System.EventHandler(this.skinLabel_CHG_LED_RES_VAL_Click);
@@ -5623,7 +5623,7 @@
             this.skinLabeL_CHG_TEST_RES_VAL.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.skinLabeL_CHG_TEST_RES_VAL.Location = new System.Drawing.Point(318, 133);
             this.skinLabeL_CHG_TEST_RES_VAL.Name = "skinLabeL_CHG_TEST_RES_VAL";
-            this.skinLabeL_CHG_TEST_RES_VAL.Size = new System.Drawing.Size(28, 31);
+            this.skinLabeL_CHG_TEST_RES_VAL.Size = new System.Drawing.Size(24, 25);
             this.skinLabeL_CHG_TEST_RES_VAL.TabIndex = 43;
             this.skinLabeL_CHG_TEST_RES_VAL.Text = "  ";
             this.skinLabeL_CHG_TEST_RES_VAL.Click += new System.EventHandler(this.skinLabeL_CHG_TEST_RES_VAL_Click);
@@ -5641,7 +5641,7 @@
             this.skinLabel_CHG_FW_RES_VAL.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.skinLabel_CHG_FW_RES_VAL.Location = new System.Drawing.Point(318, 106);
             this.skinLabel_CHG_FW_RES_VAL.Name = "skinLabel_CHG_FW_RES_VAL";
-            this.skinLabel_CHG_FW_RES_VAL.Size = new System.Drawing.Size(28, 31);
+            this.skinLabel_CHG_FW_RES_VAL.Size = new System.Drawing.Size(24, 25);
             this.skinLabel_CHG_FW_RES_VAL.TabIndex = 42;
             this.skinLabel_CHG_FW_RES_VAL.Text = "  ";
             this.skinLabel_CHG_FW_RES_VAL.Click += new System.EventHandler(this.skinLabel_CHG_FW_RES_VAL_Click);
@@ -5659,7 +5659,7 @@
             this.skinLabel_CHG_TESTOR_RES_VAL.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.skinLabel_CHG_TESTOR_RES_VAL.Location = new System.Drawing.Point(318, 79);
             this.skinLabel_CHG_TESTOR_RES_VAL.Name = "skinLabel_CHG_TESTOR_RES_VAL";
-            this.skinLabel_CHG_TESTOR_RES_VAL.Size = new System.Drawing.Size(28, 31);
+            this.skinLabel_CHG_TESTOR_RES_VAL.Size = new System.Drawing.Size(24, 25);
             this.skinLabel_CHG_TESTOR_RES_VAL.TabIndex = 41;
             this.skinLabel_CHG_TESTOR_RES_VAL.Text = "  ";
             this.skinLabel_CHG_TESTOR_RES_VAL.Click += new System.EventHandler(this.skinLabel_CHG_TESTOR_RES_VAL_Click);
@@ -5677,7 +5677,7 @@
             this.skinLabel_CHG_STATION_ID_RESLUT_VAL.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.skinLabel_CHG_STATION_ID_RESLUT_VAL.Location = new System.Drawing.Point(318, 25);
             this.skinLabel_CHG_STATION_ID_RESLUT_VAL.Name = "skinLabel_CHG_STATION_ID_RESLUT_VAL";
-            this.skinLabel_CHG_STATION_ID_RESLUT_VAL.Size = new System.Drawing.Size(28, 31);
+            this.skinLabel_CHG_STATION_ID_RESLUT_VAL.Size = new System.Drawing.Size(24, 25);
             this.skinLabel_CHG_STATION_ID_RESLUT_VAL.TabIndex = 40;
             this.skinLabel_CHG_STATION_ID_RESLUT_VAL.Text = "  ";
             this.skinLabel_CHG_STATION_ID_RESLUT_VAL.Click += new System.EventHandler(this.skinLabel_CHG_STATION_ID_RESLUT_VAL_Click);
@@ -5695,7 +5695,7 @@
             this.skinLabel113.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.skinLabel113.Location = new System.Drawing.Point(84, 191);
             this.skinLabel113.Name = "skinLabel113";
-            this.skinLabel113.Size = new System.Drawing.Size(130, 31);
+            this.skinLabel113.Size = new System.Drawing.Size(105, 25);
             this.skinLabel113.TabIndex = 39;
             this.skinLabel113.Text = "  测试用时:";
             this.skinLabel113.Click += new System.EventHandler(this.skinLabel113_Click);
@@ -5713,7 +5713,7 @@
             this.skinLabel115.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.skinLabel115.Location = new System.Drawing.Point(84, 52);
             this.skinLabel115.Name = "skinLabel115";
-            this.skinLabel115.Size = new System.Drawing.Size(130, 31);
+            this.skinLabel115.Size = new System.Drawing.Size(105, 25);
             this.skinLabel115.TabIndex = 37;
             this.skinLabel115.Text = "  主板编号:";
             this.skinLabel115.Click += new System.EventHandler(this.skinLabel115_Click);
@@ -5731,7 +5731,7 @@
             this.skinLabel121.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.skinLabel121.Location = new System.Drawing.Point(84, 160);
             this.skinLabel121.Name = "skinLabel121";
-            this.skinLabel121.Size = new System.Drawing.Size(106, 31);
+            this.skinLabel121.Size = new System.Drawing.Size(86, 25);
             this.skinLabel121.TabIndex = 31;
             this.skinLabel121.Text = "  指示灯:";
             this.skinLabel121.Click += new System.EventHandler(this.skinLabel121_Click);
@@ -5749,7 +5749,7 @@
             this.skinLabel122.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.skinLabel122.Location = new System.Drawing.Point(84, 133);
             this.skinLabel122.Name = "skinLabel122";
-            this.skinLabel122.Size = new System.Drawing.Size(130, 31);
+            this.skinLabel122.Size = new System.Drawing.Size(105, 25);
             this.skinLabel122.TabIndex = 30;
             this.skinLabel122.Text = "  测试结果:";
             this.skinLabel122.Click += new System.EventHandler(this.skinLabel122_Click);
@@ -5767,7 +5767,7 @@
             this.skinLabel123.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.skinLabel123.Location = new System.Drawing.Point(84, 106);
             this.skinLabel123.Name = "skinLabel123";
-            this.skinLabel123.Size = new System.Drawing.Size(130, 31);
+            this.skinLabel123.Size = new System.Drawing.Size(105, 25);
             this.skinLabel123.TabIndex = 29;
             this.skinLabel123.Text = "  软件版本:";
             this.skinLabel123.Click += new System.EventHandler(this.skinLabel123_Click);
@@ -5785,7 +5785,7 @@
             this.skinLabel124.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.skinLabel124.Location = new System.Drawing.Point(84, 79);
             this.skinLabel124.Name = "skinLabel124";
-            this.skinLabel124.Size = new System.Drawing.Size(106, 31);
+            this.skinLabel124.Size = new System.Drawing.Size(86, 25);
             this.skinLabel124.TabIndex = 28;
             this.skinLabel124.Text = "  测试员:";
             this.skinLabel124.Click += new System.EventHandler(this.skinLabel124_Click);
@@ -5803,7 +5803,7 @@
             this.skinLabel125.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.skinLabel125.Location = new System.Drawing.Point(84, 25);
             this.skinLabel125.Name = "skinLabel125";
-            this.skinLabel125.Size = new System.Drawing.Size(106, 31);
+            this.skinLabel125.Size = new System.Drawing.Size(86, 25);
             this.skinLabel125.TabIndex = 27;
             this.skinLabel125.Text = "  电桩号:";
             this.skinLabel125.Click += new System.EventHandler(this.skinLabel125_Click);
@@ -5853,7 +5853,7 @@
             this.label8.ForeColor = System.Drawing.Color.Red;
             this.label8.Location = new System.Drawing.Point(3, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(805, 36);
+            this.label8.Size = new System.Drawing.Size(651, 29);
             this.label8.TabIndex = 6;
             this.label8.Text = "注意：默认以WiFi模块优先上网,请优先测试WiFi模块联网";
             this.label8.Click += new System.EventHandler(this.label8_Click);
@@ -5887,7 +5887,7 @@
             this.skinLabel84.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.skinLabel84.Location = new System.Drawing.Point(32, 55);
             this.skinLabel84.Name = "skinLabel84";
-            this.skinLabel84.Size = new System.Drawing.Size(92, 31);
+            this.skinLabel84.Size = new System.Drawing.Size(74, 25);
             this.skinLabel84.TabIndex = 16;
             this.skinLabel84.Text = "倒计时:";
             // 
@@ -5899,7 +5899,7 @@
             this.skinLabel_OnlineDeviceCode.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.skinLabel_OnlineDeviceCode.Location = new System.Drawing.Point(179, 286);
             this.skinLabel_OnlineDeviceCode.Name = "skinLabel_OnlineDeviceCode";
-            this.skinLabel_OnlineDeviceCode.Size = new System.Drawing.Size(0, 31);
+            this.skinLabel_OnlineDeviceCode.Size = new System.Drawing.Size(0, 25);
             this.skinLabel_OnlineDeviceCode.TabIndex = 25;
             // 
             // skinButton_OnlineStartDetect
@@ -5931,7 +5931,7 @@
             this.skinLabel_OnlineDetectTime.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.skinLabel_OnlineDetectTime.Location = new System.Drawing.Point(141, 55);
             this.skinLabel_OnlineDetectTime.Name = "skinLabel_OnlineDetectTime";
-            this.skinLabel_OnlineDetectTime.Size = new System.Drawing.Size(0, 31);
+            this.skinLabel_OnlineDetectTime.Size = new System.Drawing.Size(0, 25);
             this.skinLabel_OnlineDetectTime.TabIndex = 17;
             // 
             // skinLabel90
@@ -5942,7 +5942,7 @@
             this.skinLabel90.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.skinLabel90.Location = new System.Drawing.Point(44, 286);
             this.skinLabel90.Name = "skinLabel90";
-            this.skinLabel90.Size = new System.Drawing.Size(92, 31);
+            this.skinLabel90.Size = new System.Drawing.Size(74, 25);
             this.skinLabel90.TabIndex = 24;
             this.skinLabel90.Text = "识别码:";
             // 
@@ -5954,7 +5954,7 @@
             this.skinLabel80.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.skinLabel80.Location = new System.Drawing.Point(25, 204);
             this.skinLabel80.Name = "skinLabel80";
-            this.skinLabel80.Size = new System.Drawing.Size(116, 31);
+            this.skinLabel80.Size = new System.Drawing.Size(93, 25);
             this.skinLabel80.TabIndex = 18;
             this.skinLabel80.Text = "检测结果:";
             // 
@@ -5966,7 +5966,7 @@
             this.skinLabel_OnlineDetectResult.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.skinLabel_OnlineDetectResult.Location = new System.Drawing.Point(179, 204);
             this.skinLabel_OnlineDetectResult.Name = "skinLabel_OnlineDetectResult";
-            this.skinLabel_OnlineDetectResult.Size = new System.Drawing.Size(0, 31);
+            this.skinLabel_OnlineDetectResult.Size = new System.Drawing.Size(0, 25);
             this.skinLabel_OnlineDetectResult.TabIndex = 19;
             // 
             // skinLabel_OnlineDetectStation
@@ -5977,7 +5977,7 @@
             this.skinLabel_OnlineDetectStation.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.skinLabel_OnlineDetectStation.Location = new System.Drawing.Point(179, 246);
             this.skinLabel_OnlineDetectStation.Name = "skinLabel_OnlineDetectStation";
-            this.skinLabel_OnlineDetectStation.Size = new System.Drawing.Size(0, 31);
+            this.skinLabel_OnlineDetectStation.Size = new System.Drawing.Size(0, 25);
             this.skinLabel_OnlineDetectStation.TabIndex = 23;
             // 
             // skinLabel_OnlineDecCsq
@@ -5988,7 +5988,7 @@
             this.skinLabel_OnlineDecCsq.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.skinLabel_OnlineDecCsq.Location = new System.Drawing.Point(44, 326);
             this.skinLabel_OnlineDecCsq.Name = "skinLabel_OnlineDecCsq";
-            this.skinLabel_OnlineDecCsq.Size = new System.Drawing.Size(92, 31);
+            this.skinLabel_OnlineDecCsq.Size = new System.Drawing.Size(74, 25);
             this.skinLabel_OnlineDecCsq.TabIndex = 20;
             this.skinLabel_OnlineDecCsq.Text = "信号值:";
             // 
@@ -6000,7 +6000,7 @@
             this.skinLabel_OnlineDecCsqVal.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.skinLabel_OnlineDecCsqVal.Location = new System.Drawing.Point(179, 326);
             this.skinLabel_OnlineDecCsqVal.Name = "skinLabel_OnlineDecCsqVal";
-            this.skinLabel_OnlineDecCsqVal.Size = new System.Drawing.Size(0, 31);
+            this.skinLabel_OnlineDecCsqVal.Size = new System.Drawing.Size(0, 25);
             this.skinLabel_OnlineDecCsqVal.TabIndex = 21;
             // 
             // skinLabel89
@@ -6011,7 +6011,7 @@
             this.skinLabel89.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.skinLabel89.Location = new System.Drawing.Point(25, 246);
             this.skinLabel89.Name = "skinLabel89";
-            this.skinLabel89.Size = new System.Drawing.Size(116, 31);
+            this.skinLabel89.Size = new System.Drawing.Size(93, 25);
             this.skinLabel89.TabIndex = 22;
             this.skinLabel89.Text = "确认桩号:";
             // 
@@ -6042,7 +6042,7 @@
             this.skinLabel_WiFiOnlineDeviceCode.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.skinLabel_WiFiOnlineDeviceCode.Location = new System.Drawing.Point(176, 272);
             this.skinLabel_WiFiOnlineDeviceCode.Name = "skinLabel_WiFiOnlineDeviceCode";
-            this.skinLabel_WiFiOnlineDeviceCode.Size = new System.Drawing.Size(0, 31);
+            this.skinLabel_WiFiOnlineDeviceCode.Size = new System.Drawing.Size(0, 25);
             this.skinLabel_WiFiOnlineDeviceCode.TabIndex = 25;
             // 
             // skinLabel141
@@ -6053,7 +6053,7 @@
             this.skinLabel141.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.skinLabel141.Location = new System.Drawing.Point(41, 272);
             this.skinLabel141.Name = "skinLabel141";
-            this.skinLabel141.Size = new System.Drawing.Size(92, 31);
+            this.skinLabel141.Size = new System.Drawing.Size(74, 25);
             this.skinLabel141.TabIndex = 24;
             this.skinLabel141.Text = "识别码:";
             // 
@@ -6065,7 +6065,7 @@
             this.skinLabel_WiFiOnlineDetectStation.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.skinLabel_WiFiOnlineDetectStation.Location = new System.Drawing.Point(176, 232);
             this.skinLabel_WiFiOnlineDetectStation.Name = "skinLabel_WiFiOnlineDetectStation";
-            this.skinLabel_WiFiOnlineDetectStation.Size = new System.Drawing.Size(0, 31);
+            this.skinLabel_WiFiOnlineDetectStation.Size = new System.Drawing.Size(0, 25);
             this.skinLabel_WiFiOnlineDetectStation.TabIndex = 23;
             // 
             // skinLabel143
@@ -6076,7 +6076,7 @@
             this.skinLabel143.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.skinLabel143.Location = new System.Drawing.Point(22, 232);
             this.skinLabel143.Name = "skinLabel143";
-            this.skinLabel143.Size = new System.Drawing.Size(116, 31);
+            this.skinLabel143.Size = new System.Drawing.Size(93, 25);
             this.skinLabel143.TabIndex = 22;
             this.skinLabel143.Text = "确认桩号:";
             // 
@@ -6088,7 +6088,7 @@
             this.skinLabel_WiFiOnlineDetectResult.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.skinLabel_WiFiOnlineDetectResult.Location = new System.Drawing.Point(176, 192);
             this.skinLabel_WiFiOnlineDetectResult.Name = "skinLabel_WiFiOnlineDetectResult";
-            this.skinLabel_WiFiOnlineDetectResult.Size = new System.Drawing.Size(0, 31);
+            this.skinLabel_WiFiOnlineDetectResult.Size = new System.Drawing.Size(0, 25);
             this.skinLabel_WiFiOnlineDetectResult.TabIndex = 19;
             // 
             // skinLabel147
@@ -6099,7 +6099,7 @@
             this.skinLabel147.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.skinLabel147.Location = new System.Drawing.Point(22, 192);
             this.skinLabel147.Name = "skinLabel147";
-            this.skinLabel147.Size = new System.Drawing.Size(116, 31);
+            this.skinLabel147.Size = new System.Drawing.Size(93, 25);
             this.skinLabel147.TabIndex = 18;
             this.skinLabel147.Text = "检测结果:";
             // 
@@ -6111,7 +6111,7 @@
             this.skinLabel_WiFiOnlineDetectTime.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.skinLabel_WiFiOnlineDetectTime.Location = new System.Drawing.Point(138, 52);
             this.skinLabel_WiFiOnlineDetectTime.Name = "skinLabel_WiFiOnlineDetectTime";
-            this.skinLabel_WiFiOnlineDetectTime.Size = new System.Drawing.Size(0, 31);
+            this.skinLabel_WiFiOnlineDetectTime.Size = new System.Drawing.Size(0, 25);
             this.skinLabel_WiFiOnlineDetectTime.TabIndex = 17;
             // 
             // skinLabel149
@@ -6122,7 +6122,7 @@
             this.skinLabel149.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.skinLabel149.Location = new System.Drawing.Point(29, 52);
             this.skinLabel149.Name = "skinLabel149";
-            this.skinLabel149.Size = new System.Drawing.Size(92, 31);
+            this.skinLabel149.Size = new System.Drawing.Size(74, 25);
             this.skinLabel149.TabIndex = 16;
             this.skinLabel149.Text = "倒计时:";
             // 
@@ -6481,7 +6481,7 @@
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(53, 38);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(121, 29);
+            this.label4.Size = new System.Drawing.Size(98, 25);
             this.label4.TabIndex = 42;
             this.label4.Text = "WiFi名称:";
             // 
@@ -6500,7 +6500,7 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(53, 89);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(121, 29);
+            this.label2.Size = new System.Drawing.Size(98, 25);
             this.label2.TabIndex = 45;
             this.label2.Text = "WiFi密码:";
             this.label2.Click += new System.EventHandler(this.label2_Click_1);
@@ -6509,7 +6509,7 @@
             // 
             this.textBoxWiFiPassWd.Location = new System.Drawing.Point(186, 86);
             this.textBoxWiFiPassWd.Name = "textBoxWiFiPassWd";
-            this.textBoxWiFiPassWd.Size = new System.Drawing.Size(194, 36);
+            this.textBoxWiFiPassWd.Size = new System.Drawing.Size(194, 30);
             this.textBoxWiFiPassWd.TabIndex = 46;
             this.textBoxWiFiPassWd.TextChanged += new System.EventHandler(this.textBoxWiFiPassWd_TextChanged);
             // 
@@ -6517,7 +6517,7 @@
             // 
             this.textBoxWiFiName.Location = new System.Drawing.Point(186, 35);
             this.textBoxWiFiName.Name = "textBoxWiFiName";
-            this.textBoxWiFiName.Size = new System.Drawing.Size(194, 36);
+            this.textBoxWiFiName.Size = new System.Drawing.Size(194, 30);
             this.textBoxWiFiName.TabIndex = 43;
             // 
             // groupBox5
@@ -6554,7 +6554,7 @@
             // 
             this.textBoxSmokeSensor433.Location = new System.Drawing.Point(183, 137);
             this.textBoxSmokeSensor433.Name = "textBoxSmokeSensor433";
-            this.textBoxSmokeSensor433.Size = new System.Drawing.Size(194, 36);
+            this.textBoxSmokeSensor433.Size = new System.Drawing.Size(194, 30);
             this.textBoxSmokeSensor433.TabIndex = 13;
             this.textBoxSmokeSensor433.TextChanged += new System.EventHandler(this.textBoxSmokeSensor433_TextChanged);
             // 
@@ -6563,7 +6563,7 @@
             this.label9.AutoSize = true;
             this.label9.Location = new System.Drawing.Point(9, 140);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(162, 29);
+            this.label9.Size = new System.Drawing.Size(131, 25);
             this.label9.TabIndex = 12;
             this.label9.Text = "设置433地址:";
             this.label9.Click += new System.EventHandler(this.label9_Click);
@@ -6573,7 +6573,7 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(76, 41);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(95, 29);
+            this.label1.Size = new System.Drawing.Size(78, 25);
             this.label1.TabIndex = 0;
             this.label1.Text = "电桩号:";
             this.label1.Click += new System.EventHandler(this.label1_Click);
@@ -6592,7 +6592,7 @@
             // 
             this.textBoxUniqueCode.Location = new System.Drawing.Point(183, 86);
             this.textBoxUniqueCode.Name = "textBoxUniqueCode";
-            this.textBoxUniqueCode.Size = new System.Drawing.Size(194, 36);
+            this.textBoxUniqueCode.Size = new System.Drawing.Size(194, 30);
             this.textBoxUniqueCode.TabIndex = 7;
             this.textBoxUniqueCode.TextChanged += new System.EventHandler(this.textBoxUniqueCode_TextChanged);
             // 
@@ -6620,7 +6620,7 @@
             // 
             this.textBoxChargerID.Location = new System.Drawing.Point(183, 35);
             this.textBoxChargerID.Name = "textBoxChargerID";
-            this.textBoxChargerID.Size = new System.Drawing.Size(194, 36);
+            this.textBoxChargerID.Size = new System.Drawing.Size(194, 30);
             this.textBoxChargerID.TabIndex = 1;
             this.textBoxChargerID.TextChanged += new System.EventHandler(this.textBoxChargerID_TextChanged);
             // 
@@ -6629,13 +6629,13 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(76, 92);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(95, 29);
+            this.label3.Size = new System.Drawing.Size(78, 25);
             this.label3.TabIndex = 6;
             this.label3.Text = "识别码:";
             // 
             // MainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(1325, 821);

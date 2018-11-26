@@ -1,0 +1,15 @@
+E:\dingding\U8U8U8\AutoTestTool_U8\AutoTestTool_U8_20181123\AutoTestTool_U8\AutoTestTool\bin\Debug\AutoTestTool.exe.config
+E:\dingding\U8U8U8\AutoTestTool_U8\AutoTestTool_U8_20181123\AutoTestTool_U8\AutoTestTool\bin\Debug\AutoTestTool.exe
+E:\dingding\U8U8U8\AutoTestTool_U8\AutoTestTool_U8_20181123\AutoTestTool_U8\AutoTestTool\bin\Debug\AutoTestTool.pdb
+E:\dingding\U8U8U8\AutoTestTool_U8\AutoTestTool_U8_20181123\AutoTestTool_U8\AutoTestTool\obj\Debug\AutoTestTool.csprojAssemblyReference.cache
+E:\dingding\U8U8U8\AutoTestTool_U8\AutoTestTool_U8_20181123\AutoTestTool_U8\AutoTestTool\obj\Debug\AutoTestTool.exe.config
+E:\dingding\U8U8U8\AutoTestTool_U8\AutoTestTool_U8_20181123\AutoTestTool_U8\AutoTestTool\obj\Debug\AutoTestTool.AccountSettingForm.resources
+E:\dingding\U8U8U8\AutoTestTool_U8\AutoTestTool_U8_20181123\AutoTestTool_U8\AutoTestTool\obj\Debug\AutoTestTool.U8_SubForms.resources
+E:\dingding\U8U8U8\AutoTestTool_U8\AutoTestTool_U8_20181123\AutoTestTool_U8\AutoTestTool\obj\Debug\AutoTestTool.LoginForm.resources
+E:\dingding\U8U8U8\AutoTestTool_U8\AutoTestTool_U8_20181123\AutoTestTool_U8\AutoTestTool\obj\Debug\AutoTestTool.MainForm.resources
+E:\dingding\U8U8U8\AutoTestTool_U8\AutoTestTool_U8_20181123\AutoTestTool_U8\AutoTestTool\obj\Debug\AutoTestTool.Properties.Resources.resources
+E:\dingding\U8U8U8\AutoTestTool_U8\AutoTestTool_U8_20181123\AutoTestTool_U8\AutoTestTool\obj\Debug\AutoTestTool.csproj.GenerateResource.cache
+E:\dingding\U8U8U8\AutoTestTool_U8\AutoTestTool_U8_20181123\AutoTestTool_U8\AutoTestTool\obj\Debug\AutoTestTool.csproj.CoreCompileInputs.cache
+E:\dingding\U8U8U8\AutoTestTool_U8\AutoTestTool_U8_20181123\AutoTestTool_U8\AutoTestTool\obj\Debug\AutoTestTool.csproj.CopyComplete
+E:\dingding\U8U8U8\AutoTestTool_U8\AutoTestTool_U8_20181123\AutoTestTool_U8\AutoTestTool\obj\Debug\AutoTestTool.exe
+E:\dingding\U8U8U8\AutoTestTool_U8\AutoTestTool_U8_20181123\AutoTestTool_U8\AutoTestTool\obj\Debug\AutoTestTool.pdb

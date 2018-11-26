@@ -87,7 +87,7 @@ namespace AutoTestTool
         UInt32 SubTRUMPETTimeTicks = 0;
         UInt32 SubFLASHTimeTicks = 0;
         UInt32 WholeRS232TimeTicks = 0;
-
+        UInt32 SmokeSensor433TimeTicks = 0;
 
 
         UInt32 MainBoardStartTimeTicks = 0;
@@ -316,7 +316,7 @@ namespace AutoTestTool
             {
                 if (serialPort1 != null)
                 {
-                  //   MsgDebug = true;
+              //       MsgDebug = true;
                     if (MsgDebug)
                     {
                         string send = "";
@@ -457,6 +457,7 @@ namespace AutoTestTool
 
                                 byte calcCRC = ProcTestData.caculatedCRC(validFrame, validFrame.Length - 1);
 
+                                /*
                                // MsgDebug = true;
                                 if (MsgDebug)
                                 {
@@ -469,7 +470,7 @@ namespace AutoTestTool
                                    LOG("Receive: " + receive);
                           
                                 }
-
+                                */
                                 if (calcCRC == checkSum)
                                 {     
                                     arraybuffer.Clear();
@@ -621,6 +622,8 @@ namespace AutoTestTool
                                             int GetSmokeSensor = validFrame[17];
                                             UInt32 SmokeSensorAddr = 0;
 
+                                            SmokeSensorAddr = (UInt32)((validFrame[19] << 16) | (validFrame[20] << 8) | validFrame[21]);
+                                            LOG("433地址  " + SmokeSensorAddr.ToString("X2"));
                                             if (0 == GetSmokeSensor)   //设置返回
                                             {
                                                 if (0 == validFrame[18])
@@ -648,10 +651,10 @@ namespace AutoTestTool
                                                             
                                                             MBTestResultDir["烟感"] = "通过";
                                                             updateControlText(skinLabel_MB_433_RESULT, "测试通过", Color.Green);
-                                                        //    if (6 <= (GetCurrentTimeStamp() - cardNumTimeTicks))
+                                                            if (10 <= (GetCurrentTimeStamp() - SmokeSensor433TimeTicks))
                                                             {
-                                                        //        cardNumTimeTicks = GetCurrentTimeStamp();
-                                                         //       updateTableSelectedIndex(skinTabControl_MB, ++MBTabSelectIndex);
+                                                                SmokeSensor433TimeTicks = GetCurrentTimeStamp();
+                                                                updateTableSelectedIndex(skinTabControl_MB, ++MBTabSelectIndex);
                                                             }
                                                         }
                                                         else
@@ -2021,6 +2024,8 @@ namespace AutoTestTool
                         SendDevReboot();
                         updateControlText(textBox_SB_QR, "");
                         SBTestingFlag = false;
+                        
+                        if (SBTestThread != null)
                         {
                             updateControlText(skinButton_PCBA_STARTTEST, "开始测试");
                             SBTestThread.Abort();
@@ -2166,7 +2171,7 @@ namespace AutoTestTool
             
             while (GetResultObj.testMode == -1)
             {
-                Thread.Sleep(300);
+                Thread.Sleep(500);
                 if (wait++ > WaitTimes)
                 {
                     wait = 0;
@@ -2179,7 +2184,7 @@ namespace AutoTestTool
                     break;
                 }
             }
-
+/*
             if (n > WaitTimes)
             {
                 if (MessageBox.Show((mode == 0) ? "请求开始失败！\r\n是否重试" : "请求结束失败！\r\n是否重试", "提示",
@@ -2188,6 +2193,7 @@ namespace AutoTestTool
                     SendTestModeReq(mode);
                 }
             }
+*/
         }
 
         //发送按键测试指令0x01
@@ -3532,7 +3538,7 @@ namespace AutoTestTool
             if (2 <= (GetCurrentTimeStamp() - SubBoardStartTimeTicks))
             {
                 SubBoardStartTimeTicks = GetCurrentTimeStamp();
-                   skinButton_PCBA_STARTTEST_Click(sender, e);
+               //    skinButton_PCBA_STARTTEST_Click(sender, e);
                 {
                     if ((textBox_MB_QRCode.Text == "" && skinTabControl_PCBATest.SelectedTab == skinTabPage_MainBoard)
                             || (textBox_SB_QR.Text == "" && skinTabControl_PCBATest.SelectedTab == skinTabPage_SubBoard))

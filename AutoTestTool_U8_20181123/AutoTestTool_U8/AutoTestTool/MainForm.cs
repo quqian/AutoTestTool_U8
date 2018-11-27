@@ -5544,6 +5544,22 @@ namespace AutoTestTool
         {
 
         }
+
+        private void skinButton_MB_KEY_SUCCESS_Click(object sender, EventArgs e)
+        {
+            LOG("主板按键检测成功.");
+            MBTestResultDir["按键"] = "通过";
+            updateControlText(skinLabel_MB_KEY_RESULT, "通过", Color.Green);
+            updateTableSelectedIndex(skinTabControl_MB, ++MBTabSelectIndex);
+        }
+
+        private void skinButton_MB_KEY_FALI_Click(object sender, EventArgs e)
+        {
+            LOG("主板检测指示灯失败.");
+            MBTestResultDir["按键"] = "不通过";
+            updateControlText(skinLabel_MB_KEY_RESULT, "不通过", Color.Red);
+            updateTableSelectedIndex(skinTabControl_MB, ++MBTabSelectIndex);
+        }
     }
 }
 

@@ -402,6 +402,8 @@
             this.skinButtonDevReboot = new System.Windows.Forms.Button();
             this.textBoxChargerID = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.skinButton_MB_KEY_FALI = new CCWin.SkinControl.SkinButton();
+            this.skinButton_MB_KEY_SUCCESS = new CCWin.SkinControl.SkinButton();
             this.tableLayoutPanel8.SuspendLayout();
             this.skinTabControl_TestMenu.SuspendLayout();
             this.skinTabPage_CurrentUser.SuspendLayout();
@@ -1047,7 +1049,7 @@
             this.skinTabControl_MB.PageImagePosition = CCWin.SkinControl.SkinTabControl.ePageImagePosition.Left;
             this.skinTabControl_MB.PageNorml = null;
             this.skinTabControl_MB.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.skinTabControl_MB.SelectedIndex = 5;
+            this.skinTabControl_MB.SelectedIndex = 8;
             this.skinTabControl_MB.Size = new System.Drawing.Size(885, 696);
             this.skinTabControl_MB.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.skinTabControl_MB.TabIndex = 0;
@@ -2431,6 +2433,8 @@
             // splitContainer11.Panel2
             // 
             this.splitContainer11.Panel2.BackColor = System.Drawing.Color.White;
+            this.splitContainer11.Panel2.Controls.Add(this.skinButton_MB_KEY_FALI);
+            this.splitContainer11.Panel2.Controls.Add(this.skinButton_MB_KEY_SUCCESS);
             this.splitContainer11.Panel2.Controls.Add(this.skinButton_MB_KEY_RTEST);
             this.splitContainer11.Panel2.Controls.Add(this.skinButton_MB_KEY_OVER);
             this.splitContainer11.Panel2.Controls.Add(this.skinLabel_MB_KEY_RESULT);
@@ -2511,7 +2515,7 @@
             this.skinButton_MB_KEY_RTEST.BorderColor = System.Drawing.Color.DarkGray;
             this.skinButton_MB_KEY_RTEST.ControlState = CCWin.SkinClass.ControlState.Normal;
             this.skinButton_MB_KEY_RTEST.DownBack = null;
-            this.skinButton_MB_KEY_RTEST.Location = new System.Drawing.Point(363, 319);
+            this.skinButton_MB_KEY_RTEST.Location = new System.Drawing.Point(349, 375);
             this.skinButton_MB_KEY_RTEST.MouseBack = null;
             this.skinButton_MB_KEY_RTEST.Name = "skinButton_MB_KEY_RTEST";
             this.skinButton_MB_KEY_RTEST.NormlBack = null;
@@ -2530,7 +2534,7 @@
             this.skinButton_MB_KEY_OVER.BorderColor = System.Drawing.Color.DarkGray;
             this.skinButton_MB_KEY_OVER.ControlState = CCWin.SkinClass.ControlState.Normal;
             this.skinButton_MB_KEY_OVER.DownBack = null;
-            this.skinButton_MB_KEY_OVER.Location = new System.Drawing.Point(197, 319);
+            this.skinButton_MB_KEY_OVER.Location = new System.Drawing.Point(195, 375);
             this.skinButton_MB_KEY_OVER.MouseBack = null;
             this.skinButton_MB_KEY_OVER.Name = "skinButton_MB_KEY_OVER";
             this.skinButton_MB_KEY_OVER.NormlBack = null;
@@ -6633,6 +6637,44 @@
             this.label3.TabIndex = 6;
             this.label3.Text = "识别码:";
             // 
+            // skinButton_MB_KEY_FALI
+            // 
+            this.skinButton_MB_KEY_FALI.BackColor = System.Drawing.Color.Transparent;
+            this.skinButton_MB_KEY_FALI.BaseColor = System.Drawing.Color.DarkGray;
+            this.skinButton_MB_KEY_FALI.BorderColor = System.Drawing.Color.DarkGray;
+            this.skinButton_MB_KEY_FALI.ControlState = CCWin.SkinClass.ControlState.Normal;
+            this.skinButton_MB_KEY_FALI.DownBack = null;
+            this.skinButton_MB_KEY_FALI.Location = new System.Drawing.Point(351, 316);
+            this.skinButton_MB_KEY_FALI.MouseBack = null;
+            this.skinButton_MB_KEY_FALI.Name = "skinButton_MB_KEY_FALI";
+            this.skinButton_MB_KEY_FALI.NormlBack = null;
+            this.skinButton_MB_KEY_FALI.Radius = 15;
+            this.skinButton_MB_KEY_FALI.RoundStyle = CCWin.SkinClass.RoundStyle.All;
+            this.skinButton_MB_KEY_FALI.Size = new System.Drawing.Size(110, 40);
+            this.skinButton_MB_KEY_FALI.TabIndex = 54;
+            this.skinButton_MB_KEY_FALI.Text = "失败";
+            this.skinButton_MB_KEY_FALI.UseVisualStyleBackColor = false;
+            this.skinButton_MB_KEY_FALI.Click += new System.EventHandler(this.skinButton_MB_KEY_FALI_Click);
+            // 
+            // skinButton_MB_KEY_SUCCESS
+            // 
+            this.skinButton_MB_KEY_SUCCESS.BackColor = System.Drawing.Color.Transparent;
+            this.skinButton_MB_KEY_SUCCESS.BaseColor = System.Drawing.Color.DarkGray;
+            this.skinButton_MB_KEY_SUCCESS.BorderColor = System.Drawing.Color.DarkGray;
+            this.skinButton_MB_KEY_SUCCESS.ControlState = CCWin.SkinClass.ControlState.Normal;
+            this.skinButton_MB_KEY_SUCCESS.DownBack = null;
+            this.skinButton_MB_KEY_SUCCESS.Location = new System.Drawing.Point(195, 316);
+            this.skinButton_MB_KEY_SUCCESS.MouseBack = null;
+            this.skinButton_MB_KEY_SUCCESS.Name = "skinButton_MB_KEY_SUCCESS";
+            this.skinButton_MB_KEY_SUCCESS.NormlBack = null;
+            this.skinButton_MB_KEY_SUCCESS.Radius = 15;
+            this.skinButton_MB_KEY_SUCCESS.RoundStyle = CCWin.SkinClass.RoundStyle.All;
+            this.skinButton_MB_KEY_SUCCESS.Size = new System.Drawing.Size(110, 40);
+            this.skinButton_MB_KEY_SUCCESS.TabIndex = 53;
+            this.skinButton_MB_KEY_SUCCESS.Text = "成功";
+            this.skinButton_MB_KEY_SUCCESS.UseVisualStyleBackColor = false;
+            this.skinButton_MB_KEY_SUCCESS.Click += new System.EventHandler(this.skinButton_MB_KEY_SUCCESS_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -7230,5 +7272,7 @@
         private CCWin.SkinControl.SkinLabel skinLabel124;
         private CCWin.SkinControl.SkinLabel skinLabel125;
         private CCWin.SkinControl.SkinButton skinButton_MB_433_RTEST;
+        private CCWin.SkinControl.SkinButton skinButton_MB_KEY_FALI;
+        private CCWin.SkinControl.SkinButton skinButton_MB_KEY_SUCCESS;
     }
 }

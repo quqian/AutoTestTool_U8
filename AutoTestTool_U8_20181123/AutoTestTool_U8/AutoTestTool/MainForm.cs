@@ -65,6 +65,7 @@ namespace AutoTestTool
             CMD_GET_SMOKE_SENSOR433 = 0x27,     //433烟感
             CMD_GET_RS232 = 0x28,               //RS232
             CMD_WIFI_ONLINE_TEST = 0x29,             //wifi联网测试
+            CMD_SHUA_CARD_TEST = 0x2B,             //副板刷卡测试
             CMD_FW_UPDATE_REQ = 0xF1,               //固件升级请求
             CMD_FW_SEND = 0xF2,                     //固件下发
             CMD_24G_COMMUNICATION_TEST = 0xF3,                     //2.4G通信测试
@@ -75,6 +76,12 @@ namespace AutoTestTool
         {
             TEST_MODE_START = 0x00,
             TEST_MODE_STOP
+        };
+
+        enum ENUM_BOARD
+        {
+            MAIN_BOARD_E = 0x00,
+            SUB_BOARD_E
         };
 
         static int LINK_WANG_TEST = 0x03;
@@ -88,6 +95,9 @@ namespace AutoTestTool
         UInt32 SubFLASHTimeTicks = 0;
         UInt32 WholeRS232TimeTicks = 0;
         UInt32 SmokeSensor433TimeTicks = 0;
+        UInt32 SubcardNumTimeTicks = 0;
+        UInt32 MainBoardcardNumTimeTicks = 0;
+        UInt32 MBoardcardNumTimeTicks = 0;
 
 
         UInt32 MainBoardStartTimeTicks = 0;
@@ -101,7 +111,9 @@ namespace AutoTestTool
             public int      key;
             public int[]    keyValue;
             public int      tapCard;
+            public int      SubtapCard;
             public string   cardNum;
+            public string   SubcardNum;
             public int      lcd;
             public int      _2G;
             public int      _2gCSQ;
@@ -128,6 +140,7 @@ namespace AutoTestTool
             public int testMode;
             public int key;
             public int tapCard;
+            public int SubtapCard;
             public int lcd;
             public int _2G;
             public int trumpet;
@@ -577,9 +590,9 @@ namespace AutoTestTool
                                                         MBTestResultDir["卡号"] = GetResultObj.cardNum;
                                                         updateControlText(skinLabel_MB_Card_RESULT, "测试通过", Color.Green);
                                                         
-                                                        //      if (6 <= (GetCurrentTimeStamp() - cardNumTimeTicks))
+                                                        if (6 <= (GetCurrentTimeStamp() - MBoardcardNumTimeTicks))
                                                         {
-                                                            //         cardNumTimeTicks = GetCurrentTimeStamp();
+                                                            MBoardcardNumTimeTicks = GetCurrentTimeStamp();
                                                             updateTableSelectedIndex(skinTabControl_MB, ++MBTabSelectIndex);
                                                         }
                                                     }
@@ -615,7 +628,81 @@ namespace AutoTestTool
                                             }
                                             else if (TestMeunSelectIndex == 2)//整机测试
                                             {
-                                               
+                                                if (TestSettingInfo["CardNum"].ToString() == GetResultObj.cardNum)
+                                                {
+                                                    ChargerTestResultDir["主板刷卡"] = "通过";
+                                                    ChargerTestResultDir["主板卡号"] = GetResultObj.cardNum;
+                                                    updateControlText(skinLabel_CHG_MAIN_CARD_RESULT, "测试通过", Color.Green);
+
+                                                    if (6 <= (GetCurrentTimeStamp() - MainBoardcardNumTimeTicks))
+                                                    {
+                                                        MainBoardcardNumTimeTicks = GetCurrentTimeStamp();
+                                                        updateTableSelectedIndex(skinTabControl_WholeChg, ++chargerTestSelectIndex);
+                                                    }
+                                                }
+                                                else
+                                                {
+                                                    LOG("主板卡号与设置的不一致,请点击重新测试按钮!");
+                                                    updateControlText(skinLabel_CHG_MAIN_CARD_RESULT, "测试不通过", Color.Red);
+                                                    ChargerTestResultDir["主板刷卡"] = "不通过";
+                                                }
+                                            }
+                                            break;
+                                        case (byte)Command.CMD_SHUA_CARD_TEST://副板刷卡
+                                            string pSubStr = "";
+                                            GetResultObj.tapCard = 0XA5;
+                                            //   int ik = 0;
+                                            //   for (ik = 0; ik < 16; ik++)
+                                            //     {
+                                            //        LOG("aaaa:" + ik);
+                                            //        LOG("qqqqqqq:" + validFrame[16 + ik] + "\r\n");
+                                            //    }
+
+                                            GetResultObj.SubcardNum = Encoding.ASCII.GetString(validFrame, 18, 16).ToUpper();   //18指的是第18个字节， 16指的16个字节的卡号
+                                            //    LOG("卡号qqqq:" + GetResultObj.SubcardNum + "\r\n");
+                                            GetResultObj.SubcardNum = GetResultObj.SubcardNum.Remove(GetResultObj.SubcardNum.IndexOf('\0'));
+
+                                            if (48 != validFrame[18])
+                                            {
+                                                pSubStr += validFrame[18].ToString("X2");
+                                                //   LOG("kkk:" + pSubStr + "\r\n");
+                                            }
+                                            //   LOG("PPPPP:" + validFrame[17] + "\r\n");
+                                            pSubStr += GetResultObj.SubcardNum;
+                                            //     LOG("HHH:" + pSubStr + "\r\n");
+                                            LOG("卡号:" + GetResultObj.SubcardNum + "\r\n");
+
+                                            if (0 == validFrame[17])    //主板
+                                            {
+
+                                            }
+                                            else if (1 == validFrame[17])
+                                            {
+                                                if (TestMeunSelectIndex == 1)//PCBA测试
+                                                {
+
+                                                }
+                                                else if (TestMeunSelectIndex == 2)//整机测试
+                                                {
+                                                    if (TestSettingInfo["CardNum"].ToString() == GetResultObj.SubcardNum)
+                                                    {
+                                                        ChargerTestResultDir["副板刷卡"] = "通过";
+                                                        ChargerTestResultDir["副板卡号"] = GetResultObj.SubcardNum;
+                                                        updateControlText(skinLabel_CHG_MAIN_CARD_RESULT, "测试通过", Color.Green);
+
+                                                        if (6 <= (GetCurrentTimeStamp() - SubcardNumTimeTicks))
+                                                        {
+                                                            SubcardNumTimeTicks = GetCurrentTimeStamp();
+                                                            updateTableSelectedIndex(skinTabControl_WholeChg, ++chargerTestSelectIndex);
+                                                        }
+                                                    }
+                                                    else
+                                                    {
+                                                        LOG("主板卡号与设置的不一致,请点击重新测试按钮!");
+                                                        updateControlText(skinLabel_CHG_MAIN_CARD_RESULT, "测试不通过", Color.Red);
+                                                        ChargerTestResultDir["主板刷卡"] = "不通过";
+                                                    }
+                                                }
                                             }
                                             break;
                                         case (byte)Command.CMD_GET_SMOKE_SENSOR433:
@@ -1460,7 +1547,9 @@ namespace AutoTestTool
             updateControlText(skinLabel_CHG_TESTOR_RES_VAL, ChargerTestResultDir["测试员"], Color.Black);
             updateControlText(skinLabel_CHG_FW_RES_VAL, ChargerTestResultDir["软件版本"], Color.Black);
             updateControlText(skinLabeL_CHG_TEST_RES_VAL, ChargerTestResultDir["测试结果"], decideColor(ChargerTestResultDir["测试结果"]));
-            updateControlText(skinLabel_CHG_LED_RES_VAL, ChargerTestResultDir["指示灯"], decideColor(ChargerTestResultDir["指示灯"]));
+            updateControlText(skinLabel_CHG_MAIN_RS232_RES_VAL, ChargerTestResultDir["RS232"], decideColor(ChargerTestResultDir["RS232"]));
+            updateControlText(skinLabel_CHG_MAIN_CARD_RES_VAL, ChargerTestResultDir["主板刷卡"], decideColor(ChargerTestResultDir["主板刷卡"]));
+            updateControlText(skinLabel_CHG_SUB_CARD_RES_VAL, ChargerTestResultDir["副板刷卡"], decideColor(ChargerTestResultDir["副板刷卡"]));
             updateControlText(skinLabel_CHG_TEST_USEDTIME_RES_VAL, ChargerTestResultDir["测试用时"], Color.Black);
             updateControlText(skinLabel_CHG_TEST_TIME_RES_VAL, ChargerTestResultDir["测试时间"], Color.Black);
         }
@@ -1549,15 +1638,9 @@ namespace AutoTestTool
             //ChargerTestResultDir.Add("副板编号", "");
             ChargerTestResultDir.Add("测试员", ProcTestData.PresentAccount);
             ChargerTestResultDir.Add("测试结果", "");
-            ChargerTestResultDir.Add("指示灯", "");
-            ChargerTestResultDir.Add("蓝牙", "");
-            ChargerTestResultDir.Add("2.4G", "");
-            ChargerTestResultDir.Add("2G模块", "");
-            ChargerTestResultDir.Add("信号值", "");
-            ChargerTestResultDir.Add("ICCID", "");
-            ChargerTestResultDir.Add("FLASH", "");
-            ChargerTestResultDir.Add("SETRTC", "");
-            ChargerTestResultDir.Add("GETRTC", "");
+            ChargerTestResultDir.Add("RS232", "");
+            ChargerTestResultDir.Add("主板刷卡", "");
+            ChargerTestResultDir.Add("副板刷卡", "");
             ChargerTestResultDir.Add("测试时间", DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"));
             ChargerTestResultDir.Add("测试用时", "0");
 
@@ -1568,7 +1651,9 @@ namespace AutoTestTool
             updateControlText(skinLabel_CHG_TESTOR_RES_VAL, "");
             updateControlText(skinLabel_CHG_FW_RES_VAL, "");
             updateControlText(skinLabeL_CHG_TEST_RES_VAL, "");
-            updateControlText(skinLabel_CHG_LED_RES_VAL, "");
+            updateControlText(skinLabel_CHG_MAIN_RS232_RES_VAL, "");
+            updateControlText(skinLabel_CHG_MAIN_CARD_RES_VAL, "");
+            updateControlText(skinLabel_CHG_SUB_CARD_RES_VAL, "");
             updateControlText(skinLabel_CHG_TEST_USEDTIME_RES_VAL, "");
             updateControlText(skinLabel_CHG_TEST_TIME_RES_VAL, "");
         }
@@ -2171,7 +2256,7 @@ namespace AutoTestTool
             
             while (GetResultObj.testMode == -1)
             {
-                Thread.Sleep(500);
+                Thread.Sleep(200);
                 if (wait++ > WaitTimes)
                 {
                     wait = 0;
@@ -2209,23 +2294,33 @@ namespace AutoTestTool
             SendSerialData(MakeSendArray((byte)Command.CMD_CARD_TEST, null));
         }
 
+        //发送副板刷卡测试指令0x2B
+        private void SendSubCardTestReq(byte mode)
+        {
+            byte[] data = { mode };
+            SendSerialData(MakeSendArray((byte)Command.CMD_SHUA_CARD_TEST, data));
+        }
+
+
         public int getDOORFlag = -1;
         //发送DOOR测试指令
         private void SendDOORTestReq()
         {
             int wait = 0, n = 0;
-            SendSerialData(MakeSendArray((byte)Command.CMD_DOOR_CONTROL_TEST, null));
+            int waitFlag = 5;
+
+            SendSerialData(MakeSendArray((byte) Command.CMD_DOOR_CONTROL_TEST, null));
 
             while (getDOORFlag == -1)
             {
-                Thread.Sleep(100);
-                if (wait++ > 10)
+                Thread.Sleep(200);
+                if (wait++ > waitFlag)
                 {
                     wait = 0;
                     n++;
-                    SendSerialData(MakeSendArray((byte)Command.CMD_DOOR_CONTROL_TEST, null));
+                    SendSerialData(MakeSendArray((byte) Command.CMD_DOOR_CONTROL_TEST, null));
                 }
-                if (n > 10)
+                if (n > waitFlag)
                 {
                     break;
                 }
@@ -2237,18 +2332,20 @@ namespace AutoTestTool
         private void SendRS232TestReq()
         {
             int wait = 0, n = 0;
+            int waitFlag = 5;
+
             SendSerialData(MakeSendArray((byte)Command.CMD_GET_RS232, null));
 
             while (getRS232Flag == -1)
             {
-                Thread.Sleep(100);
-                if (wait++ > 5)
+                Thread.Sleep(50);
+                if (wait++ > waitFlag)
                 {
                     wait = 0;
                     n++;
                     SendSerialData(MakeSendArray((byte)Command.CMD_GET_RS232, null));
                 }
-                if (n > 10)
+                if (n > waitFlag)
                 {
                     break;
                 }
@@ -2334,23 +2431,6 @@ namespace AutoTestTool
                 byte[] data = ProcTestData.stringToBCD(str);
                 //byte[] data = Encoding.Default.GetBytes(addr);
                 SendSerialData(MakeSendArray((byte)Command.CMD_SET_2_4G_GW_ADD, data));
-          //      int wait = 0, n = 0;
-         //       X6SetGwAddrFlag = 0;
-         //       while (X6SetGwAddrFlag == 0)
-          //      {
-           //         Thread.Sleep(200);
-           //         if (wait++ > 10)
-          //          {
-          //              wait = 0;
-          //              SendSerialData(MakeSendArray((byte)Command.CMD_SET_2_4G_GW_ADD, data));
-          //              LOG("设置2.4g地址...");
-          //              n++;
-         //           }
-          //          if (n > 1)
-         //           {
-          //              break;
-          //          }
-            //    }
             }
             catch (Exception ex)
             {
@@ -2404,23 +2484,6 @@ namespace AutoTestTool
       //      }
 
             SendSerialData(MakeSendArray((byte)Command.CMD_WIFI_CONFIG_TEST, data));
-/*
-            int wait = 0, n = 0;
-            while (getWiFiFlag == -1)
-            {
-                Thread.Sleep(300);
-                if (wait++ > 4)
-                {
-                    wait = 0;
-                    SendSerialData(MakeSendArray((byte)Command.CMD_WIFI_CONFIG_TEST, data));
-                    n++;
-                }
-                if (n > 3)
-                {
-                    break;
-                }
-            }
-*/
         }
 
         //设置桩号
@@ -2431,31 +2494,6 @@ namespace AutoTestTool
             GetResultObj.SetCID = -1;
 
             SendSerialData(MakeSendArray((byte)Command.CMD_SET_SN, data));
-/*
-            int wait = 0, n = 0;
-            while (GetResultObj.SetCID == -1)
-            {
-                Thread.Sleep(200);
-                if (wait++ > 10)
-                {
-                    wait = 0;
-                    SendSerialData(MakeSendArray((byte)Command.CMD_SET_SN, data));
-                    n++;
-                }
-                if (n > 3)
-                {
-                    break;
-                }
-            }
-
-            if (n > 3)
-            {
-                if (MessageBox.Show("桩号设置失败！\r\n是否重试", "提示", MessageBoxButtons.RetryCancel, MessageBoxIcon.Warning) == DialogResult.Retry)
-                {
-                    SendSetID(id);
-                }
-            }
-*/
         }
 
         //设置终端信息
@@ -2475,22 +2513,24 @@ namespace AutoTestTool
                 SendSerialData(MakeSendArray((byte)Command.CMD_SET_TERMINAL_INFO, list.ToArray()));
 
                 int wait = 0, n = 0;
+                int waitFlag = 0;
+
                 while (setTerminalInfoFlag == false)
                 {
                     Thread.Sleep(200);
-                    if (wait++ > 10)
+                    if (wait++ > waitFlag)
                     {
                         wait = 0;
-                        SendSerialData(MakeSendArray((byte)Command.CMD_GET_CHARGER_SN, null));
                         n++;
+                        SendSerialData(MakeSendArray((byte)Command.CMD_GET_CHARGER_SN, null));
                     }
-                    if (n > 3)
+                    if (n > waitFlag)
                     {
                         break;
                     }
                 }
 
-                if (n > 3)
+                if (n > waitFlag)
                 {
                     if (MessageBox.Show("设置终端信息失败！\r\n是否重试", "提示", MessageBoxButtons.RetryCancel, MessageBoxIcon.Warning) == DialogResult.Retry)
                     {
@@ -2545,18 +2585,20 @@ namespace AutoTestTool
         private void X6SendBlueToothTestReq()
         {
             int wait = 0, n = 0;
+            int waitFlag = 5;
+
             SendSerialData(MakeSendArray((byte)Command.CMD_BT_TEST, null));
 
             while (getBlueToothFlag == -1)
             {
-                Thread.Sleep(100);
-                if (wait++ > 10)
+                Thread.Sleep(200);
+                if (wait++ > waitFlag)
                 {
                     wait = 0;
                     n++;
                     SendSerialData(MakeSendArray((byte)Command.CMD_BT_TEST, null));
                 }
-                if (n > 10)
+                if (n > waitFlag)
                 {
                     break;
                 }
@@ -2569,18 +2611,20 @@ namespace AutoTestTool
         private void R6Send24G_COMMUNICATION_TestReq()
         {
             int wait = 0, n = 0;
+            int waitFlag =5;
+
             SendSerialData(MakeSendArray((byte)Command.CMD_24G_COMMUNICATION_TEST, null));
 
             while (getR6_24G_Flag == -1)
             {
                 Thread.Sleep(300);
-                if (wait++ > 10)
+                if (wait++ > waitFlag)
                 {
                     wait = 0;
                     n++;
                     SendSerialData(MakeSendArray((byte)Command.CMD_24G_COMMUNICATION_TEST, null));
                 }
-                if (n > 10)
+                if (n > waitFlag)
                 {
                     break;
                 }
@@ -2636,28 +2680,30 @@ namespace AutoTestTool
             getSnFlag = -1;
             SendSerialData(MakeSendArray((byte)Command.CMD_GET_CHARGER_SN, null));
             int wait = 0, n = 0;
+            int waitFlag = 5;
+
             while (getSnFlag == -1)
             {
-                Thread.Sleep(500);
-                if (wait++ > 5)
+                Thread.Sleep(200);
+                if (wait++ > waitFlag)
                 {
                     wait = 0;
                     SendSerialData(MakeSendArray((byte)Command.CMD_GET_CHARGER_SN, null));
                     n++;
                 }
-                if (n > 3)
+                if (n > waitFlag)
                 {
                     break;
                 }
             }
 
-       //     if (n > 3)
-       //     {
-       //         if (MessageBox.Show("获取桩号失败！\r\n是否重试", "提示", MessageBoxButtons.RetryCancel, MessageBoxIcon.Warning) == DialogResult.Retry)
-       //         {
-       //             SendGetID();
-       //         }
-       //     }
+            //     if (n > waitFlag)
+            //     {
+            //         if (MessageBox.Show("获取桩号失败！\r\n是否重试", "提示", MessageBoxButtons.RetryCancel, MessageBoxIcon.Warning) == DialogResult.Retry)
+            //         {
+            //             SendGetID();
+            //         }
+            //     }
         }
 
         //获取识别码
@@ -2667,31 +2713,33 @@ namespace AutoTestTool
             getDeviceCodeFlag = -1;
             SendSerialData(MakeSendArray((byte)Command.CMD_GET_DEVICE_CODE, null));
             int wait = 0, n = 0;
+            int waitFlag = 0;
+
             while (getDeviceCodeFlag == -1)
             {
-                Thread.Sleep(500);
-                if (wait++ > 5)
+                Thread.Sleep(100);
+                if (wait++ > waitFlag)
                 {
                     wait = 0;
-                    SendSerialData(MakeSendArray((byte)Command.CMD_GET_DEVICE_CODE, null));
                     n++;
+                    SendSerialData(MakeSendArray((byte)Command.CMD_GET_DEVICE_CODE, null));
                 }
-                if (n > 3)
+                if (n > waitFlag)
                 {
                     break;
                 }
             }
 
-      //      if (n > 3)
-      //      {
-      //          if (MessageBox.Show("获取识别码失败！\r\n是否重试", "提示", MessageBoxButtons.RetryCancel, MessageBoxIcon.Warning) == DialogResult.Retry)
-      //          {
-      //              SendGetDeviceCode();
-      //          }
-       //     }
+            //      if (n > waitFlag)
+            //      {
+            //          if (MessageBox.Show("获取识别码失败！\r\n是否重试", "提示", MessageBoxButtons.RetryCancel, MessageBoxIcon.Warning) == DialogResult.Retry)
+            //          {
+            //              SendGetDeviceCode();
+            //          }
+            //     }
         }
 
-        
+
 
         private void SendGetFwVersionReq(byte operate)
         {
@@ -2732,24 +2780,26 @@ namespace AutoTestTool
             GetResultObj.SetPcbCode = -1;
             SendSerialData(MakeSendArray((byte)Command.CMD_SET_PCB, data.ToArray()));
             int wait = 0, n = 0;
+            int waitFlag = 5;
+
             while (GetResultObj.SetPcbCode == -1)
             {
-                Thread.Sleep(300);
-                if (wait++ > 10)
+                Thread.Sleep(100);
+                if (wait++ > waitFlag)
                 {
                     wait = 0;
                     n++;
                     SendSerialData(MakeSendArray((byte)Command.CMD_SET_PCB, data.ToArray()));
 
                 }
-                if (n > 3)
+                if (n > waitFlag)
                 {
                     break;
                 }
 
             }
 
-            if (n > 10)
+            if (n > waitFlag)
             {
                 if (MessageBox.Show("PCB编号设置失败！\r\n是否重试", "提示", MessageBoxButtons.RetryCancel, MessageBoxIcon.Warning) == DialogResult.Retry)
                 {
@@ -3961,6 +4011,8 @@ namespace AutoTestTool
                 else if (ChargerTestingFlag)
                 {
                     countDownTimeCharger.RS232 = ItemCountDown(countDownTimeCharger.RS232, skinLabel_WholeChg_RS232_Time, skinTabControl_WholeChg, skinTabPage_WholeChg_RS232);
+                    countDownTimeCharger.tapCard = ItemCountDown(countDownTimeCharger.tapCard, skinLabel_WholeChg_MAIN_CARD_Time, skinTabControl_WholeChg, skinTabPage_WholeChg_MAIN_CARD);
+                    countDownTimeCharger.SubtapCard = ItemCountDown(countDownTimeCharger.SubtapCard, skinLabel_WholeChg_SUB_CARD_Time, skinTabControl_WholeChg, skinTabPage_WholeChg_SUB_CARD);
                 }
                 else if (onlineDectecFlag)
                 {
@@ -5559,6 +5611,59 @@ namespace AutoTestTool
             MBTestResultDir["按键"] = "不通过";
             updateControlText(skinLabel_MB_KEY_RESULT, "不通过", Color.Red);
             updateTableSelectedIndex(skinTabControl_MB, ++MBTabSelectIndex);
+        }
+
+        private void skinLabel83_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void splitContainer8_Panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void splitContainer4_Panel2_Paint_1(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void skinButton_WholeChg_MAIN_CARD_Over_Click(object sender, EventArgs e)
+        {
+            LOG("跳过整机主板刷卡测试.");
+            updateControlText(skinLabel_CHG_MAIN_CARD_RESULT, "跳过", Color.Green);
+            //   LOG("灯按键跳过1chargerTestSelectIndex." + chargerTestSelectIndex);
+            updateTableSelectedIndex(skinTabControl_WholeChg, ++chargerTestSelectIndex);
+        }
+
+        private void skinButton_WholeChg_SUB_CARD_Over_Click(object sender, EventArgs e)
+        {
+            LOG("跳过整机副板刷卡测试.");
+            updateControlText(skinLabel_CHG_SUB_CARD_RESULT, "跳过", Color.Green);
+            //   LOG("灯按键跳过1chargerTestSelectIndex." + chargerTestSelectIndex);
+            updateTableSelectedIndex(skinTabControl_WholeChg, ++chargerTestSelectIndex);
+        }
+
+        private void skinButton_WholeChg_MAIN_CARD_RTest_Click(object sender, EventArgs e)
+        {
+            ItemTestTime = GetCurrentTimeStamp();
+            countDownTimeCharger.tapCard = countdownTime;
+            ChargerTestResultDir["主板刷卡"] = "";
+            updateControlText(skinLabel_CHG_MAIN_CARD_RESULT, "");
+            LOG("整机主板刷卡重新测试.");
+            //发送刷卡测试指令
+            SendCardTestReq();
+        }
+
+        private void skinButton_WholeChg_SUB_CARD_RTest_Click(object sender, EventArgs e)
+        {
+            ItemTestTime = GetCurrentTimeStamp();
+            countDownTimeCharger.SubtapCard = countdownTime;
+            ChargerTestResultDir["副板刷卡"] = "";
+            updateControlText(skinLabel_CHG_SUB_CARD_RESULT, "");
+            LOG("整机副板刷卡重新测试.");
+            //发送刷卡测试指令
+            SendSubCardTestReq((byte)ENUM_BOARD.SUB_BOARD_E);
         }
     }
 }

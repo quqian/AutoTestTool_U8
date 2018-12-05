@@ -639,6 +639,7 @@ namespace AutoTestTool
         {
             byte[] data = { mode };
             int wait = 0, n = 0;
+            int waitFlag = 5;
 
             X6GetResultObj.testMode = -1;
             X6GetResultObj.testModeAllow = -1;
@@ -647,21 +648,21 @@ namespace AutoTestTool
 
             while (X6GetResultObj.testMode == -1)
             {
-                Thread.Sleep(500);
-                if (wait++ > 10)
+                Thread.Sleep(200);
+                if (wait++ > waitFlag)
                 {
                     wait = 0;
                     n++;
                     SendSerialData(MakeSendArray((byte)X6Command.TestMode, data));
                 }
 
-                if (n > 3)
+                if (n > waitFlag)
                 {
                     break;
                 }
             }
 
-            if (n > 10)
+            if (n > waitFlag)
             {
                 if (MessageBox.Show((mode == 0) ? "请求开始失败！\r\n是否重试" : "请求结束失败！\r\n是否重试", "提示",
                     MessageBoxButtons.RetryCancel, MessageBoxIcon.Warning) == DialogResult.Retry)
@@ -682,18 +683,20 @@ namespace AutoTestTool
         private void X6Send24G_COMMUNICATION_TestReq()
         {
             int wait = 0, n = 0;
+            int waitFlag = 5;
+
             SendSerialData(MakeSendArray((byte)X6Command.CMD_24G_COMMUNICATION_TEST, null));
 
             while (getX6_24G_Flag == -1)
             {
-                Thread.Sleep(30);
-                if (wait++ > 10)
+                Thread.Sleep(100);
+                if (wait++ > waitFlag)
                 {
                     wait = 0;
                     n++;
                     SendSerialData(MakeSendArray((byte)X6Command.CMD_24G_COMMUNICATION_TEST, null));
                 }
-                if (n > 10)
+                if (n > waitFlag)
                 {
                     break;
                 }
@@ -706,18 +709,19 @@ namespace AutoTestTool
             X6GetResultObj.tapCard = -1;
             SendSerialData(MakeSendArray((byte)X6Command.CMD_CARD_TEST, null));
             int wait = 0, n = 0;
+            int waitFlag = 5;
 
             while (X6GetResultObj.tapCard == -1)
             {
-                Thread.Sleep(50);
-                if (wait++ > 10)
+                Thread.Sleep(100);
+                if (wait++ > waitFlag)
                 {
                     wait = 0;
                     n++;
                     SendSerialData(MakeSendArray((byte)X6Command.CMD_CARD_TEST, null));
 
                 }
-                if (n > 10)
+                if (n > waitFlag)
                 {
                     break;
                 }
@@ -729,19 +733,21 @@ namespace AutoTestTool
         private void X6SendBlueToothTestReq()
         {
             int wait = 0, n = 0;
+            int waitFlag = 5;
+
             SendSerialData(MakeSendArray((byte)X6Command.CMD_BT_TEST, null));
 
             while (getBlueToothFlag == -1)
             {
-                Thread.Sleep(30);
-                if (wait++ > 10)
+                Thread.Sleep(100);
+                if (wait++ > waitFlag)
                 {
                     wait = 0;
                     n++;
                     SendSerialData(MakeSendArray((byte)X6Command.CMD_BT_TEST, null));
                     LOG("整机发送蓝牙测试请求!");
                 }
-                if (n > 10)
+                if (n > waitFlag)
                 {
                     break;
                 }
@@ -908,24 +914,26 @@ namespace AutoTestTool
             X6GetResultObj.SetPcbCode = -1;
             SendSerialData(MakeSendArray((byte)X6Command.CMD_SET_PCB, data.ToArray()));
             int wait = 0, n = 0;
+            int waitFlag = 5;
+
             while (X6GetResultObj.SetPcbCode == -1)
             {
                 Thread.Sleep(300);
-                if (wait++ > 10)
+                if (wait++ > waitFlag)
                 {
                     wait = 0;
                     n++;
                     SendSerialData(MakeSendArray((byte)X6Command.CMD_SET_PCB, data.ToArray()));
 
                 }
-                if (n > 3)
+                if (n > waitFlag)
                 {
                     break;
                 }
 
             }
 
-            if (n > 10)
+            if (n > waitFlag)
             {
                 if (MessageBox.Show("PCB编号设置失败！\r\n是否重试", "提示", MessageBoxButtons.RetryCancel, MessageBoxIcon.Warning) == DialogResult.Retry)
                 {
@@ -949,17 +957,19 @@ namespace AutoTestTool
                 //byte[] data = Encoding.Default.GetBytes(addr);
                 SendSerialData(MakeSendArray((byte)X6Command.CMD_START_AGING_TEST, data));
                 int wait = 0, n = 0;
+                int waitFlag = 5;
+
                 while (X6SendOldTestFlag == 0)
                 {
                     Thread.Sleep(200);
-                    if (wait++ > 10)
+                    if (wait++ > waitFlag)
                     {
                         wait = 0;
                         LOG("正在请求老机测试");
                         SendSerialData(MakeSendArray((byte)X6Command.CMD_START_AGING_TEST, data));
                         n++;
                     }
-                    if (n > 10)
+                    if (n > waitFlag)
                     {
                         break;
                     }
@@ -981,17 +991,19 @@ namespace AutoTestTool
                 //byte[] data = Encoding.Default.GetBytes(addr);
                 SendSerialData(MakeSendArray((byte)X6Command.CMD_SET_TERMINAL_INFO, data));
                 int wait = 0, n = 0;
+                int waitFlag = 5;
+
                 while (X6SetLocal2_4GAddrFlag == 0)
                 {
                     Thread.Sleep(200);
-                    if (wait++ > 10)
+                    if (wait++ > waitFlag)
                     {
                         wait = 0;
                         LOG("正在设置X6 2.4g地址...");
                         SendSerialData(MakeSendArray((byte)X6Command.CMD_SET_TERMINAL_INFO, data));
                         n++;
                     }
-                    if (n > 10)
+                    if (n > waitFlag)
                     {
                         break;
                     }
@@ -1021,17 +1033,19 @@ namespace AutoTestTool
                 //byte[] data = Encoding.Default.GetBytes(addr);
                 SendSerialData(MakeSendArray((byte)X6Command.CMD_SET_2_4G_GW_ADD, data));
                 int wait = 0, n = 0;
+                int waitFlag = 5;
+
                 while (X6SetGwAddrFlag == 0)
                 {
                     Thread.Sleep(200);
-                    if (wait++ > 10)
+                    if (wait++ > waitFlag)
                     {
                         wait = 0;
                         LOG("正在设置网关地址...");
                         SendSerialData(MakeSendArray((byte)X6Command.CMD_SET_2_4G_GW_ADD, data));
                         n++;
                     }
-                    if (n > 3)
+                    if (n > waitFlag)
                     {
                         break;
                     }
@@ -1054,22 +1068,24 @@ namespace AutoTestTool
 
             SendSerialData(MakeSendArray((byte)X6Command.CMD_SET_SN, data));
             int wait = 0, n = 0;
+            int waitFlag = 5;
+
             while (X6GetResultObj.SetCID == -1)
             {
                 Thread.Sleep(200);
-                if (wait++ > 10)
+                if (wait++ > waitFlag)
                 {
                     wait = 0;
                     SendSerialData(MakeSendArray((byte)X6Command.CMD_SET_SN, data));
                     n++;
                 }
-                if (n > 3)
+                if (n > waitFlag)
                 {
                     break;
                 }
             }
 
-            if (n > 3)
+            if (n > waitFlag)
             {
                 if (MessageBox.Show("桩号设置失败！\r\n是否重试", "提示", MessageBoxButtons.RetryCancel, MessageBoxIcon.Warning) == DialogResult.Retry)
                 {
@@ -2127,22 +2143,24 @@ namespace AutoTestTool
                 SendSerialData(MakeSendArray((byte)X6Command.CMD_SET_TERMINAL_INFO, list.ToArray()));
 
                 int wait = 0, n = 0;
+                int waitFlag = 5;
+
                 while (setTerminalInfoFlag == false)
                 {
                     Thread.Sleep(200);
-                    if (wait++ > 10)
+                    if (wait++ > waitFlag)
                     {
                         wait = 0;
                         SendSerialData(MakeSendArray((byte)X6Command.CMD_GET_CHARGER_SN, null));
                         n++;
                     }
-                    if (n > 3)
+                    if (n > waitFlag)
                     {
                         break;
                     }
                 }
 
-                if (n > 3)
+                if (n > waitFlag)
                 {
                     if (MessageBox.Show("设置终端信息失败！\r\n是否重试", "提示", MessageBoxButtons.RetryCancel, MessageBoxIcon.Warning) == DialogResult.Retry)
                     {

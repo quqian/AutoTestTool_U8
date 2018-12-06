@@ -66,6 +66,7 @@ namespace AutoTestTool
             CMD_GET_RS232 = 0x28,               //RS232
             CMD_WIFI_ONLINE_TEST = 0x29,             //wifi联网测试
             CMD_SHUA_CARD_TEST = 0x2B,             //副板刷卡测试
+            CMD_DOOR_STATUS_TEST = 0x2C,             //门锁状态测试
             CMD_FW_UPDATE_REQ = 0xF1,               //固件升级请求
             CMD_FW_SEND = 0xF2,                     //固件下发
             CMD_24G_COMMUNICATION_TEST = 0xF3,                     //2.4G通信测试
@@ -158,6 +159,7 @@ namespace AutoTestTool
             public int RS232;
      //       public int WIFI;
             public int DOOR;
+            public int DOOR_STATUS;
         };
 
 
@@ -778,6 +780,47 @@ namespace AutoTestTool
                                                        // MBTestResultDir["DOOR"] = "通过";
                                                       //  updateControlText(skinLabel_MB_DOOR_RESULT, "测试通过", Color.Green);
                                                       //  updateTableSelectedIndex(skinTabControl_MB, ++MBTabSelectIndex);
+                                                    }
+                                                    else
+                                                    {
+                                                        LOG("WIFI测试错误!");
+                                                        updateControlText(skinLabel_MB_DOOR_RESULT, "测试不通过", Color.Red);
+                                                        MBTestResultDir["DOOR"] = "不通过";
+                                                    }
+                                                }
+                                                else if (PCBATestSelectIndex == 1)//副板测试
+                                                {
+
+                                                }
+                                            }
+                                            else if (TestMeunSelectIndex == 2)//整机测试
+                                            {
+
+                                            }
+                                            break;
+                                        case (byte)Command.CMD_DOOR_STATUS_TEST:
+                                            getDOORStatusFlag = 0XA5;
+                                            int GetDOORStatusValue = validFrame[17];
+
+                                            if (TestMeunSelectIndex == 1)//PCBA测试
+                                            {
+                                                if (PCBATestSelectIndex == 0)//主板测试
+                                                {
+                                                    if (0 == GetDOORStatusValue)
+                                                    {
+                                                        if (0 == validFrame[18])
+                                                        {
+                                                            // MBTestResultDir["DOOR"] = "通过";
+                                                            LOG("门锁已打开!");
+                                                            updateControlText(skinLabel_MB_DOOR_STATUS, "开启", Color.Green);
+                                                            //  updateTableSelectedIndex(skinTabControl_MB, ++MBTabSelectIndex);
+                                                        }
+                                                        else
+                                                        {
+                                                            LOG("门锁已关闭!");
+                                                            updateControlText(skinLabel_MB_DOOR_STATUS, "关闭", Color.Red);
+                                                            MBTestResultDir["DOOR"] = "不通过";
+                                                        }
                                                     }
                                                     else
                                                     {
@@ -1521,6 +1564,7 @@ namespace AutoTestTool
             updateControlText(MB_KEY_RESULT_VAL, MBTestResultDir["按键"], decideColor(MBTestResultDir["按键"]));
       //      updateControlText(MB_WIFI_RESULT_VAL, MBTestResultDir["WIFI"], decideColor(MBTestResultDir["WIFI"]));
             updateControlText(MB_DOOR_RESULT_VAL, MBTestResultDir["DOOR"], decideColor(MBTestResultDir["DOOR"]));
+            updateControlText(MB_DOOR_STATUS_RESULT_VAL, MBTestResultDir["DOOR_STATUS"], decideColor(MBTestResultDir["DOOR_STATUS"]));
             updateControlText(MB_TEST_USED_TIME_VAL, MBTestResultDir["测试用时"], Color.Black);
             updateControlText(skinLabel_MB_TEST_START_TIME, MBTestResultDir["测试时间"], Color.Black);
         }
@@ -1574,6 +1618,7 @@ namespace AutoTestTool
             MBTestResultDir.Add("按键", "");
     //        MBTestResultDir.Add("WIFI", "");
             MBTestResultDir.Add("DOOR", "");
+            MBTestResultDir.Add("DOOR_STATUS", "");
             MBTestResultDir.Add("测试时间", DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"));
             MBTestResultDir.Add("测试用时", "0");
 
@@ -1594,6 +1639,7 @@ namespace AutoTestTool
             updateControlText(MB_KEY_RESULT_VAL, "");
       //      updateControlText(MB_WIFI_RESULT_VAL, "");
             updateControlText(MB_DOOR_RESULT_VAL, "");
+            updateControlText(MB_DOOR_STATUS_RESULT_VAL, "");
             updateControlText(MB_TEST_USED_TIME_VAL, "");
             updateControlText(skinLabel_MB_TEST_START_TIME, "");
         }
@@ -2319,6 +2365,32 @@ namespace AutoTestTool
                     wait = 0;
                     n++;
                     SendSerialData(MakeSendArray((byte) Command.CMD_DOOR_CONTROL_TEST, null));
+                }
+                if (n > waitFlag)
+                {
+                    break;
+                }
+            }
+        }
+
+        public int getDOORStatusFlag = -1;
+        //发送DOOR状态测试指令
+        private void SendDOORStatusTestReq(byte mode)
+        {
+            int wait = 0, n = 0;
+            int waitFlag = 5;
+            byte[] data = { mode };
+
+            SendSerialData(MakeSendArray((byte)Command.CMD_DOOR_STATUS_TEST, data));
+
+            while (getDOORStatusFlag == -1)
+            {
+                Thread.Sleep(200);
+                if (wait++ > waitFlag)
+                {
+                    wait = 0;
+                    n++;
+                    SendSerialData(MakeSendArray((byte)Command.CMD_DOOR_STATUS_TEST, data));
                 }
                 if (n > waitFlag)
                 {
@@ -3998,6 +4070,7 @@ namespace AutoTestTool
                     countDownTime_MB.key = ItemCountDown(countDownTime_MB.key, skinLabel_MB_KEY_TIME, skinTabControl_MB, skinTabPage_MB_KEY);
           //          countDownTime_MB.WIFI = ItemCountDown(countDownTime_MB.WIFI, skinLabel_MB_WIFI_TIME, skinTabControl_MB, skinTabPage_MB_WIFI);
                     countDownTime_MB.DOOR = ItemCountDown(countDownTime_MB.DOOR, skinLabel_MB_DOOR_TIME, skinTabControl_MB, skinTabPage_MB_DOOR);
+                    countDownTime_MB.DOOR_STATUS = ItemCountDown(countDownTime_MB.DOOR_STATUS, skinLabel_MB_DOOR_STATUS_TIME, skinTabControl_MB, skinTabPage_MB_DOOR_STATUS);
                     //          countDownTime_MB.setRtc = ItemCountDown(countDownTime_MB.setRtc, skinLabel_MB_SETRTC_TIME, skinTabControl_MB, skinTabPage_MB_SET_RTC);
                     //          countDownTime_MB.getRtc = ItemCountDown(countDownTime_MB.getRtc, skinLabel_MB_GETRTC_TIME, skinTabControl_MB, skinTabPage_MB_GET_RTC);
                 }
@@ -5664,6 +5737,46 @@ namespace AutoTestTool
             LOG("整机副板刷卡重新测试.");
             //发送刷卡测试指令
             SendSubCardTestReq((byte)ENUM_BOARD.SUB_BOARD_E);
+        }
+        
+        private void skinButton_MB_DOOR_STATUS_SUCCESS_Click(object sender, EventArgs e)
+        {
+            LOG("主板检测门锁状态成功.");
+            MBTestResultDir["DOOR_STATUS"] = "通过";
+            updateControlText(skinLabel_MB_DOOR_STATUS_RESULT, "通过", Color.Green);
+            updateTableSelectedIndex(skinTabControl_MB, ++MBTabSelectIndex);
+        }
+
+        private void skinButton_MB_DOOR_STATUS_FALI_Click(object sender, EventArgs e)
+        {
+            LOG("主板检测门锁状态失败.");
+            MBTestResultDir["DOOR_STATUS"] = "不通过";
+            updateControlText(skinLabel_MB_DOOR_STATUS_RESULT, "不通过", Color.Red);
+            updateTableSelectedIndex(skinTabControl_MB, ++MBTabSelectIndex);
+        }
+
+        private void skinButton_MB_DOOR_STATUS_OVER_Click(object sender, EventArgs e)
+        {
+            LOG("跳过主板门锁状态测试.");
+            //MBTestResultDir["Flash"] = "跳过";
+            updateControlText(skinLabel_MB_DOOR_STATUS_RESULT, "跳过", Color.Green);
+            updateTableSelectedIndex(skinTabControl_MB, ++MBTabSelectIndex);
+        }
+
+        private void skinButton_MB_DOOR_STATUS_RTEST_Click(object sender, EventArgs e)
+        {
+            ItemTestTime = GetCurrentTimeStamp();
+            countDownTime_MB.DOOR_STATUS = countdownTime;
+            MBTestResultDir["DOOR_STATUS"] = "";
+            updateControlText(skinLabel_MB_DOOR_RESULT, "");
+            LOG("主板DOOR状态重新测试.");
+            //发送DOOR状态测试指令
+            SendDOORStatusTestReq((byte)ENUM_BOARD.MAIN_BOARD_E);
+        }
+
+        private void skinLabel17_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

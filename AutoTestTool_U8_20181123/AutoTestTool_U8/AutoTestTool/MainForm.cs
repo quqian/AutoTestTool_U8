@@ -783,9 +783,9 @@ namespace AutoTestTool
                                                     }
                                                     else
                                                     {
-                                                        LOG("WIFI测试错误!");
-                                                        updateControlText(skinLabel_MB_DOOR_RESULT, "测试不通过", Color.Red);
-                                                        MBTestResultDir["DOOR"] = "不通过";
+                                                     //   LOG("WIFI测试错误!");
+                                                     //   updateControlText(skinLabel_MB_DOOR_RESULT, "测试不通过", Color.Red);
+                                                     //   MBTestResultDir["DOOR"] = "不通过";
                                                     }
                                                 }
                                                 else if (PCBATestSelectIndex == 1)//副板测试
@@ -819,14 +819,14 @@ namespace AutoTestTool
                                                         {
                                                             LOG("门锁已关闭!");
                                                             updateControlText(skinLabel_MB_DOOR_STATUS, "关闭", Color.Red);
-                                                            MBTestResultDir["DOOR"] = "不通过";
+                                                            MBTestResultDir["DOOR_STATUS"] = "不通过";
                                                         }
                                                     }
                                                     else
                                                     {
-                                                        LOG("WIFI测试错误!");
+                                                        LOG("门锁状态测试错误!");
                                                         updateControlText(skinLabel_MB_DOOR_RESULT, "测试不通过", Color.Red);
-                                                        MBTestResultDir["DOOR"] = "不通过";
+                                                        MBTestResultDir["DOOR_STATUS"] = "不通过";
                                                     }
                                                 }
                                                 else if (PCBATestSelectIndex == 1)//副板测试

@@ -1934,7 +1934,27 @@ namespace AutoTestTool
                             updateTableSelectedIndex(skinTabControl_MB, ++MBTabSelectIndex);
                         }
                     break;
-                    case 0x0A://结束测试
+                    case 0x0A://doorStatus
+                        if (selectIndexUpgradeFlag == true)
+                        {
+                            selectIndexUpgradeFlag = false;
+                            ItemTestTime = GetCurrentTimeStamp();
+                            countDownTime_MB.DOOR_STATUS = countdownTime;
+                            MBTestResultDir["DOOR_STATUS"] = "";
+                            updateControlText(skinLabel_MB_DOOR_STATUS_RESULT, "");
+                            LOG("主板发送 DOOR_STATUS 测试命令.");
+                            //发送 DOOR_STATUS 测试指令
+                            SendDOORStatusTestReq((byte)ENUM_BOARD.MAIN_BOARD_E);
+                        }
+                        if ((GetCurrentTimeStamp() - ItemTestTime) >= 30)//超时
+                        {
+                            LOG("测试 DOOR_STATUS 超时.");
+                            MBTestResultDir["DOOR_STATUS"] = "不通过";
+                            updateControlText(skinLabel_MB_DOOR_STATUS_RESULT, "不通过", Color.Red);
+                            updateTableSelectedIndex(skinTabControl_MB, ++MBTabSelectIndex);
+                        }
+                        break;
+                    case 0x0B://结束测试
                         SendGetFwVersionReq(0x00);
                         Thread.Sleep(100);
                         SendSetPcbCodeReq(0x00, textBox_MB_QRCode.Text.Trim());
@@ -5768,13 +5788,19 @@ namespace AutoTestTool
             ItemTestTime = GetCurrentTimeStamp();
             countDownTime_MB.DOOR_STATUS = countdownTime;
             MBTestResultDir["DOOR_STATUS"] = "";
-            updateControlText(skinLabel_MB_DOOR_RESULT, "");
+            updateControlText(skinLabel_MB_DOOR_STATUS_RESULT, "");
+            updateControlText(skinLabel_MB_DOOR_STATUS, "");
             LOG("主板DOOR状态重新测试.");
             //发送DOOR状态测试指令
             SendDOORStatusTestReq((byte)ENUM_BOARD.MAIN_BOARD_E);
         }
 
         private void skinLabel17_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void skinLabel_MB_DOOR_STATUS_Click(object sender, EventArgs e)
         {
 
         }

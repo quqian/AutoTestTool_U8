@@ -181,9 +181,24 @@
             this.skinButton_MB_DOOR_OVER = new CCWin.SkinControl.SkinButton();
             this.skinLabel_MB_DOOR_RESULT = new CCWin.SkinControl.SkinLabel();
             this.skinLabel139 = new CCWin.SkinControl.SkinLabel();
+            this.skinTabPage_MB_DOOR_STATUS = new CCWin.SkinControl.SkinTabPage();
+            this.splitContainer6 = new System.Windows.Forms.SplitContainer();
+            this.skinLabel_MB_DOOR_STATUS_TIME = new CCWin.SkinControl.SkinLabel();
+            this.skinLabel44 = new CCWin.SkinControl.SkinLabel();
+            this.skinLabel51 = new CCWin.SkinControl.SkinLabel();
+            this.skinLabel_MB_DOOR_STATUS = new CCWin.SkinControl.SkinLabel();
+            this.skinLabel57 = new CCWin.SkinControl.SkinLabel();
+            this.skinButton_MB_DOOR_STATUS_FALI = new CCWin.SkinControl.SkinButton();
+            this.skinButton_MB_DOOR_STATUS_SUCCESS = new CCWin.SkinControl.SkinButton();
+            this.skinButton_MB_DOOR_STATUS_RTEST = new CCWin.SkinControl.SkinButton();
+            this.skinButton_MB_DOOR_STATUS_OVER = new CCWin.SkinControl.SkinButton();
+            this.skinLabel_MB_DOOR_STATUS_RESULT = new CCWin.SkinControl.SkinLabel();
+            this.skinLabel52 = new CCWin.SkinControl.SkinLabel();
             this.skinTabPage_MB_STOPTEST = new CCWin.SkinControl.SkinTabPage();
             this.skinSplitContainer19 = new CCWin.SkinControl.SkinSplitContainer();
             this.skinLabel15 = new CCWin.SkinControl.SkinLabel();
+            this.MB_DOOR_STATUS_RESULT_VAL = new CCWin.SkinControl.SkinLabel();
+            this.skinLabel58 = new CCWin.SkinControl.SkinLabel();
             this.MB_DOOR_RESULT_VAL = new CCWin.SkinControl.SkinLabel();
             this.skinLabel140 = new CCWin.SkinControl.SkinLabel();
             this.MB_KEY_RESULT_VAL = new CCWin.SkinControl.SkinLabel();
@@ -428,21 +443,6 @@
             this.skinButtonDevReboot = new System.Windows.Forms.Button();
             this.textBoxChargerID = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.skinTabPage_MB_DOOR_STATUS = new CCWin.SkinControl.SkinTabPage();
-            this.splitContainer6 = new System.Windows.Forms.SplitContainer();
-            this.skinLabel_MB_DOOR_STATUS_TIME = new CCWin.SkinControl.SkinLabel();
-            this.skinLabel44 = new CCWin.SkinControl.SkinLabel();
-            this.skinLabel51 = new CCWin.SkinControl.SkinLabel();
-            this.skinButton_MB_DOOR_STATUS_FALI = new CCWin.SkinControl.SkinButton();
-            this.skinButton_MB_DOOR_STATUS_SUCCESS = new CCWin.SkinControl.SkinButton();
-            this.skinButton_MB_DOOR_STATUS_RTEST = new CCWin.SkinControl.SkinButton();
-            this.skinButton_MB_DOOR_STATUS_OVER = new CCWin.SkinControl.SkinButton();
-            this.skinLabel_MB_DOOR_STATUS_RESULT = new CCWin.SkinControl.SkinLabel();
-            this.skinLabel52 = new CCWin.SkinControl.SkinLabel();
-            this.skinLabel_MB_DOOR_STATUS = new CCWin.SkinControl.SkinLabel();
-            this.skinLabel57 = new CCWin.SkinControl.SkinLabel();
-            this.MB_DOOR_STATUS_RESULT_VAL = new CCWin.SkinControl.SkinLabel();
-            this.skinLabel58 = new CCWin.SkinControl.SkinLabel();
             this.tableLayoutPanel8.SuspendLayout();
             this.skinTabControl_TestMenu.SuspendLayout();
             this.skinTabPage_CurrentUser.SuspendLayout();
@@ -507,6 +507,11 @@
             this.splitContainer16.Panel1.SuspendLayout();
             this.splitContainer16.Panel2.SuspendLayout();
             this.splitContainer16.SuspendLayout();
+            this.skinTabPage_MB_DOOR_STATUS.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer6)).BeginInit();
+            this.splitContainer6.Panel1.SuspendLayout();
+            this.splitContainer6.Panel2.SuspendLayout();
+            this.splitContainer6.SuspendLayout();
             this.skinTabPage_MB_STOPTEST.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.skinSplitContainer19)).BeginInit();
             this.skinSplitContainer19.Panel1.SuspendLayout();
@@ -603,11 +608,6 @@
             this.groupBox7.SuspendLayout();
             this.groupBox6.SuspendLayout();
             this.groupBox5.SuspendLayout();
-            this.skinTabPage_MB_DOOR_STATUS.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer6)).BeginInit();
-            this.splitContainer6.Panel1.SuspendLayout();
-            this.splitContainer6.Panel2.SuspendLayout();
-            this.splitContainer6.SuspendLayout();
             this.SuspendLayout();
             // 
             // serialPort1
@@ -1104,7 +1104,7 @@
             this.skinTabControl_MB.PageImagePosition = CCWin.SkinControl.SkinTabControl.ePageImagePosition.Left;
             this.skinTabControl_MB.PageNorml = null;
             this.skinTabControl_MB.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.skinTabControl_MB.SelectedIndex = 11;
+            this.skinTabControl_MB.SelectedIndex = 10;
             this.skinTabControl_MB.Size = new System.Drawing.Size(885, 696);
             this.skinTabControl_MB.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.skinTabControl_MB.TabIndex = 0;
@@ -3078,6 +3078,236 @@
             this.skinLabel139.TabIndex = 34;
             this.skinLabel139.Text = "测试结果:";
             // 
+            // skinTabPage_MB_DOOR_STATUS
+            // 
+            this.skinTabPage_MB_DOOR_STATUS.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.skinTabPage_MB_DOOR_STATUS.Controls.Add(this.splitContainer6);
+            this.skinTabPage_MB_DOOR_STATUS.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.skinTabPage_MB_DOOR_STATUS.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.skinTabPage_MB_DOOR_STATUS.Location = new System.Drawing.Point(100, 0);
+            this.skinTabPage_MB_DOOR_STATUS.Name = "skinTabPage_MB_DOOR_STATUS";
+            this.skinTabPage_MB_DOOR_STATUS.Size = new System.Drawing.Size(785, 696);
+            this.skinTabPage_MB_DOOR_STATUS.TabIndex = 19;
+            this.skinTabPage_MB_DOOR_STATUS.TabItemImage = null;
+            this.skinTabPage_MB_DOOR_STATUS.Text = "门锁状态";
+            // 
+            // splitContainer6
+            // 
+            this.splitContainer6.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer6.Location = new System.Drawing.Point(0, 0);
+            this.splitContainer6.Name = "splitContainer6";
+            this.splitContainer6.Orientation = System.Windows.Forms.Orientation.Horizontal;
+            // 
+            // splitContainer6.Panel1
+            // 
+            this.splitContainer6.Panel1.BackColor = System.Drawing.Color.White;
+            this.splitContainer6.Panel1.Controls.Add(this.skinLabel_MB_DOOR_STATUS_TIME);
+            this.splitContainer6.Panel1.Controls.Add(this.skinLabel44);
+            this.splitContainer6.Panel1.Controls.Add(this.skinLabel51);
+            this.splitContainer6.Panel1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            // 
+            // splitContainer6.Panel2
+            // 
+            this.splitContainer6.Panel2.BackColor = System.Drawing.Color.White;
+            this.splitContainer6.Panel2.Controls.Add(this.skinLabel_MB_DOOR_STATUS);
+            this.splitContainer6.Panel2.Controls.Add(this.skinLabel57);
+            this.splitContainer6.Panel2.Controls.Add(this.skinButton_MB_DOOR_STATUS_FALI);
+            this.splitContainer6.Panel2.Controls.Add(this.skinButton_MB_DOOR_STATUS_SUCCESS);
+            this.splitContainer6.Panel2.Controls.Add(this.skinButton_MB_DOOR_STATUS_RTEST);
+            this.splitContainer6.Panel2.Controls.Add(this.skinButton_MB_DOOR_STATUS_OVER);
+            this.splitContainer6.Panel2.Controls.Add(this.skinLabel_MB_DOOR_STATUS_RESULT);
+            this.splitContainer6.Panel2.Controls.Add(this.skinLabel52);
+            this.splitContainer6.Panel2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.splitContainer6.Size = new System.Drawing.Size(785, 696);
+            this.splitContainer6.SplitterDistance = 115;
+            this.splitContainer6.TabIndex = 0;
+            // 
+            // skinLabel_MB_DOOR_STATUS_TIME
+            // 
+            this.skinLabel_MB_DOOR_STATUS_TIME.AutoSize = true;
+            this.skinLabel_MB_DOOR_STATUS_TIME.BackColor = System.Drawing.Color.Transparent;
+            this.skinLabel_MB_DOOR_STATUS_TIME.BorderColor = System.Drawing.Color.White;
+            this.skinLabel_MB_DOOR_STATUS_TIME.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.skinLabel_MB_DOOR_STATUS_TIME.Location = new System.Drawing.Point(472, 42);
+            this.skinLabel_MB_DOOR_STATUS_TIME.Name = "skinLabel_MB_DOOR_STATUS_TIME";
+            this.skinLabel_MB_DOOR_STATUS_TIME.Size = new System.Drawing.Size(0, 25);
+            this.skinLabel_MB_DOOR_STATUS_TIME.TabIndex = 17;
+            // 
+            // skinLabel44
+            // 
+            this.skinLabel44.AutoSize = true;
+            this.skinLabel44.BackColor = System.Drawing.Color.Transparent;
+            this.skinLabel44.BorderColor = System.Drawing.Color.White;
+            this.skinLabel44.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.skinLabel44.Location = new System.Drawing.Point(343, 42);
+            this.skinLabel44.Name = "skinLabel44";
+            this.skinLabel44.Size = new System.Drawing.Size(74, 25);
+            this.skinLabel44.TabIndex = 16;
+            this.skinLabel44.Text = "倒计时:";
+            // 
+            // skinLabel51
+            // 
+            this.skinLabel51.AutoSize = true;
+            this.skinLabel51.BackColor = System.Drawing.Color.Transparent;
+            this.skinLabel51.BorderColor = System.Drawing.Color.White;
+            this.skinLabel51.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.skinLabel51.Location = new System.Drawing.Point(48, 42);
+            this.skinLabel51.Name = "skinLabel51";
+            this.skinLabel51.Size = new System.Drawing.Size(88, 25);
+            this.skinLabel51.TabIndex = 15;
+            this.skinLabel51.Text = "门锁状态";
+            // 
+            // skinLabel_MB_DOOR_STATUS
+            // 
+            this.skinLabel_MB_DOOR_STATUS.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.skinLabel_MB_DOOR_STATUS.AutoEllipsis = true;
+            this.skinLabel_MB_DOOR_STATUS.AutoSize = true;
+            this.skinLabel_MB_DOOR_STATUS.BackColor = System.Drawing.Color.Transparent;
+            this.skinLabel_MB_DOOR_STATUS.BorderColor = System.Drawing.Color.White;
+            this.skinLabel_MB_DOOR_STATUS.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.skinLabel_MB_DOOR_STATUS.Location = new System.Drawing.Point(218, 72);
+            this.skinLabel_MB_DOOR_STATUS.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.skinLabel_MB_DOOR_STATUS.Name = "skinLabel_MB_DOOR_STATUS";
+            this.skinLabel_MB_DOOR_STATUS.Size = new System.Drawing.Size(18, 25);
+            this.skinLabel_MB_DOOR_STATUS.TabIndex = 47;
+            this.skinLabel_MB_DOOR_STATUS.Text = " ";
+            this.skinLabel_MB_DOOR_STATUS.Click += new System.EventHandler(this.skinLabel_MB_DOOR_STATUS_Click);
+            // 
+            // skinLabel57
+            // 
+            this.skinLabel57.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.skinLabel57.AutoEllipsis = true;
+            this.skinLabel57.AutoSize = true;
+            this.skinLabel57.BackColor = System.Drawing.Color.Transparent;
+            this.skinLabel57.BorderColor = System.Drawing.Color.White;
+            this.skinLabel57.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.skinLabel57.Location = new System.Drawing.Point(48, 72);
+            this.skinLabel57.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.skinLabel57.Name = "skinLabel57";
+            this.skinLabel57.Size = new System.Drawing.Size(93, 25);
+            this.skinLabel57.TabIndex = 46;
+            this.skinLabel57.Text = "门锁状态:";
+            // 
+            // skinButton_MB_DOOR_STATUS_FALI
+            // 
+            this.skinButton_MB_DOOR_STATUS_FALI.BackColor = System.Drawing.Color.Transparent;
+            this.skinButton_MB_DOOR_STATUS_FALI.BaseColor = System.Drawing.Color.DarkGray;
+            this.skinButton_MB_DOOR_STATUS_FALI.BorderColor = System.Drawing.Color.DarkGray;
+            this.skinButton_MB_DOOR_STATUS_FALI.ControlState = CCWin.SkinClass.ControlState.Normal;
+            this.skinButton_MB_DOOR_STATUS_FALI.DownBack = null;
+            this.skinButton_MB_DOOR_STATUS_FALI.Location = new System.Drawing.Point(305, 164);
+            this.skinButton_MB_DOOR_STATUS_FALI.MouseBack = null;
+            this.skinButton_MB_DOOR_STATUS_FALI.Name = "skinButton_MB_DOOR_STATUS_FALI";
+            this.skinButton_MB_DOOR_STATUS_FALI.NormlBack = null;
+            this.skinButton_MB_DOOR_STATUS_FALI.Radius = 15;
+            this.skinButton_MB_DOOR_STATUS_FALI.RoundStyle = CCWin.SkinClass.RoundStyle.All;
+            this.skinButton_MB_DOOR_STATUS_FALI.Size = new System.Drawing.Size(110, 40);
+            this.skinButton_MB_DOOR_STATUS_FALI.TabIndex = 45;
+            this.skinButton_MB_DOOR_STATUS_FALI.Text = "失败";
+            this.skinButton_MB_DOOR_STATUS_FALI.UseVisualStyleBackColor = false;
+            this.skinButton_MB_DOOR_STATUS_FALI.Click += new System.EventHandler(this.skinButton_MB_DOOR_STATUS_FALI_Click);
+            // 
+            // skinButton_MB_DOOR_STATUS_SUCCESS
+            // 
+            this.skinButton_MB_DOOR_STATUS_SUCCESS.BackColor = System.Drawing.Color.Transparent;
+            this.skinButton_MB_DOOR_STATUS_SUCCESS.BaseColor = System.Drawing.Color.DarkGray;
+            this.skinButton_MB_DOOR_STATUS_SUCCESS.BorderColor = System.Drawing.Color.DarkGray;
+            this.skinButton_MB_DOOR_STATUS_SUCCESS.ControlState = CCWin.SkinClass.ControlState.Normal;
+            this.skinButton_MB_DOOR_STATUS_SUCCESS.DownBack = null;
+            this.skinButton_MB_DOOR_STATUS_SUCCESS.Location = new System.Drawing.Point(155, 164);
+            this.skinButton_MB_DOOR_STATUS_SUCCESS.MouseBack = null;
+            this.skinButton_MB_DOOR_STATUS_SUCCESS.Name = "skinButton_MB_DOOR_STATUS_SUCCESS";
+            this.skinButton_MB_DOOR_STATUS_SUCCESS.NormlBack = null;
+            this.skinButton_MB_DOOR_STATUS_SUCCESS.Radius = 15;
+            this.skinButton_MB_DOOR_STATUS_SUCCESS.RoundStyle = CCWin.SkinClass.RoundStyle.All;
+            this.skinButton_MB_DOOR_STATUS_SUCCESS.Size = new System.Drawing.Size(110, 40);
+            this.skinButton_MB_DOOR_STATUS_SUCCESS.TabIndex = 44;
+            this.skinButton_MB_DOOR_STATUS_SUCCESS.Text = "成功";
+            this.skinButton_MB_DOOR_STATUS_SUCCESS.UseVisualStyleBackColor = false;
+            this.skinButton_MB_DOOR_STATUS_SUCCESS.Click += new System.EventHandler(this.skinButton_MB_DOOR_STATUS_SUCCESS_Click);
+            // 
+            // skinButton_MB_DOOR_STATUS_RTEST
+            // 
+            this.skinButton_MB_DOOR_STATUS_RTEST.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.skinButton_MB_DOOR_STATUS_RTEST.BackColor = System.Drawing.Color.Transparent;
+            this.skinButton_MB_DOOR_STATUS_RTEST.BaseColor = System.Drawing.Color.Silver;
+            this.skinButton_MB_DOOR_STATUS_RTEST.BorderColor = System.Drawing.Color.Silver;
+            this.skinButton_MB_DOOR_STATUS_RTEST.ControlState = CCWin.SkinClass.ControlState.Normal;
+            this.skinButton_MB_DOOR_STATUS_RTEST.DownBack = null;
+            this.skinButton_MB_DOOR_STATUS_RTEST.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.skinButton_MB_DOOR_STATUS_RTEST.Location = new System.Drawing.Point(305, 244);
+            this.skinButton_MB_DOOR_STATUS_RTEST.Margin = new System.Windows.Forms.Padding(4);
+            this.skinButton_MB_DOOR_STATUS_RTEST.MouseBack = null;
+            this.skinButton_MB_DOOR_STATUS_RTEST.Name = "skinButton_MB_DOOR_STATUS_RTEST";
+            this.skinButton_MB_DOOR_STATUS_RTEST.NormlBack = null;
+            this.skinButton_MB_DOOR_STATUS_RTEST.Radius = 15;
+            this.skinButton_MB_DOOR_STATUS_RTEST.RoundStyle = CCWin.SkinClass.RoundStyle.All;
+            this.skinButton_MB_DOOR_STATUS_RTEST.Size = new System.Drawing.Size(110, 41);
+            this.skinButton_MB_DOOR_STATUS_RTEST.TabIndex = 43;
+            this.skinButton_MB_DOOR_STATUS_RTEST.Text = "重新测试";
+            this.skinButton_MB_DOOR_STATUS_RTEST.UseVisualStyleBackColor = false;
+            this.skinButton_MB_DOOR_STATUS_RTEST.Click += new System.EventHandler(this.skinButton_MB_DOOR_STATUS_RTEST_Click);
+            // 
+            // skinButton_MB_DOOR_STATUS_OVER
+            // 
+            this.skinButton_MB_DOOR_STATUS_OVER.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.skinButton_MB_DOOR_STATUS_OVER.BackColor = System.Drawing.Color.Transparent;
+            this.skinButton_MB_DOOR_STATUS_OVER.BaseColor = System.Drawing.Color.Silver;
+            this.skinButton_MB_DOOR_STATUS_OVER.BorderColor = System.Drawing.Color.Silver;
+            this.skinButton_MB_DOOR_STATUS_OVER.ControlState = CCWin.SkinClass.ControlState.Normal;
+            this.skinButton_MB_DOOR_STATUS_OVER.DownBack = null;
+            this.skinButton_MB_DOOR_STATUS_OVER.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.skinButton_MB_DOOR_STATUS_OVER.Location = new System.Drawing.Point(155, 244);
+            this.skinButton_MB_DOOR_STATUS_OVER.Margin = new System.Windows.Forms.Padding(4);
+            this.skinButton_MB_DOOR_STATUS_OVER.MouseBack = null;
+            this.skinButton_MB_DOOR_STATUS_OVER.Name = "skinButton_MB_DOOR_STATUS_OVER";
+            this.skinButton_MB_DOOR_STATUS_OVER.NormlBack = null;
+            this.skinButton_MB_DOOR_STATUS_OVER.Radius = 15;
+            this.skinButton_MB_DOOR_STATUS_OVER.RoundStyle = CCWin.SkinClass.RoundStyle.All;
+            this.skinButton_MB_DOOR_STATUS_OVER.Size = new System.Drawing.Size(110, 41);
+            this.skinButton_MB_DOOR_STATUS_OVER.TabIndex = 42;
+            this.skinButton_MB_DOOR_STATUS_OVER.Text = "跳过";
+            this.skinButton_MB_DOOR_STATUS_OVER.UseVisualStyleBackColor = false;
+            this.skinButton_MB_DOOR_STATUS_OVER.Click += new System.EventHandler(this.skinButton_MB_DOOR_STATUS_OVER_Click);
+            // 
+            // skinLabel_MB_DOOR_STATUS_RESULT
+            // 
+            this.skinLabel_MB_DOOR_STATUS_RESULT.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.skinLabel_MB_DOOR_STATUS_RESULT.AutoEllipsis = true;
+            this.skinLabel_MB_DOOR_STATUS_RESULT.AutoSize = true;
+            this.skinLabel_MB_DOOR_STATUS_RESULT.BackColor = System.Drawing.Color.Transparent;
+            this.skinLabel_MB_DOOR_STATUS_RESULT.BorderColor = System.Drawing.Color.White;
+            this.skinLabel_MB_DOOR_STATUS_RESULT.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.skinLabel_MB_DOOR_STATUS_RESULT.Location = new System.Drawing.Point(218, 38);
+            this.skinLabel_MB_DOOR_STATUS_RESULT.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.skinLabel_MB_DOOR_STATUS_RESULT.Name = "skinLabel_MB_DOOR_STATUS_RESULT";
+            this.skinLabel_MB_DOOR_STATUS_RESULT.Size = new System.Drawing.Size(18, 25);
+            this.skinLabel_MB_DOOR_STATUS_RESULT.TabIndex = 41;
+            this.skinLabel_MB_DOOR_STATUS_RESULT.Text = " ";
+            // 
+            // skinLabel52
+            // 
+            this.skinLabel52.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.skinLabel52.AutoEllipsis = true;
+            this.skinLabel52.AutoSize = true;
+            this.skinLabel52.BackColor = System.Drawing.Color.Transparent;
+            this.skinLabel52.BorderColor = System.Drawing.Color.White;
+            this.skinLabel52.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.skinLabel52.Location = new System.Drawing.Point(48, 38);
+            this.skinLabel52.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.skinLabel52.Name = "skinLabel52";
+            this.skinLabel52.Size = new System.Drawing.Size(93, 25);
+            this.skinLabel52.TabIndex = 40;
+            this.skinLabel52.Text = "测试结果:";
+            // 
             // skinTabPage_MB_STOPTEST
             // 
             this.skinTabPage_MB_STOPTEST.BackColor = System.Drawing.Color.White;
@@ -3161,6 +3391,41 @@
             this.skinLabel15.Size = new System.Drawing.Size(96, 25);
             this.skinLabel15.TabIndex = 15;
             this.skinLabel15.Text = "测试结果";
+            // 
+            // MB_DOOR_STATUS_RESULT_VAL
+            // 
+            this.MB_DOOR_STATUS_RESULT_VAL.AllowDrop = true;
+            this.MB_DOOR_STATUS_RESULT_VAL.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.MB_DOOR_STATUS_RESULT_VAL.AutoEllipsis = true;
+            this.MB_DOOR_STATUS_RESULT_VAL.AutoSize = true;
+            this.MB_DOOR_STATUS_RESULT_VAL.BackColor = System.Drawing.Color.Transparent;
+            this.MB_DOOR_STATUS_RESULT_VAL.BorderColor = System.Drawing.Color.White;
+            this.MB_DOOR_STATUS_RESULT_VAL.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.MB_DOOR_STATUS_RESULT_VAL.Location = new System.Drawing.Point(407, 392);
+            this.MB_DOOR_STATUS_RESULT_VAL.Name = "MB_DOOR_STATUS_RESULT_VAL";
+            this.MB_DOOR_STATUS_RESULT_VAL.Size = new System.Drawing.Size(24, 25);
+            this.MB_DOOR_STATUS_RESULT_VAL.TabIndex = 72;
+            this.MB_DOOR_STATUS_RESULT_VAL.Text = "  ";
+            this.MB_DOOR_STATUS_RESULT_VAL.Click += new System.EventHandler(this.skinLabel17_Click);
+            // 
+            // skinLabel58
+            // 
+            this.skinLabel58.AllowDrop = true;
+            this.skinLabel58.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.skinLabel58.AutoEllipsis = true;
+            this.skinLabel58.AutoSize = true;
+            this.skinLabel58.BackColor = System.Drawing.Color.Transparent;
+            this.skinLabel58.BorderColor = System.Drawing.Color.White;
+            this.skinLabel58.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.skinLabel58.Location = new System.Drawing.Point(142, 392);
+            this.skinLabel58.Name = "skinLabel58";
+            this.skinLabel58.Size = new System.Drawing.Size(105, 25);
+            this.skinLabel58.TabIndex = 71;
+            this.skinLabel58.Text = "  门锁状态:";
             // 
             // MB_DOOR_RESULT_VAL
             // 
@@ -7179,270 +7444,6 @@
             this.label3.TabIndex = 6;
             this.label3.Text = "识别码:";
             // 
-            // skinTabPage_MB_DOOR_STATUS
-            // 
-            this.skinTabPage_MB_DOOR_STATUS.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.skinTabPage_MB_DOOR_STATUS.Controls.Add(this.splitContainer6);
-            this.skinTabPage_MB_DOOR_STATUS.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.skinTabPage_MB_DOOR_STATUS.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.skinTabPage_MB_DOOR_STATUS.Location = new System.Drawing.Point(100, 0);
-            this.skinTabPage_MB_DOOR_STATUS.Name = "skinTabPage_MB_DOOR_STATUS";
-            this.skinTabPage_MB_DOOR_STATUS.Size = new System.Drawing.Size(785, 696);
-            this.skinTabPage_MB_DOOR_STATUS.TabIndex = 19;
-            this.skinTabPage_MB_DOOR_STATUS.TabItemImage = null;
-            this.skinTabPage_MB_DOOR_STATUS.Text = "门锁状态";
-            // 
-            // splitContainer6
-            // 
-            this.splitContainer6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainer6.Location = new System.Drawing.Point(0, 0);
-            this.splitContainer6.Name = "splitContainer6";
-            this.splitContainer6.Orientation = System.Windows.Forms.Orientation.Horizontal;
-            // 
-            // splitContainer6.Panel1
-            // 
-            this.splitContainer6.Panel1.BackColor = System.Drawing.Color.White;
-            this.splitContainer6.Panel1.Controls.Add(this.skinLabel_MB_DOOR_STATUS_TIME);
-            this.splitContainer6.Panel1.Controls.Add(this.skinLabel44);
-            this.splitContainer6.Panel1.Controls.Add(this.skinLabel51);
-            this.splitContainer6.Panel1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            // 
-            // splitContainer6.Panel2
-            // 
-            this.splitContainer6.Panel2.BackColor = System.Drawing.Color.White;
-            this.splitContainer6.Panel2.Controls.Add(this.skinLabel_MB_DOOR_STATUS);
-            this.splitContainer6.Panel2.Controls.Add(this.skinLabel57);
-            this.splitContainer6.Panel2.Controls.Add(this.skinButton_MB_DOOR_STATUS_FALI);
-            this.splitContainer6.Panel2.Controls.Add(this.skinButton_MB_DOOR_STATUS_SUCCESS);
-            this.splitContainer6.Panel2.Controls.Add(this.skinButton_MB_DOOR_STATUS_RTEST);
-            this.splitContainer6.Panel2.Controls.Add(this.skinButton_MB_DOOR_STATUS_OVER);
-            this.splitContainer6.Panel2.Controls.Add(this.skinLabel_MB_DOOR_STATUS_RESULT);
-            this.splitContainer6.Panel2.Controls.Add(this.skinLabel52);
-            this.splitContainer6.Panel2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.splitContainer6.Size = new System.Drawing.Size(785, 696);
-            this.splitContainer6.SplitterDistance = 115;
-            this.splitContainer6.TabIndex = 0;
-            // 
-            // skinLabel_MB_DOOR_STATUS_TIME
-            // 
-            this.skinLabel_MB_DOOR_STATUS_TIME.AutoSize = true;
-            this.skinLabel_MB_DOOR_STATUS_TIME.BackColor = System.Drawing.Color.Transparent;
-            this.skinLabel_MB_DOOR_STATUS_TIME.BorderColor = System.Drawing.Color.White;
-            this.skinLabel_MB_DOOR_STATUS_TIME.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.skinLabel_MB_DOOR_STATUS_TIME.Location = new System.Drawing.Point(472, 42);
-            this.skinLabel_MB_DOOR_STATUS_TIME.Name = "skinLabel_MB_DOOR_STATUS_TIME";
-            this.skinLabel_MB_DOOR_STATUS_TIME.Size = new System.Drawing.Size(0, 25);
-            this.skinLabel_MB_DOOR_STATUS_TIME.TabIndex = 17;
-            // 
-            // skinLabel44
-            // 
-            this.skinLabel44.AutoSize = true;
-            this.skinLabel44.BackColor = System.Drawing.Color.Transparent;
-            this.skinLabel44.BorderColor = System.Drawing.Color.White;
-            this.skinLabel44.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.skinLabel44.Location = new System.Drawing.Point(343, 42);
-            this.skinLabel44.Name = "skinLabel44";
-            this.skinLabel44.Size = new System.Drawing.Size(74, 25);
-            this.skinLabel44.TabIndex = 16;
-            this.skinLabel44.Text = "倒计时:";
-            // 
-            // skinLabel51
-            // 
-            this.skinLabel51.AutoSize = true;
-            this.skinLabel51.BackColor = System.Drawing.Color.Transparent;
-            this.skinLabel51.BorderColor = System.Drawing.Color.White;
-            this.skinLabel51.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.skinLabel51.Location = new System.Drawing.Point(48, 42);
-            this.skinLabel51.Name = "skinLabel51";
-            this.skinLabel51.Size = new System.Drawing.Size(88, 25);
-            this.skinLabel51.TabIndex = 15;
-            this.skinLabel51.Text = "门锁状态";
-            // 
-            // skinButton_MB_DOOR_STATUS_FALI
-            // 
-            this.skinButton_MB_DOOR_STATUS_FALI.BackColor = System.Drawing.Color.Transparent;
-            this.skinButton_MB_DOOR_STATUS_FALI.BaseColor = System.Drawing.Color.DarkGray;
-            this.skinButton_MB_DOOR_STATUS_FALI.BorderColor = System.Drawing.Color.DarkGray;
-            this.skinButton_MB_DOOR_STATUS_FALI.ControlState = CCWin.SkinClass.ControlState.Normal;
-            this.skinButton_MB_DOOR_STATUS_FALI.DownBack = null;
-            this.skinButton_MB_DOOR_STATUS_FALI.Location = new System.Drawing.Point(305, 164);
-            this.skinButton_MB_DOOR_STATUS_FALI.MouseBack = null;
-            this.skinButton_MB_DOOR_STATUS_FALI.Name = "skinButton_MB_DOOR_STATUS_FALI";
-            this.skinButton_MB_DOOR_STATUS_FALI.NormlBack = null;
-            this.skinButton_MB_DOOR_STATUS_FALI.Radius = 15;
-            this.skinButton_MB_DOOR_STATUS_FALI.RoundStyle = CCWin.SkinClass.RoundStyle.All;
-            this.skinButton_MB_DOOR_STATUS_FALI.Size = new System.Drawing.Size(110, 40);
-            this.skinButton_MB_DOOR_STATUS_FALI.TabIndex = 45;
-            this.skinButton_MB_DOOR_STATUS_FALI.Text = "失败";
-            this.skinButton_MB_DOOR_STATUS_FALI.UseVisualStyleBackColor = false;
-            this.skinButton_MB_DOOR_STATUS_FALI.Click += new System.EventHandler(this.skinButton_MB_DOOR_STATUS_FALI_Click);
-            // 
-            // skinButton_MB_DOOR_STATUS_SUCCESS
-            // 
-            this.skinButton_MB_DOOR_STATUS_SUCCESS.BackColor = System.Drawing.Color.Transparent;
-            this.skinButton_MB_DOOR_STATUS_SUCCESS.BaseColor = System.Drawing.Color.DarkGray;
-            this.skinButton_MB_DOOR_STATUS_SUCCESS.BorderColor = System.Drawing.Color.DarkGray;
-            this.skinButton_MB_DOOR_STATUS_SUCCESS.ControlState = CCWin.SkinClass.ControlState.Normal;
-            this.skinButton_MB_DOOR_STATUS_SUCCESS.DownBack = null;
-            this.skinButton_MB_DOOR_STATUS_SUCCESS.Location = new System.Drawing.Point(155, 164);
-            this.skinButton_MB_DOOR_STATUS_SUCCESS.MouseBack = null;
-            this.skinButton_MB_DOOR_STATUS_SUCCESS.Name = "skinButton_MB_DOOR_STATUS_SUCCESS";
-            this.skinButton_MB_DOOR_STATUS_SUCCESS.NormlBack = null;
-            this.skinButton_MB_DOOR_STATUS_SUCCESS.Radius = 15;
-            this.skinButton_MB_DOOR_STATUS_SUCCESS.RoundStyle = CCWin.SkinClass.RoundStyle.All;
-            this.skinButton_MB_DOOR_STATUS_SUCCESS.Size = new System.Drawing.Size(110, 40);
-            this.skinButton_MB_DOOR_STATUS_SUCCESS.TabIndex = 44;
-            this.skinButton_MB_DOOR_STATUS_SUCCESS.Text = "成功";
-            this.skinButton_MB_DOOR_STATUS_SUCCESS.UseVisualStyleBackColor = false;
-            this.skinButton_MB_DOOR_STATUS_SUCCESS.Click += new System.EventHandler(this.skinButton_MB_DOOR_STATUS_SUCCESS_Click);
-            // 
-            // skinButton_MB_DOOR_STATUS_RTEST
-            // 
-            this.skinButton_MB_DOOR_STATUS_RTEST.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.skinButton_MB_DOOR_STATUS_RTEST.BackColor = System.Drawing.Color.Transparent;
-            this.skinButton_MB_DOOR_STATUS_RTEST.BaseColor = System.Drawing.Color.Silver;
-            this.skinButton_MB_DOOR_STATUS_RTEST.BorderColor = System.Drawing.Color.Silver;
-            this.skinButton_MB_DOOR_STATUS_RTEST.ControlState = CCWin.SkinClass.ControlState.Normal;
-            this.skinButton_MB_DOOR_STATUS_RTEST.DownBack = null;
-            this.skinButton_MB_DOOR_STATUS_RTEST.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.skinButton_MB_DOOR_STATUS_RTEST.Location = new System.Drawing.Point(305, 244);
-            this.skinButton_MB_DOOR_STATUS_RTEST.Margin = new System.Windows.Forms.Padding(4);
-            this.skinButton_MB_DOOR_STATUS_RTEST.MouseBack = null;
-            this.skinButton_MB_DOOR_STATUS_RTEST.Name = "skinButton_MB_DOOR_STATUS_RTEST";
-            this.skinButton_MB_DOOR_STATUS_RTEST.NormlBack = null;
-            this.skinButton_MB_DOOR_STATUS_RTEST.Radius = 15;
-            this.skinButton_MB_DOOR_STATUS_RTEST.RoundStyle = CCWin.SkinClass.RoundStyle.All;
-            this.skinButton_MB_DOOR_STATUS_RTEST.Size = new System.Drawing.Size(110, 41);
-            this.skinButton_MB_DOOR_STATUS_RTEST.TabIndex = 43;
-            this.skinButton_MB_DOOR_STATUS_RTEST.Text = "重新测试";
-            this.skinButton_MB_DOOR_STATUS_RTEST.UseVisualStyleBackColor = false;
-            this.skinButton_MB_DOOR_STATUS_RTEST.Click += new System.EventHandler(this.skinButton_MB_DOOR_STATUS_RTEST_Click);
-            // 
-            // skinButton_MB_DOOR_STATUS_OVER
-            // 
-            this.skinButton_MB_DOOR_STATUS_OVER.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.skinButton_MB_DOOR_STATUS_OVER.BackColor = System.Drawing.Color.Transparent;
-            this.skinButton_MB_DOOR_STATUS_OVER.BaseColor = System.Drawing.Color.Silver;
-            this.skinButton_MB_DOOR_STATUS_OVER.BorderColor = System.Drawing.Color.Silver;
-            this.skinButton_MB_DOOR_STATUS_OVER.ControlState = CCWin.SkinClass.ControlState.Normal;
-            this.skinButton_MB_DOOR_STATUS_OVER.DownBack = null;
-            this.skinButton_MB_DOOR_STATUS_OVER.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.skinButton_MB_DOOR_STATUS_OVER.Location = new System.Drawing.Point(155, 244);
-            this.skinButton_MB_DOOR_STATUS_OVER.Margin = new System.Windows.Forms.Padding(4);
-            this.skinButton_MB_DOOR_STATUS_OVER.MouseBack = null;
-            this.skinButton_MB_DOOR_STATUS_OVER.Name = "skinButton_MB_DOOR_STATUS_OVER";
-            this.skinButton_MB_DOOR_STATUS_OVER.NormlBack = null;
-            this.skinButton_MB_DOOR_STATUS_OVER.Radius = 15;
-            this.skinButton_MB_DOOR_STATUS_OVER.RoundStyle = CCWin.SkinClass.RoundStyle.All;
-            this.skinButton_MB_DOOR_STATUS_OVER.Size = new System.Drawing.Size(110, 41);
-            this.skinButton_MB_DOOR_STATUS_OVER.TabIndex = 42;
-            this.skinButton_MB_DOOR_STATUS_OVER.Text = "跳过";
-            this.skinButton_MB_DOOR_STATUS_OVER.UseVisualStyleBackColor = false;
-            this.skinButton_MB_DOOR_STATUS_OVER.Click += new System.EventHandler(this.skinButton_MB_DOOR_STATUS_OVER_Click);
-            // 
-            // skinLabel_MB_DOOR_STATUS_RESULT
-            // 
-            this.skinLabel_MB_DOOR_STATUS_RESULT.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.skinLabel_MB_DOOR_STATUS_RESULT.AutoEllipsis = true;
-            this.skinLabel_MB_DOOR_STATUS_RESULT.AutoSize = true;
-            this.skinLabel_MB_DOOR_STATUS_RESULT.BackColor = System.Drawing.Color.Transparent;
-            this.skinLabel_MB_DOOR_STATUS_RESULT.BorderColor = System.Drawing.Color.White;
-            this.skinLabel_MB_DOOR_STATUS_RESULT.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.skinLabel_MB_DOOR_STATUS_RESULT.Location = new System.Drawing.Point(218, 38);
-            this.skinLabel_MB_DOOR_STATUS_RESULT.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.skinLabel_MB_DOOR_STATUS_RESULT.Name = "skinLabel_MB_DOOR_STATUS_RESULT";
-            this.skinLabel_MB_DOOR_STATUS_RESULT.Size = new System.Drawing.Size(18, 25);
-            this.skinLabel_MB_DOOR_STATUS_RESULT.TabIndex = 41;
-            this.skinLabel_MB_DOOR_STATUS_RESULT.Text = " ";
-            // 
-            // skinLabel52
-            // 
-            this.skinLabel52.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.skinLabel52.AutoEllipsis = true;
-            this.skinLabel52.AutoSize = true;
-            this.skinLabel52.BackColor = System.Drawing.Color.Transparent;
-            this.skinLabel52.BorderColor = System.Drawing.Color.White;
-            this.skinLabel52.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.skinLabel52.Location = new System.Drawing.Point(48, 38);
-            this.skinLabel52.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.skinLabel52.Name = "skinLabel52";
-            this.skinLabel52.Size = new System.Drawing.Size(93, 25);
-            this.skinLabel52.TabIndex = 40;
-            this.skinLabel52.Text = "测试结果:";
-            // 
-            // skinLabel_MB_DOOR_STATUS
-            // 
-            this.skinLabel_MB_DOOR_STATUS.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.skinLabel_MB_DOOR_STATUS.AutoEllipsis = true;
-            this.skinLabel_MB_DOOR_STATUS.AutoSize = true;
-            this.skinLabel_MB_DOOR_STATUS.BackColor = System.Drawing.Color.Transparent;
-            this.skinLabel_MB_DOOR_STATUS.BorderColor = System.Drawing.Color.White;
-            this.skinLabel_MB_DOOR_STATUS.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.skinLabel_MB_DOOR_STATUS.Location = new System.Drawing.Point(218, 72);
-            this.skinLabel_MB_DOOR_STATUS.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.skinLabel_MB_DOOR_STATUS.Name = "skinLabel_MB_DOOR_STATUS";
-            this.skinLabel_MB_DOOR_STATUS.Size = new System.Drawing.Size(18, 25);
-            this.skinLabel_MB_DOOR_STATUS.TabIndex = 47;
-            this.skinLabel_MB_DOOR_STATUS.Text = " ";
-            // 
-            // skinLabel57
-            // 
-            this.skinLabel57.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.skinLabel57.AutoEllipsis = true;
-            this.skinLabel57.AutoSize = true;
-            this.skinLabel57.BackColor = System.Drawing.Color.Transparent;
-            this.skinLabel57.BorderColor = System.Drawing.Color.White;
-            this.skinLabel57.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.skinLabel57.Location = new System.Drawing.Point(48, 72);
-            this.skinLabel57.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.skinLabel57.Name = "skinLabel57";
-            this.skinLabel57.Size = new System.Drawing.Size(93, 25);
-            this.skinLabel57.TabIndex = 46;
-            this.skinLabel57.Text = "门锁状态:";
-            // 
-            // MB_DOOR_STATUS_RESULT_VAL
-            // 
-            this.MB_DOOR_STATUS_RESULT_VAL.AllowDrop = true;
-            this.MB_DOOR_STATUS_RESULT_VAL.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.MB_DOOR_STATUS_RESULT_VAL.AutoEllipsis = true;
-            this.MB_DOOR_STATUS_RESULT_VAL.AutoSize = true;
-            this.MB_DOOR_STATUS_RESULT_VAL.BackColor = System.Drawing.Color.Transparent;
-            this.MB_DOOR_STATUS_RESULT_VAL.BorderColor = System.Drawing.Color.White;
-            this.MB_DOOR_STATUS_RESULT_VAL.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.MB_DOOR_STATUS_RESULT_VAL.Location = new System.Drawing.Point(407, 392);
-            this.MB_DOOR_STATUS_RESULT_VAL.Name = "MB_DOOR_STATUS_RESULT_VAL";
-            this.MB_DOOR_STATUS_RESULT_VAL.Size = new System.Drawing.Size(24, 25);
-            this.MB_DOOR_STATUS_RESULT_VAL.TabIndex = 72;
-            this.MB_DOOR_STATUS_RESULT_VAL.Text = "  ";
-            this.MB_DOOR_STATUS_RESULT_VAL.Click += new System.EventHandler(this.skinLabel17_Click);
-            // 
-            // skinLabel58
-            // 
-            this.skinLabel58.AllowDrop = true;
-            this.skinLabel58.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.skinLabel58.AutoEllipsis = true;
-            this.skinLabel58.AutoSize = true;
-            this.skinLabel58.BackColor = System.Drawing.Color.Transparent;
-            this.skinLabel58.BorderColor = System.Drawing.Color.White;
-            this.skinLabel58.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.skinLabel58.Location = new System.Drawing.Point(142, 392);
-            this.skinLabel58.Name = "skinLabel58";
-            this.skinLabel58.Size = new System.Drawing.Size(105, 25);
-            this.skinLabel58.TabIndex = 71;
-            this.skinLabel58.Text = "  门锁状态:";
-            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -7545,6 +7546,13 @@
             this.splitContainer16.Panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer16)).EndInit();
             this.splitContainer16.ResumeLayout(false);
+            this.skinTabPage_MB_DOOR_STATUS.ResumeLayout(false);
+            this.splitContainer6.Panel1.ResumeLayout(false);
+            this.splitContainer6.Panel1.PerformLayout();
+            this.splitContainer6.Panel2.ResumeLayout(false);
+            this.splitContainer6.Panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer6)).EndInit();
+            this.splitContainer6.ResumeLayout(false);
             this.skinTabPage_MB_STOPTEST.ResumeLayout(false);
             this.skinSplitContainer19.Panel1.ResumeLayout(false);
             this.skinSplitContainer19.Panel1.PerformLayout();
@@ -7677,13 +7685,6 @@
             this.groupBox6.PerformLayout();
             this.groupBox5.ResumeLayout(false);
             this.groupBox5.PerformLayout();
-            this.skinTabPage_MB_DOOR_STATUS.ResumeLayout(false);
-            this.splitContainer6.Panel1.ResumeLayout(false);
-            this.splitContainer6.Panel1.PerformLayout();
-            this.splitContainer6.Panel2.ResumeLayout(false);
-            this.splitContainer6.Panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer6)).EndInit();
-            this.splitContainer6.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

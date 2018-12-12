@@ -651,7 +651,7 @@ namespace AutoTestTool
                                             }
                                             break;
                                         case (byte)Command.CMD_SHUA_CARD_TEST://副板刷卡
-                                            string pSubStr = "";
+                                            string pCardStr = "";
                                             GetResultObj.tapCard = 0XA5;
                                             //   int ik = 0;
                                             //   for (ik = 0; ik < 16; ik++)
@@ -660,37 +660,95 @@ namespace AutoTestTool
                                             //        LOG("qqqqqqq:" + validFrame[16 + ik] + "\r\n");
                                             //    }
 
-                                            GetResultObj.SubcardNum = Encoding.ASCII.GetString(validFrame, 18, 16).ToUpper();   //18指的是第18个字节， 16指的16个字节的卡号
-                                            //    LOG("卡号qqqq:" + GetResultObj.SubcardNum + "\r\n");
-                                            GetResultObj.SubcardNum = GetResultObj.SubcardNum.Remove(GetResultObj.SubcardNum.IndexOf('\0'));
+                                            GetResultObj.cardNum = Encoding.ASCII.GetString(validFrame, 18, 16).ToUpper();  //18指的是第18个字节， 16指的16个字节的卡号
+                                            //    LOG("卡号qqqq:" + GetResultObj.cardNum + "\r\n");
+                                            GetResultObj.cardNum = GetResultObj.cardNum.Remove(GetResultObj.cardNum.IndexOf('\0'));
 
                                             if (48 != validFrame[18])
                                             {
-                                                pSubStr += validFrame[18].ToString("X2");
-                                                //   LOG("kkk:" + pSubStr + "\r\n");
+                                                pCardStr += validFrame[17].ToString("X2");
+                                                //   LOG("kkk:" + pCardStr + "\r\n");
                                             }
                                             //   LOG("PPPPP:" + validFrame[17] + "\r\n");
-                                            pSubStr += GetResultObj.SubcardNum;
-                                            //     LOG("HHH:" + pSubStr + "\r\n");
-                                            LOG("卡号:" + GetResultObj.SubcardNum + "\r\n");
-
-                                            if (0 == validFrame[17])    //主板
+                                            pCardStr += GetResultObj.cardNum;
+                                            //     LOG("HHH:" + pCardStr + "\r\n");
+                                            LOG("卡号:" + GetResultObj.cardNum + "\r\n");
+                                            if (TestMeunSelectIndex == 1)//PCBA测试
                                             {
-
-                                            }
-                                            else if (1 == validFrame[17])
-                                            {
-                                                if (TestMeunSelectIndex == 1)//PCBA测试
+                                                if (PCBATestSelectIndex == 0)//主板测试
                                                 {
+                                                    if (TestSettingInfo["CardNum"].ToString() == GetResultObj.cardNum)
+                                                    {
+                                                        MBTestResultDir["刷卡"] = "通过";
+                                                        MBTestResultDir["卡号"] = GetResultObj.cardNum;
+                                                        updateControlText(skinLabel_MB_Card_RESULT, "测试通过", Color.Green);
 
+                                                        if (6 <= (GetCurrentTimeStamp() - MBoardcardNumTimeTicks))
+                                                        {
+                                                            MBoardcardNumTimeTicks = GetCurrentTimeStamp();
+                                                            updateTableSelectedIndex(skinTabControl_MB, ++MBTabSelectIndex);
+                                                        }
+                                                    }
+                                                    else
+                                                    {
+                                                        LOG("主板卡号与设置的不一致,请点击重新测试按钮!");
+                                                        updateControlText(skinLabel_MB_Card_RESULT, "测试不通过", Color.Red);
+                                                        MBTestResultDir["刷卡"] = "不通过";
+                                                    }
                                                 }
-                                                else if (TestMeunSelectIndex == 2)//整机测试
+                                                else if (PCBATestSelectIndex == 1)//副板测试
                                                 {
-                                                    if (TestSettingInfo["CardNum"].ToString() == GetResultObj.SubcardNum)
+                                                    //LOG("卡号qqqqqqq " + X6TestSettingInfo["CardNum"].ToString() + "\r\n");
+                                                    // X6textBox_TestCardNum.Text
+                                                    if (TestSettingInfo["CardNum"].ToString() == GetResultObj.cardNum)
+                                                    {
+                                                        SBTestResultDir["刷卡"] = "通过";
+                                                        SBTestResultDir["卡号"] = GetResultObj.cardNum;
+                                                        updateControlText(skinLabel_CARD_Result, "测试通过", Color.Green);
+                                                        if (6 <= (GetCurrentTimeStamp() - SubCardNumTimeTicks))
+                                                        {
+                                                            SubCardNumTimeTicks = GetCurrentTimeStamp();
+                                                            updateTableSelectedIndex(skinTabControl_SB, ++SBTabSelectIndex);
+                                                        }
+                                                    }
+                                                    else
+                                                    {
+                                                        LOG("副板卡号与设置的不一致,请点击重新测试按钮!");
+                                                        updateControlText(skinLabel_CARD_Result, "测试不通过", Color.Red);
+                                                        SBTestResultDir["刷卡"] = "不通过";
+                                                    }
+                                                }
+                                            }
+                                            else if (TestMeunSelectIndex == 2)//整机测试
+                                            {
+                                                if (0 == validFrame[17])
+                                                {
+                                                    if (TestSettingInfo["CardNum"].ToString() == GetResultObj.cardNum)
+                                                    {
+                                                        ChargerTestResultDir["主板刷卡"] = "通过";
+                                                        ChargerTestResultDir["主板卡号"] = GetResultObj.cardNum;
+                                                        updateControlText(skinLabel_CHG_MAIN_CARD_RESULT, "测试通过", Color.Green);
+
+                                                        if (6 <= (GetCurrentTimeStamp() - MainBoardcardNumTimeTicks))
+                                                        {
+                                                            MainBoardcardNumTimeTicks = GetCurrentTimeStamp();
+                                                            updateTableSelectedIndex(skinTabControl_WholeChg, ++chargerTestSelectIndex);
+                                                        }
+                                                    }
+                                                    else
+                                                    {
+                                                        LOG("主板卡号与设置的不一致,请点击重新测试按钮!");
+                                                        updateControlText(skinLabel_CHG_MAIN_CARD_RESULT, "测试不通过", Color.Red);
+                                                        ChargerTestResultDir["主板刷卡"] = "不通过";
+                                                    }
+                                                }
+                                                else if (1 == validFrame[17])
+                                                {
+                                                    if (TestSettingInfo["CardNum"].ToString() == GetResultObj.cardNum)
                                                     {
                                                         ChargerTestResultDir["副板刷卡"] = "通过";
-                                                        ChargerTestResultDir["副板卡号"] = GetResultObj.SubcardNum;
-                                                        updateControlText(skinLabel_CHG_MAIN_CARD_RESULT, "测试通过", Color.Green);
+                                                        ChargerTestResultDir["副板卡号"] = GetResultObj.cardNum;
+                                                        updateControlText(skinLabel_CHG_SUB_CARD_RESULT, "测试通过", Color.Green);
 
                                                         if (6 <= (GetCurrentTimeStamp() - SubcardNumTimeTicks))
                                                         {
@@ -700,9 +758,9 @@ namespace AutoTestTool
                                                     }
                                                     else
                                                     {
-                                                        LOG("主板卡号与设置的不一致,请点击重新测试按钮!");
-                                                        updateControlText(skinLabel_CHG_MAIN_CARD_RESULT, "测试不通过", Color.Red);
-                                                        ChargerTestResultDir["主板刷卡"] = "不通过";
+                                                        LOG("副板卡号与设置的不一致,请点击重新测试按钮!");
+                                                        updateControlText(skinLabel_CHG_SUB_CARD_RESULT, "测试不通过", Color.Red);
+                                                        ChargerTestResultDir["副板刷卡"] = "不通过";
                                                     }
                                                 }
                                             }
@@ -777,15 +835,16 @@ namespace AutoTestTool
                                                 {
                                                     if (0 == GetDOORValue)
                                                     {
-                                                       // MBTestResultDir["DOOR"] = "通过";
-                                                      //  updateControlText(skinLabel_MB_DOOR_RESULT, "测试通过", Color.Green);
-                                                      //  updateTableSelectedIndex(skinTabControl_MB, ++MBTabSelectIndex);
+                                                        LOG("门控检测成功!");
+                                                        MBTestResultDir["DOOR"] = "通过";
+                                                        updateControlText(skinLabel_MB_DOOR_RESULT, "测试通过", Color.Green);
+                                                        updateTableSelectedIndex(skinTabControl_MB, ++MBTabSelectIndex);
                                                     }
                                                     else
                                                     {
-                                                     //   LOG("WIFI测试错误!");
-                                                     //   updateControlText(skinLabel_MB_DOOR_RESULT, "测试不通过", Color.Red);
-                                                     //   MBTestResultDir["DOOR"] = "不通过";
+                                                        LOG("门控检测失败!");
+                                                        updateControlText(skinLabel_MB_DOOR_RESULT, "测试不通过", Color.Red);
+                                                        MBTestResultDir["DOOR"] = "不通过";
                                                     }
                                                 }
                                                 else if (PCBATestSelectIndex == 1)//副板测试
@@ -1829,7 +1888,8 @@ namespace AutoTestTool
                             updateControlText(skinLabel_MB_Card_RESULT, "");
                             LOG("发送刷卡测试命令.");
                             //发送刷卡测试指令
-                            SendCardTestReq();
+                            //SendCardTestReq();
+                            SendSubCardTestReq((byte)ENUM_BOARD.MAIN_BOARD_E);
                         }
                         
                         if ((GetCurrentTimeStamp() - ItemTestTime) >= 10)
@@ -1840,7 +1900,8 @@ namespace AutoTestTool
                             if (MBWholeTestCnt < 6)
                             {
                                 LOG("主板发送刷卡请求.");
-                                SendCardTestReq();
+                                //SendCardTestReq();
+                                SendSubCardTestReq((byte)ENUM_BOARD.MAIN_BOARD_E);
                                 //  skinButton_SB_CARD_RTEST_Click(sender, e);
                             }
                         }
@@ -2070,7 +2131,8 @@ namespace AutoTestTool
                             countDownTime_SB.tapCard = 60;
                             SBTestResultDir["刷卡"] = "";
                             updateControlText(skinLabel_CARD_Result, "");
-                            SendCardTestReq();
+                            //  SendCardTestReq();  //副板改为0x2B命令
+                            SendSubCardTestReq((byte)ENUM_BOARD.SUB_BOARD_E);
                         }
                         
                         if ((GetCurrentTimeStamp() - ItemTestTime) >= 10)
@@ -2082,8 +2144,9 @@ namespace AutoTestTool
                             if (SBWholeTestCnt < 20)
                             {
                                 LOG("发送刷卡请求.");
-                                SendCardTestReq();
-                              //  skinButton_SB_CARD_RTEST_Click(sender, e);
+                                // SendCardTestReq();
+                                SendSubCardTestReq((byte)ENUM_BOARD.SUB_BOARD_E);
+                                //  skinButton_SB_CARD_RTEST_Click(sender, e);
                             }
                         }
 
@@ -4948,7 +5011,8 @@ namespace AutoTestTool
             updateControlText(skinLabel_MB_Card_RESULT, "");
             LOG("主板刷卡重新测试.");
             //发送刷卡测试指令
-            SendCardTestReq();
+            //SendCardTestReq();
+            SendSubCardTestReq((byte)ENUM_BOARD.MAIN_BOARD_E);
         }
 
         private void skinButton_MB_RS232_SKIP_Click(object sender, EventArgs e)
@@ -5068,7 +5132,8 @@ namespace AutoTestTool
             countDownTime_SB.tapCard = countdownTime;
             SBTestResultDir["刷卡"] = "";
             updateControlText(skinLabel_CARD_Result, "");
-            SendCardTestReq();
+            //SendCardTestReq();
+            SendSubCardTestReq((byte)ENUM_BOARD.SUB_BOARD_E);
         }
 
         private void skinSplitContainer8_Panel1_Paint(object sender, PaintEventArgs e)
@@ -5745,7 +5810,8 @@ namespace AutoTestTool
             updateControlText(skinLabel_CHG_MAIN_CARD_RESULT, "");
             LOG("整机主板刷卡重新测试.");
             //发送刷卡测试指令
-            SendCardTestReq();
+            //SendCardTestReq();
+            SendSubCardTestReq((byte)ENUM_BOARD.MAIN_BOARD_E);
         }
 
         private void skinButton_WholeChg_SUB_CARD_RTest_Click(object sender, EventArgs e)

@@ -1792,7 +1792,14 @@ namespace AutoTestTool
                 switch (MBTabSelectIndex)
                 {
                     case 0x00:
-                        LOG("扫描主板二维码.");
+                        LOG("请重新扫描主板二维码.");
+                        updateControlText(textBox_MB_QRCode, "");
+                        MBTestingFlag = false;
+                        {
+                            updateControlText(skinButton_PCBA_STARTTEST, "开始测试");
+                            MBTestThread.Abort();
+                            MBTestThread = null;
+                        }
                         break;
                     case 0x01://电源
                         if (selectIndexUpgradeFlag == true)
@@ -2111,7 +2118,16 @@ namespace AutoTestTool
                 switch (SBTabSelectIndex)
                 {
                     case 0x00:
-                        LOG("扫描副板二维码.");
+                        LOG("请重新扫描副板二维码.");
+                        updateControlText(textBox_SB_QR, "");
+                        SBTestingFlag = false;
+
+                        if (SBTestThread != null)
+                        {
+                            updateControlText(skinButton_PCBA_STARTTEST, "开始测试");
+                            SBTestThread.Abort();
+                            SBTestThread = null;
+                        }
                         break;
                     case 0x01:  //副板232
                         if (selectIndexUpgradeFlag == true)
@@ -2297,7 +2313,14 @@ namespace AutoTestTool
                 switch (chargerTestSelectIndex)
                 {
                     case 0x00:
-                        LOG("扫描电桩二维码.");
+                        LOG("请重新用扫码枪扫描电桩二维码.");
+                        updateControlText(textBox_WholeChg_SN_QR, "");
+                        ChargerTestingFlag = false;
+                        {
+                            updateControlText(skinButton_WholeChg_StartTest, "开始测试");
+                            ChargerTestThread.Abort();
+                            ChargerTestThread = null;
+                        }
                         break;
                     case 0x01:  //整机RS232
                         if (selectIndexUpgradeFlag == true)
@@ -2385,33 +2408,35 @@ namespace AutoTestTool
                         //写入excel表
                         ProcTestData.WriteReport(TestSettingInfo["ChargerModel"] + "_整机测试.xlsx", TestSettingInfo["ChargerModel"] + "_整机测试", ChargerTestResultDir);
 
-/*
-                        string cmd = ProcTestData.ChargerTestMysqlCommand (
-                                TestSettingInfo["ChargerModel"].ToString(),
-                                ChargerTestResultDir["电桩号"],
-                                ChargerTestResultDir["测试员"],
-                                ChargerTestResultDir["软件版本"],
-                                ChargerTestResultDir["主板编号"],
-                                ChargerTestResultDir["测试结果"] == "通过" ? "Pass" : "Fail",
-                                ChargerTestResultDir["指示灯"] == "通过" ? "Pass" : "Fail",
-                                ChargerTestResultDir["蓝牙"] == "通过" ? "Pass" : (ChargerTestResultDir["蓝牙"] == "无" ? "Without" : "Fail"),
-                                ChargerTestResultDir["2.4G"] == "通过" ? "Pass" : (ChargerTestResultDir["2.4G"] == "无" ? "Without" : "Fail"),
-                                ChargerTestResultDir["2G模块"] == "通过" ? "Pass" : "Fail",
-                                ChargerTestResultDir["信号值"],
-                                ChargerTestResultDir["ICCID"],
-                                ChargerTestResultDir["测试时间"], 
-                                GetResultObj.UsedTime_Charger 
-                            );
+                        /*
+                                                string cmd = ProcTestData.ChargerTestMysqlCommand (
+                                                        TestSettingInfo["ChargerModel"].ToString(),
+                                                        ChargerTestResultDir["电桩号"],
+                                                        ChargerTestResultDir["测试员"],
+                                                        ChargerTestResultDir["软件版本"],
+                                                        ChargerTestResultDir["主板编号"],
+                                                        ChargerTestResultDir["测试结果"] == "通过" ? "Pass" : "Fail",
+                                                        ChargerTestResultDir["指示灯"] == "通过" ? "Pass" : "Fail",
+                                                        ChargerTestResultDir["蓝牙"] == "通过" ? "Pass" : (ChargerTestResultDir["蓝牙"] == "无" ? "Without" : "Fail"),
+                                                        ChargerTestResultDir["2.4G"] == "通过" ? "Pass" : (ChargerTestResultDir["2.4G"] == "无" ? "Without" : "Fail"),
+                                                        ChargerTestResultDir["2G模块"] == "通过" ? "Pass" : "Fail",
+                                                        ChargerTestResultDir["信号值"],
+                                                        ChargerTestResultDir["ICCID"],
+                                                        ChargerTestResultDir["测试时间"], 
+                                                        GetResultObj.UsedTime_Charger 
+                                                    );
 
-                        if (ProcTestData.SendMysqlCommand(cmd, true) == true)
-                        {
-                            LOG("整机测试记录添加数据库成功");
-                            ProcTestData.DealBackUpData(ProcTestData.backupMysqlCmdFile);
-                        }
-*/
+                                                if (ProcTestData.SendMysqlCommand(cmd, true) == true)
+                                                {
+                                                    LOG("整机测试记录添加数据库成功");
+                                                    ProcTestData.DealBackUpData(ProcTestData.backupMysqlCmdFile);
+                                                }
+                        */
+                        SendRebootReq();
+
                         updateControlText(textBox_WholeChg_SN_QR, "");
                         ChargerTestingFlag = false;
-                        SendRebootReq();
+                        
                         {
                             updateControlText(skinButton_WholeChg_StartTest, "开始测试");
                             ChargerTestThread.Abort();

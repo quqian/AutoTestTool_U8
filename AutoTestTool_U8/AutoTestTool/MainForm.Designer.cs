@@ -264,6 +264,8 @@
             this.skinLabel112 = new CCWin.SkinControl.SkinLabel();
             this.skinButton_TRUMPET_ReTest = new CCWin.SkinControl.SkinButton();
             this.skinButton_TRUMPET_Skip = new CCWin.SkinControl.SkinButton();
+            this.skinButton_TRUMPET_Fail = new CCWin.SkinControl.SkinButton();
+            this.skinButton_TRUMPET_Success = new CCWin.SkinControl.SkinButton();
             this.skinLabel_SUB_TRUMPET_Result = new CCWin.SkinControl.SkinLabel();
             this.skinLabel20 = new CCWin.SkinControl.SkinLabel();
             this.skinTabPage_SB_FLASH = new CCWin.SkinControl.SkinTabPage();
@@ -1051,7 +1053,7 @@
             this.skinTabControl_PCBATest.PageHover = ((System.Drawing.Image)(resources.GetObject("skinTabControl_PCBATest.PageHover")));
             this.skinTabControl_PCBATest.PageImagePosition = CCWin.SkinControl.SkinTabControl.ePageImagePosition.Left;
             this.skinTabControl_PCBATest.PageNorml = null;
-            this.skinTabControl_PCBATest.SelectedIndex = 0;
+            this.skinTabControl_PCBATest.SelectedIndex = 1;
             this.skinTabControl_PCBATest.Size = new System.Drawing.Size(888, 733);
             this.skinTabControl_PCBATest.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.skinTabControl_PCBATest.TabIndex = 0;
@@ -1103,7 +1105,7 @@
             this.skinTabControl_MB.PageImagePosition = CCWin.SkinControl.SkinTabControl.ePageImagePosition.Left;
             this.skinTabControl_MB.PageNorml = null;
             this.skinTabControl_MB.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.skinTabControl_MB.SelectedIndex = 2;
+            this.skinTabControl_MB.SelectedIndex = 7;
             this.skinTabControl_MB.Size = new System.Drawing.Size(885, 696);
             this.skinTabControl_MB.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.skinTabControl_MB.TabIndex = 0;
@@ -3980,7 +3982,7 @@
             this.skinTabControl_SB.PageHover = ((System.Drawing.Image)(resources.GetObject("skinTabControl_SB.PageHover")));
             this.skinTabControl_SB.PageImagePosition = CCWin.SkinControl.SkinTabControl.ePageImagePosition.Left;
             this.skinTabControl_SB.PageNorml = null;
-            this.skinTabControl_SB.SelectedIndex = 4;
+            this.skinTabControl_SB.SelectedIndex = 3;
             this.skinTabControl_SB.Size = new System.Drawing.Size(888, 693);
             this.skinTabControl_SB.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.skinTabControl_SB.TabIndex = 1;
@@ -4418,8 +4420,11 @@
             // 
             this.skinSplitContainer6.Panel2.Controls.Add(this.skinButton_TRUMPET_ReTest);
             this.skinSplitContainer6.Panel2.Controls.Add(this.skinButton_TRUMPET_Skip);
+            this.skinSplitContainer6.Panel2.Controls.Add(this.skinButton_TRUMPET_Fail);
+            this.skinSplitContainer6.Panel2.Controls.Add(this.skinButton_TRUMPET_Success);
             this.skinSplitContainer6.Panel2.Controls.Add(this.skinLabel_SUB_TRUMPET_Result);
             this.skinSplitContainer6.Panel2.Controls.Add(this.skinLabel20);
+            this.skinSplitContainer6.Panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.skinSplitContainer6_Panel2_Paint);
             this.skinSplitContainer6.Size = new System.Drawing.Size(788, 693);
             this.skinSplitContainer6.SplitterDistance = 127;
             this.skinSplitContainer6.TabIndex = 2;
@@ -4473,45 +4478,79 @@
             // 
             // skinButton_TRUMPET_ReTest
             // 
-            this.skinButton_TRUMPET_ReTest.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.skinButton_TRUMPET_ReTest.BackColor = System.Drawing.Color.Transparent;
-            this.skinButton_TRUMPET_ReTest.BaseColor = System.Drawing.Color.Silver;
-            this.skinButton_TRUMPET_ReTest.BorderColor = System.Drawing.Color.Silver;
+            this.skinButton_TRUMPET_ReTest.BaseColor = System.Drawing.Color.DarkGray;
+            this.skinButton_TRUMPET_ReTest.BorderColor = System.Drawing.Color.DarkGray;
             this.skinButton_TRUMPET_ReTest.ControlState = CCWin.SkinClass.ControlState.Normal;
             this.skinButton_TRUMPET_ReTest.DownBack = null;
-            this.skinButton_TRUMPET_ReTest.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.skinButton_TRUMPET_ReTest.Location = new System.Drawing.Point(318, 198);
+            this.skinButton_TRUMPET_ReTest.Location = new System.Drawing.Point(290, 214);
             this.skinButton_TRUMPET_ReTest.MouseBack = null;
             this.skinButton_TRUMPET_ReTest.Name = "skinButton_TRUMPET_ReTest";
             this.skinButton_TRUMPET_ReTest.NormlBack = null;
             this.skinButton_TRUMPET_ReTest.Radius = 15;
             this.skinButton_TRUMPET_ReTest.RoundStyle = CCWin.SkinClass.RoundStyle.All;
-            this.skinButton_TRUMPET_ReTest.Size = new System.Drawing.Size(137, 44);
-            this.skinButton_TRUMPET_ReTest.TabIndex = 19;
+            this.skinButton_TRUMPET_ReTest.Size = new System.Drawing.Size(110, 40);
+            this.skinButton_TRUMPET_ReTest.TabIndex = 23;
             this.skinButton_TRUMPET_ReTest.Text = "重新测试";
             this.skinButton_TRUMPET_ReTest.UseVisualStyleBackColor = false;
             this.skinButton_TRUMPET_ReTest.Click += new System.EventHandler(this.skinButton_TRUMPET_ReTest_Click);
             // 
             // skinButton_TRUMPET_Skip
             // 
-            this.skinButton_TRUMPET_Skip.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.skinButton_TRUMPET_Skip.BackColor = System.Drawing.Color.Transparent;
-            this.skinButton_TRUMPET_Skip.BaseColor = System.Drawing.Color.Silver;
-            this.skinButton_TRUMPET_Skip.BorderColor = System.Drawing.Color.Silver;
+            this.skinButton_TRUMPET_Skip.BaseColor = System.Drawing.Color.DarkGray;
+            this.skinButton_TRUMPET_Skip.BorderColor = System.Drawing.Color.DarkGray;
             this.skinButton_TRUMPET_Skip.ControlState = CCWin.SkinClass.ControlState.Normal;
             this.skinButton_TRUMPET_Skip.DownBack = null;
-            this.skinButton_TRUMPET_Skip.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.skinButton_TRUMPET_Skip.Location = new System.Drawing.Point(132, 198);
+            this.skinButton_TRUMPET_Skip.Location = new System.Drawing.Point(132, 214);
             this.skinButton_TRUMPET_Skip.MouseBack = null;
             this.skinButton_TRUMPET_Skip.Name = "skinButton_TRUMPET_Skip";
             this.skinButton_TRUMPET_Skip.NormlBack = null;
             this.skinButton_TRUMPET_Skip.Radius = 15;
             this.skinButton_TRUMPET_Skip.RoundStyle = CCWin.SkinClass.RoundStyle.All;
-            this.skinButton_TRUMPET_Skip.Size = new System.Drawing.Size(137, 44);
-            this.skinButton_TRUMPET_Skip.TabIndex = 18;
+            this.skinButton_TRUMPET_Skip.Size = new System.Drawing.Size(110, 40);
+            this.skinButton_TRUMPET_Skip.TabIndex = 22;
             this.skinButton_TRUMPET_Skip.Text = "跳过";
             this.skinButton_TRUMPET_Skip.UseVisualStyleBackColor = false;
             this.skinButton_TRUMPET_Skip.Click += new System.EventHandler(this.skinButton_TRUMPET_Skip_Click);
+            // 
+            // skinButton_TRUMPET_Fail
+            // 
+            this.skinButton_TRUMPET_Fail.BackColor = System.Drawing.Color.Transparent;
+            this.skinButton_TRUMPET_Fail.BaseColor = System.Drawing.Color.DarkGray;
+            this.skinButton_TRUMPET_Fail.BorderColor = System.Drawing.Color.DarkGray;
+            this.skinButton_TRUMPET_Fail.ControlState = CCWin.SkinClass.ControlState.Normal;
+            this.skinButton_TRUMPET_Fail.DownBack = null;
+            this.skinButton_TRUMPET_Fail.Location = new System.Drawing.Point(290, 134);
+            this.skinButton_TRUMPET_Fail.MouseBack = null;
+            this.skinButton_TRUMPET_Fail.Name = "skinButton_TRUMPET_Fail";
+            this.skinButton_TRUMPET_Fail.NormlBack = null;
+            this.skinButton_TRUMPET_Fail.Radius = 15;
+            this.skinButton_TRUMPET_Fail.RoundStyle = CCWin.SkinClass.RoundStyle.All;
+            this.skinButton_TRUMPET_Fail.Size = new System.Drawing.Size(110, 40);
+            this.skinButton_TRUMPET_Fail.TabIndex = 21;
+            this.skinButton_TRUMPET_Fail.Text = "失败";
+            this.skinButton_TRUMPET_Fail.UseVisualStyleBackColor = false;
+            this.skinButton_TRUMPET_Fail.Click += new System.EventHandler(this.skinButton_TRUMPET_Fail_Click);
+            // 
+            // skinButton_TRUMPET_Success
+            // 
+            this.skinButton_TRUMPET_Success.BackColor = System.Drawing.Color.Transparent;
+            this.skinButton_TRUMPET_Success.BaseColor = System.Drawing.Color.DarkGray;
+            this.skinButton_TRUMPET_Success.BorderColor = System.Drawing.Color.DarkGray;
+            this.skinButton_TRUMPET_Success.ControlState = CCWin.SkinClass.ControlState.Normal;
+            this.skinButton_TRUMPET_Success.DownBack = null;
+            this.skinButton_TRUMPET_Success.Location = new System.Drawing.Point(132, 134);
+            this.skinButton_TRUMPET_Success.MouseBack = null;
+            this.skinButton_TRUMPET_Success.Name = "skinButton_TRUMPET_Success";
+            this.skinButton_TRUMPET_Success.NormlBack = null;
+            this.skinButton_TRUMPET_Success.Radius = 15;
+            this.skinButton_TRUMPET_Success.RoundStyle = CCWin.SkinClass.RoundStyle.All;
+            this.skinButton_TRUMPET_Success.Size = new System.Drawing.Size(110, 40);
+            this.skinButton_TRUMPET_Success.TabIndex = 20;
+            this.skinButton_TRUMPET_Success.Text = "成功";
+            this.skinButton_TRUMPET_Success.UseVisualStyleBackColor = false;
+            this.skinButton_TRUMPET_Success.Click += new System.EventHandler(this.skinButton_TRUMPET_Success_Click);
             // 
             // skinLabel_SUB_TRUMPET_Result
             // 
@@ -7887,8 +7926,6 @@
         private CCWin.SkinControl.SkinLabel skinLabel_SB_TRUMPET_TIME;
         private CCWin.SkinControl.SkinLabel skinLabel62;
         private CCWin.SkinControl.SkinLabel skinLabel112;
-        private CCWin.SkinControl.SkinButton skinButton_TRUMPET_ReTest;
-        private CCWin.SkinControl.SkinButton skinButton_TRUMPET_Skip;
         private CCWin.SkinControl.SkinLabel skinLabel_SUB_TRUMPET_Result;
         private CCWin.SkinControl.SkinLabel skinLabel20;
         private CCWin.SkinControl.SkinTabPage skinTabPage_SB_FLASH;
@@ -8088,5 +8125,9 @@
         private CCWin.SkinControl.SkinLabel skinLabel57;
         private CCWin.SkinControl.SkinLabel MB_DOOR_STATUS_RESULT_VAL;
         private CCWin.SkinControl.SkinLabel skinLabel58;
+        private CCWin.SkinControl.SkinButton skinButton_TRUMPET_Fail;
+        private CCWin.SkinControl.SkinButton skinButton_TRUMPET_Success;
+        private CCWin.SkinControl.SkinButton skinButton_TRUMPET_ReTest;
+        private CCWin.SkinControl.SkinButton skinButton_TRUMPET_Skip;
     }
 }

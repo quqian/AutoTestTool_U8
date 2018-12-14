@@ -1032,8 +1032,8 @@ namespace AutoTestTool
                                                 {
                                                     if (0 == GetTRUMPETValue)
                                                     {
-                                                        MBTestResultDir["喇叭"] = "通过";
-                                                        updateControlText(skinLabel_MB_TRUMPET_RESULT, "测试通过", Color.Green);
+                                                     //   MBTestResultDir["喇叭"] = "通过";
+                                                     //   updateControlText(skinLabel_MB_TRUMPET_RESULT, "测试通过", Color.Green);
                                                         if (6 <= (GetCurrentTimeStamp() - TRUMPETTimeTicks))
                                                         {
                                                             TRUMPETTimeTicks = GetCurrentTimeStamp();
@@ -1051,8 +1051,8 @@ namespace AutoTestTool
                                                 {
                                                     if (0 == GetTRUMPETValue)
                                                     {
-                                                        SBTestResultDir["喇叭"] = "通过";
-                                                        updateControlText(skinLabel_SUB_TRUMPET_Result, "测试通过", Color.Green);
+                                                    //    SBTestResultDir["喇叭"] = "通过";
+                                                    //    updateControlText(skinLabel_SUB_TRUMPET_Result, "测试通过", Color.Green);
                                                         if (6 <= (GetCurrentTimeStamp() - SubTRUMPETTimeTicks))
                                                         {
                                                             SubTRUMPETTimeTicks = GetCurrentTimeStamp();
@@ -5926,6 +5926,27 @@ namespace AutoTestTool
         private void skinLabel_MB_DOOR_STATUS_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void skinSplitContainer6_Panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void skinButton_TRUMPET_Fail_Click(object sender, EventArgs e)
+        {
+            LOG("副板检测喇叭失败.");
+            SBTestResultDir["喇叭"] = "不通过";
+            updateControlText(skinLabel_SUB_TRUMPET_Result, "不通过", Color.Red);
+            updateTableSelectedIndex(skinTabControl_SB, ++SBTabSelectIndex);
+        }
+
+        private void skinButton_TRUMPET_Success_Click(object sender, EventArgs e)
+        {
+            LOG("副板检测喇叭成功.");
+            SBTestResultDir["喇叭"] = "通过";
+            updateControlText(skinLabel_SUB_TRUMPET_Result, "通过", Color.Green);
+            updateTableSelectedIndex(skinTabControl_SB, ++SBTabSelectIndex);
         }
     }
 }

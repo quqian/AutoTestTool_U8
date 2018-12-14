@@ -657,7 +657,7 @@
             this.skinTabControl_TestMenu.PageHover = ((System.Drawing.Image)(resources.GetObject("skinTabControl_TestMenu.PageHover")));
             this.skinTabControl_TestMenu.PageImagePosition = CCWin.SkinControl.SkinTabControl.ePageImagePosition.Left;
             this.skinTabControl_TestMenu.PageNorml = null;
-            this.skinTabControl_TestMenu.SelectedIndex = 2;
+            this.skinTabControl_TestMenu.SelectedIndex = 1;
             this.skinTabControl_TestMenu.Size = new System.Drawing.Size(1322, 813);
             this.skinTabControl_TestMenu.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.skinTabControl_TestMenu.TabIndex = 0;
@@ -1090,7 +1090,7 @@
             this.skinTabControl_MB.Controls.Add(this.skinTabPage_MB_STOPTEST);
             this.skinTabControl_MB.HeadBack = null;
             this.skinTabControl_MB.ImgTxtOffset = new System.Drawing.Point(0, 0);
-            this.skinTabControl_MB.ItemSize = new System.Drawing.Size(50, 100);
+            this.skinTabControl_MB.ItemSize = new System.Drawing.Size(35, 100);
             this.skinTabControl_MB.Location = new System.Drawing.Point(0, 0);
             this.skinTabControl_MB.Multiline = true;
             this.skinTabControl_MB.Name = "skinTabControl_MB";
@@ -1103,7 +1103,7 @@
             this.skinTabControl_MB.PageImagePosition = CCWin.SkinControl.SkinTabControl.ePageImagePosition.Left;
             this.skinTabControl_MB.PageNorml = null;
             this.skinTabControl_MB.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.skinTabControl_MB.SelectedIndex = 0;
+            this.skinTabControl_MB.SelectedIndex = 2;
             this.skinTabControl_MB.Size = new System.Drawing.Size(885, 696);
             this.skinTabControl_MB.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.skinTabControl_MB.TabIndex = 0;
@@ -3968,7 +3968,7 @@
             this.skinTabControl_SB.Dock = System.Windows.Forms.DockStyle.Fill;
             this.skinTabControl_SB.HeadBack = null;
             this.skinTabControl_SB.ImgTxtOffset = new System.Drawing.Point(0, 0);
-            this.skinTabControl_SB.ItemSize = new System.Drawing.Size(50, 100);
+            this.skinTabControl_SB.ItemSize = new System.Drawing.Size(35, 100);
             this.skinTabControl_SB.Location = new System.Drawing.Point(0, 0);
             this.skinTabControl_SB.Multiline = true;
             this.skinTabControl_SB.Name = "skinTabControl_SB";
@@ -3980,7 +3980,7 @@
             this.skinTabControl_SB.PageHover = ((System.Drawing.Image)(resources.GetObject("skinTabControl_SB.PageHover")));
             this.skinTabControl_SB.PageImagePosition = CCWin.SkinControl.SkinTabControl.ePageImagePosition.Left;
             this.skinTabControl_SB.PageNorml = null;
-            this.skinTabControl_SB.SelectedIndex = 2;
+            this.skinTabControl_SB.SelectedIndex = 4;
             this.skinTabControl_SB.Size = new System.Drawing.Size(888, 693);
             this.skinTabControl_SB.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.skinTabControl_SB.TabIndex = 1;
@@ -5562,7 +5562,7 @@
             this.skinTabControl_WholeChg.Controls.Add(this.skinTabPage_CHG_STOP_TEST);
             this.skinTabControl_WholeChg.HeadBack = null;
             this.skinTabControl_WholeChg.ImgTxtOffset = new System.Drawing.Point(0, 0);
-            this.skinTabControl_WholeChg.ItemSize = new System.Drawing.Size(50, 100);
+            this.skinTabControl_WholeChg.ItemSize = new System.Drawing.Size(35, 100);
             this.skinTabControl_WholeChg.Location = new System.Drawing.Point(0, 0);
             this.skinTabControl_WholeChg.Multiline = true;
             this.skinTabControl_WholeChg.Name = "skinTabControl_WholeChg";
@@ -5574,7 +5574,7 @@
             this.skinTabControl_WholeChg.PageHover = ((System.Drawing.Image)(resources.GetObject("skinTabControl_WholeChg.PageHover")));
             this.skinTabControl_WholeChg.PageImagePosition = CCWin.SkinControl.SkinTabControl.ePageImagePosition.Left;
             this.skinTabControl_WholeChg.PageNorml = null;
-            this.skinTabControl_WholeChg.SelectedIndex = 4;
+            this.skinTabControl_WholeChg.SelectedIndex = 1;
             this.skinTabControl_WholeChg.Size = new System.Drawing.Size(879, 683);
             this.skinTabControl_WholeChg.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.skinTabControl_WholeChg.TabIndex = 2;

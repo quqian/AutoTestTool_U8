@@ -1654,9 +1654,9 @@ namespace AutoTestTool
             updateControlText(skinLabel_CHG_TESTOR_RES_VAL, ChargerTestResultDir["测试员"], Color.Black);
             updateControlText(skinLabel_CHG_FW_RES_VAL, ChargerTestResultDir["软件版本"], Color.Black);
             updateControlText(skinLabeL_CHG_TEST_RES_VAL, ChargerTestResultDir["测试结果"], decideColor(ChargerTestResultDir["测试结果"]));
-            updateControlText(skinLabel_CHG_MAIN_RS232_RES_VAL, ChargerTestResultDir["整机RS232"], decideColor(ChargerTestResultDir["RS232"]));
-            updateControlText(skinLabel_CHG_MAIN_CARD_RES_VAL, ChargerTestResultDir["整机主板刷卡"], decideColor(ChargerTestResultDir["主板刷卡"]));
-            updateControlText(skinLabel_CHG_SUB_CARD_RES_VAL, ChargerTestResultDir["整机副板刷卡"], decideColor(ChargerTestResultDir["副板刷卡"]));
+            updateControlText(skinLabel_CHG_MAIN_RS232_RES_VAL, ChargerTestResultDir["整机RS232"], decideColor(ChargerTestResultDir["整机RS232"]));
+            updateControlText(skinLabel_CHG_MAIN_CARD_RES_VAL, ChargerTestResultDir["整机主板刷卡"], decideColor(ChargerTestResultDir["整机主板刷卡"]));
+            updateControlText(skinLabel_CHG_SUB_CARD_RES_VAL, ChargerTestResultDir["整机副板刷卡"], decideColor(ChargerTestResultDir["整机副板刷卡"]));
             updateControlText(skinLabel_CHG_TEST_USEDTIME_RES_VAL, ChargerTestResultDir["测试用时"], Color.Black);
             updateControlText(skinLabel_CHG_TEST_TIME_RES_VAL, ChargerTestResultDir["测试时间"], Color.Black);
         }
@@ -2010,6 +2010,20 @@ namespace AutoTestTool
                             LOG("主板发送 DOOR_STATUS 测试命令.");
                             //发送 DOOR_STATUS 测试指令
                             SendDOORStatusTestReq((byte)ENUM_BOARD.MAIN_BOARD_E);
+                            MBWholeTestCnt = 0;
+                        }
+                        if ((GetCurrentTimeStamp() - ItemTestTime) >= 5)
+                        {
+                            ItemTestTime = GetCurrentTimeStamp();
+
+                            MBWholeTestCnt++;
+                            if (MBWholeTestCnt < 6)
+                            {
+                                LOG("主板发送刷卡请求.");
+                                //发送 DOOR_STATUS 测试指令
+                                SendDOORStatusTestReq((byte)ENUM_BOARD.MAIN_BOARD_E);
+                                //  skinButton_SB_CARD_RTEST_Click(sender, e);
+                            }
                         }
                         if ((GetCurrentTimeStamp() - ItemTestTime) >= 30)//超时
                         {
@@ -5849,7 +5863,7 @@ namespace AutoTestTool
         {
             ItemTestTime = GetCurrentTimeStamp();
             countDownTimeCharger.tapCard = countdownTime;
-            ChargerTestResultDir["主板刷卡"] = "";
+            ChargerTestResultDir["整机主板刷卡"] = "";
             updateControlText(skinLabel_CHG_MAIN_CARD_RESULT, "");
             LOG("整机主板刷卡重新测试.");
             //发送刷卡测试指令
@@ -5861,7 +5875,7 @@ namespace AutoTestTool
         {
             ItemTestTime = GetCurrentTimeStamp();
             countDownTimeCharger.SubtapCard = countdownTime;
-            ChargerTestResultDir["副板刷卡"] = "";
+            ChargerTestResultDir["整机副板刷卡"] = "";
             updateControlText(skinLabel_CHG_SUB_CARD_RESULT, "");
             LOG("整机副板刷卡重新测试.");
             //发送刷卡测试指令

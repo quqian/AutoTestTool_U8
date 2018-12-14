@@ -659,7 +659,7 @@
             this.skinTabControl_TestMenu.PageHover = ((System.Drawing.Image)(resources.GetObject("skinTabControl_TestMenu.PageHover")));
             this.skinTabControl_TestMenu.PageImagePosition = CCWin.SkinControl.SkinTabControl.ePageImagePosition.Left;
             this.skinTabControl_TestMenu.PageNorml = null;
-            this.skinTabControl_TestMenu.SelectedIndex = 1;
+            this.skinTabControl_TestMenu.SelectedIndex = 0;
             this.skinTabControl_TestMenu.Size = new System.Drawing.Size(1322, 813);
             this.skinTabControl_TestMenu.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.skinTabControl_TestMenu.TabIndex = 0;
@@ -833,7 +833,8 @@
             this.textBox_TestCardNum.Name = "textBox_TestCardNum";
             this.textBox_TestCardNum.Size = new System.Drawing.Size(205, 30);
             this.textBox_TestCardNum.TabIndex = 21;
-            this.textBox_TestCardNum.Text = "A10001395";
+            this.textBox_TestCardNum.Text = "B00002713";
+            this.textBox_TestCardNum.TextChanged += new System.EventHandler(this.textBox_TestCardNum_TextChanged);
             // 
             // skinLabel55
             // 

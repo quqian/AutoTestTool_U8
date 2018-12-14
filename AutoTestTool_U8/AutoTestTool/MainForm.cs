@@ -1746,10 +1746,11 @@ namespace AutoTestTool
             ChargerTestResultDir.Add("主板编号", "");
             //ChargerTestResultDir.Add("副板编号", "");
             ChargerTestResultDir.Add("测试员", ProcTestData.PresentAccount);
+            ChargerTestResultDir.Add("软件版本", "");
             ChargerTestResultDir.Add("测试结果", "");
-            ChargerTestResultDir.Add("RS232", "");
-            ChargerTestResultDir.Add("主板刷卡", "");
-            ChargerTestResultDir.Add("副板刷卡", "");
+            ChargerTestResultDir.Add("整机RS232", "");
+            ChargerTestResultDir.Add("整机主板刷卡", "");
+            ChargerTestResultDir.Add("整机副板刷卡", "");
             ChargerTestResultDir.Add("测试时间", DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"));
             ChargerTestResultDir.Add("测试用时", "0");
 
@@ -3094,7 +3095,7 @@ namespace AutoTestTool
                 }
             }
 
-            if (n > waitFlag)
+            if (n > (waitFlag - 1))
             {
                 if (MessageBox.Show("获取PCB编号失败！\r\n是否重试", "提示", MessageBoxButtons.RetryCancel, MessageBoxIcon.Warning) == DialogResult.Retry)
                 {
@@ -5972,6 +5973,11 @@ namespace AutoTestTool
             SBTestResultDir["喇叭"] = "通过";
             updateControlText(skinLabel_SUB_TRUMPET_Result, "通过", Color.Green);
             updateTableSelectedIndex(skinTabControl_SB, ++SBTabSelectIndex);
+        }
+
+        private void textBox_TestCardNum_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

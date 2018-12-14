@@ -332,7 +332,6 @@
             this.skinTabPage_WholeChg_RS232 = new CCWin.SkinControl.SkinTabPage();
             this.skinSplitContainer11 = new CCWin.SkinControl.SkinSplitContainer();
             this.skinLabel_WholeChg_RS232_Time = new CCWin.SkinControl.SkinLabel();
-            this.skinLabel33 = new CCWin.SkinControl.SkinLabel();
             this.skinLabel34 = new CCWin.SkinControl.SkinLabel();
             this.skinLabel35 = new CCWin.SkinControl.SkinLabel();
             this.skinLabel_CHG_RS232_RESULT = new CCWin.SkinControl.SkinLabel();
@@ -658,7 +657,7 @@
             this.skinTabControl_TestMenu.PageHover = ((System.Drawing.Image)(resources.GetObject("skinTabControl_TestMenu.PageHover")));
             this.skinTabControl_TestMenu.PageImagePosition = CCWin.SkinControl.SkinTabControl.ePageImagePosition.Left;
             this.skinTabControl_TestMenu.PageNorml = null;
-            this.skinTabControl_TestMenu.SelectedIndex = 1;
+            this.skinTabControl_TestMenu.SelectedIndex = 2;
             this.skinTabControl_TestMenu.Size = new System.Drawing.Size(1322, 813);
             this.skinTabControl_TestMenu.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.skinTabControl_TestMenu.TabIndex = 0;
@@ -1104,7 +1103,7 @@
             this.skinTabControl_MB.PageImagePosition = CCWin.SkinControl.SkinTabControl.ePageImagePosition.Left;
             this.skinTabControl_MB.PageNorml = null;
             this.skinTabControl_MB.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.skinTabControl_MB.SelectedIndex = 10;
+            this.skinTabControl_MB.SelectedIndex = 0;
             this.skinTabControl_MB.Size = new System.Drawing.Size(885, 696);
             this.skinTabControl_MB.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.skinTabControl_MB.TabIndex = 0;
@@ -5698,7 +5697,6 @@
             // skinSplitContainer11.Panel1
             // 
             this.skinSplitContainer11.Panel1.Controls.Add(this.skinLabel_WholeChg_RS232_Time);
-            this.skinSplitContainer11.Panel1.Controls.Add(this.skinLabel33);
             this.skinSplitContainer11.Panel1.Controls.Add(this.skinLabel34);
             this.skinSplitContainer11.Panel1.Controls.Add(this.skinLabel35);
             // 
@@ -5710,7 +5708,7 @@
             this.skinSplitContainer11.Panel2.Controls.Add(this.skinLabel36);
             this.skinSplitContainer11.Panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.skinSplitContainer11_Panel2_Paint);
             this.skinSplitContainer11.Size = new System.Drawing.Size(779, 683);
-            this.skinSplitContainer11.SplitterDistance = 142;
+            this.skinSplitContainer11.SplitterDistance = 108;
             this.skinSplitContainer11.TabIndex = 0;
             // 
             // skinLabel_WholeChg_RS232_Time
@@ -5719,22 +5717,10 @@
             this.skinLabel_WholeChg_RS232_Time.BackColor = System.Drawing.Color.Transparent;
             this.skinLabel_WholeChg_RS232_Time.BorderColor = System.Drawing.Color.White;
             this.skinLabel_WholeChg_RS232_Time.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.skinLabel_WholeChg_RS232_Time.Location = new System.Drawing.Point(569, 15);
+            this.skinLabel_WholeChg_RS232_Time.Location = new System.Drawing.Point(582, 38);
             this.skinLabel_WholeChg_RS232_Time.Name = "skinLabel_WholeChg_RS232_Time";
             this.skinLabel_WholeChg_RS232_Time.Size = new System.Drawing.Size(0, 25);
             this.skinLabel_WholeChg_RS232_Time.TabIndex = 3;
-            // 
-            // skinLabel33
-            // 
-            this.skinLabel33.AutoSize = true;
-            this.skinLabel33.BackColor = System.Drawing.Color.Transparent;
-            this.skinLabel33.BorderColor = System.Drawing.Color.White;
-            this.skinLabel33.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.skinLabel33.Location = new System.Drawing.Point(19, 54);
-            this.skinLabel33.Name = "skinLabel33";
-            this.skinLabel33.Size = new System.Drawing.Size(240, 26);
-            this.skinLabel33.TabIndex = 2;
-            this.skinLabel33.Text = "请肉眼观察指示灯是否亮起";
             // 
             // skinLabel34
             // 
@@ -5742,7 +5728,7 @@
             this.skinLabel34.BackColor = System.Drawing.Color.Transparent;
             this.skinLabel34.BorderColor = System.Drawing.Color.White;
             this.skinLabel34.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.skinLabel34.Location = new System.Drawing.Point(439, 15);
+            this.skinLabel34.Location = new System.Drawing.Point(452, 38);
             this.skinLabel34.Name = "skinLabel34";
             this.skinLabel34.Size = new System.Drawing.Size(74, 25);
             this.skinLabel34.TabIndex = 1;
@@ -5754,11 +5740,11 @@
             this.skinLabel35.BackColor = System.Drawing.Color.Transparent;
             this.skinLabel35.BorderColor = System.Drawing.Color.White;
             this.skinLabel35.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.skinLabel35.Location = new System.Drawing.Point(19, 15);
+            this.skinLabel35.Location = new System.Drawing.Point(32, 38);
             this.skinLabel35.Name = "skinLabel35";
-            this.skinLabel35.Size = new System.Drawing.Size(188, 25);
+            this.skinLabel35.Size = new System.Drawing.Size(187, 25);
             this.skinLabel35.TabIndex = 0;
-            this.skinLabel35.Text = "当前项目:指示灯测试";
+            this.skinLabel35.Text = "当前项目:RS232测试";
             this.skinLabel35.Click += new System.EventHandler(this.skinLabel35_Click);
             // 
             // skinLabel_CHG_RS232_RESULT
@@ -8035,7 +8021,6 @@
         private CCWin.SkinControl.SkinTabPage skinTabPage_WholeChg_RS232;
         private CCWin.SkinControl.SkinSplitContainer skinSplitContainer11;
         private CCWin.SkinControl.SkinLabel skinLabel_WholeChg_RS232_Time;
-        private CCWin.SkinControl.SkinLabel skinLabel33;
         private CCWin.SkinControl.SkinLabel skinLabel34;
         private CCWin.SkinControl.SkinLabel skinLabel35;
         private CCWin.SkinControl.SkinLabel skinLabel_CHG_RS232_RESULT;

@@ -725,7 +725,7 @@ namespace AutoTestTool
                                                 {
                                                     if (TestSettingInfo["CardNum"].ToString() == GetResultObj.cardNum)
                                                     {
-                                                        ChargerTestResultDir["主板刷卡"] = "通过";
+                                                        ChargerTestResultDir["整机主板刷卡"] = "通过";
                                                         ChargerTestResultDir["主板卡号"] = GetResultObj.cardNum;
                                                         updateControlText(skinLabel_CHG_MAIN_CARD_RESULT, "测试通过", Color.Green);
 
@@ -739,14 +739,14 @@ namespace AutoTestTool
                                                     {
                                                         LOG("主板卡号与设置的不一致,请点击重新测试按钮!");
                                                         updateControlText(skinLabel_CHG_MAIN_CARD_RESULT, "测试不通过", Color.Red);
-                                                        ChargerTestResultDir["主板刷卡"] = "不通过";
+                                                        ChargerTestResultDir["整机主板刷卡"] = "不通过";
                                                     }
                                                 }
                                                 else if (1 == validFrame[17])
                                                 {
                                                     if (TestSettingInfo["CardNum"].ToString() == GetResultObj.cardNum)
                                                     {
-                                                        ChargerTestResultDir["副板刷卡"] = "通过";
+                                                        ChargerTestResultDir["整机副板刷卡"] = "通过";
                                                         ChargerTestResultDir["副板卡号"] = GetResultObj.cardNum;
                                                         updateControlText(skinLabel_CHG_SUB_CARD_RESULT, "测试通过", Color.Green);
 
@@ -760,7 +760,7 @@ namespace AutoTestTool
                                                     {
                                                         LOG("副板卡号与设置的不一致,请点击重新测试按钮!");
                                                         updateControlText(skinLabel_CHG_SUB_CARD_RESULT, "测试不通过", Color.Red);
-                                                        ChargerTestResultDir["副板刷卡"] = "不通过";
+                                                        ChargerTestResultDir["整机副板刷卡"] = "不通过";
                                                     }
                                                 }
                                             }
@@ -986,7 +986,7 @@ namespace AutoTestTool
                                             {
                                                 if (0 == GetRS232Value)
                                                 {
-                                                    ChargerTestResultDir["RS232"] = "通过";
+                                                    ChargerTestResultDir["整机RS232"] = "通过";
                                                     updateControlText(skinLabel_CHG_RS232_RESULT, "测试通过", Color.Green);
                                                     if (6 <= (GetCurrentTimeStamp() - WholeRS232TimeTicks))
                                                     {
@@ -997,8 +997,8 @@ namespace AutoTestTool
                                                 else
                                                 {
                                                     LOG("副板接收握手包应答错误!");
-                                                    updateTableSelectedIndex(skinTabControl_WholeChg, ++chargerTestSelectIndex);
-                                                    ChargerTestResultDir["RS232"] = "不通过";
+                                                   // updateTableSelectedIndex(skinTabControl_WholeChg, ++chargerTestSelectIndex);
+                                                    ChargerTestResultDir["整机RS232"] = "不通过";
                                                 }
                                             }
                                             break;
@@ -1276,6 +1276,10 @@ namespace AutoTestTool
                                                 GetResultObj.InterfaceBoardCode = str;
                                                 LOG("按键板PCB编号:" + str);
                                                 ChargerTestResultDir["按键板编号"] = GetResultObj.InterfaceBoardCode;
+                                            }
+                                            else
+                                            {
+                                                LOG("获取PCB编号失败，错误!!! ");
                                             }
                                             break;
                                         case (byte)Command.CMD_SET_REGISTER_CODE:
@@ -1650,9 +1654,9 @@ namespace AutoTestTool
             updateControlText(skinLabel_CHG_TESTOR_RES_VAL, ChargerTestResultDir["测试员"], Color.Black);
             updateControlText(skinLabel_CHG_FW_RES_VAL, ChargerTestResultDir["软件版本"], Color.Black);
             updateControlText(skinLabeL_CHG_TEST_RES_VAL, ChargerTestResultDir["测试结果"], decideColor(ChargerTestResultDir["测试结果"]));
-            updateControlText(skinLabel_CHG_MAIN_RS232_RES_VAL, ChargerTestResultDir["RS232"], decideColor(ChargerTestResultDir["RS232"]));
-            updateControlText(skinLabel_CHG_MAIN_CARD_RES_VAL, ChargerTestResultDir["主板刷卡"], decideColor(ChargerTestResultDir["主板刷卡"]));
-            updateControlText(skinLabel_CHG_SUB_CARD_RES_VAL, ChargerTestResultDir["副板刷卡"], decideColor(ChargerTestResultDir["副板刷卡"]));
+            updateControlText(skinLabel_CHG_MAIN_RS232_RES_VAL, ChargerTestResultDir["整机RS232"], decideColor(ChargerTestResultDir["RS232"]));
+            updateControlText(skinLabel_CHG_MAIN_CARD_RES_VAL, ChargerTestResultDir["整机主板刷卡"], decideColor(ChargerTestResultDir["主板刷卡"]));
+            updateControlText(skinLabel_CHG_SUB_CARD_RES_VAL, ChargerTestResultDir["整机副板刷卡"], decideColor(ChargerTestResultDir["副板刷卡"]));
             updateControlText(skinLabel_CHG_TEST_USEDTIME_RES_VAL, ChargerTestResultDir["测试用时"], Color.Black);
             updateControlText(skinLabel_CHG_TEST_TIME_RES_VAL, ChargerTestResultDir["测试时间"], Color.Black);
         }
@@ -2027,7 +2031,7 @@ namespace AutoTestTool
                         LOG("结束测试\r\n用时:" + MBTestResultDir["测试用时"]);
 
                         ShowMainboardResult();
-                        SendTestModeReq(0x01);
+                        SendTestModeReq((byte)TEST_MODE.TEST_MODE_STOP);
 
                         //写入excel表
                         ProcTestData.WriteReport(TestSettingInfo["ChargerModel"] + "_PCBA_主板.xlsx", TestSettingInfo["ChargerModel"] + "_PCBA_主板", MBTestResultDir);
@@ -2210,7 +2214,7 @@ namespace AutoTestTool
                         LOG("结束测试\r\n用时:" + SBTestResultDir["测试用时"]);
 
                         ShowSubBoardResult();
-                        SendTestModeReq(0x01);
+                        SendTestModeReq((byte)TEST_MODE.TEST_MODE_STOP);
 
                         //写入excel表
                         ProcTestData.WriteReport(TestSettingInfo["ChargerModel"] + "_PCBA_副板.xlsx", TestSettingInfo["ChargerModel"] + "_PCBA_副板", SBTestResultDir);
@@ -2261,8 +2265,8 @@ namespace AutoTestTool
             bool selectIndexUpgradeFlag = false;
             ChargerTestingFlag = true;
             GetResultObj.UsedTime_Charger = GetCurrentTimeStamp();
-            PrechargerTestSelectIndex = 1;
-            PrechargerTestSelectIndex = PrechargerTestSelectIndex + 1;
+            chargerTestSelectIndex = 1;
+            PrechargerTestSelectIndex = chargerTestSelectIndex + 1;
             LOG("整机开始测试1chargerTestSelectIndex." + chargerTestSelectIndex);
             updateTableSelectedIndex(skinTabControl_WholeChg, chargerTestSelectIndex);
             countdownTime = Convert.ToInt32(TestSettingInfo["CountDown"]);
@@ -2281,32 +2285,70 @@ namespace AutoTestTool
                     case 0x00:
                         LOG("扫描电桩二维码.");
                         break;
-                    case 0x01:  //指示灯
+                    case 0x01:  //整机RS232
                         if (selectIndexUpgradeFlag == true)
                         {
                             selectIndexUpgradeFlag = false;
                             ItemTestTime = GetCurrentTimeStamp();
-                            countDownTimeCharger.lcd = countdownTime;
-                            ChargerTestResultDir["指示灯"] = "";
+                            countDownTimeCharger.RS232 = countdownTime;
+                            ChargerTestResultDir["整机RS232"] = "";
                             updateControlText(skinLabel_CHG_RS232_RESULT, "");
-                            LOG("整机指示灯测试.");
-                            
-                            SendLedTestReq(0, 1);
-                            Thread.Sleep(200);
-                            SendLedTestReq(1, 1);
-                            Thread.Sleep(200);
-                            SendLedTestReq(2, 1);
+                            LOG("整机RS232测试.");
+
+                            SendRS232TestReq();
+                          //  Thread.Sleep(200);
                         }
                         if ((GetCurrentTimeStamp() - ItemTestTime) >= 30)//超时
                         {
-                            LOG("整机指示灯测试超时.");
-                            ChargerTestResultDir["指示灯"] = "不通过";
+                            LOG("整机RS232测试超时.");
+                            ChargerTestResultDir["整机RS232"] = "不通过";
                             updateControlText(skinLabel_CHG_RS232_RESULT, "不通过", Color.Red);
-                            LOG("灯1chargerTestSelectIndex." + chargerTestSelectIndex);
                             updateTableSelectedIndex(skinTabControl_WholeChg, ++chargerTestSelectIndex);
                         }
                         break;
-                    case 0x02:
+                    case 0x02:  //主板刷卡
+                        if (selectIndexUpgradeFlag == true)
+                        {
+                            selectIndexUpgradeFlag = false;
+                            ItemTestTime = GetCurrentTimeStamp();
+                            countDownTimeCharger.tapCard = countdownTime;
+                            ChargerTestResultDir["整机主板刷卡"] = "";
+                            updateControlText(skinLabel_CHG_MAIN_CARD_RESULT, "");
+                            LOG("整机主板刷卡测试.");
+
+                            SendSubCardTestReq((byte)ENUM_BOARD.MAIN_BOARD_E);
+                            //  Thread.Sleep(200);
+                        }
+                        if ((GetCurrentTimeStamp() - ItemTestTime) >= 30)//超时
+                        {
+                            LOG("整机主板刷卡测试超时.");
+                            ChargerTestResultDir["整机主板刷卡"] = "不通过";
+                            updateControlText(skinLabel_CHG_MAIN_CARD_RESULT, "不通过", Color.Red);
+                            updateTableSelectedIndex(skinTabControl_WholeChg, ++chargerTestSelectIndex);
+                        }
+                    break;
+                    case 0x03:  //副板刷卡
+                        if (selectIndexUpgradeFlag == true)
+                        {
+                            selectIndexUpgradeFlag = false;
+                            ItemTestTime = GetCurrentTimeStamp();
+                            countDownTimeCharger.SubtapCard = countdownTime;
+                            ChargerTestResultDir["整机副板刷卡"] = "";
+                            updateControlText(skinLabel_CHG_SUB_CARD_RESULT, "");
+                            LOG("整机副板刷卡测试.");
+
+                            SendSubCardTestReq((byte)ENUM_BOARD.SUB_BOARD_E);
+                            //  Thread.Sleep(200);
+                        }
+                        if ((GetCurrentTimeStamp() - ItemTestTime) >= 30)//超时
+                        {
+                            LOG("整机副板刷卡测试超时.");
+                            ChargerTestResultDir["整机副板刷卡"] = "不通过";
+                            updateControlText(skinLabel_CHG_SUB_CARD_RESULT, "不通过", Color.Red);
+                            updateTableSelectedIndex(skinTabControl_WholeChg, ++chargerTestSelectIndex);
+                        }
+                    break;
+                    case 0x04:
                         SendGetFwVersionReq(0x00);
                         Thread.Sleep(200);
                         SendGetPcdCode(0x00);
@@ -2319,7 +2361,7 @@ namespace AutoTestTool
                         LOG("结束测试\r\n用时:" + ChargerTestResultDir["测试用时"]);
 
                         ShowChgBoardResult();
-                        SendTestModeReq(0x01);
+                        SendTestModeReq((byte)TEST_MODE.TEST_MODE_STOP);
 
                         if (ChargerTestResultDir["测试结果"] == "通过")
                         {
@@ -2965,6 +3007,7 @@ namespace AutoTestTool
 
         private void SendGetPcdCode(byte operate)
         {
+            int waitFlag = 5;
             byte[] data = { operate };
             SendSerialData(MakeSendArray((byte)Command.CMD_READ_PCB_CODE, data));
             int waittime = 0, n = 0;
@@ -2977,14 +3020,14 @@ namespace AutoTestTool
                 {
                     Thread.Sleep(100);
                     waittime++;
-                    if (waittime > 10)
+                    if (waittime > waitFlag)
                     {
                         n++;
                         waittime = 0;
                         SendSerialData(MakeSendArray((byte)Command.CMD_READ_PCB_CODE, data));
                         LOG("读取主板PCD码 ...");
                     }
-                    if (n > 3)
+                    if (n > waitFlag)
                     {
                         break;
                     }
@@ -2996,23 +3039,23 @@ namespace AutoTestTool
                 SendSerialData(MakeSendArray((byte)Command.CMD_READ_PCB_CODE, data));
                 while ((GetResultObj.InterfaceBoardCode == ""))
                 {
-                    Thread.Sleep(300);
+                    Thread.Sleep(100);
                     waittime++;
-                    if (waittime > 10)
+                    if (waittime > waitFlag)
                     {
                         n++;
                         waittime = 0;
                         SendSerialData(MakeSendArray((byte)Command.CMD_READ_PCB_CODE, data));
                         LOG("读取副板PCD码 ...");
                     }
-                    if (n > 3)
+                    if (n > waitFlag)
                     {
                         break;
                     }
                 }
             }
 
-            if (n > 3)
+            if (n > waitFlag)
             {
                 if (MessageBox.Show("获取PCB编号失败！\r\n是否重试", "提示", MessageBoxButtons.RetryCancel, MessageBoxIcon.Warning) == DialogResult.Retry)
                 {
@@ -3899,7 +3942,7 @@ namespace AutoTestTool
         {
             ItemTestTime = GetCurrentTimeStamp();
             countDownTimeCharger.RS232 = countdownTime;
-            ChargerTestResultDir["RS232"] = "";
+            ChargerTestResultDir["整机RS232"] = "";
             updateControlText(skinLabel_CHG_RS232_RESULT, "");
             LOG("整机RS232重新测试.");
             //发送RS232测试指令
@@ -3929,7 +3972,7 @@ namespace AutoTestTool
                 case 2://整机测试         
                     chargerTestSelectIndex = 0;
                     skinTabControl_WholeChg.SelectedIndex = 0;
-                    LOG("整机qqqq1chargerTestSelectIndex." + chargerTestSelectIndex);
+                 //   LOG("整机qqqq1chargerTestSelectIndex." + chargerTestSelectIndex);
                     textBox_WholeChg_SN_QR.Focus();
                     updateControlText(textBox_WholeChg_SN_QR, "");
                     break;

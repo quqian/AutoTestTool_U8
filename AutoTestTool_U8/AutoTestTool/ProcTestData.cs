@@ -25,7 +25,7 @@ namespace AutoTestTool
         public static List<string> Password = new List<string> { };
 
         public static string PresentAccount = "";
-        public static string StationIdQrcodeUrl = "http://www.chargerlink.com/alicp/";
+        public static string StationIdQrcodeUrl = "http://www.chargerlink.com/alicp/u8/";
         public static string X6StationIdQrcodeUrl = "http://www.chargerlink.com/alicn/";
         public static string savePath = @".\智能报表\";
         public static string testConfigFile = "TestInfo.conf";
@@ -41,7 +41,7 @@ namespace AutoTestTool
         // http://www.chargerlink.com/alicp/3900009999
         // http://www.chargerlink.com/alicp/3900008888
         // http://www.chargerlink.com/alicp/3800008888
-
+        //http://www.chargerlink.com/alicp/u8/3800008888
 
         // http://www.chargerlink.com/alicn/3800008888
 

@@ -1037,7 +1037,7 @@ namespace AutoTestTool
                                                         if (6 <= (GetCurrentTimeStamp() - TRUMPETTimeTicks))
                                                         {
                                                             TRUMPETTimeTicks = GetCurrentTimeStamp();
-                                                            updateTableSelectedIndex(skinTabControl_MB, ++MBTabSelectIndex);
+                                                        //    updateTableSelectedIndex(skinTabControl_MB, ++MBTabSelectIndex);  //手动判断的
                                                         }
                                                     }
                                                     else
@@ -1056,7 +1056,7 @@ namespace AutoTestTool
                                                         if (6 <= (GetCurrentTimeStamp() - SubTRUMPETTimeTicks))
                                                         {
                                                             SubTRUMPETTimeTicks = GetCurrentTimeStamp();
-                                                            updateTableSelectedIndex(skinTabControl_SB, ++SBTabSelectIndex);
+                                                            //    updateTableSelectedIndex(skinTabControl_SB, ++SBTabSelectIndex);  //手动判断的
                                                         }
                                                     }
                                                     else
@@ -2012,7 +2012,7 @@ namespace AutoTestTool
                             SendDOORStatusTestReq((byte)ENUM_BOARD.MAIN_BOARD_E);
                             MBWholeTestCnt = 0;
                         }
-                        if ((GetCurrentTimeStamp() - ItemTestTime) >= 5)
+                        if ((GetCurrentTimeStamp() - ItemTestTime) >= 3)
                         {
                             ItemTestTime = GetCurrentTimeStamp();
 

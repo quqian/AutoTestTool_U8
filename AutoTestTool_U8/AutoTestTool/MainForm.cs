@@ -703,20 +703,20 @@ namespace AutoTestTool
                                         case (byte)Command.CMD_SHUA_CARD_TEST://副板刷卡
                                             string pCardStr = "";
                                             GetResultObj.tapCard = 0XA5;
-                                            //   int ik = 0;
-                                            //   for (ik = 0; ik < 16; ik++)
+                                            //     int ik = 0;
+                                             //    for (ik = 0; ik < 17; ik++)
                                             //     {
-                                            //        LOG("aaaa:" + ik);
-                                            //        LOG("qqqqqqq:" + validFrame[16 + ik] + "\r\n");
-                                            //    }
-
-                                            GetResultObj.cardNum = Encoding.ASCII.GetString(validFrame, 19, 16).ToUpper();  //18指的是第18个字节， 16指的16个字节的卡号
+                                                    // LOG("aaaa:" + ik);
+                                            //        LOG("qqqqqqq:" + validFrame[17 + ik].ToString("X2") + "\n");
+                                            //    Sub_WholeLOG("qqqqqqq:" + validFrame[17 + ik].ToString("X2") + "\n");
+                                           // }
+                                            
+                                                    GetResultObj.cardNum = Encoding.ASCII.GetString(validFrame, 18, 16).ToUpper();  //18指的是第18个字节， 16指的16个字节的卡号
                                             //    LOG("卡号qqqq:" + GetResultObj.cardNum + "\r\n");
                                             GetResultObj.cardNum = GetResultObj.cardNum.Remove(GetResultObj.cardNum.IndexOf('\0'));
-
-                                            if (0x30 != validFrame[18])
+                                         //   if (0x30 != validFrame[18])
                                             {
-                                                pCardStr += validFrame[18].ToString("X2");
+                                         //       pCardStr += validFrame[18].ToString("X2");
                                                 //   LOG("kkk:" + pCardStr + "\r\n");
                                             }
                                             pCardStr += GetResultObj.cardNum;
@@ -774,7 +774,7 @@ namespace AutoTestTool
                                             }
                                             else if (TestMeunSelectIndex == 2)//整机测试
                                             {
-                                                if (0 == validFrame[17])
+                                             //   if (0 == validFrame[17])
                                                 {
                                                     if (TestSettingInfo["CardNum"].ToString() == pCardStr)
                                                     {
@@ -795,9 +795,10 @@ namespace AutoTestTool
                                                         ChargerTestResultDir["整机主板刷卡"] = "不通过";
                                                     }
                                                 }
+                                                /*
                                                 else if (1 == validFrame[17])
                                                 {
-                                                    /*
+                                                    
                                                     if (TestSettingInfo["CardNum"].ToString() == GetResultObj.cardNum)
                                                     {
                                                         ChargerTestResultDir["整机副板刷卡"] = "通过";
@@ -816,8 +817,9 @@ namespace AutoTestTool
                                                         updateControlText(skinLabel_CHG_SUB_CARD_RESULT, "测试不通过", Color.Red);
                                                         ChargerTestResultDir["整机副板刷卡"] = "不通过";
                                                     }
-                                                    */
+                                                    
                                                 }
+                                                */
                                             }
                                             else if (TestMeunSelectIndex == SubWholeSelectIndex)//副板整机测试
                                             {
@@ -2897,6 +2899,13 @@ namespace AutoTestTool
 
                             SendSubCardTestReq((byte)ENUM_BOARD.MAIN_BOARD_E);
                             //  Thread.Sleep(200);
+                            WaitItemTestTime = ItemTestTime;
+                        }
+                        if ((GetCurrentTimeStamp() - WaitItemTestTime) >= 1)
+                        {
+                            WaitItemTestTime = GetCurrentTimeStamp();
+                            LOG("副板整机发送刷卡请求.");
+                            SendSubCardTestReq((byte)ENUM_BOARD.MAIN_BOARD_E);
                         }
                         if ((GetCurrentTimeStamp() - ItemTestTime) >= 30)//超时
                         {
@@ -4665,32 +4674,34 @@ namespace AutoTestTool
 
         private void skinButton_WholeChg_StartTest_Click(object sender, EventArgs e)
         {
-            if (textBox_WholeChg_SN_QR.Text == "" )
+            if ("结束测试" == skinButton_SubWholeChg_StartTest.Text)
             {
-                MessageBox.Show("桩号不能为空", "提示", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                textBox_WholeChg_SN_QR.Text = "";
-                return;
-            }
-
-            if (textBox_WholeChg_SN_QR.Text.IndexOf(ProcTestData.StationIdQrcodeUrl) == 0)
-            {
-                textBox_WholeChg_SN_QR.Text = textBox_WholeChg_SN_QR.Text.Remove(0, ProcTestData.StationIdQrcodeUrl.Length);
-                System.Text.RegularExpressions.Regex rex = new System.Text.RegularExpressions.Regex(@"^\d+$");
-
-                if (rex.IsMatch(textBox_WholeChg_SN_QR.Text) == false)
+                if (textBox_WholeChg_SN_QR.Text == "")
                 {
-                    MessageBox.Show("桩号包含非数字！", "提示", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("桩号不能为空", "提示", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    textBox_WholeChg_SN_QR.Text = "";
+                    return;
+                }
+
+                if (textBox_WholeChg_SN_QR.Text.IndexOf(ProcTestData.StationIdQrcodeUrl) == 0)
+                {
+                    textBox_WholeChg_SN_QR.Text = textBox_WholeChg_SN_QR.Text.Remove(0, ProcTestData.StationIdQrcodeUrl.Length);
+                    System.Text.RegularExpressions.Regex rex = new System.Text.RegularExpressions.Regex(@"^\d+$");
+
+                    if (rex.IsMatch(textBox_WholeChg_SN_QR.Text) == false)
+                    {
+                        MessageBox.Show("桩号包含非数字！", "提示", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        textBox_WholeChg_SN_QR.Text = "";
+                        return;
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("二维码不正确！", "提示", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     textBox_WholeChg_SN_QR.Text = "";
                     return;
                 }
             }
-            else
-            {
-                MessageBox.Show("二维码不正确！", "提示", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                textBox_WholeChg_SN_QR.Text = "";
-                return;
-            }
-
             TestSettingInfo["ChargerModel"] = skinComboBox_ChgType.SelectedItem;
             
             if (ChargerTestingFlag == false)
@@ -6663,35 +6674,39 @@ namespace AutoTestTool
 
         private void skinButton_SubWholeChg_StartTest_Click(object sender, EventArgs e)
         {
-            if (textBox_SubWholeChg_SN_QR.Text == "")
+            if ("结束测试" == skinButton_SubWholeChg_StartTest.Text)
             {
-                MessageBox.Show("桩号不能为空", "提示", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                textBox_SubWholeChg_SN_QR.Text = "";
-                return;
-            }
-
-            if (textBox_SubWholeChg_SN_QR.Text.IndexOf(ProcTestData.StationIdQrcodeUrl) == 0)
-            {
-                textBox_SubWholeChg_SN_QR.Text = textBox_SubWholeChg_SN_QR.Text.Remove(0, ProcTestData.StationIdQrcodeUrl.Length);
-                System.Text.RegularExpressions.Regex rex = new System.Text.RegularExpressions.Regex(@"^\d+$");
-
-                if (rex.IsMatch(textBox_SubWholeChg_SN_QR.Text) == false)
+                if (textBox_SubWholeChg_SN_QR.Text == "")
                 {
-                    MessageBox.Show("桩号包含非数字！", "提示", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("桩号不能为空", "提示", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    textBox_SubWholeChg_SN_QR.Text = "";
+                    return;
+                }
+            
+
+                if (textBox_SubWholeChg_SN_QR.Text.IndexOf(ProcTestData.StationIdQrcodeUrl) == 0)
+                {
+                    textBox_SubWholeChg_SN_QR.Text = textBox_SubWholeChg_SN_QR.Text.Remove(0, ProcTestData.StationIdQrcodeUrl.Length);
+                    System.Text.RegularExpressions.Regex rex = new System.Text.RegularExpressions.Regex(@"^\d+$");
+
+                    if (rex.IsMatch(textBox_SubWholeChg_SN_QR.Text) == false)
+                    {
+                        MessageBox.Show("桩号包含非数字！", "提示", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        textBox_SubWholeChg_SN_QR.Text = "";
+                        return;
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("二维码不正确！", "提示", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     textBox_SubWholeChg_SN_QR.Text = "";
                     return;
                 }
             }
-            else
-            {
-                MessageBox.Show("二维码不正确！", "提示", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                textBox_SubWholeChg_SN_QR.Text = "";
-                return;
-            }
 
             TestSettingInfo["ChargerModel"] = skinComboBox_ChgType.SelectedItem;
 
-            if (ChargerTestingFlag == false)
+            if (SubChargerTestingFlag == false)
             {
                 LOG("整机请求开始测试.");
                 SendTestModeReq((byte)TEST_MODE.TEST_MODE_START);

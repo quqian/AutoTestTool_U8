@@ -105,6 +105,9 @@ namespace AutoTestTool
         UInt32 SubBoardStartTimeTicks = 0;
         UInt32 BoardStartTimeTicks = 0;
 
+        int DoorTemp1 = 0;
+        int DoorTemp2 = 0;
+
         struct GetResult
         {
             public int      testMode;
@@ -141,7 +144,7 @@ namespace AutoTestTool
             public int testMode;
             public int key;
             public int tapCard;
-            public int SubtapCard;
+        //    public int SubtapCard;
             public int lcd;
             public int _2G;
             public int trumpet;
@@ -160,6 +163,7 @@ namespace AutoTestTool
      //       public int WIFI;
             public int DOOR;
             public int DOOR_STATUS;
+            public int LED;
         };
 
 
@@ -167,7 +171,7 @@ namespace AutoTestTool
         /*****************************************变量声明*******************************************/
         Dictionary<string, object> TestSettingInfo = new Dictionary<string, object>
         {
-            {"ChargerModel","R6" },
+            {"ChargerModel","U8" },
             {"CountDown",30 },
             {"CardNum", "A1000000" },
             {"CsqLowerLimit",20 },
@@ -271,26 +275,54 @@ namespace AutoTestTool
             getRtc = 0
         };
 
+        CountDownTime SubCountDownTimeCharger = new CountDownTime
+        {
+            testMode = 0,
+            key = 0,
+            tapCard = 0,
+            lcd = 0,
+            _2G = 0,
+            PowerSource = 0,
+            trumpet = 0,
+            relay = 0,
+            SetCID = 0,
+            SetPcbCode = 0,
+            BLE = 0,
+            _2_4G = 0,
+            flash = 0,
+            setRtc = 0,
+            getRtc = 0
+        };
+
         static byte sequence = 0;
 
         public static bool MBTestingFlag = false;
         public static bool SBTestingFlag = false;
         public static bool ChargerTestingFlag = false;
+        public static bool SubChargerTestingFlag = false;
         Thread MBTestThread;
         Thread SBTestThread;
         Thread ChargerTestThread;
+        Thread SubChargerTestThread;
         static int MBTabSelectIndex;
         static int SBTabSelectIndex;
         static int chargerTestSelectIndex;
+        static int subchargerTestSelectIndex;
         static int PreMBTabSelectIndex = 0;
         static int PreSBTabSelectIndex;
         static int PrechargerTestSelectIndex;
+        static int PreSubChargerTestSelectIndex;
         static int TestMeunSelectIndex;
         static int PCBATestSelectIndex;
+        static int SubWholeSelectIndex = 6;
+
+
+
 
         Dictionary<string, string> MBTestResultDir = new Dictionary<string, string>();
         Dictionary<string, string> SBTestResultDir = new Dictionary<string, string>();
         Dictionary<string, string> ChargerTestResultDir = new Dictionary<string, string>();
+        Dictionary<string, string> SubChargerTestResultDir = new Dictionary<string, string>();
 
         UInt32 RtcCount = 0;//定时器计数
         int tick = 0;
@@ -368,6 +400,24 @@ namespace AutoTestTool
                 }
               )
            );
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+        
+        public void Sub_WholeLOG(String text)
+        {
+            try
+            {
+                this.textBoxSubWholeDebugInfo.Invoke(
+                    new MethodInvoker(delegate
+                    {
+                        this.textBoxSubWholeDebugInfo.AppendText(text + "\r\n");
+                    }
+                 )
+                );
             }
             catch (Exception ex)
             {
@@ -660,27 +710,30 @@ namespace AutoTestTool
                                             //        LOG("qqqqqqq:" + validFrame[16 + ik] + "\r\n");
                                             //    }
 
-                                            GetResultObj.cardNum = Encoding.ASCII.GetString(validFrame, 18, 16).ToUpper();  //18指的是第18个字节， 16指的16个字节的卡号
+                                            GetResultObj.cardNum = Encoding.ASCII.GetString(validFrame, 19, 16).ToUpper();  //18指的是第18个字节， 16指的16个字节的卡号
                                             //    LOG("卡号qqqq:" + GetResultObj.cardNum + "\r\n");
                                             GetResultObj.cardNum = GetResultObj.cardNum.Remove(GetResultObj.cardNum.IndexOf('\0'));
 
-                                            if (48 != validFrame[18])
+                                            if (0x30 != validFrame[18])
                                             {
-                                                pCardStr += validFrame[17].ToString("X2");
+                                                pCardStr += validFrame[18].ToString("X2");
                                                 //   LOG("kkk:" + pCardStr + "\r\n");
                                             }
-                                            //   LOG("PPPPP:" + validFrame[17] + "\r\n");
                                             pCardStr += GetResultObj.cardNum;
+                                            
+                                            //   LOG("PPPPP:" + validFrame[17] + "\r\n");
+                                            
                                             //     LOG("HHH:" + pCardStr + "\r\n");
-                                            LOG("卡号:" + GetResultObj.cardNum + "\r\n");
+                                            LOG("卡号:" + pCardStr + "\r\n");
+                                            Sub_WholeLOG("卡号:" + pCardStr + "\r\n");
                                             if (TestMeunSelectIndex == 1)//PCBA测试
                                             {
                                                 if (PCBATestSelectIndex == 0)//主板测试
                                                 {
-                                                    if (TestSettingInfo["CardNum"].ToString() == GetResultObj.cardNum)
+                                                    if (TestSettingInfo["CardNum"].ToString() == pCardStr)
                                                     {
                                                         MBTestResultDir["刷卡"] = "通过";
-                                                        MBTestResultDir["卡号"] = GetResultObj.cardNum;
+                                                        MBTestResultDir["卡号"] = pCardStr;
                                                         updateControlText(skinLabel_MB_Card_RESULT, "测试通过", Color.Green);
 
                                                         if (6 <= (GetCurrentTimeStamp() - MBoardcardNumTimeTicks))
@@ -700,10 +753,10 @@ namespace AutoTestTool
                                                 {
                                                     //LOG("卡号qqqqqqq " + X6TestSettingInfo["CardNum"].ToString() + "\r\n");
                                                     // X6textBox_TestCardNum.Text
-                                                    if (TestSettingInfo["CardNum"].ToString() == GetResultObj.cardNum)
+                                                    if (TestSettingInfo["CardNum"].ToString() == pCardStr)
                                                     {
                                                         SBTestResultDir["刷卡"] = "通过";
-                                                        SBTestResultDir["卡号"] = GetResultObj.cardNum;
+                                                        SBTestResultDir["卡号"] = pCardStr;
                                                         updateControlText(skinLabel_CARD_Result, "测试通过", Color.Green);
                                                         if (6 <= (GetCurrentTimeStamp() - SubCardNumTimeTicks))
                                                         {
@@ -723,10 +776,10 @@ namespace AutoTestTool
                                             {
                                                 if (0 == validFrame[17])
                                                 {
-                                                    if (TestSettingInfo["CardNum"].ToString() == GetResultObj.cardNum)
+                                                    if (TestSettingInfo["CardNum"].ToString() == pCardStr)
                                                     {
                                                         ChargerTestResultDir["整机主板刷卡"] = "通过";
-                                                        ChargerTestResultDir["主板卡号"] = GetResultObj.cardNum;
+                                                        ChargerTestResultDir["主板卡号"] = pCardStr;
                                                         updateControlText(skinLabel_CHG_MAIN_CARD_RESULT, "测试通过", Color.Green);
 
                                                         if (6 <= (GetCurrentTimeStamp() - MainBoardcardNumTimeTicks))
@@ -744,6 +797,7 @@ namespace AutoTestTool
                                                 }
                                                 else if (1 == validFrame[17])
                                                 {
+                                                    /*
                                                     if (TestSettingInfo["CardNum"].ToString() == GetResultObj.cardNum)
                                                     {
                                                         ChargerTestResultDir["整机副板刷卡"] = "通过";
@@ -761,6 +815,31 @@ namespace AutoTestTool
                                                         LOG("副板卡号与设置的不一致,请点击重新测试按钮!");
                                                         updateControlText(skinLabel_CHG_SUB_CARD_RESULT, "测试不通过", Color.Red);
                                                         ChargerTestResultDir["整机副板刷卡"] = "不通过";
+                                                    }
+                                                    */
+                                                }
+                                            }
+                                            else if (TestMeunSelectIndex == SubWholeSelectIndex)//副板整机测试
+                                            {
+                                            //    if (0 == validFrame[17])
+                                                {
+                                                    if (TestSettingInfo["CardNum"].ToString() == pCardStr)
+                                                    {
+                                                        SubChargerTestResultDir["整机副板刷卡"] = "通过";
+                                                        SubChargerTestResultDir["副板卡号"] = pCardStr;
+                                                        updateControlText(skinLabel_SUB_CHG_CARD_RESULT, "通过", Color.Green);
+
+                                                        if (6 <= (GetCurrentTimeStamp() - MainBoardcardNumTimeTicks))
+                                                        {
+                                                            MainBoardcardNumTimeTicks = GetCurrentTimeStamp();
+                                                            updateTableSelectedIndex(skinTabControl_SubWholeChg, ++subchargerTestSelectIndex);
+                                                        }
+                                                    }
+                                                    else
+                                                    {
+                                                        LOG("卡号与设置的不一致,请点击重新测试按钮!");
+                                                        updateControlText(skinLabel_SUB_CHG_CARD_RESULT, "不通过", Color.Red);
+                                                        SubChargerTestResultDir["整机副板刷卡"] = "不通过";
                                                     }
                                                 }
                                             }
@@ -797,7 +876,7 @@ namespace AutoTestTool
                                                             LOG("433地址  " + SmokeSensorAddr.ToString("X2"));
                                                             
                                                             MBTestResultDir["烟感"] = "通过";
-                                                            updateControlText(skinLabel_MB_433_RESULT, "测试通过", Color.Green);
+                                                            updateControlText(skinLabel_MB_433_RESULT, "通过", Color.Green);
                                                             if (10 <= (GetCurrentTimeStamp() - SmokeSensor433TimeTicks))
                                                             {
                                                                 SmokeSensor433TimeTicks = GetCurrentTimeStamp();
@@ -810,7 +889,7 @@ namespace AutoTestTool
                                                          //   SmokeSensorAddr = (UInt32)((validFrame[19] << 16) | (validFrame[20] << 8) | validFrame[21]);
                                                             //  LOG("433地址  " + SmokeSensorAddr.ToString("X2"));
                                                             LOG("烟感地址不对!");
-                                                            updateControlText(skinLabel_MB_433_RESULT, "测试不通过", Color.Red);
+                                                            updateControlText(skinLabel_MB_433_RESULT, "不通过", Color.Red);
                                                             MBTestResultDir["烟感"] = "不通过";
                                                         }
                                                     }
@@ -821,7 +900,28 @@ namespace AutoTestTool
                                                 }
                                                 else if (TestMeunSelectIndex == 2)//整机测试
                                                 {
+                                                    if (0 == validFrame[18])
+                                                    {
+                                                        SmokeSensorAddr = (UInt32)((validFrame[19] << 16) | (validFrame[20] << 8) | validFrame[21]);
+                                                        LOG("433地址  " + SmokeSensorAddr.ToString("X2"));
 
+                                                        ChargerTestResultDir["烟感"] = "通过";
+                                                        updateControlText(skinLabel_CHG_MAIN_433_RESULT, "通过", Color.Green);
+                                                        if (10 <= (GetCurrentTimeStamp() - SmokeSensor433TimeTicks))
+                                                        {
+                                                            SmokeSensor433TimeTicks = GetCurrentTimeStamp();
+                                                            updateTableSelectedIndex(skinTabControl_WholeChg, ++chargerTestSelectIndex);
+                                                        }
+                                                    }
+                                                    else
+                                                    {
+                                                        LOG("433地址 " + validFrame[19].ToString("X2") + validFrame[20].ToString("X2") + validFrame[21].ToString("X2"));
+                                                        //   SmokeSensorAddr = (UInt32)((validFrame[19] << 16) | (validFrame[20] << 8) | validFrame[21]);
+                                                        //  LOG("433地址  " + SmokeSensorAddr.ToString("X2"));
+                                                        LOG("烟感地址不对!");
+                                                        updateControlText(skinLabel_CHG_MAIN_433_RESULT, "不通过", Color.Red);
+                                                        ChargerTestResultDir["烟感"] = "不通过";
+                                                    }
                                                 }
                                             }
                                         break;
@@ -836,15 +936,15 @@ namespace AutoTestTool
                                                     if (0 == GetDOORValue)
                                                     {
                                                         LOG("门控检测成功!");
-                                                        MBTestResultDir["DOOR"] = "通过";
-                                                        updateControlText(skinLabel_MB_DOOR_RESULT, "测试通过", Color.Green);
-                                                        updateTableSelectedIndex(skinTabControl_MB, ++MBTabSelectIndex);
+                                                    //    MBTestResultDir["DOOR"] = "通过";
+                                                  //      updateControlText(skinLabel_MB_DOOR_RESULT, "测试通过", Color.Green);
+                                                     //   updateTableSelectedIndex(skinTabControl_MB, ++MBTabSelectIndex);
                                                     }
                                                     else
                                                     {
                                                         LOG("门控检测失败!");
-                                                        updateControlText(skinLabel_MB_DOOR_RESULT, "测试不通过", Color.Red);
-                                                        MBTestResultDir["DOOR"] = "不通过";
+                                                   //     updateControlText(skinLabel_MB_DOOR_RESULT, "测试不通过", Color.Red);
+                                                   //     MBTestResultDir["DOOR"] = "不通过";
                                                     }
                                                 }
                                                 else if (PCBATestSelectIndex == 1)//副板测试
@@ -873,18 +973,36 @@ namespace AutoTestTool
                                                             LOG("门锁已打开!");
                                                             updateControlText(skinLabel_MB_DOOR_STATUS, "开启", Color.Green);
                                                             //  updateTableSelectedIndex(skinTabControl_MB, ++MBTabSelectIndex);
+                                                            if (0 == DoorTemp1)
+                                                            {
+                                                                DoorTemp1 = 1;
+                                                                DoorTemp2 = DoorTemp2 + 1;
+                                                            }
                                                         }
                                                         else
                                                         {
                                                             LOG("门锁已关闭!");
                                                             updateControlText(skinLabel_MB_DOOR_STATUS, "关闭", Color.Red);
                                                             MBTestResultDir["DOOR_STATUS"] = "不通过";
+                                                            if (1 == DoorTemp1)
+                                                            {
+                                                                DoorTemp1 = 0;
+                                                                DoorTemp2 = DoorTemp2 + 1;
+                                                            }
+                                                        }
+                                                        if (4 == DoorTemp2)
+                                                        {
+                                                            DoorTemp1 = 0;
+                                                            DoorTemp2 = 0;
+                                                            MBTestResultDir["DOOR_STATUS"] = "通过";
+                                                            updateControlText(skinLabel_MB_DOOR_STATUS_RESULT, "通过", Color.Green);
+                                                            updateTableSelectedIndex(skinTabControl_MB, ++MBTabSelectIndex);
                                                         }
                                                     }
                                                     else
                                                     {
                                                         LOG("门锁状态测试错误!");
-                                                        updateControlText(skinLabel_MB_DOOR_RESULT, "测试不通过", Color.Red);
+                                                        updateControlText(skinLabel_MB_DOOR_STATUS_RESULT, "不通过", Color.Red);
                                                         MBTestResultDir["DOOR_STATUS"] = "不通过";
                                                     }
                                                 }
@@ -895,7 +1013,46 @@ namespace AutoTestTool
                                             }
                                             else if (TestMeunSelectIndex == 2)//整机测试
                                             {
-
+                                                if (0 == GetDOORStatusValue)
+                                                {
+                                                    if (0 == validFrame[18])
+                                                    {
+                                                        // ChargerTestResultDir["DOODOOR_CONTROLR"] = "通过";
+                                                        LOG("门锁已打开!");
+                                                        updateControlText(skinLabel_CHG_MAIN_DoorStatus2_RESULT, "开启", Color.Green);
+                                                        //  updateTableSelectedIndex(skinTabControl_MB, ++MBTabSelectIndex);
+                                                        if (0 == DoorTemp1)
+                                                        {
+                                                            DoorTemp1 = 1;
+                                                            DoorTemp2 = DoorTemp2 + 1;
+                                                        }
+                                                    }
+                                                    else
+                                                    {
+                                                        LOG("门锁已关闭!");
+                                                        updateControlText(skinLabel_CHG_MAIN_DoorStatus2_RESULT, "关闭", Color.Red);
+                                                        ChargerTestResultDir["DOOR_STATUS"] = "不通过";
+                                                        if (1 == DoorTemp1)
+                                                        {
+                                                            DoorTemp1 = 0;
+                                                            DoorTemp2 = DoorTemp2 + 1;
+                                                        }
+                                                    }
+                                                    if (4 == DoorTemp2)
+                                                    {
+                                                        DoorTemp1 = 0;
+                                                        DoorTemp2 = 0;
+                                                        ChargerTestResultDir["DOOR_STATUS"] = "通过";
+                                                        updateControlText(skinLabel_CHG_MAIN_DoorStatus_RESULT, "通过", Color.Green);
+                                                        updateTableSelectedIndex(skinTabControl_WholeChg, ++chargerTestSelectIndex);
+                                                    }
+                                                }
+                                                else
+                                                {
+                                                    LOG("门锁状态测试错误!");
+                                                    updateControlText(skinLabel_CHG_MAIN_DoorStatus_RESULT, "不通过", Color.Red);
+                                                    ChargerTestResultDir["DOOR_STATUS"] = "不通过";
+                                                }
                                             }
                                             break;
                                         case (byte)Command.CMD_WIFI_CONFIG_TEST:
@@ -987,7 +1144,7 @@ namespace AutoTestTool
                                                 if (0 == GetRS232Value)
                                                 {
                                                     ChargerTestResultDir["整机RS232"] = "通过";
-                                                    updateControlText(skinLabel_CHG_RS232_RESULT, "测试通过", Color.Green);
+                                                    updateControlText(skinLabel_CHG_RS232_RESULT, "通过", Color.Green);
                                                     if (6 <= (GetCurrentTimeStamp() - WholeRS232TimeTicks))
                                                     {
                                                         WholeRS232TimeTicks = GetCurrentTimeStamp();
@@ -999,6 +1156,25 @@ namespace AutoTestTool
                                                     LOG("副板接收握手包应答错误!");
                                                    // updateTableSelectedIndex(skinTabControl_WholeChg, ++chargerTestSelectIndex);
                                                     ChargerTestResultDir["整机RS232"] = "不通过";
+                                                }
+                                            }
+                                            else if (TestMeunSelectIndex == SubWholeSelectIndex)//副板整机测试
+                                            {
+                                                if (0 == GetRS232Value)
+                                                {
+                                                    SubChargerTestResultDir["整机RS232"] = "通过";
+                                                    updateControlText(skinLabel_SUB_CHG_RS232_RESULT, "通过", Color.Green);
+                                                    if (6 <= (GetCurrentTimeStamp() - WholeRS232TimeTicks))
+                                                    {
+                                                        WholeRS232TimeTicks = GetCurrentTimeStamp();
+                                                        updateTableSelectedIndex(skinTabControl_SubWholeChg, ++subchargerTestSelectIndex);
+                                                    }
+                                                }
+                                                else
+                                                {
+                                                    LOG("副板接收握手包应答错误!");
+                                                    // updateTableSelectedIndex(skinTabControl_WholeChg, ++chargerTestSelectIndex);
+                                                    SubChargerTestResultDir["整机RS232"] = "不通过";
                                                 }
                                             }
                                             break;
@@ -1245,6 +1421,12 @@ namespace AutoTestTool
                                                     ChargerTestResultDir["副板软件版本"] = GetResultObj.FwVersion;
                                                 }
 
+                                            }
+                                            else if (SubChargerTestingFlag)
+                                            {
+                                                {
+                                                    SubChargerTestResultDir["软件版本"] = GetResultObj.FwVersion;
+                                                }
                                             }
                                             LOG("软件版本:" + GetResultObj.FwVersion);
                                             break;
@@ -1654,14 +1836,33 @@ namespace AutoTestTool
             updateControlText(skinLabel_CHG_TESTOR_RES_VAL, ChargerTestResultDir["测试员"], Color.Black);
             updateControlText(skinLabel_CHG_FW_RES_VAL, ChargerTestResultDir["软件版本"], Color.Black);
             updateControlText(skinLabeL_CHG_TEST_RES_VAL, ChargerTestResultDir["测试结果"], decideColor(ChargerTestResultDir["测试结果"]));
+            updateControlText(skinLabel_CHG_MAIN_LED_RES_VAL, ChargerTestResultDir["LED"], decideColor(ChargerTestResultDir["LED"]));
+            updateControlText(skinLabel_CHG_MAIN_TRUMPT_RES_VAL, ChargerTestResultDir["喇叭"], decideColor(ChargerTestResultDir["喇叭"]));
             updateControlText(skinLabel_CHG_MAIN_RS232_RES_VAL, ChargerTestResultDir["整机RS232"], decideColor(ChargerTestResultDir["整机RS232"]));
             updateControlText(skinLabel_CHG_MAIN_CARD_RES_VAL, ChargerTestResultDir["整机主板刷卡"], decideColor(ChargerTestResultDir["整机主板刷卡"]));
-            updateControlText(skinLabel_CHG_SUB_CARD_RES_VAL, ChargerTestResultDir["整机副板刷卡"], decideColor(ChargerTestResultDir["整机副板刷卡"]));
+            //        updateControlText(skinLabel_CHG_SUB_CARD_RES_VAL, ChargerTestResultDir["整机副板刷卡"], decideColor(ChargerTestResultDir["整机副板刷卡"]));
+            updateControlText(skinLabel_CHG_MAIN_433_RES_VAL, ChargerTestResultDir["烟感"], decideColor(ChargerTestResultDir["烟感"]));
+            updateControlText(skinLabel_CHG_MAIN_DOOR_CONTROL__RES_VAL, ChargerTestResultDir["DOOR_CONTROL"], decideColor(ChargerTestResultDir["DOOR_CONTROL"]));
+            updateControlText(skinLabel_CHG_MAIN_DOOR_STATUS__RES_VAL, ChargerTestResultDir["DOOR_STATUS"], decideColor(ChargerTestResultDir["DOOR_STATUS"]));
             updateControlText(skinLabel_CHG_TEST_USEDTIME_RES_VAL, ChargerTestResultDir["测试用时"], Color.Black);
             updateControlText(skinLabel_CHG_TEST_TIME_RES_VAL, ChargerTestResultDir["测试时间"], Color.Black);
         }
 
-
+        private void ShowSubChgBoardResult()
+        {
+   //         updateControlText(skinLabel_SUB_CHG_STATION_ID_RESLUT_VAL, SubChargerTestResultDir["电桩号"], Color.Black);
+   //         updateControlText(skinLabel_SUB_CHG_MB_QR_RES_VAL, SubChargerTestResultDir["副板编号"], Color.Black);
+            updateControlText(skinLabel_SUB_CHG_TESTOR_RES_VAL, SubChargerTestResultDir["测试员"], Color.Black);
+            updateControlText(skinLabel_SUB_CHG_FW_RES_VAL, SubChargerTestResultDir["软件版本"], Color.Black);
+            updateControlText(skinLabeL_SUB_CHG_TEST_RES_VAL, SubChargerTestResultDir["测试结果"], decideColor(SubChargerTestResultDir["测试结果"]));
+            updateControlText(skinLabel_SUB_CHG_MAIN_LED_RES_VAL, SubChargerTestResultDir["LED"], decideColor(SubChargerTestResultDir["LED"]));
+            updateControlText(skinLabel_SUB_CHG_MAIN_TRUMPT_RES_VAL, SubChargerTestResultDir["喇叭"], decideColor(SubChargerTestResultDir["喇叭"]));
+            updateControlText(skinLabel_SUB_CHG_MAIN_RS232_RES_VAL, SubChargerTestResultDir["整机RS232"], decideColor(SubChargerTestResultDir["整机RS232"]));
+            updateControlText(skinLabel_SUB_CHG_CARD_RES_VAL, SubChargerTestResultDir["整机副板刷卡"], decideColor(SubChargerTestResultDir["整机副板刷卡"]));
+            //        updateControlText(skinLabel_CHG_SUB_CARD_RES_VAL, SubChargerTestResultDir["整机副板刷卡"], decideColor(SubChargerTestResultDir["整机副板刷卡"]));
+            updateControlText(skinLabel_SUB_CHG_TEST_USEDTIME_RES_VAL, SubChargerTestResultDir["测试用时"], Color.Black);
+            updateControlText(skinLabel_SUB_CHG_TEST_TIME_RES_VAL, SubChargerTestResultDir["测试时间"], Color.Black);
+        }
 
         void MainBoardClearData()
         {
@@ -1748,9 +1949,13 @@ namespace AutoTestTool
             ChargerTestResultDir.Add("测试员", ProcTestData.PresentAccount);
             ChargerTestResultDir.Add("软件版本", "");
             ChargerTestResultDir.Add("测试结果", "");
+            ChargerTestResultDir.Add("LED", "");
+            ChargerTestResultDir.Add("喇叭", "");
             ChargerTestResultDir.Add("整机RS232", "");
             ChargerTestResultDir.Add("整机主板刷卡", "");
-            ChargerTestResultDir.Add("整机副板刷卡", "");
+            ChargerTestResultDir.Add("烟感", "");
+            ChargerTestResultDir.Add("DOOR_CONTROL", "");
+            ChargerTestResultDir.Add("DOOR_STATUS", "");
             ChargerTestResultDir.Add("测试时间", DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"));
             ChargerTestResultDir.Add("测试用时", "0");
 
@@ -1761,15 +1966,54 @@ namespace AutoTestTool
             updateControlText(skinLabel_CHG_TESTOR_RES_VAL, "");
             updateControlText(skinLabel_CHG_FW_RES_VAL, "");
             updateControlText(skinLabeL_CHG_TEST_RES_VAL, "");
+            updateControlText(skinLabel_CHG_MAIN_LED_RES_VAL, "");
+            updateControlText(skinLabel_CHG_MAIN_TRUMPT_RES_VAL, "");
             updateControlText(skinLabel_CHG_MAIN_RS232_RES_VAL, "");
             updateControlText(skinLabel_CHG_MAIN_CARD_RES_VAL, "");
-            updateControlText(skinLabel_CHG_SUB_CARD_RES_VAL, "");
+            updateControlText(skinLabel_CHG_MAIN_433_RES_VAL, "");
+            updateControlText(skinLabel_CHG_MAIN_DOOR_CONTROL__RES_VAL, "");
+            updateControlText(skinLabel_CHG_MAIN_DOOR_STATUS__RES_VAL, "");
+            //       updateControlText(skinLabel_CHG_SUB_CARD_RES_VAL, "");
             updateControlText(skinLabel_CHG_TEST_USEDTIME_RES_VAL, "");
             updateControlText(skinLabel_CHG_TEST_TIME_RES_VAL, "");
         }
-        
+
+        void SubWholeBoardClearData()
+        {
+            DateTime now = DateTime.Now;
+            SubChargerTestResultDir.Clear();
+      //      SubChargerTestResultDir.Add("电桩号", textBox_WholeChg_SN_QR.Text.Trim());
+      //      SubChargerTestResultDir.Add("副板编号", "");
+            SubChargerTestResultDir.Add("测试员", ProcTestData.PresentAccount);
+            SubChargerTestResultDir.Add("软件版本", "");
+            SubChargerTestResultDir.Add("测试结果", "");
+            SubChargerTestResultDir.Add("LED", "");
+            SubChargerTestResultDir.Add("喇叭", "");
+            SubChargerTestResultDir.Add("整机RS232", "");
+            SubChargerTestResultDir.Add("整机副板刷卡", "");
+            SubChargerTestResultDir.Add("测试时间", DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"));
+            SubChargerTestResultDir.Add("测试用时", "0");
+
+
+
+     //       updateControlText(skinLabel_SUB_CHG_STATION_ID_RESLUT_VAL, "");
+     //       updateControlText(skinLabel_SUB_CHG_MB_QR_RES_VAL, "");
+            updateControlText(skinLabel_SUB_CHG_TESTOR_RES_VAL, "");
+            updateControlText(skinLabel_SUB_CHG_FW_RES_VAL, "");
+            updateControlText(skinLabeL_SUB_CHG_TEST_RES_VAL, "");
+            updateControlText(skinLabel_SUB_CHG_MAIN_LED_RES_VAL, "");
+            updateControlText(skinLabel_SUB_CHG_MAIN_TRUMPT_RES_VAL, "");
+            updateControlText(skinLabel_SUB_CHG_MAIN_RS232_RES_VAL, "");
+           // updateControlText(skinLabel_SUB_CHG_MAIN_CARD_RES_VAL, "");
+             updateControlText(skinLabel_SUB_CHG_CARD_RES_VAL, ""); 
+            updateControlText(skinLabel_SUB_CHG_TEST_USEDTIME_RES_VAL, "");
+            updateControlText(skinLabel_SUB_CHG_TEST_TIME_RES_VAL, "");
+        }
+
+
         int countdownTime;
         private int MBWholeTestCnt = 0;
+        int MainBoardWaitTime = 1;
         //主板测试线程
         private void MainBoardTestProcess()
         {
@@ -1906,7 +2150,7 @@ namespace AutoTestTool
                         
                         if ((GetCurrentTimeStamp() - ItemTestTime) >= 10)
                         {
-                            ItemTestTime = GetCurrentTimeStamp();
+                         //   ItemTestTime = GetCurrentTimeStamp(); //这里要注释掉
 
                             MBWholeTestCnt++;
                             if (MBWholeTestCnt < 6)
@@ -2018,15 +2262,13 @@ namespace AutoTestTool
                             LOG("主板发送 DOOR_STATUS 测试命令.");
                             //发送 DOOR_STATUS 测试指令
                             SendDOORStatusTestReq((byte)ENUM_BOARD.MAIN_BOARD_E);
-                            MBWholeTestCnt = 0;
+                            WaitItemTestTime = ItemTestTime;
                         }
-                        if ((GetCurrentTimeStamp() - ItemTestTime) >= 3)
+                       // if ((GetCurrentTimeStamp() - ItemTestTime) >= 1)
                         {
-                            ItemTestTime = GetCurrentTimeStamp();
-
-                            MBWholeTestCnt++;
-                            if (MBWholeTestCnt < 6)
+                            if ((GetCurrentTimeStamp() - WaitItemTestTime) >= 1)
                             {
+                                WaitItemTestTime = GetCurrentTimeStamp();
                                 LOG("主板发送刷卡请求.");
                                 //发送 DOOR_STATUS 测试指令
                                 SendDOORStatusTestReq((byte)ENUM_BOARD.MAIN_BOARD_E);
@@ -2289,7 +2531,7 @@ namespace AutoTestTool
                 Thread.Sleep(200);
             }
         }
-        private int R6Wholesend2GTestCnt = 0;
+        
         //整机测试线程
         private void ChargerTestProcess()
         {
@@ -2323,7 +2565,49 @@ namespace AutoTestTool
                             ChargerTestThread = null;
                         }
                         break;
-                    case 0x01:  //整机RS232
+                    case 0x01:  //LED
+                        if (selectIndexUpgradeFlag == true)
+                        {
+                            selectIndexUpgradeFlag = false;
+                            ItemTestTime = GetCurrentTimeStamp();
+                            countDownTimeCharger.LED = countdownTime;
+                            ChargerTestResultDir["LED"] = "";
+                            updateControlText(skinLabel_CHG_MAIN_LED_RESULT, "");
+                            LOG("整机LED测试.");
+
+                            SendLedTestReq(0, 1);
+                            //  Thread.Sleep(200);
+                        }
+                        if ((GetCurrentTimeStamp() - ItemTestTime) >= 30)//超时
+                        {
+                            LOG("整机LED2测试超时.");
+                            ChargerTestResultDir["LED"] = "不通过";
+                            updateControlText(skinLabel_CHG_MAIN_LED_RESULT, "不通过", Color.Red);
+                            updateTableSelectedIndex(skinTabControl_WholeChg, ++chargerTestSelectIndex);
+                        }
+                    break;
+                    case 0x02:  //喇叭
+                        if (selectIndexUpgradeFlag == true)
+                        {
+                            selectIndexUpgradeFlag = false;
+                            ItemTestTime = GetCurrentTimeStamp();
+                            countDownTimeCharger.trumpet = countdownTime;
+                            ChargerTestResultDir["喇叭"] = "";
+                            updateControlText(skinLabel_CHG_MAIN_TRUMPT_RESULT, "");
+                            LOG("整机喇叭测试.");
+
+                            SendTrumptTestReq();
+                            //  Thread.Sleep(200);
+                        }
+                        if ((GetCurrentTimeStamp() - ItemTestTime) >= 30)//超时
+                        {
+                            LOG("整机喇叭测试超时.");
+                            ChargerTestResultDir["喇叭"] = "不通过";
+                            updateControlText(skinLabel_CHG_MAIN_TRUMPT_RESULT, "不通过", Color.Red);
+                            updateTableSelectedIndex(skinTabControl_WholeChg, ++chargerTestSelectIndex);
+                        }
+                    break;
+                    case 0x03:  //整机RS232
                         if (selectIndexUpgradeFlag == true)
                         {
                             selectIndexUpgradeFlag = false;
@@ -2343,8 +2627,8 @@ namespace AutoTestTool
                             updateControlText(skinLabel_CHG_RS232_RESULT, "不通过", Color.Red);
                             updateTableSelectedIndex(skinTabControl_WholeChg, ++chargerTestSelectIndex);
                         }
-                        break;
-                    case 0x02:  //主板刷卡
+                    break;
+                    case 0x04:  //主板刷卡
                         if (selectIndexUpgradeFlag == true)
                         {
                             selectIndexUpgradeFlag = false;
@@ -2365,28 +2649,80 @@ namespace AutoTestTool
                             updateTableSelectedIndex(skinTabControl_WholeChg, ++chargerTestSelectIndex);
                         }
                     break;
-                    case 0x03:  //副板刷卡
+                    case 0x05:  //433
                         if (selectIndexUpgradeFlag == true)
                         {
                             selectIndexUpgradeFlag = false;
                             ItemTestTime = GetCurrentTimeStamp();
-                            countDownTimeCharger.SubtapCard = countdownTime;
-                            ChargerTestResultDir["整机副板刷卡"] = "";
-                            updateControlText(skinLabel_CHG_SUB_CARD_RESULT, "");
-                            LOG("整机副板刷卡测试.");
+                            countDownTimeCharger.SmokeSensor433 = countdownTime;
+                            ChargerTestResultDir["烟感"] = "";
+                            updateControlText(skinLabel_CHG_MAIN_433_RESULT, "");
+                            LOG("请按报警烟感按钮报警进行烟感测试.");
 
-                            SendSubCardTestReq((byte)ENUM_BOARD.SUB_BOARD_E);
-                            //  Thread.Sleep(200);
+                            //发送433测试指令
+                            SendSetSmokeSensor433();
                         }
                         if ((GetCurrentTimeStamp() - ItemTestTime) >= 30)//超时
                         {
-                            LOG("整机副板刷卡测试超时.");
-                            ChargerTestResultDir["整机副板刷卡"] = "不通过";
-                            updateControlText(skinLabel_CHG_SUB_CARD_RESULT, "不通过", Color.Red);
+                            LOG("测试烟感超时.");
+                            ChargerTestResultDir["烟感"] = "不通过";
+                            updateControlText(skinLabel_CHG_MAIN_433_RESULT, "不通过", Color.Red);
                             updateTableSelectedIndex(skinTabControl_WholeChg, ++chargerTestSelectIndex);
                         }
-                    break;
-                    case 0x04:
+                        break;
+                    case 0x06:  //门控
+                        if (selectIndexUpgradeFlag == true)
+                        {
+                            selectIndexUpgradeFlag = false;
+                            ItemTestTime = GetCurrentTimeStamp();
+                            countDownTimeCharger.DOOR = countdownTime;
+                            ChargerTestResultDir["DOOR_CONTROL"] = "";
+                            updateControlText(skinLabel_CHG_MAIN_DoorControl_RESULT, "");
+                            LOG("整机主板发送DOOR测试命令.");
+                            //发送DOOR测试指令
+                            SendDOORTestReq();
+                        }
+                        if ((GetCurrentTimeStamp() - ItemTestTime) >= 30)//超时
+                        {
+                            LOG("整机RS232测试超时.");
+                            ChargerTestResultDir["DOOR_CONTROL"] = "不通过";
+                            updateControlText(skinLabel_CHG_MAIN_DoorControl_RESULT, "不通过", Color.Red);
+                            updateTableSelectedIndex(skinTabControl_WholeChg, ++chargerTestSelectIndex);
+                        }
+                        break;
+                    case 0x07:  //门锁状态
+                        if (selectIndexUpgradeFlag == true)
+                        {
+                            selectIndexUpgradeFlag = false;
+                            ItemTestTime = GetCurrentTimeStamp();
+                            countDownTimeCharger.DOOR_STATUS = countdownTime;
+                            ChargerTestResultDir["DOOR_STATUS"] = "";
+                            updateControlText(skinLabel_CHG_MAIN_DoorStatus_RESULT, "");
+                            LOG("整机主板发送 DOOR_STATUS 测试命令.");
+                            //发送 DOOR_STATUS 测试指令
+                            SendDOORStatusTestReq((byte)ENUM_BOARD.MAIN_BOARD_E);
+                            WaitItemTestTime = ItemTestTime;
+                        }
+                        // if ((GetCurrentTimeStamp() - ItemTestTime) >= 1)
+                        {
+                            if ((GetCurrentTimeStamp() - WaitItemTestTime) >= 1)
+                            {
+                                WaitItemTestTime = GetCurrentTimeStamp();
+                                LOG("主板发送刷卡请求.");
+                                //发送 DOOR_STATUS 测试指令
+                                SendDOORStatusTestReq((byte)ENUM_BOARD.MAIN_BOARD_E);
+                                //  skinButton_SB_CARD_RTEST_Click(sender, e);
+                            }
+                        }
+                        if ((GetCurrentTimeStamp() - ItemTestTime) >= 30)//超时
+                        {
+                            LOG("测试 DOOR_STATUS 超时.");
+                            ChargerTestResultDir["DOOR_STATUS"] = "不通过";
+                            updateControlText(skinLabel_CHG_MAIN_DoorStatus_RESULT, "不通过", Color.Red);
+                            updateTableSelectedIndex(skinTabControl_WholeChg, ++chargerTestSelectIndex);
+                        }
+                        break;
+                    case 0x08:
                         SendGetFwVersionReq(0x00);
                         Thread.Sleep(200);
                         SendGetPcdCode(0x00);
@@ -2407,7 +2743,7 @@ namespace AutoTestTool
                         }
 
                         //写入excel表
-                        ProcTestData.WriteReport(TestSettingInfo["ChargerModel"] + "_整机测试.xlsx", TestSettingInfo["ChargerModel"] + "_整机测试", ChargerTestResultDir);
+                        ProcTestData.WriteReport(TestSettingInfo["ChargerModel"] + "_主板整机测试.xlsx", TestSettingInfo["ChargerModel"] + "_主板整机测试", ChargerTestResultDir);
 
                         /*
                                                 string cmd = ProcTestData.ChargerTestMysqlCommand (
@@ -2445,6 +2781,191 @@ namespace AutoTestTool
                         }
                         break;
      
+                    default:
+                        break;
+                }
+
+                Thread.Sleep(500);
+            }
+        }
+
+        //副板整机测试线程
+        private void SubChargerTestProcess()
+        {
+            bool selectIndexUpgradeFlag = false;
+            SubChargerTestingFlag = true;
+            GetResultObj.UsedTime_Charger = GetCurrentTimeStamp();
+            subchargerTestSelectIndex = 1;
+            PreSubChargerTestSelectIndex = subchargerTestSelectIndex + 1;
+            Sub_WholeLOG("副板整机开始测试1 subchargerTestSelectIndex." + subchargerTestSelectIndex);
+            updateTableSelectedIndex(skinTabControl_SubWholeChg, subchargerTestSelectIndex);
+            countdownTime = Convert.ToInt32(TestSettingInfo["CountDown"]);
+
+            SubWholeBoardClearData();
+            while (SubChargerTestingFlag == true)
+            {
+                if (PreSubChargerTestSelectIndex != subchargerTestSelectIndex)
+                {
+                    PreSubChargerTestSelectIndex = subchargerTestSelectIndex;
+                    Sub_WholeLOG("PreSubChargerTestSelectIndex." + PreSubChargerTestSelectIndex);
+                    selectIndexUpgradeFlag = true;
+                }
+                switch (subchargerTestSelectIndex)
+                {
+                    case 0x00:
+                        Sub_WholeLOG("副板整机测试, 请重新用扫码枪扫描电桩二维码.");
+                        updateControlText(textBox_SubWholeChg_SN_QR, "");
+                        SubChargerTestingFlag = false;
+                        {
+                            updateControlText(skinButton_SubWholeChg_StartTest, "开始测试");
+                            SubChargerTestThread.Abort();
+                            SubChargerTestThread = null;
+                        }
+                        break;
+                    case 0x01:  //LED
+                        if (selectIndexUpgradeFlag == true)
+                        {
+                            selectIndexUpgradeFlag = false;
+                            ItemTestTime = GetCurrentTimeStamp();
+                            SubCountDownTimeCharger.LED = countdownTime;
+                            SubChargerTestResultDir["LED"] = "";
+                            updateControlText(skinLabel_SUB_CHG_MAIN_LED_RESULT, "");
+                            Sub_WholeLOG("副板整机LED测试.");
+
+                            SendLedTestReq(0, 1);
+                            //  Thread.Sleep(200);
+                        }
+                        if ((GetCurrentTimeStamp() - ItemTestTime) >= 30)//超时
+                        {
+                            Sub_WholeLOG("副板整机LED2测试超时.");
+                            SubChargerTestResultDir["LED"] = "不通过";
+                            updateControlText(skinLabel_SUB_CHG_MAIN_LED_RESULT, "不通过", Color.Red);
+                            updateTableSelectedIndex(skinTabControl_SubWholeChg, ++subchargerTestSelectIndex);
+                        }
+                        break;
+                    case 0x02:  //喇叭
+                        if (selectIndexUpgradeFlag == true)
+                        {
+                            selectIndexUpgradeFlag = false;
+                            ItemTestTime = GetCurrentTimeStamp();
+                            SubCountDownTimeCharger.trumpet = countdownTime;
+                            SubChargerTestResultDir["喇叭"] = "";
+                            updateControlText(skinLabel_SUB_CHG_MAIN_TRUMPT_RESULT, "");
+                            Sub_WholeLOG("副板整机喇叭测试.");
+
+                            SendTrumptTestReq();
+                            //  Thread.Sleep(200);
+                        }
+                        if ((GetCurrentTimeStamp() - ItemTestTime) >= 30)//超时
+                        {
+                            Sub_WholeLOG("副板整机喇叭测试超时.");
+                            SubChargerTestResultDir["喇叭"] = "不通过";
+                            updateControlText(skinLabel_SUB_CHG_MAIN_TRUMPT_RESULT, "不通过", Color.Red);
+                            updateTableSelectedIndex(skinTabControl_SubWholeChg, ++subchargerTestSelectIndex);
+                        }
+                        break;
+                    case 0x03:  //整机RS232
+                        if (selectIndexUpgradeFlag == true)
+                        {
+                            selectIndexUpgradeFlag = false;
+                            ItemTestTime = GetCurrentTimeStamp();
+                            SubCountDownTimeCharger.RS232 = countdownTime;
+                            SubChargerTestResultDir["整机RS232"] = "";
+                            updateControlText(skinLabel_SUB_CHG_RS232_RESULT, "");
+                            Sub_WholeLOG("副板整机RS232测试.");
+
+                            SendRS232TestReq();
+                            //  Thread.Sleep(200);
+                        }
+                        if ((GetCurrentTimeStamp() - ItemTestTime) >= 30)//超时
+                        {
+                            Sub_WholeLOG("副板整机RS232测试超时.");
+                            SubChargerTestResultDir["整机RS232"] = "不通过";
+                            updateControlText(skinLabel_SUB_CHG_RS232_RESULT, "不通过", Color.Red);
+                            updateTableSelectedIndex(skinTabControl_SubWholeChg, ++subchargerTestSelectIndex);
+                        }
+                        break;
+                    case 0x04:  //主板刷卡
+                        if (selectIndexUpgradeFlag == true)
+                        {
+                            selectIndexUpgradeFlag = false;
+                            ItemTestTime = GetCurrentTimeStamp();
+                            SubCountDownTimeCharger.tapCard = countdownTime;
+                            SubChargerTestResultDir["整机副板刷卡"] = "";
+                            updateControlText(skinLabel_SUB_CHG_CARD_RESULT, "");
+                            Sub_WholeLOG("副板整机副板刷卡测试.");
+
+                            SendSubCardTestReq((byte)ENUM_BOARD.MAIN_BOARD_E);
+                            //  Thread.Sleep(200);
+                        }
+                        if ((GetCurrentTimeStamp() - ItemTestTime) >= 30)//超时
+                        {
+                            Sub_WholeLOG("副板整机副板刷卡测试超时.");
+                            SubChargerTestResultDir["整机副板刷卡"] = "不通过";
+                            updateControlText(skinLabel_SUB_CHG_CARD_RESULT, "不通过", Color.Red);
+                            updateTableSelectedIndex(skinTabControl_SubWholeChg, ++subchargerTestSelectIndex);
+                        }
+                        break;
+                    
+                    case 0x05:
+                        SendGetFwVersionReq(0x01);
+                        Thread.Sleep(200);
+                     //   SendGetPcdCode(0x00);
+                        GetResultObj.UsedTime_Charger = GetCurrentTimeStamp() - GetResultObj.UsedTime_Charger;
+                        SubChargerTestResultDir["测试用时"] = (GetResultObj.UsedTime_Charger / 60) + "分 " + ((GetResultObj.UsedTime_Charger) % 60) + "秒";
+                        Thread.Sleep(2000);
+
+
+                        SubChargerTestResultDir = ModifyResultData(SubChargerTestResultDir);
+                        Sub_WholeLOG("结束测试\r\n用时:" + SubChargerTestResultDir["测试用时"]);
+
+                        ShowSubChgBoardResult();
+                        SendTestModeReq((byte)TEST_MODE.TEST_MODE_STOP);
+
+                        if (SubChargerTestResultDir["测试结果"] == "通过")
+                        {
+                        //    SendSetID(textBox_SubWholeChg_SN_QR.Text.Trim()); //副板不用设置设备号
+                        }
+
+                        //写入excel表
+                        ProcTestData.WriteReport(TestSettingInfo["ChargerModel"] + "_副板整机测试.xlsx", TestSettingInfo["ChargerModel"] + "_副板整机测试", SubChargerTestResultDir);
+
+                        /*
+                                                string cmd = ProcTestData.ChargerTestMysqlCommand (
+                                                        TestSettingInfo["ChargerModel"].ToString(),
+                                                        SubChargerTestResultDir["电桩号"],
+                                                        SubChargerTestResultDir["测试员"],
+                                                        SubChargerTestResultDir["软件版本"],
+                                                        SubChargerTestResultDir["主板编号"],
+                                                        SubChargerTestResultDir["测试结果"] == "通过" ? "Pass" : "Fail",
+                                                        SubChargerTestResultDir["指示灯"] == "通过" ? "Pass" : "Fail",
+                                                        SubChargerTestResultDir["蓝牙"] == "通过" ? "Pass" : (SubChargerTestResultDir["蓝牙"] == "无" ? "Without" : "Fail"),
+                                                        SubChargerTestResultDir["2.4G"] == "通过" ? "Pass" : (SubChargerTestResultDir["2.4G"] == "无" ? "Without" : "Fail"),
+                                                        SubChargerTestResultDir["2G模块"] == "通过" ? "Pass" : "Fail",
+                                                        SubChargerTestResultDir["信号值"],
+                                                        SubChargerTestResultDir["ICCID"],
+                                                        SubChargerTestResultDir["测试时间"], 
+                                                        GetResultObj.UsedTime_Charger 
+                                                    );
+
+                                                if (ProcTestData.SendMysqlCommand(cmd, true) == true)
+                                                {
+                                                    Sub_WholeLOG("整机测试记录添加数据库成功");
+                                                    ProcTestData.DealBackUpData(ProcTestData.backupMysqlCmdFile);
+                                                }
+                        */
+                        SendRebootReq();
+
+                        updateControlText(textBox_SubWholeChg_SN_QR, "");
+                        SubChargerTestingFlag = false;
+
+                        {
+                            updateControlText(skinButton_SubWholeChg_StartTest, "开始测试");
+                            SubChargerTestThread.Abort();
+                            SubChargerTestThread = null;
+                        }
+                        break;
+
                     default:
                         break;
                 }
@@ -3105,6 +3626,7 @@ namespace AutoTestTool
         }
 
         public UInt32 ItemTestTime=0;
+        public UInt32 WaitItemTestTime = 0;
         //测试模式命令消息处理
         private void MessageTestModeHandle(byte[] pkt)
         {
@@ -3213,7 +3735,40 @@ namespace AutoTestTool
                     updateControlText(skinButton_WholeChg_StartTest, "开始测试");
                 }
 
-            }    
+            }
+            else if (TestMeunSelectIndex == SubWholeSelectIndex)          //副板整机测试
+            {
+                if (GetResultObj.testMode == 0x00)//整机开始测试请求回复
+                {
+                    if (GetResultObj.testModeAllow == 0x00) //成功
+                    {
+                        LOG("副板整机请求开始测试成功.");
+                        updateControlText(skinButton_SubWholeChg_StartTest, "结束测试");
+
+
+                        if (SubChargerTestThread != null)
+                        {
+                            SubChargerTestThread.Abort();
+                            SubChargerTestThread = null;
+                        }
+                        SubChargerTestThread = new Thread(SubChargerTestProcess);
+                        SubChargerTestThread.Start();
+                    }
+                    else
+                    {
+                        LOG("副板整机请求开始测试失败.");
+                        updateControlText(skinButton_SubWholeChg_StartTest, "开始测试");
+                        SubChargerTestingFlag = false;
+                    }
+                }
+                else//整机结束测试请求回复
+                {
+                    LOG("副板整机请求结束测试成功...");
+                    SubChargerTestingFlag = false;
+                    updateControlText(skinButton_SubWholeChg_StartTest, "开始测试");
+                }
+
+            }
         }
 
         //按键测试消息处理
@@ -3783,10 +4338,10 @@ namespace AutoTestTool
             LOG("主板指示灯重新测试.");
             //发送指示灯测试指令
             SendLedTestReq(0, 1);
-            Thread.Sleep(500);
-            SendLedTestReq(1, 1);
-            Thread.Sleep(500);
-            SendLedTestReq(2, 1); 
+       //     Thread.Sleep(500);
+       //     SendLedTestReq(1, 1);
+       //     Thread.Sleep(500);
+        //    SendLedTestReq(2, 1); 
         }
 
 
@@ -3978,6 +4533,7 @@ namespace AutoTestTool
             updateTableSelectedIndex(skinTabControl_WholeChg, ++chargerTestSelectIndex);
         }
         
+
         private void skinButton_WholeChg_RS232_RTest_Click(object sender, EventArgs e)
         {
             ItemTestTime = GetCurrentTimeStamp();
@@ -4015,6 +4571,13 @@ namespace AutoTestTool
                  //   LOG("整机qqqq1chargerTestSelectIndex." + chargerTestSelectIndex);
                     textBox_WholeChg_SN_QR.Focus();
                     updateControlText(textBox_WholeChg_SN_QR, "");
+                    break;
+                case 6://副板整机测试         
+                    subchargerTestSelectIndex = 0;
+                    skinTabControl_SubWholeChg.SelectedIndex = 0;
+                    //   LOG("整机qqqq1chargerTestSelectIndex." + chargerTestSelectIndex);
+                    textBox_SubWholeChg_SN_QR.Focus();
+                    updateControlText(textBox_SubWholeChg_SN_QR, "");
                     break;
                 default:
                     break;
@@ -4249,9 +4812,22 @@ namespace AutoTestTool
                 }
                 else if (ChargerTestingFlag)
                 {
+                    countDownTimeCharger.LED = ItemCountDown(countDownTimeCharger.LED, skinLabel_WholeChg_LED_Time, skinTabControl_WholeChg, skinTabPage_WholeChg_LED);
+                    countDownTimeCharger.trumpet = ItemCountDown(countDownTimeCharger.trumpet, skinLabel_WholeChg_TRUMPT_Time, skinTabControl_WholeChg, skinTabPage_WholeChg_TRUMPT);
                     countDownTimeCharger.RS232 = ItemCountDown(countDownTimeCharger.RS232, skinLabel_WholeChg_RS232_Time, skinTabControl_WholeChg, skinTabPage_WholeChg_RS232);
                     countDownTimeCharger.tapCard = ItemCountDown(countDownTimeCharger.tapCard, skinLabel_WholeChg_MAIN_CARD_Time, skinTabControl_WholeChg, skinTabPage_WholeChg_MAIN_CARD);
-                    countDownTimeCharger.SubtapCard = ItemCountDown(countDownTimeCharger.SubtapCard, skinLabel_WholeChg_SUB_CARD_Time, skinTabControl_WholeChg, skinTabPage_WholeChg_SUB_CARD);
+                    countDownTimeCharger.SmokeSensor433 = ItemCountDown(countDownTimeCharger.SmokeSensor433, skinLabel_WholeChg_MAIN_433_Time, skinTabControl_WholeChg, skinTabPage_WholeChg_MAIN_433);
+                    countDownTimeCharger.DOOR = ItemCountDown(countDownTimeCharger.DOOR, skinLabel_WholeChg_MAIN_Door_Control_Time, skinTabControl_WholeChg, skinTabPage_WholeChg_MAIN_DOOR_CONTROL);
+                    countDownTimeCharger.DOOR_STATUS = ItemCountDown(countDownTimeCharger.DOOR_STATUS, skinLabel_WholeChg_MAIN_DoorStatus_Time, skinTabControl_WholeChg, skinTabPage_WholeChg_MAIN_DOOR_STATUS);
+                    //     countDownTimeCharger.SubtapCard = ItemCountDown(countDownTimeCharger.SubtapCard, skinLabel_WholeChg_SUB_CARD_Time, skinTabControl_WholeChg, skinTabPage_WholeChg_SUB_CARD);
+                }
+                else if (SubChargerTestingFlag)
+                {
+                    SubCountDownTimeCharger.LED = ItemCountDown(SubCountDownTimeCharger.LED, skinLabel_SubWholeChg_LED_Time, skinTabControl_SubWholeChg, skinTabPage_SubWholeChg_LED);
+                    SubCountDownTimeCharger.trumpet = ItemCountDown(SubCountDownTimeCharger.trumpet, skinLabel_SubWholeChg_TRUMPT_Time, skinTabControl_SubWholeChg, skinTabPage_SubWholeChg_TRUMPT);
+                    SubCountDownTimeCharger.RS232 = ItemCountDown(SubCountDownTimeCharger.RS232, skinLabel_SubWholeChg_RS232_Time, skinTabControl_SubWholeChg, skinTabPage_SubWholeChg_RS232);
+                    SubCountDownTimeCharger.tapCard = ItemCountDown(SubCountDownTimeCharger.tapCard, skinLabel_SubWholeChg_CARD_Time, skinTabControl_SubWholeChg, skinTabPage_SubWholeChg_CARD);
+                    //     SubCountDownTimeCharger.SubtapCard = ItemCountDown(SubCountDownTimeCharger.SubtapCard, skinLabel_WholeChg_SUB_CARD_Time, skinTabControl_SubWholeChg, skinTabPage_SubWholeChg_SUB_CARD);
                 }
                 else if (onlineDectecFlag)
                 {
@@ -4398,6 +4974,14 @@ namespace AutoTestTool
                     if (ChargerTestThread.IsAlive)
                     {
                         ChargerTestThread.Abort();
+                    }
+                }
+
+                if (SubChargerTestThread != null)
+                {
+                    if (SubChargerTestThread.IsAlive)
+                    {
+                        SubChargerTestThread.Abort();
                     }
                 }
 
@@ -5879,10 +6463,10 @@ namespace AutoTestTool
 
         private void skinButton_WholeChg_SUB_CARD_Over_Click(object sender, EventArgs e)
         {
-            LOG("跳过整机副板刷卡测试.");
-            updateControlText(skinLabel_CHG_SUB_CARD_RESULT, "跳过", Color.Green);
+         //   LOG("跳过整机副板刷卡测试.");
+        //    updateControlText(skinLabel_CHG_SUB_CARD_RESULT, "跳过", Color.Green);
             //   LOG("灯按键跳过1chargerTestSelectIndex." + chargerTestSelectIndex);
-            updateTableSelectedIndex(skinTabControl_WholeChg, ++chargerTestSelectIndex);
+        //    updateTableSelectedIndex(skinTabControl_WholeChg, ++chargerTestSelectIndex);
         }
 
         private void skinButton_WholeChg_MAIN_CARD_RTest_Click(object sender, EventArgs e)
@@ -5899,13 +6483,13 @@ namespace AutoTestTool
 
         private void skinButton_WholeChg_SUB_CARD_RTest_Click(object sender, EventArgs e)
         {
-            ItemTestTime = GetCurrentTimeStamp();
-            countDownTimeCharger.SubtapCard = countdownTime;
-            ChargerTestResultDir["整机副板刷卡"] = "";
-            updateControlText(skinLabel_CHG_SUB_CARD_RESULT, "");
-            LOG("整机副板刷卡重新测试.");
-            //发送刷卡测试指令
-            SendSubCardTestReq((byte)ENUM_BOARD.SUB_BOARD_E);
+       //     ItemTestTime = GetCurrentTimeStamp();
+       //     countDownTimeCharger.SubtapCard = countdownTime;
+        //    ChargerTestResultDir["整机副板刷卡"] = "";
+        //    updateControlText(skinLabel_CHG_SUB_CARD_RESULT, "");
+        //    LOG("整机副板刷卡重新测试.");
+       //     //发送刷卡测试指令
+       //     SendSubCardTestReq((byte)ENUM_BOARD.SUB_BOARD_E);
         }
         
         private void skinButton_MB_DOOR_STATUS_SUCCESS_Click(object sender, EventArgs e)
@@ -5978,6 +6562,386 @@ namespace AutoTestTool
         private void textBox_TestCardNum_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void skinTabPage_WholeChg_TRUMPT_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void skinButton_WholeChg_MAIN_TRUMPT_Fail_Click(object sender, EventArgs e)
+        {
+            LOG("整机主板LED灯测试失败.");
+            ChargerTestResultDir["LED"] = "不通过";
+            updateControlText(skinLabel_CHG_MAIN_LED_RESULT, "不通过", Color.Green);
+            //   LOG("灯按键跳过1chargerTestSelectIndex." + chargerTestSelectIndex);
+            updateTableSelectedIndex(skinTabControl_WholeChg, ++chargerTestSelectIndex);
+        }
+
+        private void skinButton_WholeChg_RS232_SUCCESS_Click(object sender, EventArgs e)
+        {
+            LOG("整机主板喇叭测试成功.");
+            ChargerTestResultDir["喇叭"] = "通过";
+            updateControlText(skinLabel_CHG_MAIN_TRUMPT_RESULT, "通过", Color.Green);
+            //   LOG("灯按键跳过1chargerTestSelectIndex." + chargerTestSelectIndex);
+            updateTableSelectedIndex(skinTabControl_WholeChg, ++chargerTestSelectIndex);
+        }
+
+        private void skinButton_WholeChg_RS232_FAIL_Click(object sender, EventArgs e)
+        {
+            LOG("整机主板喇叭测试失败.");
+            ChargerTestResultDir["喇叭"] = "不通过";
+            updateControlText(skinLabel_CHG_MAIN_TRUMPT_RESULT, "不通过", Color.Green);
+            //   LOG("灯按键跳过1chargerTestSelectIndex." + chargerTestSelectIndex);
+            updateTableSelectedIndex(skinTabControl_WholeChg, ++chargerTestSelectIndex);
+        }
+
+        private void skinButton_WholeChg_MAIN_TRUMPT_Over_Click(object sender, EventArgs e)
+        {
+            LOG("跳过整机主板喇叭测试."); 
+
+            updateControlText(skinLabel_CHG_MAIN_TRUMPT_RESULT, "跳过", Color.Green);
+            //   LOG("灯按键跳过1chargerTestSelectIndex." + chargerTestSelectIndex);
+            updateTableSelectedIndex(skinTabControl_WholeChg, ++chargerTestSelectIndex);
+        }
+
+        private void skinButton_WholeChg_TRUMPT_RTest_Click(object sender, EventArgs e)
+        {
+            ItemTestTime = GetCurrentTimeStamp();
+            countDownTimeCharger.trumpet = countdownTime;
+            ChargerTestResultDir["喇叭"] = "";
+            updateControlText(skinLabel_CHG_MAIN_TRUMPT_RESULT, "");
+            LOG("整机主板喇叭重新测试.");
+
+            //发送喇叭测试指令
+            SendTrumptTestReq();
+        }
+
+        private void skinButton_WholeChg_MAIN_TRUMPT_Success_Click(object sender, EventArgs e)
+        {
+            LOG("整机主板LED灯测试成功.");
+            ChargerTestResultDir["LED"] = "通过";
+            updateControlText(skinLabel_CHG_MAIN_LED_RESULT, "通过", Color.Green);
+            //   LOG("灯按键跳过1chargerTestSelectIndex." + chargerTestSelectIndex);
+            updateTableSelectedIndex(skinTabControl_WholeChg, ++chargerTestSelectIndex);
+        }
+
+        private void skinButton_WholeChg_MAIN_LED_Over_Click(object sender, EventArgs e)
+        {
+            LOG("跳过整机主板LED灯测试.");
+
+            updateControlText(skinLabel_CHG_MAIN_LED_RESULT, "跳过", Color.Green);
+            //   LOG("灯按键跳过1chargerTestSelectIndex." + chargerTestSelectIndex);
+            updateTableSelectedIndex(skinTabControl_WholeChg, ++chargerTestSelectIndex);
+        }
+
+        private void skinButton_WholeChg_LED_RTest_Click(object sender, EventArgs e)
+        {
+            ItemTestTime = GetCurrentTimeStamp();
+            countDownTimeCharger.LED = countdownTime;
+            ChargerTestResultDir["LED"] = "";
+            updateControlText(skinLabel_CHG_MAIN_LED_RESULT, "");
+            LOG("整机主板LED灯重新测试.");
+
+            //发送指示灯测试指令
+            SendLedTestReq(0, 1);
+        //    Thread.Sleep(500);
+        //    SendLedTestReq(1, 1);
+        //    Thread.Sleep(500);
+         //   SendLedTestReq(2, 1);
+        }
+
+        private void splitContainer18_Panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void skinButton_SubWholeChg_SN_Confirm_Click(object sender, EventArgs e)
+        {
+            skinButton_SubWholeChg_StartTest_Click(sender, e);
+        }
+
+        private void skinButton_SubWholeChg_StartTest_Click(object sender, EventArgs e)
+        {
+            if (textBox_SubWholeChg_SN_QR.Text == "")
+            {
+                MessageBox.Show("桩号不能为空", "提示", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                textBox_SubWholeChg_SN_QR.Text = "";
+                return;
+            }
+
+            if (textBox_SubWholeChg_SN_QR.Text.IndexOf(ProcTestData.StationIdQrcodeUrl) == 0)
+            {
+                textBox_SubWholeChg_SN_QR.Text = textBox_SubWholeChg_SN_QR.Text.Remove(0, ProcTestData.StationIdQrcodeUrl.Length);
+                System.Text.RegularExpressions.Regex rex = new System.Text.RegularExpressions.Regex(@"^\d+$");
+
+                if (rex.IsMatch(textBox_SubWholeChg_SN_QR.Text) == false)
+                {
+                    MessageBox.Show("桩号包含非数字！", "提示", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    textBox_SubWholeChg_SN_QR.Text = "";
+                    return;
+                }
+            }
+            else
+            {
+                MessageBox.Show("二维码不正确！", "提示", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                textBox_SubWholeChg_SN_QR.Text = "";
+                return;
+            }
+
+            TestSettingInfo["ChargerModel"] = skinComboBox_ChgType.SelectedItem;
+
+            if (ChargerTestingFlag == false)
+            {
+                LOG("整机请求开始测试.");
+                SendTestModeReq((byte)TEST_MODE.TEST_MODE_START);
+            }
+            else
+            {
+                LOG("整机请求结束测试.");
+                SendTestModeReq((byte)TEST_MODE.TEST_MODE_STOP);
+            }
+            Thread.Sleep(500);
+            //  textBoxGateWayAddr.Text = "389FE343C0";
+            //   SendSetGwAddr(textBoxGateWayAddr.Text.Trim());
+        }
+
+        private void skinButton_SubWholeChg_ReportDir_Click(object sender, EventArgs e)
+        {
+            skinButton_PCBA_REPORTDIR_Click(sender, e);
+        }
+
+        private void skinButton_SubWholeChg_ClearLog_Click(object sender, EventArgs e)
+        {
+            textBoxSubWholeDebugInfo.Text = "";
+        }
+
+        private void skinButton_SubWholeChg_MAIN_TRUMPT_Success_Click(object sender, EventArgs e)
+        {
+            LOG("整机副板LED灯测试成功.");
+            SubChargerTestResultDir["LED"] = "通过";
+            updateControlText(skinLabel_SUB_CHG_MAIN_LED_RESULT, "通过", Color.Green);
+            updateTableSelectedIndex(skinTabControl_SubWholeChg, ++subchargerTestSelectIndex);
+        }
+
+        private void skinButton_SubWholeChg_MAIN_TRUMPT_Fail_Click(object sender, EventArgs e)
+        {
+            LOG("整机副板LED灯测试失败.");
+            SubChargerTestResultDir["LED"] = "不通过";
+            updateControlText(skinLabel_SUB_CHG_MAIN_LED_RESULT, "不通过", Color.Green);
+            updateTableSelectedIndex(skinTabControl_SubWholeChg, ++subchargerTestSelectIndex);
+        }
+
+        private void skinButton_SubWholeChg_RS232_FAIL_Click(object sender, EventArgs e)
+        {
+            LOG("整机副板喇叭测试失败.");
+            SubChargerTestResultDir["喇叭"] = "不通过";
+            updateControlText(skinLabel_SUB_CHG_MAIN_TRUMPT_RESULT, "不通过", Color.Green);
+            updateTableSelectedIndex(skinTabControl_SubWholeChg, ++subchargerTestSelectIndex);
+        }
+
+        private void skinButton_SubWholeChg_RS232_SUCCESS_Click(object sender, EventArgs e)
+        {
+            LOG("整机副板喇叭测试成功.");
+            SubChargerTestResultDir["喇叭"] = "通过";
+            updateControlText(skinLabel_SUB_CHG_MAIN_TRUMPT_RESULT, "通过", Color.Green);
+            updateTableSelectedIndex(skinTabControl_SubWholeChg, ++subchargerTestSelectIndex);
+        }
+
+        private void skinButton_SubWholeChg_MAIN_LED_Over_Click(object sender, EventArgs e)
+        {
+            LOG("跳过整机副板LED灯测试.");
+
+            updateControlText(skinLabel_SUB_CHG_MAIN_LED_RESULT, "跳过", Color.Green);
+            updateTableSelectedIndex(skinTabControl_SubWholeChg, ++subchargerTestSelectIndex);
+        }
+
+        private void skinButton_SubWholeChg_MAIN_TRUMPT_Over_Click(object sender, EventArgs e)
+        {
+            LOG("跳过整机副板喇叭测试.");
+
+            updateControlText(skinLabel_SUB_CHG_MAIN_TRUMPT_RESULT, "跳过", Color.Green);
+            updateTableSelectedIndex(skinTabControl_SubWholeChg, ++subchargerTestSelectIndex);
+        }
+
+        private void skinButton_SubWholeChg_RS232_Over_Click(object sender, EventArgs e)
+        {
+            LOG("跳过整机副板RS232测试.");
+
+            updateControlText(skinLabel_SUB_CHG_RS232_RESULT, "跳过", Color.Green);
+            updateTableSelectedIndex(skinTabControl_SubWholeChg, ++subchargerTestSelectIndex);
+        }
+
+        private void skinButton_SubWholeChg_MAIN_CARD_Over_Click(object sender, EventArgs e)
+        {
+            LOG("跳过整机副板刷卡测试.");
+            
+            updateControlText(skinLabel_SUB_CHG_CARD_RESULT, "跳过", Color.Green);
+            updateTableSelectedIndex(skinTabControl_SubWholeChg, ++subchargerTestSelectIndex);
+        }
+
+        private void skinButton_SubWholeChg_LED_RTest_Click(object sender, EventArgs e)
+        {
+            ItemTestTime = GetCurrentTimeStamp();
+            SubCountDownTimeCharger.LED = countdownTime;
+            SubChargerTestResultDir["LED"] = "";
+            updateControlText(skinLabel_SUB_CHG_MAIN_LED_RESULT, "");
+            LOG("整机副板LED灯重新测试.");
+
+            //发送指示灯测试指令
+            SendLedTestReq(0, 1);
+        }
+
+        private void skinButton_SubWholeChg_TRUMPT_RTest_Click(object sender, EventArgs e)
+        {
+            ItemTestTime = GetCurrentTimeStamp();
+            SubCountDownTimeCharger.trumpet = countdownTime;
+            SubChargerTestResultDir["喇叭"] = "";
+            updateControlText(skinLabel_SUB_CHG_MAIN_TRUMPT_RESULT, "");
+            LOG("整机副板喇叭重新测试.");
+            
+            SendTrumptTestReq();
+        }
+
+        private void skinButton_SubWholeChg_RS232_RTest_Click(object sender, EventArgs e)
+        {
+            ItemTestTime = GetCurrentTimeStamp();
+            SubCountDownTimeCharger.RS232 = countdownTime;
+            SubChargerTestResultDir["RS232"] = "";
+            updateControlText(skinLabel_SUB_CHG_RS232_RESULT, "");
+            LOG("整机副板喇叭重新测试.");
+
+            SendRS232TestReq();
+        }
+
+        private void skinButton_SubWholeChg_MAIN_CARD_RTest_Click(object sender, EventArgs e)
+        {
+            ItemTestTime = GetCurrentTimeStamp();
+            SubCountDownTimeCharger.tapCard = countdownTime;
+            SubChargerTestResultDir["整机副板刷卡"] = "";
+            updateControlText(skinLabel_SUB_CHG_CARD_RESULT, "");
+            LOG("整机副板刷卡重新测试.");
+
+            SendSubCardTestReq((byte)ENUM_BOARD.SUB_BOARD_E);
+        }
+
+        private void splitContainer5_Panel2_Paint_1(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void skinButton_WholeChg_MAIN_DoorStatus_Seccess_Click(object sender, EventArgs e)
+        {
+            LOG("整机主板检测门锁状态成功.");
+            ChargerTestResultDir["DOOR_STATUS"] = "通过";
+            updateControlText(skinLabel_CHG_MAIN_DoorStatus_RESULT, "通过", Color.Green);
+            updateTableSelectedIndex(skinTabControl_WholeChg, ++chargerTestSelectIndex);
+        }
+
+        private void skinButton_WholeChg_MAIN_433_RTest_Click(object sender, EventArgs e)
+        {
+            ItemTestTime = GetCurrentTimeStamp();
+            countDownTimeCharger.SmokeSensor433 = countdownTime;
+            ChargerTestResultDir["烟感"] = "";
+            updateControlText(skinLabel_CHG_MAIN_433_RESULT, "");
+            LOG("整机主板烟感重新测试.");
+            SendSetSmokeSensor433();
+        }
+
+        private void skinButton_WholeChg_MAIN_DoorStatus_RTest_Click(object sender, EventArgs e)
+        {
+            ItemTestTime = GetCurrentTimeStamp();
+            countDownTimeCharger.DOOR_STATUS = countdownTime;
+            ChargerTestResultDir["DOOR_STATUS"] = "";
+            updateControlText(skinLabel_CHG_MAIN_DoorStatus_RESULT, "");
+            updateControlText(skinLabel_CHG_MAIN_DoorStatus2_RESULT, "");
+            LOG("整机主板 DOOR_STATUS 重新测试.");
+            //发送DOOR状态测试指令
+            SendDOORStatusTestReq((byte)ENUM_BOARD.MAIN_BOARD_E);
+        }
+
+        private void skinButton_WholeChg_MAIN_DoorStatus_Fail_Click(object sender, EventArgs e)
+        {
+            LOG("整机主板检测门锁状态失败.");
+            ChargerTestResultDir["DOOR_STATUS"] = "不通过";
+            updateControlText(skinLabel_CHG_MAIN_DoorStatus_RESULT, "不通过", Color.Green);
+            updateTableSelectedIndex(skinTabControl_WholeChg, ++chargerTestSelectIndex);
+        }
+
+        private void skinButton_WholeChg_MAIN_DoorControl_Seccess_Click(object sender, EventArgs e)
+        {
+            LOG("整机主板检测门锁控制成功.");
+            ChargerTestResultDir["DOOR_CONTROL"] = "通过";
+            updateControlText(skinLabel_CHG_MAIN_DoorControl_RESULT, "通过", Color.Green);
+            updateTableSelectedIndex(skinTabControl_WholeChg, ++chargerTestSelectIndex);
+        }
+
+        private void skinButton_WholeChg_MAIN_DoorControl_Fail_Click(object sender, EventArgs e)
+        {
+            LOG("整机主板检测门锁控制成功.");
+            ChargerTestResultDir["DOOR_CONTROL"] = "不通过";
+            updateControlText(skinLabel_CHG_MAIN_DoorControl_RESULT, "不通过", Color.Green);
+            updateTableSelectedIndex(skinTabControl_WholeChg, ++chargerTestSelectIndex);
+        }
+
+        private void skinButton_WholeChg_MAIN_433_Seccess_Click(object sender, EventArgs e)
+        {
+            LOG("整机主板检测烟感成功.");
+            ChargerTestResultDir["烟感"] = "通过";
+            updateControlText(skinLabel_CHG_MAIN_433_RESULT, "通过", Color.Green);
+            updateTableSelectedIndex(skinTabControl_WholeChg, ++chargerTestSelectIndex);
+        }
+
+        private void skinButton_WholeChg_MAIN_433_Fail_Click(object sender, EventArgs e)
+        {
+            LOG("整机主板检测烟感成功.");
+            ChargerTestResultDir["烟感"] = "不通过";
+            updateControlText(skinLabel_CHG_MAIN_433_RESULT, "不通过", Color.Green);
+            updateTableSelectedIndex(skinTabControl_WholeChg, ++chargerTestSelectIndex);
+        }
+
+        private void skinButton_WholeChg_MAIN_433_Over_Click(object sender, EventArgs e)
+        {
+            LOG("跳过整机主板检测烟感.");
+         //   ChargerTestResultDir["烟感"] = "通过";
+            updateControlText(skinLabel_CHG_MAIN_433_RESULT, "跳过", Color.Green);
+            updateTableSelectedIndex(skinTabControl_WholeChg, ++chargerTestSelectIndex);
+        }
+
+        private void skinButton_WholeChg_MAIN_DoorControl_Over_Click(object sender, EventArgs e)
+        {
+            LOG("跳过整机主板门控检测.");
+            //   ChargerTestResultDir["烟感"] = "通过";
+            updateControlText(skinLabel_CHG_MAIN_DoorControl_RESULT, "跳过", Color.Green);
+            updateTableSelectedIndex(skinTabControl_WholeChg, ++chargerTestSelectIndex);
+        }
+
+        private void skinButton_WholeChg_MAIN_DoorStatus_Over_Click(object sender, EventArgs e)
+        {
+            LOG("跳过整机主板门状态检测.");
+            //   ChargerTestResultDir["烟感"] = "通过";
+            updateControlText(skinLabel_CHG_MAIN_DoorStatus_RESULT, "跳过", Color.Green);
+            updateTableSelectedIndex(skinTabControl_WholeChg, ++chargerTestSelectIndex);
+        }
+
+        private void skinButton_WholeChg_MAIN_DoorControl_RTest_Click(object sender, EventArgs e)
+        {
+            ItemTestTime = GetCurrentTimeStamp();
+            countDownTimeCharger.DOOR = countdownTime;
+            ChargerTestResultDir["DOOR_CONTROL"] = "";
+            updateControlText(skinLabel_CHG_MAIN_DoorControl_RESULT, "");
+            LOG("整机主板DOOR重新测试.");
+            //发送DOOR测试指令
+            SendDOORTestReq();
+        }
+
+        private void skinTabControl_SubWholeChg_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            subchargerTestSelectIndex = skinTabControl_SubWholeChg.SelectedIndex;
+            if (subchargerTestSelectIndex == 0)
+            {
+                textBox_SubWholeChg_SN_QR.Focus();
+            }
         }
     }
 }

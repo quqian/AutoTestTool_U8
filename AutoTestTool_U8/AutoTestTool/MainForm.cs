@@ -1852,8 +1852,7 @@ namespace AutoTestTool
 
         private void ShowSubChgBoardResult()
         {
-   //         updateControlText(skinLabel_SUB_CHG_STATION_ID_RESLUT_VAL, SubChargerTestResultDir["电桩号"], Color.Black);
-   //         updateControlText(skinLabel_SUB_CHG_MB_QR_RES_VAL, SubChargerTestResultDir["副板编号"], Color.Black);
+            updateControlText(skinLabel_SUB_CHG_DEVICE_ID_RES_VAL, SubChargerTestResultDir["电桩号"], Color.Black);
             updateControlText(skinLabel_SUB_CHG_TESTOR_RES_VAL, SubChargerTestResultDir["测试员"], Color.Black);
             updateControlText(skinLabel_SUB_CHG_FW_RES_VAL, SubChargerTestResultDir["软件版本"], Color.Black);
             updateControlText(skinLabeL_SUB_CHG_TEST_RES_VAL, SubChargerTestResultDir["测试结果"], decideColor(SubChargerTestResultDir["测试结果"]));
@@ -1984,7 +1983,7 @@ namespace AutoTestTool
         {
             DateTime now = DateTime.Now;
             SubChargerTestResultDir.Clear();
-      //      SubChargerTestResultDir.Add("电桩号", textBox_WholeChg_SN_QR.Text.Trim());
+            SubChargerTestResultDir.Add("电桩号", textBox_SubWholeChg_SN_QR.Text.Trim());
       //      SubChargerTestResultDir.Add("副板编号", "");
             SubChargerTestResultDir.Add("测试员", ProcTestData.PresentAccount);
             SubChargerTestResultDir.Add("软件版本", "");
@@ -1998,8 +1997,7 @@ namespace AutoTestTool
 
 
 
-     //       updateControlText(skinLabel_SUB_CHG_STATION_ID_RESLUT_VAL, "");
-     //       updateControlText(skinLabel_SUB_CHG_MB_QR_RES_VAL, "");
+            updateControlText(skinLabel_SUB_CHG_DEVICE_ID_RES_VAL, "");
             updateControlText(skinLabel_SUB_CHG_TESTOR_RES_VAL, "");
             updateControlText(skinLabel_SUB_CHG_FW_RES_VAL, "");
             updateControlText(skinLabeL_SUB_CHG_TEST_RES_VAL, "");
@@ -4674,7 +4672,7 @@ namespace AutoTestTool
 
         private void skinButton_WholeChg_StartTest_Click(object sender, EventArgs e)
         {
-            if ("结束测试" == skinButton_SubWholeChg_StartTest.Text)
+           // if ("开始测试" == skinButton_SubWholeChg_StartTest.Text)
             {
                 if (textBox_WholeChg_SN_QR.Text == "")
                 {
@@ -4682,6 +4680,7 @@ namespace AutoTestTool
                     textBox_WholeChg_SN_QR.Text = "";
                     return;
                 }
+            }
 
                 if (textBox_WholeChg_SN_QR.Text.IndexOf(ProcTestData.StationIdQrcodeUrl) == 0)
                 {
@@ -4697,11 +4696,11 @@ namespace AutoTestTool
                 }
                 else
                 {
-                    MessageBox.Show("二维码不正确！", "提示", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("主板整机输入二维码不正确！", "提示", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     textBox_WholeChg_SN_QR.Text = "";
                     return;
                 }
-            }
+            
             TestSettingInfo["ChargerModel"] = skinComboBox_ChgType.SelectedItem;
             
             if (ChargerTestingFlag == false)
@@ -6674,7 +6673,7 @@ namespace AutoTestTool
 
         private void skinButton_SubWholeChg_StartTest_Click(object sender, EventArgs e)
         {
-            if ("结束测试" == skinButton_SubWholeChg_StartTest.Text)
+           // if ("结束测试" == skinButton_SubWholeChg_StartTest.Text)
             {
                 if (textBox_SubWholeChg_SN_QR.Text == "")
                 {
@@ -6956,6 +6955,29 @@ namespace AutoTestTool
             if (subchargerTestSelectIndex == 0)
             {
                 textBox_SubWholeChg_SN_QR.Focus();
+            }
+        }
+
+        private void skinLabel93_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void skinLabel41_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void skinSplitContainer10_Panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void textBox_SubWholeChg_SN_QR_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == '\r')
+            {
+                skinButton_SubWholeChg_SN_Confirm_Click(sender, e);
             }
         }
     }

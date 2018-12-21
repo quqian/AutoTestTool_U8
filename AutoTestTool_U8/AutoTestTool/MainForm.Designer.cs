@@ -579,6 +579,8 @@
             this.skinButton_SubWholeChg_ReportDir = new CCWin.SkinControl.SkinButton();
             this.textBoxSubWholeDebugInfo = new System.Windows.Forms.TextBox();
             this.skinButton_SubWholeChg_ClearLog = new CCWin.SkinControl.SkinButton();
+            this.skinLabel_SUB_CHG_DEVICE_ID_RES_VAL = new CCWin.SkinControl.SkinLabel();
+            this.skinLabel93 = new CCWin.SkinControl.SkinLabel();
             this.tableLayoutPanel8.SuspendLayout();
             this.skinTabControl_TestMenu.SuspendLayout();
             this.skinTabPage_CurrentUser.SuspendLayout();
@@ -1295,7 +1297,7 @@
             this.skinTabControl_MB.PageImagePosition = CCWin.SkinControl.SkinTabControl.ePageImagePosition.Left;
             this.skinTabControl_MB.PageNorml = null;
             this.skinTabControl_MB.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.skinTabControl_MB.SelectedIndex = 11;
+            this.skinTabControl_MB.SelectedIndex = 0;
             this.skinTabControl_MB.Size = new System.Drawing.Size(885, 696);
             this.skinTabControl_MB.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.skinTabControl_MB.TabIndex = 0;
@@ -5807,7 +5809,7 @@
             this.skinTabControl_WholeChg.PageHover = ((System.Drawing.Image)(resources.GetObject("skinTabControl_WholeChg.PageHover")));
             this.skinTabControl_WholeChg.PageImagePosition = CCWin.SkinControl.SkinTabControl.ePageImagePosition.Left;
             this.skinTabControl_WholeChg.PageNorml = null;
-            this.skinTabControl_WholeChg.SelectedIndex = 8;
+            this.skinTabControl_WholeChg.SelectedIndex = 0;
             this.skinTabControl_WholeChg.Size = new System.Drawing.Size(879, 683);
             this.skinTabControl_WholeChg.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.skinTabControl_WholeChg.TabIndex = 2;
@@ -5845,6 +5847,7 @@
             this.skinSplitContainer10.Panel2.Controls.Add(this.skinButton_WholeChg_SN_Confirm);
             this.skinSplitContainer10.Panel2.Controls.Add(this.skinLabel31);
             this.skinSplitContainer10.Panel2.Controls.Add(this.textBox_WholeChg_SN_QR);
+            this.skinSplitContainer10.Panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.skinSplitContainer10_Panel2_Paint);
             this.skinSplitContainer10.Size = new System.Drawing.Size(779, 683);
             this.skinSplitContainer10.SplitterDistance = 101;
             this.skinSplitContainer10.TabIndex = 0;
@@ -8645,7 +8648,7 @@
             this.skinTabControl_SubWholeChg.PageHover = ((System.Drawing.Image)(resources.GetObject("skinTabControl_SubWholeChg.PageHover")));
             this.skinTabControl_SubWholeChg.PageImagePosition = CCWin.SkinControl.SkinTabControl.ePageImagePosition.Left;
             this.skinTabControl_SubWholeChg.PageNorml = null;
-            this.skinTabControl_SubWholeChg.SelectedIndex = 5;
+            this.skinTabControl_SubWholeChg.SelectedIndex = 0;
             this.skinTabControl_SubWholeChg.Size = new System.Drawing.Size(879, 683);
             this.skinTabControl_SubWholeChg.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.skinTabControl_SubWholeChg.TabIndex = 5;
@@ -8739,6 +8742,7 @@
             this.textBox_SubWholeChg_SN_QR.Name = "textBox_SubWholeChg_SN_QR";
             this.textBox_SubWholeChg_SN_QR.Size = new System.Drawing.Size(397, 26);
             this.textBox_SubWholeChg_SN_QR.TabIndex = 0;
+            this.textBox_SubWholeChg_SN_QR.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_SubWholeChg_SN_QR_KeyPress);
             // 
             // skinTabPage_SubWholeChg_LED
             // 
@@ -9466,6 +9470,8 @@
             // 
             // skinSplitContainer12.Panel2
             // 
+            this.skinSplitContainer12.Panel2.Controls.Add(this.skinLabel_SUB_CHG_DEVICE_ID_RES_VAL);
+            this.skinSplitContainer12.Panel2.Controls.Add(this.skinLabel93);
             this.skinSplitContainer12.Panel2.Controls.Add(this.skinLabel_SUB_CHG_MAIN_TRUMPT_RES_VAL);
             this.skinSplitContainer12.Panel2.Controls.Add(this.skinLabel155);
             this.skinSplitContainer12.Panel2.Controls.Add(this.skinLabel_SUB_CHG_MAIN_LED_RES_VAL);
@@ -9516,7 +9522,7 @@
             this.skinLabel_SUB_CHG_MAIN_TRUMPT_RES_VAL.BackColor = System.Drawing.Color.Transparent;
             this.skinLabel_SUB_CHG_MAIN_TRUMPT_RES_VAL.BorderColor = System.Drawing.Color.White;
             this.skinLabel_SUB_CHG_MAIN_TRUMPT_RES_VAL.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.skinLabel_SUB_CHG_MAIN_TRUMPT_RES_VAL.Location = new System.Drawing.Point(315, 140);
+            this.skinLabel_SUB_CHG_MAIN_TRUMPT_RES_VAL.Location = new System.Drawing.Point(308, 157);
             this.skinLabel_SUB_CHG_MAIN_TRUMPT_RES_VAL.Name = "skinLabel_SUB_CHG_MAIN_TRUMPT_RES_VAL";
             this.skinLabel_SUB_CHG_MAIN_TRUMPT_RES_VAL.Size = new System.Drawing.Size(24, 25);
             this.skinLabel_SUB_CHG_MAIN_TRUMPT_RES_VAL.TabIndex = 62;
@@ -9533,7 +9539,7 @@
             this.skinLabel155.BackColor = System.Drawing.Color.Transparent;
             this.skinLabel155.BorderColor = System.Drawing.Color.White;
             this.skinLabel155.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.skinLabel155.Location = new System.Drawing.Point(81, 140);
+            this.skinLabel155.Location = new System.Drawing.Point(74, 157);
             this.skinLabel155.Name = "skinLabel155";
             this.skinLabel155.Size = new System.Drawing.Size(67, 25);
             this.skinLabel155.TabIndex = 61;
@@ -9550,7 +9556,7 @@
             this.skinLabel_SUB_CHG_MAIN_LED_RES_VAL.BackColor = System.Drawing.Color.Transparent;
             this.skinLabel_SUB_CHG_MAIN_LED_RES_VAL.BorderColor = System.Drawing.Color.White;
             this.skinLabel_SUB_CHG_MAIN_LED_RES_VAL.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.skinLabel_SUB_CHG_MAIN_LED_RES_VAL.Location = new System.Drawing.Point(315, 115);
+            this.skinLabel_SUB_CHG_MAIN_LED_RES_VAL.Location = new System.Drawing.Point(308, 132);
             this.skinLabel_SUB_CHG_MAIN_LED_RES_VAL.Name = "skinLabel_SUB_CHG_MAIN_LED_RES_VAL";
             this.skinLabel_SUB_CHG_MAIN_LED_RES_VAL.Size = new System.Drawing.Size(24, 25);
             this.skinLabel_SUB_CHG_MAIN_LED_RES_VAL.TabIndex = 60;
@@ -9567,7 +9573,7 @@
             this.skinLabel157.BackColor = System.Drawing.Color.Transparent;
             this.skinLabel157.BorderColor = System.Drawing.Color.White;
             this.skinLabel157.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.skinLabel157.Location = new System.Drawing.Point(81, 115);
+            this.skinLabel157.Location = new System.Drawing.Point(74, 132);
             this.skinLabel157.Name = "skinLabel157";
             this.skinLabel157.Size = new System.Drawing.Size(63, 25);
             this.skinLabel157.TabIndex = 59;
@@ -9584,7 +9590,7 @@
             this.skinLabel_SUB_CHG_CARD_RES_VAL.BackColor = System.Drawing.Color.Transparent;
             this.skinLabel_SUB_CHG_CARD_RES_VAL.BorderColor = System.Drawing.Color.White;
             this.skinLabel_SUB_CHG_CARD_RES_VAL.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.skinLabel_SUB_CHG_CARD_RES_VAL.Location = new System.Drawing.Point(314, 190);
+            this.skinLabel_SUB_CHG_CARD_RES_VAL.Location = new System.Drawing.Point(307, 207);
             this.skinLabel_SUB_CHG_CARD_RES_VAL.Name = "skinLabel_SUB_CHG_CARD_RES_VAL";
             this.skinLabel_SUB_CHG_CARD_RES_VAL.Size = new System.Drawing.Size(24, 25);
             this.skinLabel_SUB_CHG_CARD_RES_VAL.TabIndex = 56;
@@ -9601,7 +9607,7 @@
             this.skinLabel159.BackColor = System.Drawing.Color.Transparent;
             this.skinLabel159.BorderColor = System.Drawing.Color.White;
             this.skinLabel159.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.skinLabel159.Location = new System.Drawing.Point(80, 190);
+            this.skinLabel159.Location = new System.Drawing.Point(73, 207);
             this.skinLabel159.Name = "skinLabel159";
             this.skinLabel159.Size = new System.Drawing.Size(105, 25);
             this.skinLabel159.TabIndex = 55;
@@ -9618,7 +9624,7 @@
             this.skinLabel_SUB_CHG_TEST_TIME_RES_VAL.BackColor = System.Drawing.Color.Transparent;
             this.skinLabel_SUB_CHG_TEST_TIME_RES_VAL.BorderColor = System.Drawing.Color.White;
             this.skinLabel_SUB_CHG_TEST_TIME_RES_VAL.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.skinLabel_SUB_CHG_TEST_TIME_RES_VAL.Location = new System.Drawing.Point(315, 242);
+            this.skinLabel_SUB_CHG_TEST_TIME_RES_VAL.Location = new System.Drawing.Point(308, 259);
             this.skinLabel_SUB_CHG_TEST_TIME_RES_VAL.Name = "skinLabel_SUB_CHG_TEST_TIME_RES_VAL";
             this.skinLabel_SUB_CHG_TEST_TIME_RES_VAL.Size = new System.Drawing.Size(24, 25);
             this.skinLabel_SUB_CHG_TEST_TIME_RES_VAL.TabIndex = 54;
@@ -9635,7 +9641,7 @@
             this.skinLabel161.BackColor = System.Drawing.Color.Transparent;
             this.skinLabel161.BorderColor = System.Drawing.Color.White;
             this.skinLabel161.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.skinLabel161.Location = new System.Drawing.Point(81, 242);
+            this.skinLabel161.Location = new System.Drawing.Point(74, 259);
             this.skinLabel161.Name = "skinLabel161";
             this.skinLabel161.Size = new System.Drawing.Size(105, 25);
             this.skinLabel161.TabIndex = 53;
@@ -9652,7 +9658,7 @@
             this.skinLabel_SUB_CHG_TEST_USEDTIME_RES_VAL.BackColor = System.Drawing.Color.Transparent;
             this.skinLabel_SUB_CHG_TEST_USEDTIME_RES_VAL.BorderColor = System.Drawing.Color.White;
             this.skinLabel_SUB_CHG_TEST_USEDTIME_RES_VAL.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.skinLabel_SUB_CHG_TEST_USEDTIME_RES_VAL.Location = new System.Drawing.Point(315, 215);
+            this.skinLabel_SUB_CHG_TEST_USEDTIME_RES_VAL.Location = new System.Drawing.Point(308, 232);
             this.skinLabel_SUB_CHG_TEST_USEDTIME_RES_VAL.Name = "skinLabel_SUB_CHG_TEST_USEDTIME_RES_VAL";
             this.skinLabel_SUB_CHG_TEST_USEDTIME_RES_VAL.Size = new System.Drawing.Size(24, 25);
             this.skinLabel_SUB_CHG_TEST_USEDTIME_RES_VAL.TabIndex = 52;
@@ -9669,7 +9675,7 @@
             this.skinLabel_SUB_CHG_MAIN_RS232_RES_VAL.BackColor = System.Drawing.Color.Transparent;
             this.skinLabel_SUB_CHG_MAIN_RS232_RES_VAL.BorderColor = System.Drawing.Color.White;
             this.skinLabel_SUB_CHG_MAIN_RS232_RES_VAL.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.skinLabel_SUB_CHG_MAIN_RS232_RES_VAL.Location = new System.Drawing.Point(314, 165);
+            this.skinLabel_SUB_CHG_MAIN_RS232_RES_VAL.Location = new System.Drawing.Point(307, 182);
             this.skinLabel_SUB_CHG_MAIN_RS232_RES_VAL.Name = "skinLabel_SUB_CHG_MAIN_RS232_RES_VAL";
             this.skinLabel_SUB_CHG_MAIN_RS232_RES_VAL.Size = new System.Drawing.Size(24, 25);
             this.skinLabel_SUB_CHG_MAIN_RS232_RES_VAL.TabIndex = 44;
@@ -9686,7 +9692,7 @@
             this.skinLabeL_SUB_CHG_TEST_RES_VAL.BackColor = System.Drawing.Color.Transparent;
             this.skinLabeL_SUB_CHG_TEST_RES_VAL.BorderColor = System.Drawing.Color.White;
             this.skinLabeL_SUB_CHG_TEST_RES_VAL.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.skinLabeL_SUB_CHG_TEST_RES_VAL.Location = new System.Drawing.Point(314, 90);
+            this.skinLabeL_SUB_CHG_TEST_RES_VAL.Location = new System.Drawing.Point(307, 107);
             this.skinLabeL_SUB_CHG_TEST_RES_VAL.Name = "skinLabeL_SUB_CHG_TEST_RES_VAL";
             this.skinLabeL_SUB_CHG_TEST_RES_VAL.Size = new System.Drawing.Size(24, 25);
             this.skinLabeL_SUB_CHG_TEST_RES_VAL.TabIndex = 43;
@@ -9703,7 +9709,7 @@
             this.skinLabel_SUB_CHG_FW_RES_VAL.BackColor = System.Drawing.Color.Transparent;
             this.skinLabel_SUB_CHG_FW_RES_VAL.BorderColor = System.Drawing.Color.White;
             this.skinLabel_SUB_CHG_FW_RES_VAL.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.skinLabel_SUB_CHG_FW_RES_VAL.Location = new System.Drawing.Point(314, 63);
+            this.skinLabel_SUB_CHG_FW_RES_VAL.Location = new System.Drawing.Point(307, 80);
             this.skinLabel_SUB_CHG_FW_RES_VAL.Name = "skinLabel_SUB_CHG_FW_RES_VAL";
             this.skinLabel_SUB_CHG_FW_RES_VAL.Size = new System.Drawing.Size(24, 25);
             this.skinLabel_SUB_CHG_FW_RES_VAL.TabIndex = 42;
@@ -9720,7 +9726,7 @@
             this.skinLabel_SUB_CHG_TESTOR_RES_VAL.BackColor = System.Drawing.Color.Transparent;
             this.skinLabel_SUB_CHG_TESTOR_RES_VAL.BorderColor = System.Drawing.Color.White;
             this.skinLabel_SUB_CHG_TESTOR_RES_VAL.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.skinLabel_SUB_CHG_TESTOR_RES_VAL.Location = new System.Drawing.Point(314, 36);
+            this.skinLabel_SUB_CHG_TESTOR_RES_VAL.Location = new System.Drawing.Point(307, 53);
             this.skinLabel_SUB_CHG_TESTOR_RES_VAL.Name = "skinLabel_SUB_CHG_TESTOR_RES_VAL";
             this.skinLabel_SUB_CHG_TESTOR_RES_VAL.Size = new System.Drawing.Size(24, 25);
             this.skinLabel_SUB_CHG_TESTOR_RES_VAL.TabIndex = 41;
@@ -9737,7 +9743,7 @@
             this.skinLabel179.BackColor = System.Drawing.Color.Transparent;
             this.skinLabel179.BorderColor = System.Drawing.Color.White;
             this.skinLabel179.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.skinLabel179.Location = new System.Drawing.Point(81, 215);
+            this.skinLabel179.Location = new System.Drawing.Point(74, 232);
             this.skinLabel179.Name = "skinLabel179";
             this.skinLabel179.Size = new System.Drawing.Size(105, 25);
             this.skinLabel179.TabIndex = 39;
@@ -9754,7 +9760,7 @@
             this.skinLabel181.BackColor = System.Drawing.Color.Transparent;
             this.skinLabel181.BorderColor = System.Drawing.Color.White;
             this.skinLabel181.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.skinLabel181.Location = new System.Drawing.Point(80, 165);
+            this.skinLabel181.Location = new System.Drawing.Point(73, 182);
             this.skinLabel181.Name = "skinLabel181";
             this.skinLabel181.Size = new System.Drawing.Size(85, 25);
             this.skinLabel181.TabIndex = 31;
@@ -9771,7 +9777,7 @@
             this.skinLabel182.BackColor = System.Drawing.Color.Transparent;
             this.skinLabel182.BorderColor = System.Drawing.Color.White;
             this.skinLabel182.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.skinLabel182.Location = new System.Drawing.Point(80, 90);
+            this.skinLabel182.Location = new System.Drawing.Point(73, 107);
             this.skinLabel182.Name = "skinLabel182";
             this.skinLabel182.Size = new System.Drawing.Size(105, 25);
             this.skinLabel182.TabIndex = 30;
@@ -9788,7 +9794,7 @@
             this.skinLabel183.BackColor = System.Drawing.Color.Transparent;
             this.skinLabel183.BorderColor = System.Drawing.Color.White;
             this.skinLabel183.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.skinLabel183.Location = new System.Drawing.Point(80, 63);
+            this.skinLabel183.Location = new System.Drawing.Point(73, 80);
             this.skinLabel183.Name = "skinLabel183";
             this.skinLabel183.Size = new System.Drawing.Size(105, 25);
             this.skinLabel183.TabIndex = 29;
@@ -9805,7 +9811,7 @@
             this.skinLabel184.BackColor = System.Drawing.Color.Transparent;
             this.skinLabel184.BorderColor = System.Drawing.Color.White;
             this.skinLabel184.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.skinLabel184.Location = new System.Drawing.Point(80, 36);
+            this.skinLabel184.Location = new System.Drawing.Point(73, 53);
             this.skinLabel184.Name = "skinLabel184";
             this.skinLabel184.Size = new System.Drawing.Size(86, 25);
             this.skinLabel184.TabIndex = 28;
@@ -9908,6 +9914,42 @@
             this.skinButton_SubWholeChg_ClearLog.UseVisualStyleBackColor = false;
             this.skinButton_SubWholeChg_ClearLog.Click += new System.EventHandler(this.skinButton_SubWholeChg_ClearLog_Click);
             // 
+            // skinLabel_SUB_CHG_DEVICE_ID_RES_VAL
+            // 
+            this.skinLabel_SUB_CHG_DEVICE_ID_RES_VAL.AllowDrop = true;
+            this.skinLabel_SUB_CHG_DEVICE_ID_RES_VAL.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.skinLabel_SUB_CHG_DEVICE_ID_RES_VAL.AutoEllipsis = true;
+            this.skinLabel_SUB_CHG_DEVICE_ID_RES_VAL.AutoSize = true;
+            this.skinLabel_SUB_CHG_DEVICE_ID_RES_VAL.BackColor = System.Drawing.Color.Transparent;
+            this.skinLabel_SUB_CHG_DEVICE_ID_RES_VAL.BorderColor = System.Drawing.Color.White;
+            this.skinLabel_SUB_CHG_DEVICE_ID_RES_VAL.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.skinLabel_SUB_CHG_DEVICE_ID_RES_VAL.Location = new System.Drawing.Point(308, 28);
+            this.skinLabel_SUB_CHG_DEVICE_ID_RES_VAL.Name = "skinLabel_SUB_CHG_DEVICE_ID_RES_VAL";
+            this.skinLabel_SUB_CHG_DEVICE_ID_RES_VAL.Size = new System.Drawing.Size(24, 25);
+            this.skinLabel_SUB_CHG_DEVICE_ID_RES_VAL.TabIndex = 64;
+            this.skinLabel_SUB_CHG_DEVICE_ID_RES_VAL.Text = "  ";
+            this.skinLabel_SUB_CHG_DEVICE_ID_RES_VAL.Click += new System.EventHandler(this.skinLabel41_Click);
+            // 
+            // skinLabel93
+            // 
+            this.skinLabel93.AllowDrop = true;
+            this.skinLabel93.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.skinLabel93.AutoEllipsis = true;
+            this.skinLabel93.AutoSize = true;
+            this.skinLabel93.BackColor = System.Drawing.Color.Transparent;
+            this.skinLabel93.BorderColor = System.Drawing.Color.White;
+            this.skinLabel93.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.skinLabel93.Location = new System.Drawing.Point(74, 28);
+            this.skinLabel93.Name = "skinLabel93";
+            this.skinLabel93.Size = new System.Drawing.Size(86, 25);
+            this.skinLabel93.TabIndex = 63;
+            this.skinLabel93.Text = "  电桩号:";
+            this.skinLabel93.Click += new System.EventHandler(this.skinLabel93_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -9919,7 +9961,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "MainForm";
-            this.Text = "U8自动化测试上位机_20181115";
+            this.Text = "U8自动化测试上位机";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainForm_FormClosing);
             this.Load += new System.EventHandler(this.MainForm_Load);
             this.tableLayoutPanel8.ResumeLayout(false);
@@ -10777,5 +10819,7 @@
         private CCWin.SkinControl.SkinLabel skinLabel118;
         private CCWin.SkinControl.SkinLabel skinLabel_CHG_MAIN_DOOR_STATUS__RES_VAL;
         private CCWin.SkinControl.SkinLabel skinLabel148;
+        private CCWin.SkinControl.SkinLabel skinLabel_SUB_CHG_DEVICE_ID_RES_VAL;
+        private CCWin.SkinControl.SkinLabel skinLabel93;
     }
 }

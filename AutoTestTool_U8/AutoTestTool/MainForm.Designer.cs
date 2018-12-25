@@ -483,6 +483,8 @@
             this.skinButtonCleanConfigLog = new System.Windows.Forms.Button();
             this.splitContainer7 = new System.Windows.Forms.SplitContainer();
             this.groupBox10 = new System.Windows.Forms.GroupBox();
+            this.label1_rtc_year1 = new System.Windows.Forms.Label();
+            this.Button_Get_RTC = new System.Windows.Forms.Button();
             this.ButtonSet_RTC = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
@@ -584,19 +586,7 @@
             this.skinButton_SubWholeChg_ReportDir = new CCWin.SkinControl.SkinButton();
             this.textBoxSubWholeDebugInfo = new System.Windows.Forms.TextBox();
             this.skinButton_SubWholeChg_ClearLog = new CCWin.SkinControl.SkinButton();
-            this.Button_Get_RTC = new System.Windows.Forms.Button();
-            this.label1_rtc_year = new System.Windows.Forms.Label();
-            this.label1_rtc_year1 = new System.Windows.Forms.Label();
-            this.label1_rtc_month = new System.Windows.Forms.Label();
-            this.label1_rtc_month1 = new System.Windows.Forms.Label();
-            this.label1_rtc_data = new System.Windows.Forms.Label();
-            this.label1_rtc_data1 = new System.Windows.Forms.Label();
-            this.label1_rtc_Second1 = new System.Windows.Forms.Label();
-            this.label1_rtc_Second = new System.Windows.Forms.Label();
-            this.label1_rtc_minute1 = new System.Windows.Forms.Label();
-            this.label1_rtc_minute = new System.Windows.Forms.Label();
-            this.label_rtc_hour1 = new System.Windows.Forms.Label();
-            this.label1_rtc_hour = new System.Windows.Forms.Label();
+            this.label1_data_time = new System.Windows.Forms.Label();
             this.tableLayoutPanel8.SuspendLayout();
             this.skinTabControl_TestMenu.SuspendLayout();
             this.skinTabPage_CurrentUser.SuspendLayout();
@@ -8403,18 +8393,8 @@
             // 
             // groupBox10
             // 
-            this.groupBox10.Controls.Add(this.label1_rtc_Second1);
-            this.groupBox10.Controls.Add(this.label1_rtc_Second);
-            this.groupBox10.Controls.Add(this.label1_rtc_minute1);
-            this.groupBox10.Controls.Add(this.label1_rtc_minute);
-            this.groupBox10.Controls.Add(this.label_rtc_hour1);
-            this.groupBox10.Controls.Add(this.label1_rtc_hour);
-            this.groupBox10.Controls.Add(this.label1_rtc_data1);
-            this.groupBox10.Controls.Add(this.label1_rtc_data);
-            this.groupBox10.Controls.Add(this.label1_rtc_month1);
-            this.groupBox10.Controls.Add(this.label1_rtc_month);
+            this.groupBox10.Controls.Add(this.label1_data_time);
             this.groupBox10.Controls.Add(this.label1_rtc_year1);
-            this.groupBox10.Controls.Add(this.label1_rtc_year);
             this.groupBox10.Controls.Add(this.Button_Get_RTC);
             this.groupBox10.Controls.Add(this.ButtonSet_RTC);
             this.groupBox10.Controls.Add(this.label6);
@@ -8424,6 +8404,25 @@
             this.groupBox10.TabIndex = 51;
             this.groupBox10.TabStop = false;
             this.groupBox10.Text = "RTC";
+            this.groupBox10.Enter += new System.EventHandler(this.groupBox10_Enter);
+            // 
+            // label1_rtc_year1
+            // 
+            this.label1_rtc_year1.AutoSize = true;
+            this.label1_rtc_year1.Location = new System.Drawing.Point(169, 94);
+            this.label1_rtc_year1.Name = "label1_rtc_year1";
+            this.label1_rtc_year1.Size = new System.Drawing.Size(0, 25);
+            this.label1_rtc_year1.TabIndex = 21;
+            // 
+            // Button_Get_RTC
+            // 
+            this.Button_Get_RTC.Location = new System.Drawing.Point(28, 86);
+            this.Button_Get_RTC.Name = "Button_Get_RTC";
+            this.Button_Get_RTC.Size = new System.Drawing.Size(137, 41);
+            this.Button_Get_RTC.TabIndex = 19;
+            this.Button_Get_RTC.Text = "获取RTC";
+            this.Button_Get_RTC.UseVisualStyleBackColor = true;
+            this.Button_Get_RTC.Click += new System.EventHandler(this.Button_Get_RTC_Click);
             // 
             // ButtonSet_RTC
             // 
@@ -10011,112 +10010,13 @@
             this.skinButton_SubWholeChg_ClearLog.UseVisualStyleBackColor = false;
             this.skinButton_SubWholeChg_ClearLog.Click += new System.EventHandler(this.skinButton_SubWholeChg_ClearLog_Click);
             // 
-            // Button_Get_RTC
+            // label1_data_time
             // 
-            this.Button_Get_RTC.Location = new System.Drawing.Point(28, 86);
-            this.Button_Get_RTC.Name = "Button_Get_RTC";
-            this.Button_Get_RTC.Size = new System.Drawing.Size(137, 41);
-            this.Button_Get_RTC.TabIndex = 19;
-            this.Button_Get_RTC.Text = "获取RTC";
-            this.Button_Get_RTC.UseVisualStyleBackColor = true;
-            this.Button_Get_RTC.Click += new System.EventHandler(this.Button_Get_RTC_Click);
-            // 
-            // label1_rtc_year
-            // 
-            this.label1_rtc_year.AutoSize = true;
-            this.label1_rtc_year.Location = new System.Drawing.Point(199, 94);
-            this.label1_rtc_year.Name = "label1_rtc_year";
-            this.label1_rtc_year.Size = new System.Drawing.Size(0, 25);
-            this.label1_rtc_year.TabIndex = 20;
-            // 
-            // label1_rtc_year1
-            // 
-            this.label1_rtc_year1.AutoSize = true;
-            this.label1_rtc_year1.Location = new System.Drawing.Point(228, 94);
-            this.label1_rtc_year1.Name = "label1_rtc_year1";
-            this.label1_rtc_year1.Size = new System.Drawing.Size(0, 25);
-            this.label1_rtc_year1.TabIndex = 21;
-            // 
-            // label1_rtc_month
-            // 
-            this.label1_rtc_month.AutoSize = true;
-            this.label1_rtc_month.Location = new System.Drawing.Point(257, 94);
-            this.label1_rtc_month.Name = "label1_rtc_month";
-            this.label1_rtc_month.Size = new System.Drawing.Size(0, 25);
-            this.label1_rtc_month.TabIndex = 22;
-            // 
-            // label1_rtc_month1
-            // 
-            this.label1_rtc_month1.AutoSize = true;
-            this.label1_rtc_month1.Location = new System.Drawing.Point(284, 94);
-            this.label1_rtc_month1.Name = "label1_rtc_month1";
-            this.label1_rtc_month1.Size = new System.Drawing.Size(0, 25);
-            this.label1_rtc_month1.TabIndex = 23;
-            // 
-            // label1_rtc_data
-            // 
-            this.label1_rtc_data.AutoSize = true;
-            this.label1_rtc_data.Location = new System.Drawing.Point(309, 94);
-            this.label1_rtc_data.Name = "label1_rtc_data";
-            this.label1_rtc_data.Size = new System.Drawing.Size(0, 25);
-            this.label1_rtc_data.TabIndex = 24;
-            // 
-            // label1_rtc_data1
-            // 
-            this.label1_rtc_data1.AutoSize = true;
-            this.label1_rtc_data1.Location = new System.Drawing.Point(335, 94);
-            this.label1_rtc_data1.Name = "label1_rtc_data1";
-            this.label1_rtc_data1.Size = new System.Drawing.Size(0, 25);
-            this.label1_rtc_data1.TabIndex = 25;
-            // 
-            // label1_rtc_Second1
-            // 
-            this.label1_rtc_Second1.AutoSize = true;
-            this.label1_rtc_Second1.Location = new System.Drawing.Point(517, 94);
-            this.label1_rtc_Second1.Name = "label1_rtc_Second1";
-            this.label1_rtc_Second1.Size = new System.Drawing.Size(0, 25);
-            this.label1_rtc_Second1.TabIndex = 31;
-            // 
-            // label1_rtc_Second
-            // 
-            this.label1_rtc_Second.AutoSize = true;
-            this.label1_rtc_Second.Location = new System.Drawing.Point(491, 94);
-            this.label1_rtc_Second.Name = "label1_rtc_Second";
-            this.label1_rtc_Second.Size = new System.Drawing.Size(0, 25);
-            this.label1_rtc_Second.TabIndex = 30;
-            // 
-            // label1_rtc_minute1
-            // 
-            this.label1_rtc_minute1.AutoSize = true;
-            this.label1_rtc_minute1.Location = new System.Drawing.Point(466, 94);
-            this.label1_rtc_minute1.Name = "label1_rtc_minute1";
-            this.label1_rtc_minute1.Size = new System.Drawing.Size(0, 25);
-            this.label1_rtc_minute1.TabIndex = 29;
-            this.label1_rtc_minute1.Click += new System.EventHandler(this.label1_rtc_minute1_Click);
-            // 
-            // label1_rtc_minute
-            // 
-            this.label1_rtc_minute.AutoSize = true;
-            this.label1_rtc_minute.Location = new System.Drawing.Point(439, 94);
-            this.label1_rtc_minute.Name = "label1_rtc_minute";
-            this.label1_rtc_minute.Size = new System.Drawing.Size(0, 25);
-            this.label1_rtc_minute.TabIndex = 28;
-            // 
-            // label_rtc_hour1
-            // 
-            this.label_rtc_hour1.AutoSize = true;
-            this.label_rtc_hour1.Location = new System.Drawing.Point(410, 94);
-            this.label_rtc_hour1.Name = "label_rtc_hour1";
-            this.label_rtc_hour1.Size = new System.Drawing.Size(0, 25);
-            this.label_rtc_hour1.TabIndex = 27;
-            // 
-            // label1_rtc_hour
-            // 
-            this.label1_rtc_hour.AutoSize = true;
-            this.label1_rtc_hour.Location = new System.Drawing.Point(381, 94);
-            this.label1_rtc_hour.Name = "label1_rtc_hour";
-            this.label1_rtc_hour.Size = new System.Drawing.Size(0, 25);
-            this.label1_rtc_hour.TabIndex = 26;
+            this.label1_data_time.AutoSize = true;
+            this.label1_data_time.Location = new System.Drawing.Point(208, 94);
+            this.label1_data_time.Name = "label1_data_time";
+            this.label1_data_time.Size = new System.Drawing.Size(0, 25);
+            this.label1_data_time.TabIndex = 32;
             // 
             // MainForm
             // 
@@ -10996,16 +10896,6 @@
         private System.Windows.Forms.GroupBox groupBox10;
         private System.Windows.Forms.Button Button_Get_RTC;
         private System.Windows.Forms.Label label1_rtc_year1;
-        private System.Windows.Forms.Label label1_rtc_year;
-        private System.Windows.Forms.Label label1_rtc_Second1;
-        private System.Windows.Forms.Label label1_rtc_Second;
-        private System.Windows.Forms.Label label1_rtc_minute1;
-        private System.Windows.Forms.Label label1_rtc_minute;
-        private System.Windows.Forms.Label label_rtc_hour1;
-        private System.Windows.Forms.Label label1_rtc_hour;
-        private System.Windows.Forms.Label label1_rtc_data1;
-        private System.Windows.Forms.Label label1_rtc_data;
-        private System.Windows.Forms.Label label1_rtc_month1;
-        private System.Windows.Forms.Label label1_rtc_month;
+        private System.Windows.Forms.Label label1_data_time;
     }
 }

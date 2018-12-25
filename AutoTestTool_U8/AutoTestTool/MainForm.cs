@@ -4137,6 +4137,7 @@ namespace AutoTestTool
             }
             else if (TestMeunSelectIndex == 5)  //
             {
+                string textStr = "";
                 UInt32 StationRtcCount = (UInt32)((pkt[17] << 24) | (pkt[18] << 16) | (pkt[19] << 8) | pkt[20]);
                 UInt32 CurrentCount = GetCurrentTimeStamp();
                 UInt32 TmpCount = 0;
@@ -4145,8 +4146,39 @@ namespace AutoTestTool
                 //    localtime(&StationRtcCount);
                 //  DateTime1 = ConvertStringToDateTime(StationRtcCount.ToString);
                 //  DateTime1 = GetDateTimeFrom1970Ticks(StationRtcCount);
-                // DateTime1 = GetDateTime((int)StationRtcCount);
+                DateTime1 = GetDateTime((int)StationRtcCount);
+                TextBoxLog("DateTime1.Year," + DateTime1.Year.ToString());
+                TextBoxLog("DateTime1.Month," + DateTime1.Month.ToString());
+                TextBoxLog("DateTime1.Day," + DateTime1.Day.ToString());
+                TextBoxLog("DateTime1.Hour," + DateTime1.Hour.ToString());
+                TextBoxLog("DateTime1.Minute," + DateTime1.Minute.ToString());
+                TextBoxLog("DateTime1.Second," + DateTime1.Second.ToString());
+
+                textStr = DateTime1.Year.ToString() + "年" + DateTime1.Month.ToString() + "月" + DateTime1.Day.ToString() + "日" + " " +
+                    DateTime1.Hour.ToString() + "时" + DateTime1.Minute.ToString() + "分" + DateTime1.Second.ToString() + "秒";
+                
+                updateControlText(label1_data_time, textStr);
+                /*
+                updateControlText(label1_rtc_year1, DateTime1.Year.ToString());
+                updateControlText(label1_rtc_year, "年");
+
+                updateControlText(label1_rtc_month, DateTime1.Month.ToString());
+                updateControlText(label1_rtc_month1, "月");
+
+                updateControlText(label1_rtc_data, DateTime1.Day.ToString());
+                updateControlText(label1_rtc_data1, "日");
+
+                updateControlText(label1_rtc_hour, DateTime1.Hour.ToString());
+                updateControlText(label_rtc_hour1, "时");
+
+                updateControlText(label1_rtc_minute, DateTime1.Minute.ToString());
+                updateControlText(label1_rtc_minute1, "分");
+
+                updateControlText(label1_rtc_Second, DateTime1.Second.ToString());
+                updateControlText(label1_rtc_Second1, "秒");
                 TextBoxLog("读取RTC时间成功," + StationRtcCount.ToString());
+                */
+                /*
                 // countDownTime_MB.lcd = ItemCountDown(countDownTime_MB.lcd, skinLabel_MB_LED_TIMECOUNTDOWN, skinTabControl_MB, skinTabPage_MainBoard_Led);
                 TextBoxLog("pkt[21]," + pkt[21].ToString());
                 TextBoxLog("pkt[22]," + pkt[22].ToString());
@@ -4171,6 +4203,7 @@ namespace AutoTestTool
 
                 updateControlText(label1_rtc_Second, pkt[26].ToString("D2"));
                 updateControlText(label1_rtc_Second1, "秒");
+                */
                 /*
                 if (CurrentCount > StationRtcCount)
                 {
@@ -7137,6 +7170,61 @@ namespace AutoTestTool
         }
 
         private void label1_rtc_minute1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox10_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_rtc_year_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_rtc_Second_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_rtc_Second1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_rtc_minute_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label_rtc_hour1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_rtc_data1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_rtc_data_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_rtc_month1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_rtc_month_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_rtc_hour_Click(object sender, EventArgs e)
         {
 
         }

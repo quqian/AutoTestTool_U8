@@ -482,6 +482,9 @@
             this.textBoxConfigPrint = new System.Windows.Forms.TextBox();
             this.skinButtonCleanConfigLog = new System.Windows.Forms.Button();
             this.splitContainer7 = new System.Windows.Forms.SplitContainer();
+            this.groupBox10 = new System.Windows.Forms.GroupBox();
+            this.ButtonSet_RTC = new System.Windows.Forms.Button();
+            this.label6 = new System.Windows.Forms.Label();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
             this.u8_skinButton_upGrade = new CCWin.SkinControl.SkinButton();
             this.u8_skinButton_HexToBin = new CCWin.SkinControl.SkinButton();
@@ -556,6 +559,8 @@
             this.skinTabPage_SubWholeChg_STOP_TEST = new CCWin.SkinControl.SkinTabPage();
             this.skinSplitContainer12 = new CCWin.SkinControl.SkinSplitContainer();
             this.skinLabel153 = new CCWin.SkinControl.SkinLabel();
+            this.skinLabel_SUB_CHG_DEVICE_ID_RES_VAL = new CCWin.SkinControl.SkinLabel();
+            this.skinLabel93 = new CCWin.SkinControl.SkinLabel();
             this.skinLabel_SUB_CHG_MAIN_TRUMPT_RES_VAL = new CCWin.SkinControl.SkinLabel();
             this.skinLabel155 = new CCWin.SkinControl.SkinLabel();
             this.skinLabel_SUB_CHG_MAIN_LED_RES_VAL = new CCWin.SkinControl.SkinLabel();
@@ -579,8 +584,19 @@
             this.skinButton_SubWholeChg_ReportDir = new CCWin.SkinControl.SkinButton();
             this.textBoxSubWholeDebugInfo = new System.Windows.Forms.TextBox();
             this.skinButton_SubWholeChg_ClearLog = new CCWin.SkinControl.SkinButton();
-            this.skinLabel_SUB_CHG_DEVICE_ID_RES_VAL = new CCWin.SkinControl.SkinLabel();
-            this.skinLabel93 = new CCWin.SkinControl.SkinLabel();
+            this.Button_Get_RTC = new System.Windows.Forms.Button();
+            this.label1_rtc_year = new System.Windows.Forms.Label();
+            this.label1_rtc_year1 = new System.Windows.Forms.Label();
+            this.label1_rtc_month = new System.Windows.Forms.Label();
+            this.label1_rtc_month1 = new System.Windows.Forms.Label();
+            this.label1_rtc_data = new System.Windows.Forms.Label();
+            this.label1_rtc_data1 = new System.Windows.Forms.Label();
+            this.label1_rtc_Second1 = new System.Windows.Forms.Label();
+            this.label1_rtc_Second = new System.Windows.Forms.Label();
+            this.label1_rtc_minute1 = new System.Windows.Forms.Label();
+            this.label1_rtc_minute = new System.Windows.Forms.Label();
+            this.label_rtc_hour1 = new System.Windows.Forms.Label();
+            this.label1_rtc_hour = new System.Windows.Forms.Label();
             this.tableLayoutPanel8.SuspendLayout();
             this.skinTabControl_TestMenu.SuspendLayout();
             this.skinTabPage_CurrentUser.SuspendLayout();
@@ -763,6 +779,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer7)).BeginInit();
             this.splitContainer7.Panel1.SuspendLayout();
             this.splitContainer7.SuspendLayout();
+            this.groupBox10.SuspendLayout();
             this.groupBox7.SuspendLayout();
             this.groupBox6.SuspendLayout();
             this.groupBox5.SuspendLayout();
@@ -850,7 +867,7 @@
             this.skinTabControl_TestMenu.PageHover = ((System.Drawing.Image)(resources.GetObject("skinTabControl_TestMenu.PageHover")));
             this.skinTabControl_TestMenu.PageImagePosition = CCWin.SkinControl.SkinTabControl.ePageImagePosition.Left;
             this.skinTabControl_TestMenu.PageNorml = null;
-            this.skinTabControl_TestMenu.SelectedIndex = 6;
+            this.skinTabControl_TestMenu.SelectedIndex = 5;
             this.skinTabControl_TestMenu.Size = new System.Drawing.Size(1322, 813);
             this.skinTabControl_TestMenu.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.skinTabControl_TestMenu.TabIndex = 0;
@@ -1297,7 +1314,7 @@
             this.skinTabControl_MB.PageImagePosition = CCWin.SkinControl.SkinTabControl.ePageImagePosition.Left;
             this.skinTabControl_MB.PageNorml = null;
             this.skinTabControl_MB.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.skinTabControl_MB.SelectedIndex = 0;
+            this.skinTabControl_MB.SelectedIndex = 2;
             this.skinTabControl_MB.Size = new System.Drawing.Size(885, 696);
             this.skinTabControl_MB.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.skinTabControl_MB.TabIndex = 0;
@@ -8370,6 +8387,7 @@
             // splitContainer7.Panel1
             // 
             this.splitContainer7.Panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.splitContainer7.Panel1.Controls.Add(this.groupBox10);
             this.splitContainer7.Panel1.Controls.Add(this.groupBox7);
             this.splitContainer7.Panel1.Controls.Add(this.groupBox6);
             this.splitContainer7.Panel1.Controls.Add(this.groupBox5);
@@ -8383,11 +8401,53 @@
             this.splitContainer7.SplitterDistance = 885;
             this.splitContainer7.TabIndex = 21;
             // 
+            // groupBox10
+            // 
+            this.groupBox10.Controls.Add(this.label1_rtc_Second1);
+            this.groupBox10.Controls.Add(this.label1_rtc_Second);
+            this.groupBox10.Controls.Add(this.label1_rtc_minute1);
+            this.groupBox10.Controls.Add(this.label1_rtc_minute);
+            this.groupBox10.Controls.Add(this.label_rtc_hour1);
+            this.groupBox10.Controls.Add(this.label1_rtc_hour);
+            this.groupBox10.Controls.Add(this.label1_rtc_data1);
+            this.groupBox10.Controls.Add(this.label1_rtc_data);
+            this.groupBox10.Controls.Add(this.label1_rtc_month1);
+            this.groupBox10.Controls.Add(this.label1_rtc_month);
+            this.groupBox10.Controls.Add(this.label1_rtc_year1);
+            this.groupBox10.Controls.Add(this.label1_rtc_year);
+            this.groupBox10.Controls.Add(this.Button_Get_RTC);
+            this.groupBox10.Controls.Add(this.ButtonSet_RTC);
+            this.groupBox10.Controls.Add(this.label6);
+            this.groupBox10.Location = new System.Drawing.Point(3, 181);
+            this.groupBox10.Name = "groupBox10";
+            this.groupBox10.Size = new System.Drawing.Size(869, 189);
+            this.groupBox10.TabIndex = 51;
+            this.groupBox10.TabStop = false;
+            this.groupBox10.Text = "RTC";
+            // 
+            // ButtonSet_RTC
+            // 
+            this.ButtonSet_RTC.Location = new System.Drawing.Point(28, 37);
+            this.ButtonSet_RTC.Name = "ButtonSet_RTC";
+            this.ButtonSet_RTC.Size = new System.Drawing.Size(137, 41);
+            this.ButtonSet_RTC.TabIndex = 17;
+            this.ButtonSet_RTC.Text = "设置RTC";
+            this.ButtonSet_RTC.UseVisualStyleBackColor = true;
+            this.ButtonSet_RTC.Click += new System.EventHandler(this.ButtonSet_RTC_Click);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(47, 45);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(0, 25);
+            this.label6.TabIndex = 15;
+            // 
             // groupBox7
             // 
             this.groupBox7.Controls.Add(this.u8_skinButton_upGrade);
             this.groupBox7.Controls.Add(this.u8_skinButton_HexToBin);
-            this.groupBox7.Location = new System.Drawing.Point(3, 496);
+            this.groupBox7.Location = new System.Drawing.Point(3, 576);
             this.groupBox7.Name = "groupBox7";
             this.groupBox7.Size = new System.Drawing.Size(869, 151);
             this.groupBox7.TabIndex = 50;
@@ -8443,9 +8503,9 @@
             this.groupBox6.Controls.Add(this.label2);
             this.groupBox6.Controls.Add(this.textBoxWiFiPassWd);
             this.groupBox6.Controls.Add(this.textBoxWiFiName);
-            this.groupBox6.Location = new System.Drawing.Point(0, 285);
+            this.groupBox6.Location = new System.Drawing.Point(3, 423);
             this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(891, 205);
+            this.groupBox6.Size = new System.Drawing.Size(869, 147);
             this.groupBox6.TabIndex = 49;
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "WiFi设置";
@@ -8461,7 +8521,7 @@
             // 
             // skinButtonWifiNameAndPassWd
             // 
-            this.skinButtonWifiNameAndPassWd.Location = new System.Drawing.Point(186, 145);
+            this.skinButtonWifiNameAndPassWd.Location = new System.Drawing.Point(643, 55);
             this.skinButtonWifiNameAndPassWd.Name = "skinButtonWifiNameAndPassWd";
             this.skinButtonWifiNameAndPassWd.Size = new System.Drawing.Size(194, 41);
             this.skinButtonWifiNameAndPassWd.TabIndex = 47;
@@ -8508,7 +8568,7 @@
             this.groupBox5.Controls.Add(this.label3);
             this.groupBox5.Location = new System.Drawing.Point(3, 6);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(879, 273);
+            this.groupBox5.Size = new System.Drawing.Size(869, 169);
             this.groupBox5.TabIndex = 48;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "充电桩设置";
@@ -8516,7 +8576,7 @@
             // 
             // skinButtonSmokeSensor433
             // 
-            this.skinButtonSmokeSensor433.Location = new System.Drawing.Point(410, 134);
+            this.skinButtonSmokeSensor433.Location = new System.Drawing.Point(410, 106);
             this.skinButtonSmokeSensor433.Name = "skinButtonSmokeSensor433";
             this.skinButtonSmokeSensor433.Size = new System.Drawing.Size(137, 41);
             this.skinButtonSmokeSensor433.TabIndex = 14;
@@ -8526,7 +8586,7 @@
             // 
             // textBoxSmokeSensor433
             // 
-            this.textBoxSmokeSensor433.Location = new System.Drawing.Point(183, 137);
+            this.textBoxSmokeSensor433.Location = new System.Drawing.Point(183, 113);
             this.textBoxSmokeSensor433.Name = "textBoxSmokeSensor433";
             this.textBoxSmokeSensor433.Size = new System.Drawing.Size(194, 30);
             this.textBoxSmokeSensor433.TabIndex = 13;
@@ -8535,7 +8595,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(9, 140);
+            this.label9.Location = new System.Drawing.Point(23, 114);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(131, 25);
             this.label9.TabIndex = 12;
@@ -8554,7 +8614,7 @@
             // 
             // skinButtonUniqueCode
             // 
-            this.skinButtonUniqueCode.Location = new System.Drawing.Point(410, 83);
+            this.skinButtonUniqueCode.Location = new System.Drawing.Point(410, 69);
             this.skinButtonUniqueCode.Name = "skinButtonUniqueCode";
             this.skinButtonUniqueCode.Size = new System.Drawing.Size(137, 41);
             this.skinButtonUniqueCode.TabIndex = 8;
@@ -8564,7 +8624,7 @@
             // 
             // textBoxUniqueCode
             // 
-            this.textBoxUniqueCode.Location = new System.Drawing.Point(183, 86);
+            this.textBoxUniqueCode.Location = new System.Drawing.Point(183, 74);
             this.textBoxUniqueCode.Name = "textBoxUniqueCode";
             this.textBoxUniqueCode.Size = new System.Drawing.Size(194, 30);
             this.textBoxUniqueCode.TabIndex = 7;
@@ -8582,7 +8642,7 @@
             // 
             // skinButtonDevReboot
             // 
-            this.skinButtonDevReboot.Location = new System.Drawing.Point(183, 193);
+            this.skinButtonDevReboot.Location = new System.Drawing.Point(643, 69);
             this.skinButtonDevReboot.Name = "skinButtonDevReboot";
             this.skinButtonDevReboot.Size = new System.Drawing.Size(194, 41);
             this.skinButtonDevReboot.TabIndex = 11;
@@ -8601,7 +8661,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(76, 92);
+            this.label3.Location = new System.Drawing.Point(76, 78);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(78, 25);
             this.label3.TabIndex = 6;
@@ -8648,7 +8708,7 @@
             this.skinTabControl_SubWholeChg.PageHover = ((System.Drawing.Image)(resources.GetObject("skinTabControl_SubWholeChg.PageHover")));
             this.skinTabControl_SubWholeChg.PageImagePosition = CCWin.SkinControl.SkinTabControl.ePageImagePosition.Left;
             this.skinTabControl_SubWholeChg.PageNorml = null;
-            this.skinTabControl_SubWholeChg.SelectedIndex = 0;
+            this.skinTabControl_SubWholeChg.SelectedIndex = 4;
             this.skinTabControl_SubWholeChg.Size = new System.Drawing.Size(879, 683);
             this.skinTabControl_SubWholeChg.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.skinTabControl_SubWholeChg.TabIndex = 5;
@@ -8680,6 +8740,7 @@
             // skinSplitContainer4.Panel1
             // 
             this.skinSplitContainer4.Panel1.Controls.Add(this.skinLabel17);
+            this.skinSplitContainer4.Panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.skinSplitContainer4_Panel1_Paint);
             // 
             // skinSplitContainer4.Panel2
             // 
@@ -9511,6 +9572,42 @@
             this.skinLabel153.TabIndex = 15;
             this.skinLabel153.Text = "测试结果";
             // 
+            // skinLabel_SUB_CHG_DEVICE_ID_RES_VAL
+            // 
+            this.skinLabel_SUB_CHG_DEVICE_ID_RES_VAL.AllowDrop = true;
+            this.skinLabel_SUB_CHG_DEVICE_ID_RES_VAL.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.skinLabel_SUB_CHG_DEVICE_ID_RES_VAL.AutoEllipsis = true;
+            this.skinLabel_SUB_CHG_DEVICE_ID_RES_VAL.AutoSize = true;
+            this.skinLabel_SUB_CHG_DEVICE_ID_RES_VAL.BackColor = System.Drawing.Color.Transparent;
+            this.skinLabel_SUB_CHG_DEVICE_ID_RES_VAL.BorderColor = System.Drawing.Color.White;
+            this.skinLabel_SUB_CHG_DEVICE_ID_RES_VAL.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.skinLabel_SUB_CHG_DEVICE_ID_RES_VAL.Location = new System.Drawing.Point(308, 28);
+            this.skinLabel_SUB_CHG_DEVICE_ID_RES_VAL.Name = "skinLabel_SUB_CHG_DEVICE_ID_RES_VAL";
+            this.skinLabel_SUB_CHG_DEVICE_ID_RES_VAL.Size = new System.Drawing.Size(24, 25);
+            this.skinLabel_SUB_CHG_DEVICE_ID_RES_VAL.TabIndex = 64;
+            this.skinLabel_SUB_CHG_DEVICE_ID_RES_VAL.Text = "  ";
+            this.skinLabel_SUB_CHG_DEVICE_ID_RES_VAL.Click += new System.EventHandler(this.skinLabel41_Click);
+            // 
+            // skinLabel93
+            // 
+            this.skinLabel93.AllowDrop = true;
+            this.skinLabel93.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.skinLabel93.AutoEllipsis = true;
+            this.skinLabel93.AutoSize = true;
+            this.skinLabel93.BackColor = System.Drawing.Color.Transparent;
+            this.skinLabel93.BorderColor = System.Drawing.Color.White;
+            this.skinLabel93.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.skinLabel93.Location = new System.Drawing.Point(74, 28);
+            this.skinLabel93.Name = "skinLabel93";
+            this.skinLabel93.Size = new System.Drawing.Size(86, 25);
+            this.skinLabel93.TabIndex = 63;
+            this.skinLabel93.Text = "  电桩号:";
+            this.skinLabel93.Click += new System.EventHandler(this.skinLabel93_Click);
+            // 
             // skinLabel_SUB_CHG_MAIN_TRUMPT_RES_VAL
             // 
             this.skinLabel_SUB_CHG_MAIN_TRUMPT_RES_VAL.AllowDrop = true;
@@ -9914,41 +10011,112 @@
             this.skinButton_SubWholeChg_ClearLog.UseVisualStyleBackColor = false;
             this.skinButton_SubWholeChg_ClearLog.Click += new System.EventHandler(this.skinButton_SubWholeChg_ClearLog_Click);
             // 
-            // skinLabel_SUB_CHG_DEVICE_ID_RES_VAL
+            // Button_Get_RTC
             // 
-            this.skinLabel_SUB_CHG_DEVICE_ID_RES_VAL.AllowDrop = true;
-            this.skinLabel_SUB_CHG_DEVICE_ID_RES_VAL.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.skinLabel_SUB_CHG_DEVICE_ID_RES_VAL.AutoEllipsis = true;
-            this.skinLabel_SUB_CHG_DEVICE_ID_RES_VAL.AutoSize = true;
-            this.skinLabel_SUB_CHG_DEVICE_ID_RES_VAL.BackColor = System.Drawing.Color.Transparent;
-            this.skinLabel_SUB_CHG_DEVICE_ID_RES_VAL.BorderColor = System.Drawing.Color.White;
-            this.skinLabel_SUB_CHG_DEVICE_ID_RES_VAL.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.skinLabel_SUB_CHG_DEVICE_ID_RES_VAL.Location = new System.Drawing.Point(308, 28);
-            this.skinLabel_SUB_CHG_DEVICE_ID_RES_VAL.Name = "skinLabel_SUB_CHG_DEVICE_ID_RES_VAL";
-            this.skinLabel_SUB_CHG_DEVICE_ID_RES_VAL.Size = new System.Drawing.Size(24, 25);
-            this.skinLabel_SUB_CHG_DEVICE_ID_RES_VAL.TabIndex = 64;
-            this.skinLabel_SUB_CHG_DEVICE_ID_RES_VAL.Text = "  ";
-            this.skinLabel_SUB_CHG_DEVICE_ID_RES_VAL.Click += new System.EventHandler(this.skinLabel41_Click);
+            this.Button_Get_RTC.Location = new System.Drawing.Point(28, 86);
+            this.Button_Get_RTC.Name = "Button_Get_RTC";
+            this.Button_Get_RTC.Size = new System.Drawing.Size(137, 41);
+            this.Button_Get_RTC.TabIndex = 19;
+            this.Button_Get_RTC.Text = "获取RTC";
+            this.Button_Get_RTC.UseVisualStyleBackColor = true;
+            this.Button_Get_RTC.Click += new System.EventHandler(this.Button_Get_RTC_Click);
             // 
-            // skinLabel93
+            // label1_rtc_year
             // 
-            this.skinLabel93.AllowDrop = true;
-            this.skinLabel93.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.skinLabel93.AutoEllipsis = true;
-            this.skinLabel93.AutoSize = true;
-            this.skinLabel93.BackColor = System.Drawing.Color.Transparent;
-            this.skinLabel93.BorderColor = System.Drawing.Color.White;
-            this.skinLabel93.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.skinLabel93.Location = new System.Drawing.Point(74, 28);
-            this.skinLabel93.Name = "skinLabel93";
-            this.skinLabel93.Size = new System.Drawing.Size(86, 25);
-            this.skinLabel93.TabIndex = 63;
-            this.skinLabel93.Text = "  电桩号:";
-            this.skinLabel93.Click += new System.EventHandler(this.skinLabel93_Click);
+            this.label1_rtc_year.AutoSize = true;
+            this.label1_rtc_year.Location = new System.Drawing.Point(199, 94);
+            this.label1_rtc_year.Name = "label1_rtc_year";
+            this.label1_rtc_year.Size = new System.Drawing.Size(0, 25);
+            this.label1_rtc_year.TabIndex = 20;
+            // 
+            // label1_rtc_year1
+            // 
+            this.label1_rtc_year1.AutoSize = true;
+            this.label1_rtc_year1.Location = new System.Drawing.Point(228, 94);
+            this.label1_rtc_year1.Name = "label1_rtc_year1";
+            this.label1_rtc_year1.Size = new System.Drawing.Size(0, 25);
+            this.label1_rtc_year1.TabIndex = 21;
+            // 
+            // label1_rtc_month
+            // 
+            this.label1_rtc_month.AutoSize = true;
+            this.label1_rtc_month.Location = new System.Drawing.Point(257, 94);
+            this.label1_rtc_month.Name = "label1_rtc_month";
+            this.label1_rtc_month.Size = new System.Drawing.Size(0, 25);
+            this.label1_rtc_month.TabIndex = 22;
+            // 
+            // label1_rtc_month1
+            // 
+            this.label1_rtc_month1.AutoSize = true;
+            this.label1_rtc_month1.Location = new System.Drawing.Point(284, 94);
+            this.label1_rtc_month1.Name = "label1_rtc_month1";
+            this.label1_rtc_month1.Size = new System.Drawing.Size(0, 25);
+            this.label1_rtc_month1.TabIndex = 23;
+            // 
+            // label1_rtc_data
+            // 
+            this.label1_rtc_data.AutoSize = true;
+            this.label1_rtc_data.Location = new System.Drawing.Point(309, 94);
+            this.label1_rtc_data.Name = "label1_rtc_data";
+            this.label1_rtc_data.Size = new System.Drawing.Size(0, 25);
+            this.label1_rtc_data.TabIndex = 24;
+            // 
+            // label1_rtc_data1
+            // 
+            this.label1_rtc_data1.AutoSize = true;
+            this.label1_rtc_data1.Location = new System.Drawing.Point(335, 94);
+            this.label1_rtc_data1.Name = "label1_rtc_data1";
+            this.label1_rtc_data1.Size = new System.Drawing.Size(0, 25);
+            this.label1_rtc_data1.TabIndex = 25;
+            // 
+            // label1_rtc_Second1
+            // 
+            this.label1_rtc_Second1.AutoSize = true;
+            this.label1_rtc_Second1.Location = new System.Drawing.Point(517, 94);
+            this.label1_rtc_Second1.Name = "label1_rtc_Second1";
+            this.label1_rtc_Second1.Size = new System.Drawing.Size(0, 25);
+            this.label1_rtc_Second1.TabIndex = 31;
+            // 
+            // label1_rtc_Second
+            // 
+            this.label1_rtc_Second.AutoSize = true;
+            this.label1_rtc_Second.Location = new System.Drawing.Point(491, 94);
+            this.label1_rtc_Second.Name = "label1_rtc_Second";
+            this.label1_rtc_Second.Size = new System.Drawing.Size(0, 25);
+            this.label1_rtc_Second.TabIndex = 30;
+            // 
+            // label1_rtc_minute1
+            // 
+            this.label1_rtc_minute1.AutoSize = true;
+            this.label1_rtc_minute1.Location = new System.Drawing.Point(466, 94);
+            this.label1_rtc_minute1.Name = "label1_rtc_minute1";
+            this.label1_rtc_minute1.Size = new System.Drawing.Size(0, 25);
+            this.label1_rtc_minute1.TabIndex = 29;
+            this.label1_rtc_minute1.Click += new System.EventHandler(this.label1_rtc_minute1_Click);
+            // 
+            // label1_rtc_minute
+            // 
+            this.label1_rtc_minute.AutoSize = true;
+            this.label1_rtc_minute.Location = new System.Drawing.Point(439, 94);
+            this.label1_rtc_minute.Name = "label1_rtc_minute";
+            this.label1_rtc_minute.Size = new System.Drawing.Size(0, 25);
+            this.label1_rtc_minute.TabIndex = 28;
+            // 
+            // label_rtc_hour1
+            // 
+            this.label_rtc_hour1.AutoSize = true;
+            this.label_rtc_hour1.Location = new System.Drawing.Point(410, 94);
+            this.label_rtc_hour1.Name = "label_rtc_hour1";
+            this.label_rtc_hour1.Size = new System.Drawing.Size(0, 25);
+            this.label_rtc_hour1.TabIndex = 27;
+            // 
+            // label1_rtc_hour
+            // 
+            this.label1_rtc_hour.AutoSize = true;
+            this.label1_rtc_hour.Location = new System.Drawing.Point(381, 94);
+            this.label1_rtc_hour.Name = "label1_rtc_hour";
+            this.label1_rtc_hour.Size = new System.Drawing.Size(0, 25);
+            this.label1_rtc_hour.TabIndex = 26;
             // 
             // MainForm
             // 
@@ -10214,6 +10382,8 @@
             this.splitContainer7.Panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer7)).EndInit();
             this.splitContainer7.ResumeLayout(false);
+            this.groupBox10.ResumeLayout(false);
+            this.groupBox10.PerformLayout();
             this.groupBox7.ResumeLayout(false);
             this.groupBox6.ResumeLayout(false);
             this.groupBox6.PerformLayout();
@@ -10821,5 +10991,21 @@
         private CCWin.SkinControl.SkinLabel skinLabel148;
         private CCWin.SkinControl.SkinLabel skinLabel_SUB_CHG_DEVICE_ID_RES_VAL;
         private CCWin.SkinControl.SkinLabel skinLabel93;
+        private System.Windows.Forms.Button ButtonSet_RTC;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.GroupBox groupBox10;
+        private System.Windows.Forms.Button Button_Get_RTC;
+        private System.Windows.Forms.Label label1_rtc_year1;
+        private System.Windows.Forms.Label label1_rtc_year;
+        private System.Windows.Forms.Label label1_rtc_Second1;
+        private System.Windows.Forms.Label label1_rtc_Second;
+        private System.Windows.Forms.Label label1_rtc_minute1;
+        private System.Windows.Forms.Label label1_rtc_minute;
+        private System.Windows.Forms.Label label_rtc_hour1;
+        private System.Windows.Forms.Label label1_rtc_hour;
+        private System.Windows.Forms.Label label1_rtc_data1;
+        private System.Windows.Forms.Label label1_rtc_data;
+        private System.Windows.Forms.Label label1_rtc_month1;
+        private System.Windows.Forms.Label label1_rtc_month;
     }
 }

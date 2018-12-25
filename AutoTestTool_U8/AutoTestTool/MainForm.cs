@@ -363,7 +363,7 @@ namespace AutoTestTool
             {
                 if (serialPort1 != null)
                 {
-              //       MsgDebug = true;
+                  //   MsgDebug = true;
                     if (MsgDebug)
                     {
                         string send = "";
@@ -3251,14 +3251,41 @@ namespace AutoTestTool
             SendSerialData(MakeSendArray((byte)Command.CMD_WIFI_CONFIG_TEST, data));
         }
 
+        
+
         //设置桩号
         private void SendSetID(string id)
         {
+            int wait = 0, n = 0;
+            int waitFlag = 5;
             string str = ProcTestData.fillString(id, 16, '0', 0);
             byte[] data = ProcTestData.stringToBCD(str);
             GetResultObj.SetCID = -1;
 
             SendSerialData(MakeSendArray((byte)Command.CMD_SET_SN, data));
+
+            while (GetResultObj.SetCID == -1)
+            {
+                Thread.Sleep(50);
+                if (wait++ > waitFlag)
+                {
+                    wait = 0;
+                    n++;
+                    SendSerialData(MakeSendArray((byte)Command.CMD_SET_SN, data));
+                }
+                if (n > waitFlag)
+                {
+                    break;
+                }
+            }
+
+            if (n > (waitFlag))
+            {
+                if (MessageBox.Show("桩号设置失败！\r\n是否重试", "提示", MessageBoxButtons.RetryCancel, MessageBoxIcon.Warning) == DialogResult.Retry)
+                {
+                    SendSetID(id);
+                }
+            }
         }
 
         //设置终端信息
@@ -3999,6 +4026,17 @@ namespace AutoTestTool
                 }
                 */
             }
+            else if (TestMeunSelectIndex == 5)  //配置
+            {
+                if (pkt[17] == 0x00)//成功
+                {
+                    TextBoxLog("设置RTC时间成功.");
+                }
+                else
+                {
+                    TextBoxLog("设置RTC时间失败.");
+                }
+            }
         }
 
         //读取RTC时间消息处理
@@ -4059,6 +4097,81 @@ namespace AutoTestTool
                 UInt32 TmpCount = 0;
 
                 LOG("读取RTC时间成功," + StationRtcCount.ToString());
+                if (CurrentCount > StationRtcCount)
+                {
+                    TmpCount = (CurrentCount - StationRtcCount) % 60;
+                    LOG("RTC差值:" + TmpCount.ToString());
+                    if (TmpCount < 20)
+                    {
+                        LOG("RTC校验OK.");
+                        ChargerTestResultDir["GETRTC"] = "通过";
+                        updateControlText(R6skinLabel_Whole_GETRTC_RESULT, "通过", Color.Green);
+                        updateTableSelectedIndex(skinTabControl_WholeChg, ++chargerTestSelectIndex);
+                    }
+                    else
+                    {
+                        LOG("RTC校验err.");
+                        ChargerTestResultDir["GETRTC"] = "不通过";
+                        updateControlText(R6skinLabel_Whole_GETRTC_RESULT, "不通过", Color.Red);
+                    }
+                }
+                else
+                {
+                    TmpCount = (StationRtcCount - CurrentCount) % 60;
+                    LOG("RTC差值:" + TmpCount.ToString());
+                    if (TmpCount < 20)
+                    {
+                        LOG("RTC校验OK.");
+                        ChargerTestResultDir["GETRTC"] = "通过";
+                        updateControlText(R6skinLabel_Whole_GETRTC_RESULT, "通过", Color.Green);
+                        updateTableSelectedIndex(skinTabControl_WholeChg, ++chargerTestSelectIndex);
+                    }
+                    else
+                    {
+                        LOG("RTC校验err.");
+                        ChargerTestResultDir["GETRTC"] = "不通过";
+                        updateControlText(R6skinLabel_Whole_GETRTC_RESULT, "不通过", Color.Red);
+                    }
+                }
+                */
+            }
+            else if (TestMeunSelectIndex == 5)  //
+            {
+                UInt32 StationRtcCount = (UInt32)((pkt[17] << 24) | (pkt[18] << 16) | (pkt[19] << 8) | pkt[20]);
+                UInt32 CurrentCount = GetCurrentTimeStamp();
+                UInt32 TmpCount = 0;
+                DateTime DateTime1;
+
+                //    localtime(&StationRtcCount);
+                //  DateTime1 = ConvertStringToDateTime(StationRtcCount.ToString);
+                //  DateTime1 = GetDateTimeFrom1970Ticks(StationRtcCount);
+                // DateTime1 = GetDateTime((int)StationRtcCount);
+                TextBoxLog("读取RTC时间成功," + StationRtcCount.ToString());
+                // countDownTime_MB.lcd = ItemCountDown(countDownTime_MB.lcd, skinLabel_MB_LED_TIMECOUNTDOWN, skinTabControl_MB, skinTabPage_MainBoard_Led);
+                TextBoxLog("pkt[21]," + pkt[21].ToString());
+                TextBoxLog("pkt[22]," + pkt[22].ToString());
+                TextBoxLog("pkt[23]," + pkt[23].ToString());
+                TextBoxLog("pkt[24]," + pkt[24].ToString());
+                TextBoxLog("pkt[25]," + pkt[25].ToString());
+                TextBoxLog("pkt[26]," + pkt[26].ToString());
+                updateControlText(label1_rtc_year, pkt[21].ToString("D2"));
+                updateControlText(label1_rtc_year1, "年");
+
+                updateControlText(label1_rtc_month, pkt[22].ToString("D2"));
+                updateControlText(label1_rtc_month1, "月");
+
+                updateControlText(label1_rtc_data, pkt[23].ToString("D2"));
+                updateControlText(label1_rtc_data1, "日");
+
+                updateControlText(label1_rtc_hour, pkt[24].ToString("D2"));
+                updateControlText(label_rtc_hour1, "时");
+
+                updateControlText(label1_rtc_minute, pkt[25].ToString("D2"));
+                updateControlText(label1_rtc_minute1, "分");
+
+                updateControlText(label1_rtc_Second, pkt[26].ToString("D2"));
+                updateControlText(label1_rtc_Second1, "秒");
+                /*
                 if (CurrentCount > StationRtcCount)
                 {
                     TmpCount = (CurrentCount - StationRtcCount) % 60;
@@ -4206,6 +4319,28 @@ namespace AutoTestTool
             }//    Thread.Sleep(50);
         }
 
+        public DateTime GetDateTimeFrom1970Ticks(long curSeconds)
+        {
+            DateTime dtStart = TimeZone.CurrentTimeZone.ToLocalTime(new DateTime(1970, 1, 1));
+            return dtStart.AddSeconds(curSeconds);
+        }
+
+        private DateTime GetDateTime(int timeStamp)
+        {
+            DateTime dtStart = TimeZone.CurrentTimeZone.ToLocalTime(new DateTime(1970, 1, 1));
+            long lTime = ((long)timeStamp * 10000000);
+            TimeSpan toNow = new TimeSpan(lTime);
+            DateTime targetDt = dtStart.Add(toNow);
+            return targetDt;
+        }
+
+        private DateTime ConvertStringToDateTime(string timeStamp)
+        {
+            DateTime dtStart = TimeZone.CurrentTimeZone.ToLocalTime(new DateTime(1970, 1, 1));
+            long lTime = long.Parse(timeStamp + "0000");
+            TimeSpan toNow = new TimeSpan(lTime);
+            return dtStart.Add(toNow);
+        }
 
         public static UInt32 GetCurrentTimeStamp()
         {
@@ -6979,6 +7114,31 @@ namespace AutoTestTool
             {
                 skinButton_SubWholeChg_SN_Confirm_Click(sender, e);
             }
+        }
+
+        private void skinSplitContainer4_Panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void ButtonSet_RTC_Click(object sender, EventArgs e)
+        {
+            SendSetRtcTestReq();
+        }
+
+        private void Button_Get_RTC_Click(object sender, EventArgs e)
+        {
+            SendGetRtcTestReq();
+        }
+
+        private void skinLabel41_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_rtc_minute1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

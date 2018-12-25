@@ -1062,14 +1062,14 @@ namespace AutoTestTool
         //设置桩号
         private void SendSetID(string id)
         {
+            int wait = 0, n = 0;
+            int waitFlag = 6;
             string str = ProcTestData.fillString(id, 16, '0', 0);
             byte[] data = ProcTestData.stringToBCD(str);
             X6GetResultObj.SetCID = -1;
 
             SendSerialData(MakeSendArray((byte)X6Command.CMD_SET_SN, data));
-            int wait = 0, n = 0;
-            int waitFlag = 5;
-
+            
             while (X6GetResultObj.SetCID == -1)
             {
                 Thread.Sleep(200);
@@ -1085,7 +1085,7 @@ namespace AutoTestTool
                 }
             }
 
-            if (n > waitFlag)
+            if (n > (waitFlag))
             {
                 if (MessageBox.Show("桩号设置失败！\r\n是否重试", "提示", MessageBoxButtons.RetryCancel, MessageBoxIcon.Warning) == DialogResult.Retry)
                 {

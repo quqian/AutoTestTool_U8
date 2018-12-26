@@ -483,6 +483,7 @@
             this.skinButtonCleanConfigLog = new System.Windows.Forms.Button();
             this.splitContainer7 = new System.Windows.Forms.SplitContainer();
             this.groupBox10 = new System.Windows.Forms.GroupBox();
+            this.label1_data_time = new System.Windows.Forms.Label();
             this.label1_rtc_year1 = new System.Windows.Forms.Label();
             this.Button_Get_RTC = new System.Windows.Forms.Button();
             this.ButtonSet_RTC = new System.Windows.Forms.Button();
@@ -586,7 +587,6 @@
             this.skinButton_SubWholeChg_ReportDir = new CCWin.SkinControl.SkinButton();
             this.textBoxSubWholeDebugInfo = new System.Windows.Forms.TextBox();
             this.skinButton_SubWholeChg_ClearLog = new CCWin.SkinControl.SkinButton();
-            this.label1_data_time = new System.Windows.Forms.Label();
             this.tableLayoutPanel8.SuspendLayout();
             this.skinTabControl_TestMenu.SuspendLayout();
             this.skinTabPage_CurrentUser.SuspendLayout();
@@ -857,7 +857,7 @@
             this.skinTabControl_TestMenu.PageHover = ((System.Drawing.Image)(resources.GetObject("skinTabControl_TestMenu.PageHover")));
             this.skinTabControl_TestMenu.PageImagePosition = CCWin.SkinControl.SkinTabControl.ePageImagePosition.Left;
             this.skinTabControl_TestMenu.PageNorml = null;
-            this.skinTabControl_TestMenu.SelectedIndex = 5;
+            this.skinTabControl_TestMenu.SelectedIndex = 0;
             this.skinTabControl_TestMenu.Size = new System.Drawing.Size(1322, 813);
             this.skinTabControl_TestMenu.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.skinTabControl_TestMenu.TabIndex = 0;
@@ -1168,6 +1168,8 @@
             this.skinComboBox_SerialPortSelect.Size = new System.Drawing.Size(205, 27);
             this.skinComboBox_SerialPortSelect.TabIndex = 5;
             this.skinComboBox_SerialPortSelect.WaterText = "";
+            this.skinComboBox_SerialPortSelect.DropDown += new System.EventHandler(this.skinComboBox_SerialPortSelect_DropDown_1);
+            this.skinComboBox_SerialPortSelect.SelectedIndexChanged += new System.EventHandler(this.skinComboBox_SerialPortSelect_SelectedIndexChanged);
             // 
             // skinLabel48
             // 
@@ -8406,6 +8408,14 @@
             this.groupBox10.Text = "RTC";
             this.groupBox10.Enter += new System.EventHandler(this.groupBox10_Enter);
             // 
+            // label1_data_time
+            // 
+            this.label1_data_time.AutoSize = true;
+            this.label1_data_time.Location = new System.Drawing.Point(208, 94);
+            this.label1_data_time.Name = "label1_data_time";
+            this.label1_data_time.Size = new System.Drawing.Size(0, 25);
+            this.label1_data_time.TabIndex = 32;
+            // 
             // label1_rtc_year1
             // 
             this.label1_rtc_year1.AutoSize = true;
@@ -10010,14 +10020,6 @@
             this.skinButton_SubWholeChg_ClearLog.UseVisualStyleBackColor = false;
             this.skinButton_SubWholeChg_ClearLog.Click += new System.EventHandler(this.skinButton_SubWholeChg_ClearLog_Click);
             // 
-            // label1_data_time
-            // 
-            this.label1_data_time.AutoSize = true;
-            this.label1_data_time.Location = new System.Drawing.Point(208, 94);
-            this.label1_data_time.Name = "label1_data_time";
-            this.label1_data_time.Size = new System.Drawing.Size(0, 25);
-            this.label1_data_time.TabIndex = 32;
-            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -10029,7 +10031,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "MainForm";
-            this.Text = "U8自动化测试上位机";
+            this.Text = "U8自动化测试上位机_V2";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainForm_FormClosing);
             this.Load += new System.EventHandler(this.MainForm_Load);
             this.tableLayoutPanel8.ResumeLayout(false);

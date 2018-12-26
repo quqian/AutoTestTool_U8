@@ -133,6 +133,7 @@ namespace AutoTestTool
 
         public static byte[] stringToBCD(string text)
         {
+         //   TextBoxLog("wwwwww" + text);
             if (text.Length % 2 != 0)
             {
                 text = text.Insert(0, "0");
@@ -157,7 +158,6 @@ namespace AutoTestTool
             }
 
             return array;
-
         }
 
         [DllImport("wininet.dll")]

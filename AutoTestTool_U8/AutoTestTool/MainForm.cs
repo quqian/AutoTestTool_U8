@@ -363,7 +363,7 @@ namespace AutoTestTool
             {
                 if (serialPort1 != null)
                 {
-                  //   MsgDebug = true;
+                     MsgDebug = true;
                     if (MsgDebug)
                     {
                         string send = "";
@@ -3152,6 +3152,7 @@ namespace AutoTestTool
         private void SendSetUUID(string uuid)
         {
             string str = ProcTestData.fillString(uuid, 12, '0', 0);
+        //    TextBoxLog("wwwwww" + str);
             byte[] data = ProcTestData.stringToBCD(str);
             SendSerialData(MakeSendArray((byte)Command.CMD_SET_DEVICE_ID, data));
         }
@@ -5525,6 +5526,7 @@ namespace AutoTestTool
         
         private void skinButtonUniqueCode_Click(object sender, EventArgs e)
         {
+            TextBoxLog("qqqq" + textBoxUniqueCode.Text.Trim());
             SendSetUUID(textBoxUniqueCode.Text.Trim());
         }
 
@@ -7227,6 +7229,37 @@ namespace AutoTestTool
         private void label1_rtc_hour_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void skinComboBox_SerialPortSelect_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void skinComboBox_SerialPortSelect_DropDown_1(object sender, EventArgs e)
+        {
+            try
+            {
+                skinComboBox_SerialPortSelect.Items.Clear();
+                //添加串口项目  
+                foreach (string s in System.IO.Ports.SerialPort.GetPortNames())
+                {//获取有多少个COM口  
+                    skinComboBox_SerialPortSelect.Items.Add(s);
+                }
+                if (skinComboBox_SerialPortSelect.Items.Count > 0)
+                {
+                    skinComboBox_SerialPortSelect.SelectedIndex = 0;
+                    skinComboBox_SerialBuateSelect.SelectedIndex = 0;
+                }
+                else
+                {
+                    skinComboBox_SerialPortSelect.Text = "";
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "提示");
+            }
         }
     }
 }

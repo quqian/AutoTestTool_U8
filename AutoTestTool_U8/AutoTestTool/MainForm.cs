@@ -1394,14 +1394,16 @@ namespace AutoTestTool
                                                 int fwVer = (int)(validFrame[18]);
                                                 int subver1 = validFrame[19];
                                                 int subver2 = validFrame[20];
-                                                GetResultObj.FwVersion = fwVer + "." + subver1 + "." + subver2;
+                                             //   GetResultObj.FwVersion = fwVer + "." + subver1 + "." + subver2;
+                                                GetResultObj.FwVersion = fwVer + "";
                                             }
                                             else if (validFrame[17] == 0x01)
                                             {
                                                 int fwVer = (int)(validFrame[18]);
-                                                int subver1 = validFrame[19];
-                                                int subver2 = validFrame[20];
-                                                GetResultObj.FwVersion = fwVer + "." + subver1 + "." + subver2;
+                                                //   int subver1 = validFrame[19];
+                                                //  int subver2 = validFrame[20];
+                                                //    GetResultObj.FwVersion = fwVer + "." + subver1 + "." + subver2;
+                                                GetResultObj.FwVersion = fwVer + "";
                                             }
 
                                             if (MBTestingFlag)
@@ -2076,9 +2078,9 @@ namespace AutoTestTool
                             //发送指示灯测试指令
                             SendLedTestReq(0, 1);
                             Thread.Sleep(500);
-                            SendLedTestReq(1, 1);
-                            Thread.Sleep(500);
-                            SendLedTestReq(2, 1);
+                        //    SendLedTestReq(1, 1);
+                       //     Thread.Sleep(500);
+                       //     SendLedTestReq(2, 1);
                         }
                         if ((GetCurrentTimeStamp() - ItemTestTime) >= 30)//超时
                         {
@@ -2576,6 +2578,7 @@ namespace AutoTestTool
                             LOG("整机LED测试.");
 
                             SendLedTestReq(0, 1);
+                         //   SendSetID(textBoxChargerID.Text.Trim());
                             //  Thread.Sleep(200);
                         }
                         if ((GetCurrentTimeStamp() - ItemTestTime) >= 30)//超时
@@ -3350,7 +3353,7 @@ namespace AutoTestTool
             byte[] data = new byte[4];
 
             UInt32 currentUtc = GetCurrentTimeStamp();
-            LOG("currentUtc:" + currentUtc.ToString());
+            TextBoxLog("currentUtc:" + currentUtc.ToString());
 
             data[0] = (byte)((currentUtc >> 24) & 0xFF);
             data[1] = (byte)((currentUtc >> 16) & 0xFF);
@@ -4147,6 +4150,7 @@ namespace AutoTestTool
                 //    localtime(&StationRtcCount);
                 //  DateTime1 = ConvertStringToDateTime(StationRtcCount.ToString);
                 //  DateTime1 = GetDateTimeFrom1970Ticks(StationRtcCount);
+                TextBoxLog("获取时间戳," + StationRtcCount.ToString());
                 DateTime1 = GetDateTime((int)StationRtcCount);
                 TextBoxLog("DateTime1.Year," + DateTime1.Year.ToString());
                 TextBoxLog("DateTime1.Month," + DateTime1.Month.ToString());
